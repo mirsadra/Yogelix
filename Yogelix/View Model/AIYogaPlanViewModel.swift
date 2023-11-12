@@ -1,0 +1,2 @@
+//  AIYogaPlanViewModel.swift
+import Foundation

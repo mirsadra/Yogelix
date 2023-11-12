@@ -1,0 +1,1179 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B1F0D812B101B3100BD54FD /* HealthDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F0D802B101B3100BD54FD /* HealthDataViewModel.swift */; };
+		3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */; };
+		3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */; };
+		3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */; };
+		3B2EA7482B0C14BA00D46DA6 /* AdditionalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA7472B0C14BA00D46DA6 /* AdditionalDetailsView.swift */; };
+		3B38F5132B08323C00511CF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B38F5122B08323C00511CF6 /* CustomButton.swift */; };
+		3B3E13B52B0A6B67003F8E78 /* YogaPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E13B42B0A6B67003F8E78 /* YogaPose.swift */; };
+		3B3E13B72B0A6C7F003F8E78 /* pose-list-with-meta.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B3E13B62B0A6C7F003F8E78 /* pose-list-with-meta.json */; };
+		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
+		3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469892B0CFC5B009130FD /* AuthenticationView.swift */; };
+		3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */; };
+		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
+		3B5469962B0CFF4B009130FD /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5469952B0CFF4B009130FD /* FirebaseAnalyticsSwift */; };
+		3B5469992B0CFF6F009130FD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5469982B0CFF6F009130FD /* FirebaseFirestoreSwift */; };
+		3B7DCC1F2B0FB0BF004B6053 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */; };
+		3B83F9532B03EC78001ADD11 /* ChatGPTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83F9522B03EC78001ADD11 /* ChatGPTService.swift */; };
+		3B8920CE2B0F5D1A000A61A2 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920CD2B0F5D1A000A61A2 /* HealthKitManager.swift */; };
+		3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */; };
+		3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920D12B0F8378000A61A2 /* HealthView.swift */; };
+		3B8920D82B0F8D89000A61A2 /* HealthData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920D62B0F8D88000A61A2 /* HealthData.xcdatamodeld */; };
+		3B92DB062B0E6AD100D646A4 /* YogaInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92DB052B0E6AD100D646A4 /* YogaInstructionView.swift */; };
+		3B92DB082B0E6B8000D646A4 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3B92DB072B0E6B8000D646A4 /* FirebaseRemoteConfig */; };
+		3B92DB0A2B0E6B8000D646A4 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B92DB092B0E6B8000D646A4 /* FirebaseRemoteConfigSwift */; };
+		3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */; };
+		3B9DA82A2B0EAC7C00480621 /* DailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8292B0EAC7C00480621 /* DailyExercise.swift */; };
+		3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82B2B0EAF6D00480621 /* Theme.swift */; };
+		3B9DA82E2B0EAFE500480621 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82D2B0EAFE500480621 /* CardView.swift */; };
+		3B9DA8302B0EB3FC00480621 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */; };
+		3B9DA8322B0EBE8100480621 /* DailyExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */; };
+		3BA4A6352B0D4FDF0032936E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4A6342B0D4FDF0032936E /* UserData.swift */; };
+		3BA4A6562B0D60D50032936E /* YogelixSecrets.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA4A6552B0D60D50032936E /* YogelixSecrets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BA4A6592B0D60D50032936E /* YogelixSecrets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */; };
+		3BA4A65A2B0D60D50032936E /* YogelixSecrets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BA4A6602B0D61120032936E /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4A65F2B0D61120032936E /* Secrets.swift */; };
+		3BA4A6642B0D68130032936E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4A6622B0D630B0032936E /* NetworkManager.swift */; };
+		3BA4A6662B0D69880032936E /* OpenAIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4A6652B0D69880032936E /* OpenAIInterface.swift */; };
+		3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */; };
+		3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C82B01901400FD1FC3 /* ContentView.swift */; };
+		3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
+		3BCC04CE2B01901500FD1FC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CD2B01901500FD1FC3 /* Preview Assets.xcassets */; };
+		3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04CF2B01901500FD1FC3 /* Persistence.swift */; };
+		3BCC04D32B01901500FD1FC3 /* Yogelix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04D12B01901500FD1FC3 /* Yogelix.xcdatamodeld */; };
+		3BCC04DF2B01901600FD1FC3 /* YogelixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04DE2B01901600FD1FC3 /* YogelixTests.swift */; };
+		3BCC04E92B01901600FD1FC3 /* YogelixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04E82B01901600FD1FC3 /* YogelixUITests.swift */; };
+		3BCC04EB2B01901600FD1FC3 /* YogelixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04EA2B01901600FD1FC3 /* YogelixUITestsLaunchTests.swift */; };
+		3BCC05032B019B4A00FD1FC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05022B019B4A00FD1FC3 /* HomeView.swift */; };
+		3BCC05052B01A2B400FD1FC3 /* DailyWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05042B01A2B400FD1FC3 /* DailyWorkoutView.swift */; };
+		3BCC05072B01A31F00FD1FC3 /* ProgressSnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05062B01A31F00FD1FC3 /* ProgressSnapshotView.swift */; };
+		3BCC050B2B01A3FE00FD1FC3 /* AIYogaPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC050A2B01A3FE00FD1FC3 /* AIYogaPlanView.swift */; };
+		3BCC050D2B01A44100FD1FC3 /* AsanasExplorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC050C2B01A44100FD1FC3 /* AsanasExplorerView.swift */; };
+		3BCC05122B01A48900FD1FC3 /* ChallengesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05112B01A48900FD1FC3 /* ChallengesView.swift */; };
+		3BCC05162B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05152B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift */; };
+		3BCC05182B01A6AE00FD1FC3 /* AIYogaPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05172B01A6AE00FD1FC3 /* AIYogaPlanViewModel.swift */; };
+		3BCC051A2B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05192B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift */; };
+		3BCC05202B01A72600FD1FC3 /* AdditionalDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC051F2B01A72600FD1FC3 /* AdditionalDataViewModel.swift */; };
+		3BCC05232B01A73800FD1FC3 /* UpgradeToPremiumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05222B01A73800FD1FC3 /* UpgradeToPremiumViewModel.swift */; };
+		3BDADF192B0E395B0023B4AC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDADF182B0E395B0023B4AC /* AccountView.swift */; };
+		3BDADF1D2B0E55FE0023B4AC /* RandomQueryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDADF1C2B0E55FE0023B4AC /* RandomQueryView.swift */; };
+		3BDFE13C2B026C21007FB23E /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13B2B026C21007FB23E /* UserController.swift */; };
+		3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13D2B026C2B007FB23E /* SessionController.swift */; };
+		3BDFE1402B026C43007FB23E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13F2B026C43007FB23E /* NetworkService.swift */; };
+		3BDFE1422B026C58007FB23E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE1412B026C58007FB23E /* DataService.swift */; };
+		3BDFE1442B026C62007FB23E /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE1432B026C62007FB23E /* SubscriptionService.swift */; };
+		3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */; };
+		3BE7841C2B04F45C00D1C91B /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE7841B2B04F45C00D1C91B /* FirebaseAppCheck */; };
+		3BE7841E2B04F47300D1C91B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE7841D2B04F47300D1C91B /* FirebaseAuth */; };
+		3BE784202B04F48000D1C91B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE7841F2B04F48000D1C91B /* FirebaseFirestore */; };
+		3BE784232B04F4BA00D1C91B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94C2B03B6DD001ADD11 /* CoreData.framework */; };
+		3BE987422B0A2901005A7B62 /* FirestoreDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE987412B0A2901005A7B62 /* FirestoreDatabase.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BA4A6572B0D60D50032936E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BCC04BB2B01901400FD1FC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BA4A6522B0D60D50032936E;
+			remoteInfo = YogelixSecrets;
+		};
+		3BCC04DB2B01901600FD1FC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BCC04BB2B01901400FD1FC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BCC04C22B01901400FD1FC3;
+			remoteInfo = Yogelix;
+		};
+		3BCC04E52B01901600FD1FC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BCC04BB2B01901400FD1FC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BCC04C22B01901400FD1FC3;
+			remoteInfo = Yogelix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B3E13C52B0A8BB8003F8E78 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3BA4A65A2B0D60D50032936E /* YogelixSecrets.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BA4A64B2B0D56310032936E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3B1F0D802B101B3100BD54FD /* HealthDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataViewModel.swift; sourceTree = "<group>"; };
+		3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		3B2EA7472B0C14BA00D46DA6 /* AdditionalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsView.swift; sourceTree = "<group>"; };
+		3B38F5122B08323C00511CF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		3B3E13B42B0A6B67003F8E78 /* YogaPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPose.swift; sourceTree = "<group>"; };
+		3B3E13B62B0A6C7F003F8E78 /* pose-list-with-meta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pose-list-with-meta.json"; sourceTree = "<group>"; };
+		3B5469892B0CFC5B009130FD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
+		3B5469912B0CFD40009130FD /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3B83F94A2B0399E4001ADD11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3B83F94C2B03B6DD001ADD11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3B83F9522B03EC78001ADD11 /* ChatGPTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTService.swift; sourceTree = "<group>"; };
+		3B8920CD2B0F5D1A000A61A2 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		3B8920D12B0F8378000A61A2 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		3B8920D72B0F8D89000A61A2 /* Hdata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hdata.xcdatamodel; sourceTree = "<group>"; };
+		3B92DB052B0E6AD100D646A4 /* YogaInstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaInstructionView.swift; sourceTree = "<group>"; };
+		3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTimerView.swift; sourceTree = "<group>"; };
+		3B9DA8292B0EAC7C00480621 /* DailyExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExercise.swift; sourceTree = "<group>"; };
+		3B9DA82B2B0EAF6D00480621 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		3B9DA82D2B0EAFE500480621 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExerciseView.swift; sourceTree = "<group>"; };
+		3BA4A6342B0D4FDF0032936E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3BA4A63C2B0D56310032936E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YogelixSecrets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA4A6552B0D60D50032936E /* YogelixSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogelixSecrets.h; sourceTree = "<group>"; };
+		3BA4A65F2B0D61120032936E /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		3BA4A6622B0D630B0032936E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3BA4A6652B0D69880032936E /* OpenAIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIInterface.swift; sourceTree = "<group>"; };
+		3BCC04C32B01901400FD1FC3 /* Yogelix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yogelix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixApp.swift; sourceTree = "<group>"; };
+		3BCC04C82B01901400FD1FC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BCC04CD2B01901500FD1FC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BCC04CF2B01901500FD1FC3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3BCC04D22B01901500FD1FC3 /* Yogelix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Yogelix.xcdatamodel; sourceTree = "<group>"; };
+		3BCC04D42B01901500FD1FC3 /* Yogelix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yogelix.entitlements; sourceTree = "<group>"; };
+		3BCC04D52B01901500FD1FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BCC04DA2B01901600FD1FC3 /* YogelixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YogelixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC04DE2B01901600FD1FC3 /* YogelixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixTests.swift; sourceTree = "<group>"; };
+		3BCC04E42B01901600FD1FC3 /* YogelixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YogelixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BCC04E82B01901600FD1FC3 /* YogelixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixUITests.swift; sourceTree = "<group>"; };
+		3BCC04EA2B01901600FD1FC3 /* YogelixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3BCC05022B019B4A00FD1FC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3BCC05042B01A2B400FD1FC3 /* DailyWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWorkoutView.swift; sourceTree = "<group>"; };
+		3BCC05062B01A31F00FD1FC3 /* ProgressSnapshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSnapshotView.swift; sourceTree = "<group>"; };
+		3BCC050A2B01A3FE00FD1FC3 /* AIYogaPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIYogaPlanView.swift; sourceTree = "<group>"; };
+		3BCC050C2B01A44100FD1FC3 /* AsanasExplorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanasExplorerView.swift; sourceTree = "<group>"; };
+		3BCC05112B01A48900FD1FC3 /* ChallengesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesView.swift; sourceTree = "<group>"; };
+		3BCC05152B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeToPremiumView.swift; sourceTree = "<group>"; };
+		3BCC05172B01A6AE00FD1FC3 /* AIYogaPlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIYogaPlanViewModel.swift; sourceTree = "<group>"; };
+		3BCC05192B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanasExplorerViewModel.swift; sourceTree = "<group>"; };
+		3BCC051F2B01A72600FD1FC3 /* AdditionalDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDataViewModel.swift; sourceTree = "<group>"; };
+		3BCC05222B01A73800FD1FC3 /* UpgradeToPremiumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeToPremiumViewModel.swift; sourceTree = "<group>"; };
+		3BDADF182B0E395B0023B4AC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		3BDADF1C2B0E55FE0023B4AC /* RandomQueryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQueryView.swift; sourceTree = "<group>"; };
+		3BDFE13B2B026C21007FB23E /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		3BDFE13D2B026C2B007FB23E /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		3BDFE13F2B026C43007FB23E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3BDFE1412B026C58007FB23E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3BDFE1432B026C62007FB23E /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3BE987412B0A2901005A7B62 /* FirestoreDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDatabase.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BA4A6502B0D60D50032936E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04C02B01901400FD1FC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B92DB082B0E6B8000D646A4 /* FirebaseRemoteConfig in Frameworks */,
+				3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */,
+				3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */,
+				3BE784232B04F4BA00D1C91B /* CoreData.framework in Frameworks */,
+				3BE7841E2B04F47300D1C91B /* FirebaseAuth in Frameworks */,
+				3BE7841C2B04F45C00D1C91B /* FirebaseAppCheck in Frameworks */,
+				3B5469962B0CFF4B009130FD /* FirebaseAnalyticsSwift in Frameworks */,
+				3BE784202B04F48000D1C91B /* FirebaseFirestore in Frameworks */,
+				3B92DB0A2B0E6B8000D646A4 /* FirebaseRemoteConfigSwift in Frameworks */,
+				3BA4A6592B0D60D50032936E /* YogelixSecrets.framework in Frameworks */,
+				3B5469992B0CFF6F009130FD /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04D72B01901600FD1FC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04E12B01901600FD1FC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B5279672B0766F00011914A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3B2EA7472B0C14BA00D46DA6 /* AdditionalDetailsView.swift */,
+				3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */,
+				3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */,
+				3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */,
+				3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */,
+				3B5469892B0CFC5B009130FD /* AuthenticationView.swift */,
+				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3B83F9492B0399E4001ADD11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */,
+				3B83F94C2B03B6DD001ADD11 /* CoreData.framework */,
+				3B83F94A2B0399E4001ADD11 /* StoreKit.framework */,
+				3BA4A63C2B0D56310032936E /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B8920CC2B0F5C08000A61A2 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				3B8920CD2B0F5D1A000A61A2 /* HealthKitManager.swift */,
+				3B8920D12B0F8378000A61A2 /* HealthView.swift */,
+				3B8920D62B0F8D88000A61A2 /* HealthData.xcdatamodeld */,
+				3B1F0D802B101B3100BD54FD /* HealthDataViewModel.swift */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		3B9DA8262B0EAC2400480621 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */,
+				3B9DA8292B0EAC7C00480621 /* DailyExercise.swift */,
+				3B9DA82D2B0EAFE500480621 /* CardView.swift */,
+				3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */,
+				3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */,
+				3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		3BA4A6542B0D60D50032936E /* YogelixSecrets */ = {
+			isa = PBXGroup;
+			children = (
+				3BA4A6552B0D60D50032936E /* YogelixSecrets.h */,
+				3BA4A6622B0D630B0032936E /* NetworkManager.swift */,
+				3BA4A65F2B0D61120032936E /* Secrets.swift */,
+				3BA4A6652B0D69880032936E /* OpenAIInterface.swift */,
+			);
+			path = YogelixSecrets;
+			sourceTree = "<group>";
+		};
+		3BCC04BA2B01901400FD1FC3 = {
+			isa = PBXGroup;
+			children = (
+				3BCC04C52B01901400FD1FC3 /* Yogelix */,
+				3BCC04DD2B01901600FD1FC3 /* YogelixTests */,
+				3BCC04E72B01901600FD1FC3 /* YogelixUITests */,
+				3BA4A6542B0D60D50032936E /* YogelixSecrets */,
+				3BCC04C42B01901400FD1FC3 /* Products */,
+				3B83F9492B0399E4001ADD11 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3BCC04C42B01901400FD1FC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC04C32B01901400FD1FC3 /* Yogelix.app */,
+				3BCC04DA2B01901600FD1FC3 /* YogelixTests.xctest */,
+				3BCC04E42B01901600FD1FC3 /* YogelixUITests.xctest */,
+				3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BCC04C52B01901400FD1FC3 /* Yogelix */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC04F82B0192C600FD1FC3 /* View */,
+				3BCC04F72B0192B200FD1FC3 /* Model */,
+				3BCC04FE2B01932200FD1FC3 /* View Model */,
+				3BCC04FD2B01931400FD1FC3 /* Controller */,
+				3BCC04FA2B0192FA00FD1FC3 /* Services */,
+				3B8920CC2B0F5C08000A61A2 /* Health */,
+				3B9DA8262B0EAC2400480621 /* Exercise */,
+				3B5279672B0766F00011914A /* Auth */,
+				3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */,
+				3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */,
+				3BCC04CF2B01901500FD1FC3 /* Persistence.swift */,
+				3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */,
+				3BCC04D42B01901500FD1FC3 /* Yogelix.entitlements */,
+				3BCC04D52B01901500FD1FC3 /* Info.plist */,
+				3BCC04D12B01901500FD1FC3 /* Yogelix.xcdatamodeld */,
+				3B3E13B62B0A6C7F003F8E78 /* pose-list-with-meta.json */,
+				3BCC04CC2B01901500FD1FC3 /* Preview Content */,
+			);
+			path = Yogelix;
+			sourceTree = "<group>";
+		};
+		3BCC04CC2B01901500FD1FC3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC04CD2B01901500FD1FC3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BCC04DD2B01901600FD1FC3 /* YogelixTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC04DE2B01901600FD1FC3 /* YogelixTests.swift */,
+			);
+			path = YogelixTests;
+			sourceTree = "<group>";
+		};
+		3BCC04E72B01901600FD1FC3 /* YogelixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC04E82B01901600FD1FC3 /* YogelixUITests.swift */,
+				3BCC04EA2B01901600FD1FC3 /* YogelixUITestsLaunchTests.swift */,
+			);
+			path = YogelixUITests;
+			sourceTree = "<group>";
+		};
+		3BCC04F72B0192B200FD1FC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B3E13B42B0A6B67003F8E78 /* YogaPose.swift */,
+				3BA4A6342B0D4FDF0032936E /* UserData.swift */,
+				3B9DA82B2B0EAF6D00480621 /* Theme.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BCC04F82B0192C600FD1FC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC04C82B01901400FD1FC3 /* ContentView.swift */,
+				3BCC05022B019B4A00FD1FC3 /* HomeView.swift */,
+				3B38F5122B08323C00511CF6 /* CustomButton.swift */,
+				3BCC05042B01A2B400FD1FC3 /* DailyWorkoutView.swift */,
+				3BCC05062B01A31F00FD1FC3 /* ProgressSnapshotView.swift */,
+				3BCC050A2B01A3FE00FD1FC3 /* AIYogaPlanView.swift */,
+				3BCC050C2B01A44100FD1FC3 /* AsanasExplorerView.swift */,
+				3BCC05112B01A48900FD1FC3 /* ChallengesView.swift */,
+				3BCC05152B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift */,
+				3BDADF182B0E395B0023B4AC /* AccountView.swift */,
+				3BDADF1C2B0E55FE0023B4AC /* RandomQueryView.swift */,
+				3B92DB052B0E6AD100D646A4 /* YogaInstructionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BCC04FA2B0192FA00FD1FC3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3BDFE13F2B026C43007FB23E /* NetworkService.swift */,
+				3BDFE1412B026C58007FB23E /* DataService.swift */,
+				3BDFE1432B026C62007FB23E /* SubscriptionService.swift */,
+				3B83F9522B03EC78001ADD11 /* ChatGPTService.swift */,
+				3BE987412B0A2901005A7B62 /* FirestoreDatabase.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3BCC04FD2B01931400FD1FC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3BDFE13B2B026C21007FB23E /* UserController.swift */,
+				3BDFE13D2B026C2B007FB23E /* SessionController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3BCC04FE2B01932200FD1FC3 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BCC05172B01A6AE00FD1FC3 /* AIYogaPlanViewModel.swift */,
+				3BCC05192B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift */,
+				3BCC051F2B01A72600FD1FC3 /* AdditionalDataViewModel.swift */,
+				3BCC05222B01A73800FD1FC3 /* UpgradeToPremiumViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3BA4A64E2B0D60D50032936E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA4A6562B0D60D50032936E /* YogelixSecrets.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3BA4A6522B0D60D50032936E /* YogelixSecrets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BA4A65B2B0D60D50032936E /* Build configuration list for PBXNativeTarget "YogelixSecrets" */;
+			buildPhases = (
+				3BA4A64E2B0D60D50032936E /* Headers */,
+				3BA4A64F2B0D60D50032936E /* Sources */,
+				3BA4A6502B0D60D50032936E /* Frameworks */,
+				3BA4A6512B0D60D50032936E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YogelixSecrets;
+			productName = YogelixSecrets;
+			productReference = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3BCC04C22B01901400FD1FC3 /* Yogelix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BCC04EE2B01901600FD1FC3 /* Build configuration list for PBXNativeTarget "Yogelix" */;
+			buildPhases = (
+				3BCC04BF2B01901400FD1FC3 /* Sources */,
+				3BCC04C02B01901400FD1FC3 /* Frameworks */,
+				3BCC04C12B01901400FD1FC3 /* Resources */,
+				3B3E13C52B0A8BB8003F8E78 /* Embed Frameworks */,
+				3BA4A64B2B0D56310032936E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BA4A6582B0D60D50032936E /* PBXTargetDependency */,
+			);
+			name = Yogelix;
+			packageProductDependencies = (
+				3BE7841B2B04F45C00D1C91B /* FirebaseAppCheck */,
+				3BE7841D2B04F47300D1C91B /* FirebaseAuth */,
+				3BE7841F2B04F48000D1C91B /* FirebaseFirestore */,
+				3B5469952B0CFF4B009130FD /* FirebaseAnalyticsSwift */,
+				3B5469982B0CFF6F009130FD /* FirebaseFirestoreSwift */,
+				3B92DB072B0E6B8000D646A4 /* FirebaseRemoteConfig */,
+				3B92DB092B0E6B8000D646A4 /* FirebaseRemoteConfigSwift */,
+			);
+			productName = Yogelix;
+			productReference = 3BCC04C32B01901400FD1FC3 /* Yogelix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BCC04D92B01901600FD1FC3 /* YogelixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BCC04F12B01901600FD1FC3 /* Build configuration list for PBXNativeTarget "YogelixTests" */;
+			buildPhases = (
+				3BCC04D62B01901600FD1FC3 /* Sources */,
+				3BCC04D72B01901600FD1FC3 /* Frameworks */,
+				3BCC04D82B01901600FD1FC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BCC04DC2B01901600FD1FC3 /* PBXTargetDependency */,
+			);
+			name = YogelixTests;
+			productName = YogelixTests;
+			productReference = 3BCC04DA2B01901600FD1FC3 /* YogelixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BCC04E32B01901600FD1FC3 /* YogelixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BCC04F42B01901600FD1FC3 /* Build configuration list for PBXNativeTarget "YogelixUITests" */;
+			buildPhases = (
+				3BCC04E02B01901600FD1FC3 /* Sources */,
+				3BCC04E12B01901600FD1FC3 /* Frameworks */,
+				3BCC04E22B01901600FD1FC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BCC04E62B01901600FD1FC3 /* PBXTargetDependency */,
+			);
+			name = YogelixUITests;
+			productName = YogelixUITests;
+			productReference = 3BCC04E42B01901600FD1FC3 /* YogelixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BCC04BB2B01901400FD1FC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					3BA4A6522B0D60D50032936E = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
+					};
+					3BCC04C22B01901400FD1FC3 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					3BCC04D92B01901600FD1FC3 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 3BCC04C22B01901400FD1FC3;
+					};
+					3BCC04E32B01901600FD1FC3 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 3BCC04C22B01901400FD1FC3;
+					};
+				};
+			};
+			buildConfigurationList = 3BCC04BE2B01901400FD1FC3 /* Build configuration list for PBXProject "Yogelix" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BCC04BA2B01901400FD1FC3;
+			packageReferences = (
+				3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 3BCC04C42B01901400FD1FC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BCC04C22B01901400FD1FC3 /* Yogelix */,
+				3BCC04D92B01901600FD1FC3 /* YogelixTests */,
+				3BCC04E32B01901600FD1FC3 /* YogelixUITests */,
+				3BA4A6522B0D60D50032936E /* YogelixSecrets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BA4A6512B0D60D50032936E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04C12B01901400FD1FC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3E13B72B0A6C7F003F8E78 /* pose-list-with-meta.json in Resources */,
+				3BCC04CE2B01901500FD1FC3 /* Preview Assets.xcassets in Resources */,
+				3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */,
+				3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04D82B01901600FD1FC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04E22B01901600FD1FC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BA4A64F2B0D60D50032936E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA4A6642B0D68130032936E /* NetworkManager.swift in Sources */,
+				3BA4A6602B0D61120032936E /* Secrets.swift in Sources */,
+				3BA4A6662B0D69880032936E /* OpenAIInterface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04BF2B01901400FD1FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */,
+				3BCC05122B01A48900FD1FC3 /* ChallengesView.swift in Sources */,
+				3BCC05202B01A72600FD1FC3 /* AdditionalDataViewModel.swift in Sources */,
+				3BCC050B2B01A3FE00FD1FC3 /* AIYogaPlanView.swift in Sources */,
+				3BDFE1442B026C62007FB23E /* SubscriptionService.swift in Sources */,
+				3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */,
+				3BCC04D32B01901500FD1FC3 /* Yogelix.xcdatamodeld in Sources */,
+				3B9DA8322B0EBE8100480621 /* DailyExerciseView.swift in Sources */,
+				3B8920D82B0F8D89000A61A2 /* HealthData.xcdatamodeld in Sources */,
+				3BCC05052B01A2B400FD1FC3 /* DailyWorkoutView.swift in Sources */,
+				3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */,
+				3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */,
+				3BDFE13C2B026C21007FB23E /* UserController.swift in Sources */,
+				3BCC05162B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift in Sources */,
+				3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */,
+				3BCC05032B019B4A00FD1FC3 /* HomeView.swift in Sources */,
+				3BDADF192B0E395B0023B4AC /* AccountView.swift in Sources */,
+				3BDADF1D2B0E55FE0023B4AC /* RandomQueryView.swift in Sources */,
+				3BCC050D2B01A44100FD1FC3 /* AsanasExplorerView.swift in Sources */,
+				3BCC05232B01A73800FD1FC3 /* UpgradeToPremiumViewModel.swift in Sources */,
+				3B3E13B52B0A6B67003F8E78 /* YogaPose.swift in Sources */,
+				3BDFE1402B026C43007FB23E /* NetworkService.swift in Sources */,
+				3B38F5132B08323C00511CF6 /* CustomButton.swift in Sources */,
+				3B9DA8302B0EB3FC00480621 /* TrailingIconLabelStyle.swift in Sources */,
+				3BA4A6352B0D4FDF0032936E /* UserData.swift in Sources */,
+				3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */,
+				3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */,
+				3BE987422B0A2901005A7B62 /* FirestoreDatabase.swift in Sources */,
+				3B1F0D812B101B3100BD54FD /* HealthDataViewModel.swift in Sources */,
+				3B2EA7482B0C14BA00D46DA6 /* AdditionalDetailsView.swift in Sources */,
+				3B9DA82E2B0EAFE500480621 /* CardView.swift in Sources */,
+				3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */,
+				3B83F9532B03EC78001ADD11 /* ChatGPTService.swift in Sources */,
+				3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */,
+				3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */,
+				3B7DCC1F2B0FB0BF004B6053 /* DetailView.swift in Sources */,
+				3B92DB062B0E6AD100D646A4 /* YogaInstructionView.swift in Sources */,
+				3B8920CE2B0F5D1A000A61A2 /* HealthKitManager.swift in Sources */,
+				3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */,
+				3B9DA82A2B0EAC7C00480621 /* DailyExercise.swift in Sources */,
+				3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */,
+				3BCC051A2B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift in Sources */,
+				3BCC05072B01A31F00FD1FC3 /* ProgressSnapshotView.swift in Sources */,
+				3BCC05182B01A6AE00FD1FC3 /* AIYogaPlanViewModel.swift in Sources */,
+				3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */,
+				3BDFE1422B026C58007FB23E /* DataService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04D62B01901600FD1FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCC04DF2B01901600FD1FC3 /* YogelixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BCC04E02B01901600FD1FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BCC04EB2B01901600FD1FC3 /* YogelixUITestsLaunchTests.swift in Sources */,
+				3BCC04E92B01901600FD1FC3 /* YogelixUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BA4A6582B0D60D50032936E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BA4A6522B0D60D50032936E /* YogelixSecrets */;
+			targetProxy = 3BA4A6572B0D60D50032936E /* PBXContainerItemProxy */;
+		};
+		3BCC04DC2B01901600FD1FC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BCC04C22B01901400FD1FC3 /* Yogelix */;
+			targetProxy = 3BCC04DB2B01901600FD1FC3 /* PBXContainerItemProxy */;
+		};
+		3BCC04E62B01901600FD1FC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BCC04C22B01901400FD1FC3 /* Yogelix */;
+			targetProxy = 3BCC04E52B01901600FD1FC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3BA4A65C2B0D60D50032936E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G9QU83M3D9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chateth.YogelixSecrets;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BA4A65D2B0D60D50032936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = G9QU83M3D9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chateth.YogelixSecrets;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3BCC04EC2B01901600FD1FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BCC04ED2B01901600FD1FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BCC04EF2B01901600FD1FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Yogelix/Yogelix.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = G9QU83M3D9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Yogelix/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Yogelix;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chateth.Yogelix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BCC04F02B01901600FD1FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Yogelix/Yogelix.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = G9QU83M3D9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Yogelix/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Yogelix;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chateth.Yogelix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BCC04F22B01901600FD1FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9QU83M3D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chateth.YogelixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yogelix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yogelix";
+			};
+			name = Debug;
+		};
+		3BCC04F32B01901600FD1FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9QU83M3D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chateth.YogelixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yogelix.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yogelix";
+			};
+			name = Release;
+		};
+		3BCC04F52B01901600FD1FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9QU83M3D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chateth.YogelixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Yogelix;
+			};
+			name = Debug;
+		};
+		3BCC04F62B01901600FD1FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9QU83M3D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chateth.YogelixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Yogelix;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BA4A65B2B0D60D50032936E /* Build configuration list for PBXNativeTarget "YogelixSecrets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA4A65C2B0D60D50032936E /* Debug */,
+				3BA4A65D2B0D60D50032936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCC04BE2B01901400FD1FC3 /* Build configuration list for PBXProject "Yogelix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCC04EC2B01901600FD1FC3 /* Debug */,
+				3BCC04ED2B01901600FD1FC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCC04EE2B01901600FD1FC3 /* Build configuration list for PBXNativeTarget "Yogelix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCC04EF2B01901600FD1FC3 /* Debug */,
+				3BCC04F02B01901600FD1FC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCC04F12B01901600FD1FC3 /* Build configuration list for PBXNativeTarget "YogelixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCC04F22B01901600FD1FC3 /* Debug */,
+				3BCC04F32B01901600FD1FC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BCC04F42B01901600FD1FC3 /* Build configuration list for PBXNativeTarget "YogelixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BCC04F52B01901600FD1FC3 /* Debug */,
+				3BCC04F62B01901600FD1FC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B5469952B0CFF4B009130FD /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		3B5469982B0CFF6F009130FD /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		3B92DB072B0E6B8000D646A4 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		3B92DB092B0E6B8000D646A4 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		3BE7841B2B04F45C00D1C91B /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		3BE7841D2B04F47300D1C91B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3BE7841F2B04F48000D1C91B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		3B8920D62B0F8D88000A61A2 /* HealthData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3B8920D72B0F8D89000A61A2 /* Hdata.xcdatamodel */,
+			);
+			currentVersion = 3B8920D72B0F8D89000A61A2 /* Hdata.xcdatamodel */;
+			path = HealthData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		3BCC04D12B01901500FD1FC3 /* Yogelix.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3BCC04D22B01901500FD1FC3 /* Yogelix.xcdatamodel */,
+			);
+			currentVersion = 3BCC04D22B01901500FD1FC3 /* Yogelix.xcdatamodel */;
+			path = Yogelix.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3BCC04BB2B01901400FD1FC3 /* Project object */;
+}

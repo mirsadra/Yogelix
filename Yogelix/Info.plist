@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Your workout data will be used to suggest personalized exercise routines and provide insights into your fitness journey. By analyzing your health records, Yogelix can offer tailored recommendations and adapt to your evolving fitness needs. We ensure the utmost privacy and security in handling your health data and use it solely to enhance your personal fitness experience.</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>Yogelix requires access to your health records to personalize your exercise routines and provide tailored fitness recommendations based on your health history. Your data will be used solely for improving your experience with our personalized fitness programs.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Saving your workout data to the Yogelix Health Records helps in tracking your fitness progress over time. This allows for a comprehensive analysis of your exercise routines, enabling more accurate and personalized fitness recommendations. Your health data is always treated with the utmost confidentiality and is used exclusively for enhancing your fitness journey with Yogelix.</string>
+</dict>
+</plist>
