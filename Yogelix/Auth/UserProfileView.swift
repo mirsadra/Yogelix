@@ -47,39 +47,7 @@ struct UserProfileView: View {
             Section("Email") {
                 Text(viewModel.displayName)
             }
-            Section(header: Text("Personal Information")) {
-                Picker("Age", selection: $userData.age) {
-                    ForEach(ageRange, id: \.self) { age in
-                        Text("\(age)").tag(age)
-                    }
-                }
-                Picker("Weight (kg)", selection: $userData.weight) {
-                    ForEach(weightRange, id: \.self) { weight in
-                        Text("\(Int(weight))").tag(weight)
-                    }
-                }
-                Picker("Height (cm)", selection: $userData.height) {
-                    ForEach(heightRange, id: \.self) { height in
-                        Text("\(Int(height))").tag(height)
-                    }
-                }
-                Picker("Gender", selection: $userData.gender) {
-                    ForEach(Gender.allCases, id: \.self) {
-                        Text($0.rawValue.capitalized).tag($0)
-                    }
-                }
-                Picker("Body Type", selection: $userData.bodyType) {
-                    ForEach(BodyType.allCases, id: \.self) {
-                        Text($0.rawValue.capitalized).tag($0)
-                    }
-                }
-                Picker("Yoga Experience (Years)", selection: $userData.yogaExperienceYears) {
-                    ForEach(yogaExperienceRange, id: \.self) { years in
-                        Text("\(years)").tag(years)
-                    }
-                }
-            }
-            Button("Save", action: saveUserData)
+
             Section {
                 Button(role: .cancel, action: signOut) {
                     HStack {
@@ -106,29 +74,6 @@ struct UserProfileView: View {
                             isPresented: $presentingConfirmationDialog, titleVisibility: .visible) {
             Button("Delete Account", role: .destructive, action: deleteAccount)
             Button("Cancel", role: .cancel, action: { })
-        }
-    }
-    private func saveUserData() {
-        guard let userUID = Auth.auth().currentUser?.uid else { return }
-        
-        let db = Firestore.firestore()
-        let userDataDictionary: [String: Any] = [
-            "age": userData.age,
-            "weight": userData.weight,
-            "height": userData.height,
-            "yogaExperienceYears": userData.yogaExperienceYears,
-            "gender": userData.gender.rawValue,
-            "bodyType": userData.bodyType.rawValue
-        ]
-        
-        db.collection("users").document(userUID).setData(userDataDictionary) { error in
-            if let error = error {
-                // Handle the error appropriately
-                print("Error saving user data: \(error)")
-            } else {
-                // Data saved successfully
-                print("User data saved successfully")
-            }
         }
     }
 }

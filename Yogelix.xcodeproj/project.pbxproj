@@ -8,19 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		3B1F0D812B101B3100BD54FD /* HealthDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F0D802B101B3100BD54FD /* HealthDataViewModel.swift */; };
+		3B2125C82B121CE600B3E0BE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125C72B121CE600B3E0BE /* FirebaseAnalytics */; };
+		3B2125CA2B121CE600B3E0BE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125C92B121CE600B3E0BE /* FirebaseAuth */; };
+		3B2125CC2B121CE600B3E0BE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125CB2B121CE600B3E0BE /* FirebaseFirestore */; };
+		3B2125CE2B121D2600B3E0BE /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125CD2B121D2600B3E0BE /* FirebaseAnalyticsSwift */; };
+		3B2125D02B121D2600B3E0BE /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125CF2B121D2600B3E0BE /* FirebaseAppCheck */; };
+		3B2125D22B121D2600B3E0BE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125D12B121D2600B3E0BE /* FirebaseFirestoreSwift */; };
+		3B2125D52B121D6400B3E0BE /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125D42B121D6400B3E0BE /* Markdown */; };
+		3B2125DA2B121D9300B3E0BE /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125D92B121D9300B3E0BE /* FirebaseRemoteConfig */; };
+		3B2125DC2B121D9300B3E0BE /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125DB2B121D9300B3E0BE /* FirebaseRemoteConfigSwift */; };
 		3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */; };
 		3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */; };
 		3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */; };
-		3B2EA7482B0C14BA00D46DA6 /* AdditionalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA7472B0C14BA00D46DA6 /* AdditionalDetailsView.swift */; };
+		3B347FAC2B117537004C2C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
 		3B38F5132B08323C00511CF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B38F5122B08323C00511CF6 /* CustomButton.swift */; };
 		3B3E13B52B0A6B67003F8E78 /* YogaPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E13B42B0A6B67003F8E78 /* YogaPose.swift */; };
 		3B3E13B72B0A6C7F003F8E78 /* pose-list-with-meta.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B3E13B62B0A6C7F003F8E78 /* pose-list-with-meta.json */; };
 		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
+		3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B40A36B2B1222EA00170041 /* Alamofire */; };
+		3B40A36F2B12230400170041 /* OpenAINetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A36E2B12230400170041 /* OpenAINetworking.swift */; };
 		3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469892B0CFC5B009130FD /* AuthenticationView.swift */; };
 		3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */; };
 		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
-		3B5469962B0CFF4B009130FD /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5469952B0CFF4B009130FD /* FirebaseAnalyticsSwift */; };
-		3B5469992B0CFF6F009130FD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B5469982B0CFF6F009130FD /* FirebaseFirestoreSwift */; };
 		3B7DCC1F2B0FB0BF004B6053 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */; };
 		3B83F9532B03EC78001ADD11 /* ChatGPTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83F9522B03EC78001ADD11 /* ChatGPTService.swift */; };
 		3B8920CE2B0F5D1A000A61A2 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920CD2B0F5D1A000A61A2 /* HealthKitManager.swift */; };
@@ -28,8 +37,6 @@
 		3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920D12B0F8378000A61A2 /* HealthView.swift */; };
 		3B8920D82B0F8D89000A61A2 /* HealthData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920D62B0F8D88000A61A2 /* HealthData.xcdatamodeld */; };
 		3B92DB062B0E6AD100D646A4 /* YogaInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92DB052B0E6AD100D646A4 /* YogaInstructionView.swift */; };
-		3B92DB082B0E6B8000D646A4 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3B92DB072B0E6B8000D646A4 /* FirebaseRemoteConfig */; };
-		3B92DB0A2B0E6B8000D646A4 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B92DB092B0E6B8000D646A4 /* FirebaseRemoteConfigSwift */; };
 		3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */; };
 		3B9DA82A2B0EAC7C00480621 /* DailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8292B0EAC7C00480621 /* DailyExercise.swift */; };
 		3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82B2B0EAF6D00480621 /* Theme.swift */; };
@@ -40,9 +47,6 @@
 		3BA4A6562B0D60D50032936E /* YogelixSecrets.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA4A6552B0D60D50032936E /* YogelixSecrets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BA4A6592B0D60D50032936E /* YogelixSecrets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */; };
 		3BA4A65A2B0D60D50032936E /* YogelixSecrets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BA4A6602B0D61120032936E /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4A65F2B0D61120032936E /* Secrets.swift */; };
-		3BA4A6642B0D68130032936E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4A6622B0D630B0032936E /* NetworkManager.swift */; };
-		3BA4A6662B0D69880032936E /* OpenAIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4A6652B0D69880032936E /* OpenAIInterface.swift */; };
 		3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */; };
 		3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C82B01901400FD1FC3 /* ContentView.swift */; };
 		3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
@@ -55,7 +59,6 @@
 		3BCC05032B019B4A00FD1FC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05022B019B4A00FD1FC3 /* HomeView.swift */; };
 		3BCC05052B01A2B400FD1FC3 /* DailyWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05042B01A2B400FD1FC3 /* DailyWorkoutView.swift */; };
 		3BCC05072B01A31F00FD1FC3 /* ProgressSnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05062B01A31F00FD1FC3 /* ProgressSnapshotView.swift */; };
-		3BCC050B2B01A3FE00FD1FC3 /* AIYogaPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC050A2B01A3FE00FD1FC3 /* AIYogaPlanView.swift */; };
 		3BCC050D2B01A44100FD1FC3 /* AsanasExplorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC050C2B01A44100FD1FC3 /* AsanasExplorerView.swift */; };
 		3BCC05122B01A48900FD1FC3 /* ChallengesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05112B01A48900FD1FC3 /* ChallengesView.swift */; };
 		3BCC05162B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC05152B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift */; };
@@ -71,9 +74,6 @@
 		3BDFE1422B026C58007FB23E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE1412B026C58007FB23E /* DataService.swift */; };
 		3BDFE1442B026C62007FB23E /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE1432B026C62007FB23E /* SubscriptionService.swift */; };
 		3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */; };
-		3BE7841C2B04F45C00D1C91B /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE7841B2B04F45C00D1C91B /* FirebaseAppCheck */; };
-		3BE7841E2B04F47300D1C91B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE7841D2B04F47300D1C91B /* FirebaseAuth */; };
-		3BE784202B04F48000D1C91B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE7841F2B04F48000D1C91B /* FirebaseFirestore */; };
 		3BE784232B04F4BA00D1C91B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94C2B03B6DD001ADD11 /* CoreData.framework */; };
 		3BE987422B0A2901005A7B62 /* FirestoreDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE987412B0A2901005A7B62 /* FirestoreDatabase.swift */; };
 /* End PBXBuildFile section */
@@ -131,10 +131,10 @@
 		3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
-		3B2EA7472B0C14BA00D46DA6 /* AdditionalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsView.swift; sourceTree = "<group>"; };
 		3B38F5122B08323C00511CF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3B3E13B42B0A6B67003F8E78 /* YogaPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPose.swift; sourceTree = "<group>"; };
 		3B3E13B62B0A6C7F003F8E78 /* pose-list-with-meta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pose-list-with-meta.json"; sourceTree = "<group>"; };
+		3B40A36E2B12230400170041 /* OpenAINetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAINetworking.swift; sourceTree = "<group>"; };
 		3B5469892B0CFC5B009130FD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		3B5469912B0CFD40009130FD /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -157,9 +157,6 @@
 		3BA4A63C2B0D56310032936E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YogelixSecrets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA4A6552B0D60D50032936E /* YogelixSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogelixSecrets.h; sourceTree = "<group>"; };
-		3BA4A65F2B0D61120032936E /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
-		3BA4A6622B0D630B0032936E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		3BA4A6652B0D69880032936E /* OpenAIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIInterface.swift; sourceTree = "<group>"; };
 		3BCC04C32B01901400FD1FC3 /* Yogelix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yogelix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixApp.swift; sourceTree = "<group>"; };
 		3BCC04C82B01901400FD1FC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -177,7 +174,6 @@
 		3BCC05022B019B4A00FD1FC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3BCC05042B01A2B400FD1FC3 /* DailyWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWorkoutView.swift; sourceTree = "<group>"; };
 		3BCC05062B01A31F00FD1FC3 /* ProgressSnapshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSnapshotView.swift; sourceTree = "<group>"; };
-		3BCC050A2B01A3FE00FD1FC3 /* AIYogaPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIYogaPlanView.swift; sourceTree = "<group>"; };
 		3BCC050C2B01A44100FD1FC3 /* AsanasExplorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsanasExplorerView.swift; sourceTree = "<group>"; };
 		3BCC05112B01A48900FD1FC3 /* ChallengesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesView.swift; sourceTree = "<group>"; };
 		3BCC05152B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeToPremiumView.swift; sourceTree = "<group>"; };
@@ -208,17 +204,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B92DB082B0E6B8000D646A4 /* FirebaseRemoteConfig in Frameworks */,
 				3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */,
+				3B2125CA2B121CE600B3E0BE /* FirebaseAuth in Frameworks */,
 				3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */,
+				3B2125DC2B121D9300B3E0BE /* FirebaseRemoteConfigSwift in Frameworks */,
 				3BE784232B04F4BA00D1C91B /* CoreData.framework in Frameworks */,
-				3BE7841E2B04F47300D1C91B /* FirebaseAuth in Frameworks */,
-				3BE7841C2B04F45C00D1C91B /* FirebaseAppCheck in Frameworks */,
-				3B5469962B0CFF4B009130FD /* FirebaseAnalyticsSwift in Frameworks */,
-				3BE784202B04F48000D1C91B /* FirebaseFirestore in Frameworks */,
-				3B92DB0A2B0E6B8000D646A4 /* FirebaseRemoteConfigSwift in Frameworks */,
+				3B2125CE2B121D2600B3E0BE /* FirebaseAnalyticsSwift in Frameworks */,
+				3B2125D22B121D2600B3E0BE /* FirebaseFirestoreSwift in Frameworks */,
+				3B2125D52B121D6400B3E0BE /* Markdown in Frameworks */,
+				3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */,
+				3B2125C82B121CE600B3E0BE /* FirebaseAnalytics in Frameworks */,
 				3BA4A6592B0D60D50032936E /* YogelixSecrets.framework in Frameworks */,
-				3B5469992B0CFF6F009130FD /* FirebaseFirestoreSwift in Frameworks */,
+				3B2125D02B121D2600B3E0BE /* FirebaseAppCheck in Frameworks */,
+				3B2125DA2B121D9300B3E0BE /* FirebaseRemoteConfig in Frameworks */,
+				3B2125CC2B121CE600B3E0BE /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,10 +238,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B40A36D2B1222F100170041 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3B40A36E2B12230400170041 /* OpenAINetworking.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		3B5279672B0766F00011914A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				3B2EA7472B0C14BA00D46DA6 /* AdditionalDetailsView.swift */,
 				3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */,
 				3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */,
 				3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */,
@@ -292,9 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				3BA4A6552B0D60D50032936E /* YogelixSecrets.h */,
-				3BA4A6622B0D630B0032936E /* NetworkManager.swift */,
-				3BA4A65F2B0D61120032936E /* Secrets.swift */,
-				3BA4A6652B0D69880032936E /* OpenAIInterface.swift */,
 			);
 			path = YogelixSecrets;
 			sourceTree = "<group>";
@@ -303,9 +306,9 @@
 			isa = PBXGroup;
 			children = (
 				3BCC04C52B01901400FD1FC3 /* Yogelix */,
+				3BA4A6542B0D60D50032936E /* YogelixSecrets */,
 				3BCC04DD2B01901600FD1FC3 /* YogelixTests */,
 				3BCC04E72B01901600FD1FC3 /* YogelixUITests */,
-				3BA4A6542B0D60D50032936E /* YogelixSecrets */,
 				3BCC04C42B01901400FD1FC3 /* Products */,
 				3B83F9492B0399E4001ADD11 /* Frameworks */,
 			);
@@ -325,6 +328,7 @@
 		3BCC04C52B01901400FD1FC3 /* Yogelix */ = {
 			isa = PBXGroup;
 			children = (
+				3B40A36D2B1222F100170041 /* Network */,
 				3BCC04F82B0192C600FD1FC3 /* View */,
 				3BCC04F72B0192B200FD1FC3 /* Model */,
 				3BCC04FE2B01932200FD1FC3 /* View Model */,
@@ -333,6 +337,7 @@
 				3B8920CC2B0F5C08000A61A2 /* Health */,
 				3B9DA8262B0EAC2400480621 /* Exercise */,
 				3B5279672B0766F00011914A /* Auth */,
+				3BCC04CC2B01901500FD1FC3 /* Preview Content */,
 				3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */,
 				3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */,
 				3BCC04CF2B01901500FD1FC3 /* Persistence.swift */,
@@ -341,7 +346,6 @@
 				3BCC04D52B01901500FD1FC3 /* Info.plist */,
 				3BCC04D12B01901500FD1FC3 /* Yogelix.xcdatamodeld */,
 				3B3E13B62B0A6C7F003F8E78 /* pose-list-with-meta.json */,
-				3BCC04CC2B01901500FD1FC3 /* Preview Content */,
 			);
 			path = Yogelix;
 			sourceTree = "<group>";
@@ -389,7 +393,6 @@
 				3B38F5122B08323C00511CF6 /* CustomButton.swift */,
 				3BCC05042B01A2B400FD1FC3 /* DailyWorkoutView.swift */,
 				3BCC05062B01A31F00FD1FC3 /* ProgressSnapshotView.swift */,
-				3BCC050A2B01A3FE00FD1FC3 /* AIYogaPlanView.swift */,
 				3BCC050C2B01A44100FD1FC3 /* AsanasExplorerView.swift */,
 				3BCC05112B01A48900FD1FC3 /* ChallengesView.swift */,
 				3BCC05152B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift */,
@@ -460,6 +463,8 @@
 			dependencies = (
 			);
 			name = YogelixSecrets;
+			packageProductDependencies = (
+			);
 			productName = YogelixSecrets;
 			productReference = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */;
 			productType = "com.apple.product-type.framework";
@@ -481,13 +486,16 @@
 			);
 			name = Yogelix;
 			packageProductDependencies = (
-				3BE7841B2B04F45C00D1C91B /* FirebaseAppCheck */,
-				3BE7841D2B04F47300D1C91B /* FirebaseAuth */,
-				3BE7841F2B04F48000D1C91B /* FirebaseFirestore */,
-				3B5469952B0CFF4B009130FD /* FirebaseAnalyticsSwift */,
-				3B5469982B0CFF6F009130FD /* FirebaseFirestoreSwift */,
-				3B92DB072B0E6B8000D646A4 /* FirebaseRemoteConfig */,
-				3B92DB092B0E6B8000D646A4 /* FirebaseRemoteConfigSwift */,
+				3B2125C72B121CE600B3E0BE /* FirebaseAnalytics */,
+				3B2125C92B121CE600B3E0BE /* FirebaseAuth */,
+				3B2125CB2B121CE600B3E0BE /* FirebaseFirestore */,
+				3B2125CD2B121D2600B3E0BE /* FirebaseAnalyticsSwift */,
+				3B2125CF2B121D2600B3E0BE /* FirebaseAppCheck */,
+				3B2125D12B121D2600B3E0BE /* FirebaseFirestoreSwift */,
+				3B2125D42B121D6400B3E0BE /* Markdown */,
+				3B2125D92B121D9300B3E0BE /* FirebaseRemoteConfig */,
+				3B2125DB2B121D9300B3E0BE /* FirebaseRemoteConfigSwift */,
+				3B40A36B2B1222EA00170041 /* Alamofire */,
 			);
 			productName = Yogelix;
 			productReference = 3BCC04C32B01901400FD1FC3 /* Yogelix.app */;
@@ -566,7 +574,9 @@
 			);
 			mainGroup = 3BCC04BA2B01901400FD1FC3;
 			packageReferences = (
-				3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3B2125D32B121D6400B3E0BE /* XCRemoteSwiftPackageReference "swift-markdown" */,
+				3B40A36A2B1222EA00170041 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3BCC04C42B01901400FD1FC3 /* Products */;
 			projectDirPath = "";
@@ -585,6 +595,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B347FAC2B117537004C2C1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,9 +631,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA4A6642B0D68130032936E /* NetworkManager.swift in Sources */,
-				3BA4A6602B0D61120032936E /* Secrets.swift in Sources */,
-				3BA4A6662B0D69880032936E /* OpenAIInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,7 +641,6 @@
 				3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */,
 				3BCC05122B01A48900FD1FC3 /* ChallengesView.swift in Sources */,
 				3BCC05202B01A72600FD1FC3 /* AdditionalDataViewModel.swift in Sources */,
-				3BCC050B2B01A3FE00FD1FC3 /* AIYogaPlanView.swift in Sources */,
 				3BDFE1442B026C62007FB23E /* SubscriptionService.swift in Sources */,
 				3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */,
 				3BCC04D32B01901500FD1FC3 /* Yogelix.xcdatamodeld in Sources */,
@@ -659,7 +666,6 @@
 				3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */,
 				3BE987422B0A2901005A7B62 /* FirestoreDatabase.swift in Sources */,
 				3B1F0D812B101B3100BD54FD /* HealthDataViewModel.swift in Sources */,
-				3B2EA7482B0C14BA00D46DA6 /* AdditionalDetailsView.swift in Sources */,
 				3B9DA82E2B0EAFE500480621 /* CardView.swift in Sources */,
 				3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */,
 				3B83F9532B03EC78001ADD11 /* ChatGPTService.swift in Sources */,
@@ -672,6 +678,7 @@
 				3B9DA82A2B0EAC7C00480621 /* DailyExercise.swift in Sources */,
 				3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */,
 				3BCC051A2B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift in Sources */,
+				3B40A36F2B12230400170041 /* OpenAINetworking.swift in Sources */,
 				3BCC05072B01A31F00FD1FC3 /* ProgressSnapshotView.swift in Sources */,
 				3BCC05182B01A6AE00FD1FC3 /* AIYogaPlanViewModel.swift in Sources */,
 				3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */,
@@ -908,7 +915,6 @@
 		3BCC04EF2B01901600FD1FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Yogelix/Yogelix.entitlements;
@@ -916,6 +922,7 @@
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = G9QU83M3D9;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yogelix/Info.plist;
@@ -944,7 +951,6 @@
 		3BCC04F02B01901600FD1FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Yogelix/Yogelix.entitlements;
@@ -952,6 +958,7 @@
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = G9QU83M3D9;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yogelix/Info.plist;
@@ -1104,7 +1111,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -1112,43 +1119,74 @@
 				minimumVersion = 10.18.0;
 			};
 		};
+		3B2125D32B121D6400B3E0BE /* XCRemoteSwiftPackageReference "swift-markdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-markdown";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+		3B40A36A2B1222EA00170041 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3B5469952B0CFF4B009130FD /* FirebaseAnalyticsSwift */ = {
+		3B2125C72B121CE600B3E0BE /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
+			package = 3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
-		3B5469982B0CFF6F009130FD /* FirebaseFirestoreSwift */ = {
+		3B2125C92B121CE600B3E0BE /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestoreSwift;
-		};
-		3B92DB072B0E6B8000D646A4 /* FirebaseRemoteConfig */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseRemoteConfig;
-		};
-		3B92DB092B0E6B8000D646A4 /* FirebaseRemoteConfigSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseRemoteConfigSwift;
-		};
-		3BE7841B2B04F45C00D1C91B /* FirebaseAppCheck */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAppCheck;
-		};
-		3BE7841D2B04F47300D1C91B /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		3BE7841F2B04F48000D1C91B /* FirebaseFirestore */ = {
+		3B2125CB2B121CE600B3E0BE /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3BE784162B04F45C00D1C91B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		3B2125CD2B121D2600B3E0BE /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		3B2125CF2B121D2600B3E0BE /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		3B2125D12B121D2600B3E0BE /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		3B2125D42B121D6400B3E0BE /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2125D32B121D6400B3E0BE /* XCRemoteSwiftPackageReference "swift-markdown" */;
+			productName = Markdown;
+		};
+		3B2125D92B121D9300B3E0BE /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		3B2125DB2B121D9300B3E0BE /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B2125C62B121CE600B3E0BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		3B40A36B2B1222EA00170041 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B40A36A2B1222EA00170041 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 

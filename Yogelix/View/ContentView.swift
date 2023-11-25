@@ -22,9 +22,9 @@ struct ContentView: View {
                     Label("Challenges", systemImage: "medal.fill")
                 }
             
-            AIYogaPlanView()
+            DailyWorkoutView()
                 .tabItem {
-                    Label("AI Yoga Plan", systemImage: "figure.yoga")
+                    Label("Daily Workout", systemImage: "figure.yoga")
                 }
             
             UserProfileView()
@@ -32,7 +32,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Account", systemImage: "person")
                 }
-            
         }
     }
 }

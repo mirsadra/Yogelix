@@ -2,41 +2,33 @@
 import SwiftUI
 
 struct DailyWorkoutView: View {
-
+    
+    @ObservedObject var openAINetworking = OpenAINetworking()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Today's Workout")
-                .font(.headline)
-                .padding(.bottom, 4)
-                .font(.title2)
-                .fontWeight(.bold)
-            
-            HStack {
-                
-                
-            }
-            .font(.caption)
-            .foregroundColor(.secondary)
-            
-            Button(action: {
-                // Action to start the workout
-            }) {
-                Text("Start Workout")
-                    .bold()
-                    .frame(maxWidth: .infinity)
+            VStack {
+                Text(openAINetworking.responseText) // Display the response text
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                
+                Spacer()
+                
+                Button("Send Request") {
+                    // Call the sendRequest method when the button is tapped
+                    openAINetworking.sendRequest()
+                }
+                .bold()
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
             }
         }
         .padding()
-        .background(Color.gray.opacity(0.1))
+        .background(Color.accentColor.opacity(0.1))
         .cornerRadius(10)
         .padding()
-        .onAppear {
-            
-        }
     }
 }
 

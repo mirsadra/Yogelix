@@ -14,6 +14,33 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
 }
 
+@main
+struct YogelixApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+//    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
+    @StateObject var viewModel = AuthenticationViewModel()  // @StateObject is source of truth
+    
+    
+    var body: some Scene {
+        WindowGroup {
+            if viewModel.authenticationState == .authenticated {
+                // Replace with your authenticated user view
+                ContentView(exercise: DailyExercise.sampleExercises)
+                    .environmentObject(viewModel)
+            } else {
+                // Login view for unauthenticated users
+                NavigationView {
+                    LoginView()
+                        .environmentObject(viewModel)
+                }
+            }
+        }
+    }
+}
+
+
+
+
 /*        // Firebase Emulator (Auth)
  Auth.auth().useEmulator(withHost: "localhost", port: 9099)
  
@@ -37,25 +64,3 @@ class AppDelegate: NSObject, UIApplicationDelegate {
  }
  }
  */
-
-@main
-struct YogelixApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var viewModel = AuthenticationViewModel()  // @StateObject is source of truth
-    
-    var body: some Scene {
-        WindowGroup {
-            if viewModel.authenticationState == .authenticated {
-                // Replace with your authenticated user view
-                ContentView(exercise: DailyExercise.sampleExercises)
-                    .environmentObject(viewModel)
-            } else {
-                // Login view for unauthenticated users
-                NavigationView {
-                    LoginView()
-                        .environmentObject(viewModel)
-                }
-            }
-        }
-    }
-}

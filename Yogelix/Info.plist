@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
+		</dict>
+	</array>
 	<key>NSHealthShareUsageDescription</key>
 	<string>Your workout data will be used to suggest personalized exercise routines and provide insights into your fitness journey. By analyzing your health records, Yogelix can offer tailored recommendations and adapt to your evolving fitness needs. We ensure the utmost privacy and security in handling your health data and use it solely to enhance your personal fitness experience.</string>
 	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>

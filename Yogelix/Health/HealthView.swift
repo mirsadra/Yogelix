@@ -12,17 +12,26 @@ struct HealthView: View {
                 HStack(spacing: 15) {
                     OverviewCard(title: "Yoga", subtitle: "45 min", imageName: "yoga")
                     OverviewCard(title: "Steps", subtitle: "\(viewModel.stepsData) Steps", imageName: "steps")
-                    OverviewCard(title: "Sleep", subtitle: "7h 30m", imageName: "sleep")
+                    OverviewCard(title: "Sleep", subtitle: "\(viewModel.sleepData)", imageName: "sleep")
                 }
-
+                
                 // Detailed Data Section
                 HeartRateGraphView(heartRateData: viewModel.heartRateData)
+                
+                // Sleep Data Visualization
+                SleepDataView(sleepData: viewModel.sleepData)
 
+                
+                // Body Measurements Card
+                if let bodyMeasurements = viewModel.bodyMeasurements {
+                    BodyMeasurementsView(bodyMeasurements: bodyMeasurements)
+                }
+                
                 // Women's Health Section
                 WomenHealthSection()
-
+                
                 // Mindfulness and Meditation Section
-                MindfulnessView()
+                MindfulnessView(mindfulnessMinutes: viewModel.mindfulnessMinutes)
             }
             .padding()
         }
@@ -34,7 +43,7 @@ struct OverviewCard: View {
     var title: String
     var subtitle: String
     var imageName: String
-
+    
     var body: some View {
         VStack {
             Image(systemName: imageName)
@@ -54,7 +63,7 @@ struct OverviewCard: View {
 
 struct HeartRateGraphView: View {
     var heartRateData: [HeartRateData]
-
+    
     var body: some View {
         VStack {
             Text("Heart Rate")
@@ -90,17 +99,68 @@ struct WomenHealthSection: View {
 }
 
 struct MindfulnessView: View {
+    var mindfulnessMinutes: Int
+    
     var body: some View {
         VStack {
             Text("Mindfulness")
                 .font(.headline)
-            // Placeholder for Mindfulness Data
-            Rectangle()
-                .fill(Color.green.opacity(0.3))
-                .frame(height: 100)
+            Chart {
+                BarMark(
+                    x: .value("Day", "Today"),
+                    y: .value("Minutes", mindfulnessMinutes)
+                )
+            }
+            .frame(height: 150)
         }
         .padding()
         .background(Color.gray.opacity(0.2))
+        .cornerRadius(10)
+    }
+}
+
+struct SleepDataView: View {
+    var sleepData: [SleepData]
+
+    var body: some View {
+        VStack {
+            Text("Sleep Analysis")
+                .font(.headline)
+            Chart(sleepData) { data in
+                BarMark(
+                    x: .value("Date", data.start, unit: .day),
+                    y: .value("Duration", data.duration)
+                )
+            }
+            .frame(height: 150)
+        }
+        .padding()
+        .background(Color.blue.opacity(0.2))
+        .cornerRadius(10)
+    }
+}
+
+struct BodyMeasurementsView: View {
+    var bodyMeasurements: BodyMeasurements
+
+    var body: some View {
+        VStack {
+            Text("Body Measurements")
+                .font(.headline)
+            HStack {
+                VStack {
+                    Text("Weight")
+                    Text("\(bodyMeasurements.weight, specifier: "%.1f") kg")
+                }
+                Divider()
+                VStack {
+                    Text("Height")
+                    Text("\(bodyMeasurements.height, specifier: "%.2f") m")
+                }
+            }
+        }
+        .padding()
+        .background(Color.orange.opacity(0.2))
         .cornerRadius(10)
     }
 }
