@@ -27,6 +27,9 @@
 		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
 		3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B40A36B2B1222EA00170041 /* Alamofire */; };
 		3B40A36F2B12230400170041 /* OpenAINetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A36E2B12230400170041 /* OpenAINetworking.swift */; };
+		3B40A3752B126D7400170041 /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A3742B126D7400170041 /* ActivityRingView.swift */; };
+		3B40A3792B12858600170041 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B40A3782B12858600170041 /* Storyboard.storyboard */; };
+		3B40A37B2B12863200170041 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A37A2B12863200170041 /* TableViewController.swift */; };
 		3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469892B0CFC5B009130FD /* AuthenticationView.swift */; };
 		3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */; };
 		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
@@ -135,6 +138,9 @@
 		3B3E13B42B0A6B67003F8E78 /* YogaPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPose.swift; sourceTree = "<group>"; };
 		3B3E13B62B0A6C7F003F8E78 /* pose-list-with-meta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pose-list-with-meta.json"; sourceTree = "<group>"; };
 		3B40A36E2B12230400170041 /* OpenAINetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAINetworking.swift; sourceTree = "<group>"; };
+		3B40A3742B126D7400170041 /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
+		3B40A3782B12858600170041 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		3B40A37A2B12863200170041 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3B5469892B0CFC5B009130FD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		3B5469912B0CFD40009130FD /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -277,6 +283,9 @@
 				3B8920D12B0F8378000A61A2 /* HealthView.swift */,
 				3B8920D62B0F8D88000A61A2 /* HealthData.xcdatamodeld */,
 				3B1F0D802B101B3100BD54FD /* HealthDataViewModel.swift */,
+				3B40A3742B126D7400170041 /* ActivityRingView.swift */,
+				3B40A3782B12858600170041 /* Storyboard.storyboard */,
+				3B40A37A2B12863200170041 /* TableViewController.swift */,
 			);
 			path = Health;
 			sourceTree = "<group>";
@@ -607,6 +616,7 @@
 				3BCC04CE2B01901500FD1FC3 /* Preview Assets.xcassets in Resources */,
 				3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */,
 				3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */,
+				3B40A3792B12858600170041 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +661,7 @@
 				3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */,
 				3BDFE13C2B026C21007FB23E /* UserController.swift in Sources */,
 				3BCC05162B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift in Sources */,
+				3B40A3752B126D7400170041 /* ActivityRingView.swift in Sources */,
 				3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */,
 				3BCC05032B019B4A00FD1FC3 /* HomeView.swift in Sources */,
 				3BDADF192B0E395B0023B4AC /* AccountView.swift in Sources */,
@@ -683,6 +694,7 @@
 				3BCC05182B01A6AE00FD1FC3 /* AIYogaPlanViewModel.swift in Sources */,
 				3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */,
 				3BDFE1422B026C58007FB23E /* DataService.swift in Sources */,
+				3B40A37B2B12863200170041 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,6 +939,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yogelix/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yogelix;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To provide you with a truly personalized yoga experience, Yogelix requests access to read certain health data from your HealthKit store. By analyzing this data, Yogelix's advanced AI, powered by OpenAI's GPT-4, can tailor your yoga routines to align perfectly with your current fitness level, health goals, and progress. This insight allows us to suggest the most effective and enjoyable workouts for you. Rest assured, your privacy is our top priority. We use this data solely to enhance your fitness experience and never share it without your consent.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Yogelix is dedicated to enriching your fitness journey by intelligently tracking and adapting to your progress. For this, we request permission to save information about your yoga workouts and associated health metrics, like heart rate during exercises, to your HealthKit store. This integration allows us to monitor your progress, adjust future routines for improved effectiveness, and ensure you're always on the right track towards your health goals. The data saved will also enable comprehensive fitness tracking, helping you visualize your achievements over time. Your data is always handled with the utmost respect for your privacy and security, ensuring a seamless and personalized workout experience with Yogelix.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -963,6 +977,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yogelix/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yogelix;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "To provide you with a truly personalized yoga experience, Yogelix requests access to read certain health data from your HealthKit store. By analyzing this data, Yogelix's advanced AI, powered by OpenAI's GPT-4, can tailor your yoga routines to align perfectly with your current fitness level, health goals, and progress. This insight allows us to suggest the most effective and enjoyable workouts for you. Rest assured, your privacy is our top priority. We use this data solely to enhance your fitness experience and never share it without your consent.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Yogelix is dedicated to enriching your fitness journey by intelligently tracking and adapting to your progress. For this, we request permission to save information about your yoga workouts and associated health metrics, like heart rate during exercises, to your HealthKit store. This integration allows us to monitor your progress, adjust future routines for improved effectiveness, and ensure you're always on the right track towards your health goals. The data saved will also enable comprehensive fitness tracking, helping you visualize your achievements over time. Your data is always handled with the utmost respect for your privacy and security, ensuring a seamless and personalized workout experience with Yogelix.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

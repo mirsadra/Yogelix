@@ -3,67 +3,49 @@ import Foundation
 import HealthKit
 
 class HealthDataViewModel: ObservableObject {
-    @Published var heartRateData: [HeartRateData] = []
-    @Published var stepsData = ""
-    @Published var distanceData: [DistanceData] = []
-    @Published var sleepData: [SleepData] = []
-    @Published var mindfulnessMinutes: Int = 0
-    @Published var bodyMeasurements: BodyMeasurements?
-    
-    private var healthStore = HKHealthStore()
-    private var healthKitManager = HealthKitManager()
+    private let healthKitManager = HealthKitManager()
+    @Published var activitySummary = HKActivitySummary()
     
     init() {
-        fetchAllData()
-    }
-    
-    private func fetchAllData() {
-        healthKitManager.fetchHeartRateData { [weak self] data in
-            DispatchQueue.main.async {
-                self?.heartRateData = data
-            }
+            requestAuthorization()
         }
-        
-        healthKitManager.fetchDailyStepCount(forToday: Date(), healthStore: healthStore) { step in
-            if step != 0.0 {
-                DispatchQueue.main.async {
-                    self.stepsData = String(format: "%.0f", step) // Update to store average steps
+    
+    func requestAuthorization() {
+            healthKitManager.requestAuthorization { [weak self] success, error in
+                if success {
+                    self?.loadActivitySummary()
+                } else if let error = error {
+                    print("Authorization failed with error: \(error.localizedDescription)")
                 }
             }
         }
-        
-        healthKitManager.fetchDistanceData { [weak self] data in
-            DispatchQueue.main.async {
-                self?.distanceData = data
-            }
-        }
-
-        fetchSleepData()
-        fetchMindfulnessData()
-        fetchBodyMeasurements()
-    }
     
-    private func fetchSleepData() {
-        healthKitManager.fetchSleepData { [weak self] sleepData in
-            DispatchQueue.main.async {
-                self?.sleepData = sleepData
+    func loadActivitySummary() {
+        let group = DispatchGroup()
+        
+        group.enter()
+        healthKitManager.fetchTotalActiveEnergyBurned { [weak self] totalCalories, _ in
+            defer { group.leave() }
+            if let totalCalories = totalCalories, let self = self {
+                let quantity = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: totalCalories)
+                self.activitySummary.activeEnergyBurned = quantity
+                self.activitySummary.activeEnergyBurnedGoal = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: 500) // Set a goal or fetch from user preferences
             }
         }
-    }
-
-    private func fetchMindfulnessData() {
-        healthKitManager.fetchMindfulnessData { [weak self] totalMinutes in
-            DispatchQueue.main.async {
-                self?.mindfulnessMinutes = totalMinutes
+        
+        group.enter()
+        healthKitManager.fetchTotalExerciseMinutes { [weak self] totalMinutes, _ in
+            defer { group.leave() }
+            if let totalMinutes = totalMinutes, let self = self {
+                let quantity = HKQuantity(unit: HKUnit.minute(), doubleValue: totalMinutes)
+                self.activitySummary.appleExerciseTime = quantity
+                self.activitySummary.appleExerciseTimeGoal = HKQuantity(unit: HKUnit.minute(), doubleValue: 30) // Set a goal or fetch from user preferences
             }
         }
-    }
-
-    private func fetchBodyMeasurements() {
-        healthKitManager.fetchBodyMeasurements { [weak self] bodyMeasurements in
-            DispatchQueue.main.async {
-                self?.bodyMeasurements = bodyMeasurements
-            }
+        
+        group.notify(queue: .main) { [weak self] in
+            // Update the UI here if needed
+            self?.objectWillChange.send()
         }
     }
 

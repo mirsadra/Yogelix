@@ -2,18 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLName</key>
-			<string></string>
-		</dict>
-	</array>
-	<key>NSHealthShareUsageDescription</key>
-	<string>Your workout data will be used to suggest personalized exercise routines and provide insights into your fitness journey. By analyzing your health records, Yogelix can offer tailored recommendations and adapt to your evolving fitness needs. We ensure the utmost privacy and security in handling your health data and use it solely to enhance your personal fitness experience.</string>
-	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
-	<string>Yogelix requires access to your health records to personalize your exercise routines and provide tailored fitness recommendations based on your health history. Your data will be used solely for improving your experience with our personalized fitness programs.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Saving your workout data to the Yogelix Health Records helps in tracking your fitness progress over time. This allows for a comprehensive analysis of your exercise routines, enabling more accurate and personalized fitness recommendations. Your health data is always treated with the utmost confidentiality and is used exclusively for enhancing your fitness journey with Yogelix.</string>
+	<string>Yogelix is dedicated to enriching your fitness journey by intelligently tracking and adapting to your progress. For this, we request permission to save information about your yoga workouts and associated health metrics, like heart rate during exercises, to your HealthKit store. This integration allows us to monitor your progress, adjust future routines for improved effectiveness, and ensure you&apos;re always on the right track towards your health goals. The data saved will also enable comprehensive fitness tracking, helping you visualize your achievements over time. Your data is always handled with the utmost respect for your privacy and security, ensuring a seamless and personalized workout experience with Yogelix.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>To provide you with a truly personalized yoga experience, Yogelix requests access to read certain health data from your HealthKit store. By analyzing this data, Yogelix&apos;s advanced AI, powered by OpenAI&apos;s GPT-4, can tailor your yoga routines to align perfectly with your current fitness level, health goals, and progress. This insight allows us to suggest the most effective and enjoyable workouts for you. Rest assured, your privacy is our top priority. We use this data solely to enhance your fitness experience and never share it without your consent.</string>
 </dict>
 </plist>
