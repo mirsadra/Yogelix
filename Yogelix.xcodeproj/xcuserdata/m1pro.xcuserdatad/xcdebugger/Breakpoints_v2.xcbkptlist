@@ -3,4 +3,118 @@
    uuid = "AAAEB1F7-55BF-4FA9-8E3D-8C118920E75C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3D73FFC-07AE-4CD0-9040-8FABAE89127E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yogelix/Health/HealthKitManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "readHeight(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C3D73FFC-07AE-4CD0-9040-8FABAE89127E - aade94dd51281cd5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yogelix.HealthKitManager.readHeight(completion: (Swift.Optional&lt;__C.HKQuantitySample&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Yogelix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/m1pro/appledev/Yogelix/Yogelix/Health/HealthKitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "C3D73FFC-07AE-4CD0-9040-8FABAE89127E - aade94dd51281cd5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yogelix.HealthKitManager.readHeight(completion: (Swift.Optional&lt;__C.HKQuantitySample&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Yogelix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/m1pro/appledev/Yogelix/Yogelix/Health/HealthKitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F69A9984-C13A-417D-9128-E21C716BE32A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yogelix/Health/HealthDataViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "loadHeight()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8A4E1F5-223E-43E7-AF11-11A6A770E71B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Yogelix/Health/HealthKitManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "readHeight(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B8A4E1F5-223E-43E7-AF11-11A6A770E71B - aade94dd51281cf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yogelix.HealthKitManager.readHeight(completion: (Swift.Optional&lt;__C.HKQuantitySample&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Yogelix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/m1pro/appledev/Yogelix/Yogelix/Health/HealthKitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "B8A4E1F5-223E-43E7-AF11-11A6A770E71B - aade94dd51281cf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Yogelix.HealthKitManager.readHeight(completion: (Swift.Optional&lt;__C.HKQuantitySample&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Yogelix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/m1pro/appledev/Yogelix/Yogelix/Health/HealthKitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

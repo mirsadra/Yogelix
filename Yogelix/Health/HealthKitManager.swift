@@ -7,7 +7,7 @@ class HealthKitManager {
     // MARK: - Request permission from the user
     func requestAuthorization(completion: @escaping (Bool, Error?) -> Void) {
         // Safely unwrap HKSampleType and HKCharacteristicType
-        guard let bodyMassType = HKObjectType.quantityType(forIdentifier: .bodyMass),
+        guard let bodyMassIndexType = HKObjectType.quantityType(forIdentifier: .bodyMassIndex),
               let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate),
               let heightType = HKObjectType.quantityType(forIdentifier: .height),
               let walkingRunningDistanceType = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning),
@@ -22,7 +22,7 @@ class HealthKitManager {
         
         let sampleTypes: Set<HKSampleType> = [
             HKObjectType.workoutType(),
-            bodyMassType,
+            bodyMassIndexType,
             heartRateType,
             heightType,
             walkingRunningDistanceType,
@@ -38,16 +38,6 @@ class HealthKitManager {
         
         let readTypes: Set<HKObjectType> = Set(sampleTypes).union(Set(characteristicTypes))
         
-        // Specify only the types you need to write
-        guard let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate) else {
-            completion(false, NSError(domain: "HealthKit", code: 101, userInfo: [NSLocalizedDescriptionKey: "Unable to create heart rate type"]))
-            return
-        }
-        guard let activeEnergyBurnedType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
-            completion(false, NSError(domain: "HealthKit", code: 102, userInfo: [NSLocalizedDescriptionKey: "Unable to create active energy burned type"]))
-            return
-        }
-        
         let writeTypes: Set<HKSampleType> = [
             HKObjectType.workoutType(), // For writing yoga workouts
             heartRateType,          // For writing heart rate data
@@ -58,13 +48,13 @@ class HealthKitManager {
             print("Not on the main thread. Dispatching requestAuthorization to the main thread.")
             DispatchQueue.main.async {
                 self.healthStore.requestAuthorization(toShare: writeTypes, read: readTypes) { success, error in
-                        completion(success, error)
-                    }
+                    completion(success, error)
+                }
             }
         } else {
             self.healthStore.requestAuthorization(toShare: writeTypes, read: readTypes) { success, error in
-                    completion(success, error)
-                }
+                completion(success, error)
+            }
         }
     }
     
@@ -160,21 +150,21 @@ class HealthKitManager {
     
     // Read body mass
     func readBodyMass(completion: @escaping (HKQuantitySample?, Error?) -> Void) {
-        guard let bodyMassType = HKSampleType.quantityType(forIdentifier: .bodyMass) else {
+        guard let bodyMassIndexType = HKSampleType.quantityType(forIdentifier: .bodyMassIndex) else {
             completion(nil, NSError(domain: "HealthKit", code: 200, userInfo: [NSLocalizedDescriptionKey: "Body Mass type is not available"]))
             return
         }
         
         let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        let query = HKSampleQuery(sampleType: bodyMassType, predicate: mostRecentPredicate, limit: 1, sortDescriptors: [sortDescriptor]) { _, samples, error in
+        let query = HKSampleQuery(sampleType: bodyMassIndexType, predicate: mostRecentPredicate, limit: 1, sortDescriptors: [sortDescriptor]) { _, samples, error in
             completion(samples?.first as? HKQuantitySample, error)
         }
-        
         healthStore.execute(query)
     }
     
-    // Read heart rate
+
+    // MARK: - Read Heart & Calculations
     func readHeartRate(completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
         guard let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
             completion(nil, NSError(domain: "HealthKit", code: 201, userInfo: [NSLocalizedDescriptionKey: "Heart Rate type is not available"]))
@@ -190,9 +180,9 @@ class HealthKitManager {
         healthStore.execute(query)
     }
     
-    // Read height
+    // MARK: - Read Height
     func readHeight(completion: @escaping (HKQuantitySample?, Error?) -> Void) {
-        guard let heightType = HKSampleType.quantityType(forIdentifier: .height) else {
+        guard let heightType = HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height) else {
             completion(nil, NSError(domain: "HealthKit", code: 202, userInfo: [NSLocalizedDescriptionKey: "Height type is not available"]))
             return
         }
@@ -202,24 +192,267 @@ class HealthKitManager {
         let query = HKSampleQuery(sampleType: heightType, predicate: mostRecentPredicate, limit: 1, sortDescriptors: [sortDescriptor]) { _, samples, error in
             completion(samples?.first as? HKQuantitySample, error)
         }
-        
         healthStore.execute(query)
     }
     
-    // Read sleep analysis
-    func readSleepAnalysis(completion: @escaping ([HKCategorySample]?, Error?) -> Void) {
-        guard let sleepAnalysisType = HKSampleType.categoryType(forIdentifier: .sleepAnalysis) else {
-            completion(nil, NSError(domain: "HealthKit", code: 203, userInfo: [NSLocalizedDescriptionKey: "Sleep Analysis type is not available"]))
+    func readHeartRateWeeklyAverage(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        guard let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
+            completion(nil, NSError(domain: "HealthKit", code: 202, userInfo: [NSLocalizedDescriptionKey: "Heart Rate type is not available"]))
+            return
+        }
+        
+        let calendar = Calendar.current
+        let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: Date())!
+        
+        let predicate = HKQuery.predicateForSamples(withStart: sevenDaysAgo, end: Date(), options: .strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)
+        
+        let query = HKSampleQuery(sampleType: heartRateType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) { query, samples, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            var dailyHeartRateAverages: [(Date, Double)] = []
+            var currentDate: Date?
+            var totalHeartRate: Double = 0
+            var count: Double = 0
+            
+            if let heartRateSamples = samples as? [HKQuantitySample] {
+                for sample in heartRateSamples {
+                    if let date = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: sample.startDate) {
+                        if currentDate != date {
+                            if let current = currentDate {
+                                let average = totalHeartRate / count
+                                dailyHeartRateAverages.append((current, average))
+                            }
+                            
+                            currentDate = date
+                            totalHeartRate = 0
+                            count = 0
+                        }
+                        
+                        totalHeartRate += sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+                        count += 1
+                    }
+                }
+                
+                if let current = currentDate {
+                    let average = totalHeartRate / count
+                    dailyHeartRateAverages.append((current, average))
+                }
+            }
+            
+            completion(dailyHeartRateAverages, nil)
+        }
+        healthStore.execute(query)
+    }
+    
+    // Analyze trends over time for heart rate (e.g., monthly average)
+    func readMonthlyHeartRateTrends(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        guard let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate) else {
+            completion(nil, NSError(domain: "HealthKit", code: 203, userInfo: [NSLocalizedDescriptionKey: "Heart Rate type is not available"]))
+            return
+        }
+        
+        // Set up the date components for the query
+        var interval = DateComponents()
+        interval.month = 1
+        
+        let calendar = Calendar.current
+        let currentDate = Date()
+        let startDate = calendar.date(byAdding: .year, value: -1, to: currentDate) // 1 year ago
+        guard let anchorDate = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: currentDate) else {
+            completion(nil, NSError(domain: "HealthKit", code: 204, userInfo: [NSLocalizedDescriptionKey: "Could not create anchor date for query"]))
+            return
+        }
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: currentDate, options: .strictStartDate)
+        
+        // Create the query to calculate the monthly averages
+        let query = HKStatisticsCollectionQuery(quantityType: heartRateType,
+                                                quantitySamplePredicate: predicate,
+                                                options: [.discreteAverage],
+                                                anchorDate: anchorDate,
+                                                intervalComponents: interval)
+        
+        // Set the results handler
+        query.initialResultsHandler = { query, results, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            var monthlyAverages: [(Date, Double)] = []
+            let endDate = Date()
+            
+            results?.enumerateStatistics(from: startDate!, to: endDate) { statistics, stop in
+                if let averageQuantity = statistics.averageQuantity() {
+                    let averageHeartRate = averageQuantity.doubleValue(for: HKUnit(from: "count/min"))
+                    let date = statistics.startDate
+                    monthlyAverages.append((date, averageHeartRate))
+                }
+            }
+            
+            completion(monthlyAverages, nil)
+        }
+        
+        // Execute the query
+        healthStore.execute(query)
+    }
+    
+    // Calculate Heart Rate Recovery (HRR)
+    func calculateHeartRateRecovery(peakHeartRate: Double, recoveryHeartRate: Double) -> Result<Double, Error> {
+        // Ensure that the peak heart rate is higher than the recovery heart rate
+        guard peakHeartRate > recoveryHeartRate else {
+            return .failure(NSError(domain: "HealthKitManager",
+                                    code: 300,
+                                    userInfo: [NSLocalizedDescriptionKey: "Peak heart rate must be greater than recovery heart rate."]))
+        }
+        
+        // Calculate the heart rate recovery
+        let heartRateRecovery = peakHeartRate - recoveryHeartRate
+        
+        // Return the result
+        return .success(heartRateRecovery)
+    }
+    
+    
+    // Calculate Resting Heart Rate (RHR)
+    func readRestingHeartRate(completion: @escaping (Double?, Error?) -> Void) {
+        guard let restingHeartRateType = HKObjectType.quantityType(forIdentifier: .restingHeartRate) else {
+            completion(nil, NSError(domain: "HealthKit", code: 203, userInfo: [NSLocalizedDescriptionKey: "Resting Heart Rate type is not available"]))
             return
         }
         
         let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        let query = HKSampleQuery(sampleType: sleepAnalysisType, predicate: mostRecentPredicate, limit: 10, sortDescriptors: [sortDescriptor]) { _, samples, error in
-            completion(samples as? [HKCategorySample], error)
+        let query = HKSampleQuery(sampleType: restingHeartRateType, predicate: mostRecentPredicate, limit: 1, sortDescriptors: [sortDescriptor]) { _, samples, error in
+            guard let samples = samples, let mostRecentSample = samples.first as? HKQuantitySample else {
+                completion(nil, error)
+                return
+            }
+            
+            let restingHeartRate = mostRecentSample.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            completion(restingHeartRate, nil)
         }
         
         healthStore.execute(query)
+    }
+    
+    // Detect anomalies in heart rate data
+    func detectAnomaliesInHeartRateData(heartRateSamples: [HKQuantitySample], completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
+        let heartRates = heartRateSamples.map { $0.quantity.doubleValue(for: HKUnit(from: "count/min")) }
+        let meanHeartRate = heartRates.reduce(0, +) / Double(heartRates.count)
+        let squaredDiffs = heartRates.map { ($0 - meanHeartRate) * ($0 - meanHeartRate) }
+        let varianceHeartRate = squaredDiffs.reduce(0, +) / Double(heartRates.count)
+        let standardDeviation = sqrt(varianceHeartRate)
+        
+        let anomalyThreshold = standardDeviation * 3 // This is a common threshold for anomaly detection
+        let anomalies = heartRateSamples.filter {
+            let heartRateValue = $0.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            return abs(heartRateValue - meanHeartRate) > anomalyThreshold
+        }
+        
+        completion(anomalies, nil)
+    }
+    
+    // Correlate Heart Rate with Sleep Analysis
+    func correlateHeartRateWithSleep(heartRateSamples: [HKQuantitySample], sleepSamples: [HKCategorySample], completion: @escaping (Double?, Error?) -> Void) {
+        // Extract heart rates and sleep values with corresponding dates
+        let heartRates = heartRateSamples.map { ($0.startDate, $0.quantity.doubleValue(for: HKUnit(from: "count/min"))) }
+        let sleepValues = sleepSamples.map { ($0.startDate, $0.value == HKCategoryValueSleepAnalysis.inBed.rawValue ? 1 : 0) }
+        
+        // Ensure we have data to compare
+        guard !heartRates.isEmpty && !sleepValues.isEmpty else {
+            completion(nil, NSError(domain: "HealthKitManager", code: 0, userInfo: [NSLocalizedDescriptionKey: "Insufficient data for correlation analysis"]))
+            return
+        }
+        
+        // Match heart rate and sleep data by date
+        var matchedData: [(heartRate: Double, sleep: Int)] = []
+        for heartRate in heartRates {
+            for sleep in sleepValues where Calendar.current.isDate(heartRate.0, inSameDayAs: sleep.0) {
+                matchedData.append((heartRate: heartRate.1, sleep: sleep.1))
+                break
+            }
+        }
+        
+        // Calculate Pearson correlation coefficient
+        let n = Double(matchedData.count)
+        let sum1 = matchedData.map { $0.heartRate }.reduce(0, +)
+        let sum2 = matchedData.map { Double($0.sleep) }.reduce(0, +)
+        let sum1Sq = matchedData.map { $0.heartRate * $0.heartRate }.reduce(0, +)
+        let sum2Sq = matchedData.map { Double($0.sleep) * Double($0.sleep) }.reduce(0, +)
+        let pSum = matchedData.map { $0.heartRate * Double($0.sleep) }.reduce(0, +)
+        let num = pSum - (sum1 * sum2 / n)
+        let den = sqrt((sum1Sq - pow(sum1, 2) / n) * (sum2Sq - pow(sum2, 2) / n))
+        
+        if den == 0 {
+            completion(nil, NSError(domain: "HealthKitManager", code: 0, userInfo: [NSLocalizedDescriptionKey: "Denominator is zero, correlation cannot be computed"]))
+            return
+        }
+        
+        let correlation = num / den
+        completion(correlation, nil)
+    }
+    
+
+    
+    // MARK: - Read Sleep Analysis
+    // Read sleep analysis & calculate sleep metrics
+    func readSleepAnalysis(completion: @escaping ([HKCategorySample]?, Error?) -> Void) {
+        guard let sleepAnalysisType = HKSampleType.categoryType(forIdentifier: .sleepAnalysis) else {
+            completion(nil, NSError(domain: "HealthKit", code: 203, userInfo: [NSLocalizedDescriptionKey: "Sleep Analysis type is not available"]))
+            return
+        }
+        let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: sleepAnalysisType, predicate: mostRecentPredicate, limit: 10, sortDescriptors: [sortDescriptor]) { _, samples, error in
+            guard let samples = samples as? [HKCategorySample], error == nil else {
+                completion(nil, error)
+                return
+            }
+            let sleepMetrics = self.calculateSleepMetrics(from: samples)
+            print("Sleep Quality: \(sleepMetrics.sleepQuality)")
+            print("Sleep Efficiency: \(sleepMetrics.sleepEfficiency)")
+            print("Number of Interruptions: \(sleepMetrics.interruptions)")
+            
+            completion(samples, nil)
+        }
+        healthStore.execute(query)
+    }
+    
+    func calculateSleepMetrics(from samples: [HKCategorySample]) -> (sleepQuality: Double, sleepEfficiency: Double, interruptions: Int) {
+        var totalSleepTime: TimeInterval = 0
+        var totalTimeInBed: TimeInterval = 0
+        var interruptions: Int = 0
+        var lastSleepEnd: Date? = nil
+        
+        for sample in samples {
+            let duration = sample.endDate.timeIntervalSince(sample.startDate)
+            switch sample.value {
+                case HKCategoryValueSleepAnalysis.asleepUnspecified.rawValue:
+                    totalSleepTime += duration
+                    if let lastEnd = lastSleepEnd, sample.startDate.timeIntervalSince(lastEnd) > 0 {
+                        interruptions += 1
+                    }
+                    lastSleepEnd = sample.endDate
+                case HKCategoryValueSleepAnalysis.inBed.rawValue:
+                    totalTimeInBed += duration
+                default: break
+            }
+        }
+        
+        // Sleep Quality is the ratio of the total sleep time to the total time in bed.
+        let sleepQuality = (totalTimeInBed > 0) ? (totalSleepTime / totalTimeInBed) : 0
+        
+        // Sleep Efficiency is the percentage of time in bed that the user is actually asleep.
+        let sleepEfficiency = (totalTimeInBed > 0) ? (totalSleepTime / totalTimeInBed) * 100 : 0
+        
+        // Number of Interruptions during the sleep. Assumes any time gap between asleep samples is an interruption.
+        
+        return (sleepQuality, sleepEfficiency, interruptions)
     }
     
     // Read Walking/Running Distance

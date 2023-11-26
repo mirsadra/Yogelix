@@ -59,7 +59,7 @@
 		<key>Yogelix.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>YogelixAPIFramework.xcscheme_^#shared#^_</key>
 		<dict>
@@ -69,7 +69,7 @@
 		<key>YogelixSecrets.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>
