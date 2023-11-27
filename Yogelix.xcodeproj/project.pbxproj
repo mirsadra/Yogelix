@@ -82,6 +82,9 @@
 		3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */; };
 		3BE784232B04F4BA00D1C91B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94C2B03B6DD001ADD11 /* CoreData.framework */; };
 		3BE987422B0A2901005A7B62 /* FirestoreDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE987412B0A2901005A7B62 /* FirestoreDatabase.swift */; };
+		3BF5476C2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5476B2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift */; };
+		3BF5476E2B148A6F0073BD18 /* WorkoutStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5476D2B148A6F0073BD18 /* WorkoutStore.swift */; };
+		3BF547702B148FFE0073BD18 /* YogaCustomWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5476F2B148FFE0073BD18 /* YogaCustomWorkoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +206,9 @@
 		3BDFE1432B026C62007FB23E /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BE987412B0A2901005A7B62 /* FirestoreDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDatabase.swift; sourceTree = "<group>"; };
+		3BF5476B2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWorkoutConfiguration+Displaying.swift"; sourceTree = "<group>"; };
+		3BF5476D2B148A6F0073BD18 /* WorkoutStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStore.swift; sourceTree = "<group>"; };
+		3BF5476F2B148FFE0073BD18 /* YogaCustomWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaCustomWorkoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +301,7 @@
 		3B8920CC2B0F5C08000A61A2 /* Health */ = {
 			isa = PBXGroup;
 			children = (
+				3BF5476A2B14882B0073BD18 /* WorkoutKitData */,
 				3B33FD532B1376EB00DB2283 /* HealthData */,
 				3B8920CD2B0F5D1A000A61A2 /* HealthKitManager.swift */,
 				3B8920D12B0F8378000A61A2 /* HealthView.swift */,
@@ -461,6 +468,16 @@
 				3BCC05222B01A73800FD1FC3 /* UpgradeToPremiumViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		3BF5476A2B14882B0073BD18 /* WorkoutKitData */ = {
+			isa = PBXGroup;
+			children = (
+				3BF5476B2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift */,
+				3BF5476D2B148A6F0073BD18 /* WorkoutStore.swift */,
+				3BF5476F2B148FFE0073BD18 /* YogaCustomWorkoutView.swift */,
+			);
+			path = WorkoutKitData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -669,9 +686,11 @@
 				3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */,
 				3BAF8EFE2B13D25500E5436F /* PicView.swift in Sources */,
 				3BCC05122B01A48900FD1FC3 /* ChallengesView.swift in Sources */,
+				3BF547702B148FFE0073BD18 /* YogaCustomWorkoutView.swift in Sources */,
 				3BCC05202B01A72600FD1FC3 /* AdditionalDataViewModel.swift in Sources */,
 				3BDFE1442B026C62007FB23E /* SubscriptionService.swift in Sources */,
 				3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */,
+				3BF5476E2B148A6F0073BD18 /* WorkoutStore.swift in Sources */,
 				3BCC04D32B01901500FD1FC3 /* Yogelix.xcdatamodeld in Sources */,
 				3B9DA8322B0EBE8100480621 /* DailyExerciseView.swift in Sources */,
 				3B8920D82B0F8D89000A61A2 /* HealthData.xcdatamodeld in Sources */,
@@ -709,6 +728,7 @@
 				3B9DA82A2B0EAC7C00480621 /* DailyExercise.swift in Sources */,
 				3BAF8F002B13D79300E5436F /* HealthCardView.swift in Sources */,
 				3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */,
+				3BF5476C2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift in Sources */,
 				3B40A37D2B12B43000170041 /* MetricCardView.swift in Sources */,
 				3BCC051A2B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift in Sources */,
 				3B40A36F2B12230400170041 /* OpenAINetworking.swift in Sources */,

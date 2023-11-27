@@ -149,16 +149,26 @@ class HealthKitManager {
     }
     
     // Read body mass
-    func readBodyMass(completion: @escaping (HKQuantitySample?, Error?) -> Void) {
-        guard let bodyMassIndexType = HKSampleType.quantityType(forIdentifier: .bodyMassIndex) else {
-            completion(nil, NSError(domain: "HealthKit", code: 200, userInfo: [NSLocalizedDescriptionKey: "Body Mass type is not available"]))
+    func readBodyMassIndex(completion: @escaping (Double?, Error?) -> Void) {
+        guard let bodyMassIndexType = HKQuantityType.quantityType(forIdentifier: .bodyMassIndex) else {
+            completion(nil, NSError(domain: "HealthKit", code: 200, userInfo: [NSLocalizedDescriptionKey: "Body Mass Index type is not available"]))
             return
         }
         
         let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
         let query = HKSampleQuery(sampleType: bodyMassIndexType, predicate: mostRecentPredicate, limit: 1, sortDescriptors: [sortDescriptor]) { _, samples, error in
-            completion(samples?.first as? HKQuantitySample, error)
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+
+            if let bmiSample = samples?.first as? HKQuantitySample {
+                let bmiValue = bmiSample.quantity.doubleValue(for: HKUnit(from: ""))
+                completion(bmiValue, nil)
+            } else {
+                completion(nil, nil) // No samples found
+            }
         }
         healthStore.execute(query)
     }

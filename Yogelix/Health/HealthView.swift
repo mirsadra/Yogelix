@@ -123,7 +123,7 @@ struct HealthView: View {
             .navigationTitle("Health Metrics")
         }
         .onAppear {
-            viewModel.loadAllData()
+            viewModel.fetchAllData()
         }
     }
 }
