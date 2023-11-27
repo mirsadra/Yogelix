@@ -115,11 +115,12 @@ struct HealthView: View {
                         Text("Height data is not available")
                     }
                     
-                    if let aeburn = viewModel.activeEnergyBurn {
-                        MetricCard(title: "Active Energy Burn", value: aeburn, unit: "kilocalories")
+                    if let aeburn = viewModel.activeEnergy {
+                        MetricCard(title: "Active Energy Burn", value: aeburn, unit: "kcal", isInteger: false, iconName: "flame")
                     } else {
                         Text("Active Energy Burn data is not available")
                     }
+                    
                     
                     MetricCard(title: "Sleep Analysis", value: sleepAnalysis, unit: "hrs")
                     MetricCard(title: "Mindful Session", value: mindfulSession, unit: "mins")

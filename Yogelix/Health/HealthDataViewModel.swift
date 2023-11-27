@@ -11,7 +11,7 @@ class HealthDataViewModel: ObservableObject {
     @Published var heartRate: Double? // Example for heart rate
     @Published var activeEnergyBurn: Double?
     @Published var basalEnergyBurn: Double?
-    
+    @Published var AverageActiveEnergyBurn: Double?
     @Published var sleepAnalysis: [HKCategorySample]? // Example for sleep analysis
     @Published var heightCm: Double?
     @Published var dailyAverageHeartRates: [(date: Date, averageHeartRate: Double)] = []
@@ -64,16 +64,17 @@ class HealthDataViewModel: ObservableObject {
     }
     
     func fetchActiveEnergyBurned() {
-        healthKitManager.readActiveEnergyBurned { [weak self] activeEnergyValue, error in
+        healthKitManager.readActiveEnergyBurned { [weak self] samples, error in
+            let latestActiveEnergy = samples?.first?.quantity.doubleValue(for: HKUnit(from: "kcal"))
             DispatchQueue.main.async {
-                if let error = error {
-                    print("Error fetching Active Energy: \(error.localizedDescription)")
-                    return
-                }
-                self?.activeEnergyBurn = activeEnergyValue
+                self?.activeEnergy = latestActiveEnergy
+                return
             }
+            
         }
     }
+    
+
         
     func fetchBodyMassIndex() {
         healthKitManager.readBodyMassIndex { [weak self] bmiValue, error in
@@ -103,8 +104,7 @@ class HealthDataViewModel: ObservableObject {
             }
         }
     }
-    
-    
+
     
     func processHeartRateSamples(_ samples: [HKQuantitySample]) -> [(date: Date, averageHeartRate: Double)] {
         let groupedSamples = Dictionary(grouping: samples, by: { Calendar.current.startOfDay(for: $0.startDate) })
@@ -176,6 +176,7 @@ class HealthDataViewModel: ObservableObject {
         fetchSleepAnalysis()
         fetchHeight()
         fetchHeartRateChart()
+        fetchActiveEnergyBurned()
         
     }
     
