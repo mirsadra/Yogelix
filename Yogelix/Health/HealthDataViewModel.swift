@@ -6,8 +6,11 @@ class HealthDataViewModel: ObservableObject {
     private let healthKitManager = HealthKitManager()
     
     @Published var bodyMassIndex: Double?  // Example for body mass
+    @Published var moveTime: Double?
     @Published var activitySummary = HKActivitySummary()
     @Published var heartRate: Double? // Example for heart rate
+    @Published var activeEnergyBurn: Double?
+    @Published var basalEnergyBurn: Double?
     
     @Published var sleepAnalysis: [HKCategorySample]? // Example for sleep analysis
     @Published var heightCm: Double?
@@ -27,6 +30,47 @@ class HealthDataViewModel: ObservableObject {
                 self?.fetchActivitySummary()
             } else if let error = error {
                 print("Authorization failed with error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func fetchActivitySummary() {
+        let group = DispatchGroup()
+        
+        group.enter()
+        healthKitManager.fetchTotalActiveEnergyBurned { [weak self] totalCalories, _ in
+            defer { group.leave() }
+            if let totalCalories = totalCalories, let self = self {
+                let quantity = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: totalCalories)
+                self.activitySummary.activeEnergyBurned = quantity
+                self.activitySummary.activeEnergyBurnedGoal = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: 500) // Set a goal or fetch from user preferences
+            }
+        }
+        
+        group.enter()
+        healthKitManager.fetchTotalExerciseMinutes { [weak self] totalMinutes, _ in
+            defer { group.leave() }
+            if let totalMinutes = totalMinutes, let self = self {
+                let quantity = HKQuantity(unit: HKUnit.minute(), doubleValue: totalMinutes)
+                self.activitySummary.appleExerciseTime = quantity
+                self.activitySummary.appleExerciseTimeGoal = HKQuantity(unit: HKUnit.minute(), doubleValue: 30) // Set a goal or fetch from user preferences
+            }
+        }
+        
+        group.notify(queue: .main) { [weak self] in
+            // Update the UI here if needed
+            self?.objectWillChange.send()
+        }
+    }
+    
+    func fetchActiveEnergyBurned() {
+        healthKitManager.readActiveEnergyBurned { [weak self] activeEnergyValue, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error fetching Active Energy: \(error.localizedDescription)")
+                    return
+                }
+                self?.activeEnergyBurn = activeEnergyValue
             }
         }
     }
@@ -59,6 +103,7 @@ class HealthDataViewModel: ObservableObject {
             }
         }
     }
+    
     
     
     func processHeartRateSamples(_ samples: [HKQuantitySample]) -> [(date: Date, averageHeartRate: Double)] {
@@ -122,34 +167,7 @@ class HealthDataViewModel: ObservableObject {
         return min(CGFloat(standHours / goalHours), 1.0) // Progress should not exceed 1.0
     }
     
-    func fetchActivitySummary() {
-        let group = DispatchGroup()
-        
-        group.enter()
-        healthKitManager.fetchTotalActiveEnergyBurned { [weak self] totalCalories, _ in
-            defer { group.leave() }
-            if let totalCalories = totalCalories, let self = self {
-                let quantity = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: totalCalories)
-                self.activitySummary.activeEnergyBurned = quantity
-                self.activitySummary.activeEnergyBurnedGoal = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: 500) // Set a goal or fetch from user preferences
-            }
-        }
-        
-        group.enter()
-        healthKitManager.fetchTotalExerciseMinutes { [weak self] totalMinutes, _ in
-            defer { group.leave() }
-            if let totalMinutes = totalMinutes, let self = self {
-                let quantity = HKQuantity(unit: HKUnit.minute(), doubleValue: totalMinutes)
-                self.activitySummary.appleExerciseTime = quantity
-                self.activitySummary.appleExerciseTimeGoal = HKQuantity(unit: HKUnit.minute(), doubleValue: 30) // Set a goal or fetch from user preferences
-            }
-        }
-        
-        group.notify(queue: .main) { [weak self] in
-            // Update the UI here if needed
-            self?.objectWillChange.send()
-        }
-    }
+
     
     func fetchAllData() {
         fetchBodyMassIndex()

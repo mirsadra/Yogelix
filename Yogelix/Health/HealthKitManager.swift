@@ -10,8 +10,11 @@ class HealthKitManager {
         guard let bodyMassIndexType = HKObjectType.quantityType(forIdentifier: .bodyMassIndex),
               let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate),
               let heightType = HKObjectType.quantityType(forIdentifier: .height),
+              
               let walkingRunningDistanceType = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning),
               let activeEnergyBurnedType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned),
+              let oxygenSaturationType = HKObjectType.quantityType(forIdentifier: .oxygenSaturation),  // add read for it
+              let basalEnergyBurnedType = HKObjectType.quantityType(forIdentifier: .basalEnergyBurned), // add read for it
               let sleepAnalysisType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis),
               let mindfulSessionType = HKObjectType.categoryType(forIdentifier: .mindfulSession),
               let biologicalSexType = HKObjectType.characteristicType(forIdentifier: .biologicalSex),
@@ -27,6 +30,8 @@ class HealthKitManager {
             heightType,
             walkingRunningDistanceType,
             activeEnergyBurnedType,
+            oxygenSaturationType,
+            basalEnergyBurnedType,
             sleepAnalysisType,
             mindfulSessionType
         ]
@@ -148,7 +153,7 @@ class HealthKitManager {
         }
     }
     
-    // Read body mass
+    // MARK: - Body Mass Index
     func readBodyMassIndex(completion: @escaping (Double?, Error?) -> Void) {
         guard let bodyMassIndexType = HKQuantityType.quantityType(forIdentifier: .bodyMassIndex) else {
             completion(nil, NSError(domain: "HealthKit", code: 200, userInfo: [NSLocalizedDescriptionKey: "Body Mass Index type is not available"]))
@@ -189,6 +194,57 @@ class HealthKitManager {
         
         healthStore.execute(query)
     }
+    
+    // MARK: - Active Energy Burned
+    func readActiveEnergyBurned(completion: @escaping (Double?, Error?) -> Void) {
+        guard let activeEnergyBurnedType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned) else {
+            completion(nil, NSError(domain: "HealthKit", code: 201, userInfo: [NSLocalizedDescriptionKey: "Active Energy data is not available"]))
+            return
+        }
+        
+        let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: activeEnergyBurnedType, predicate: mostRecentPredicate, limit: 20, sortDescriptors: [sortDescriptor]) { _, samples, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            if let activeEnergySample = samples?.first as? HKQuantitySample {
+                let activeEnergyValue = activeEnergySample.quantity.doubleValue(for: HKUnit.kilocalorie())
+                completion(activeEnergyValue, nil)
+            } else {
+                completion(nil, nil) // No samples found
+            }
+        }
+        healthStore.execute(query)
+    }
+    
+    // MARK: - Basal Energy Burned
+    func readBasalEnergyBurned(completion: @escaping (Double?, Error?) -> Void) {
+        guard let basalEnergyBurnedType = HKQuantityType.quantityType(forIdentifier: .basalEnergyBurned) else {
+            completion(nil, NSError(domain: "HealthKit", code: 201, userInfo: [NSLocalizedDescriptionKey: "Basal Energy data is not available"]))
+            return
+        }
+        
+        let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: basalEnergyBurnedType, predicate: mostRecentPredicate, limit: 20, sortDescriptors: [sortDescriptor]) { _, samples, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            if let basalEnergySample = samples?.first as? HKQuantitySample {
+                let basalEnergyValue = basalEnergySample.quantity.doubleValue(for: HKUnit.kilocalorie())
+                completion(basalEnergyValue, nil)
+            } else {
+                completion(nil, nil) // No samples found
+            }
+        }
+        healthStore.execute(query)
+    }
+
     
     // MARK: - Read Height
     func readHeight(completion: @escaping (HKQuantitySample?, Error?) -> Void) {
