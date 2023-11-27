@@ -1,20 +1,23 @@
 // HealthView.swift
 import SwiftUI
 import HealthKit
+import Charts
 
 struct HealthView: View {
     @ObservedObject var viewModel = HealthDataViewModel()
+
+    @State private var walkingRunningDistance: Double = 5.0 // in kilometers
+    @State private var activeEnergyBurned: Double = 500.0 // in calories
+    @State private var sleepAnalysis: Double = 8.0 // in hours
+    @State private var mindfulSession: Double = 30.0 // in minutes
+    @State private var selectedDay: UUID?
+    
     
     struct Day: Identifiable {
         let id = UUID()
         let dayOfWeek: String
         let number: Int
     }
-    @State private var walkingRunningDistance: Double = 5.0 // in kilometers
-    @State private var activeEnergyBurned: Double = 500.0 // in calories
-    @State private var sleepAnalysis: Double = 8.0 // in hours
-    @State private var mindfulSession: Double = 30.0 // in minutes
-    @State private var selectedDay: UUID?
     
     // Create an array of days for the week
     let days: [Day] = [
@@ -61,6 +64,37 @@ struct HealthView: View {
                         }
                     }
                 }
+                
+                // Activity Rings View
+                CustomActivityRingView(healthDataViewModel: viewModel)
+                    .frame(height: 100)
+                    .padding()
+                
+                Chart {
+                    ForEach(viewModel.dailyAverageHeartRates, id: \.date) { dataPoint in
+                        LineMark(
+                            x: .value("Date", dataPoint.date),
+                            y: .value("Heart Rate", dataPoint.averageHeartRate)
+                        )
+                        .interpolationMethod(.catmullRom)
+                    }
+                }
+                .chartXAxis {
+                    AxisMarks(values: .stride(by: .day)) { _ in
+                        AxisGridLine()
+                        AxisTick()
+                        AxisValueLabel(format: .dateTime.day().month())
+                    }
+                }
+                .chartYAxis {
+                    AxisMarks() { _ in
+                        AxisGridLine()
+                        AxisTick()
+                        AxisValueLabel()
+                    }
+                }
+                .navigationTitle("Heart Rate Trends")
+                
                 VStack() {
                     
                     if let bmi = viewModel.bodyMassIndex {
@@ -81,8 +115,6 @@ struct HealthView: View {
                         Text("Height data is not available")
                     }
                     
-                    MetricCard(title: "Walking + Running Distance", value: walkingRunningDistance, unit: "km")
-                    MetricCard(title: "Active Energy Burned", value: activeEnergyBurned, unit: "kcal")
                     MetricCard(title: "Sleep Analysis", value: sleepAnalysis, unit: "hrs")
                     MetricCard(title: "Mindful Session", value: mindfulSession, unit: "mins")
                 }
@@ -92,7 +124,7 @@ struct HealthView: View {
         }
         .onAppear {
             viewModel.loadAllData()
-                }
+        }
     }
 }
 
@@ -102,18 +134,18 @@ struct MetricCard: View {
     var unit: String
     var isInteger: Bool = true  // default is set to true
     var iconName: String  = "figure" // default is set to figure
-
+    
     var formattedValue: String {
         isInteger ? "\(Int(value))" : String(format: "%.2f", value)
     }
-
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.headline)
                     .foregroundColor(.gray)
-
+                
                 Text("\(formattedValue) \(unit)")
                     .font(.title2)
                     .fontWeight(.bold)
@@ -139,59 +171,3 @@ struct HealthView_Previews: PreviewProvider {
 }
 
 
-// MARK: - New Metric Card View
-/*
- import SwiftUI
-
- struct MetricCard: View {
-     var title: String
-     var value: Double
-     var unit: String
-     var progress: CGFloat // Represents the progress as a percentage
-     var progressColor: Color // The color of the progress bar
-     var backgroundColor: Color // The background color of the card
-
-     var body: some View {
-         VStack {
-             HStack {
-                 VStack(alignment: .leading, spacing: 4) {
-                     Text(title)
-                         .font(.caption)
-                         .foregroundColor(.secondary)
-                     Text("\(value, specifier: "%.0f") \(unit)")
-                         .font(.title)
-                         .fontWeight(.semibold)
-                 }
-                 Spacer()
-             }
-             .padding(.bottom, 1)
-
-             GeometryReader { geometry in
-                 ZStack(alignment: .leading) {
-                     RoundedRectangle(cornerRadius: 45.0)
-                         .frame(width: geometry.size.width , height: 4)
-                         .opacity(0.3)
-                         .foregroundColor(Color(UIColor.systemTeal))
-
-                     RoundedRectangle(cornerRadius: 45.0)
-                         .frame(width: min(CGFloat(self.progress)*geometry.size.width, geometry.size.width), height: 4)
-                         .foregroundColor(progressColor)
-                         .animation(.linear, value: progress)
-                 }
-             }
-             .frame(height: 4)
-         }
-         .padding()
-         .background(backgroundColor)
-         .cornerRadius(12.0)
-         .shadow(radius: 5)
-     }
- }
-
- struct MetricCard_Previews: PreviewProvider {
-     static var previews: some View {
-         MetricCard(title: "Active Calories", value: 1145, unit: "kcal", progress: 2.86, progressColor: .red, backgroundColor: .white)
-     }
- }
-
- */

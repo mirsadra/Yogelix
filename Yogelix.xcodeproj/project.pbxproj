@@ -20,7 +20,6 @@
 		3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */; };
 		3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */; };
 		3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */; };
-		3B33FD552B13770600DB2283 /* BodyMass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33FD542B13770600DB2283 /* BodyMass.swift */; };
 		3B347FAC2B117537004C2C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
 		3B38F5132B08323C00511CF6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B38F5122B08323C00511CF6 /* CustomButton.swift */; };
 		3B3E13B52B0A6B67003F8E78 /* YogaPose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3E13B42B0A6B67003F8E78 /* YogaPose.swift */; };
@@ -28,7 +27,7 @@
 		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
 		3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B40A36B2B1222EA00170041 /* Alamofire */; };
 		3B40A36F2B12230400170041 /* OpenAINetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A36E2B12230400170041 /* OpenAINetworking.swift */; };
-		3B40A3752B126D7400170041 /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A3742B126D7400170041 /* ActivityRingView.swift */; };
+		3B40A3752B126D7400170041 /* CustomActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A3742B126D7400170041 /* CustomActivityRingView.swift */; };
 		3B40A37D2B12B43000170041 /* MetricCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A37C2B12B43000170041 /* MetricCardView.swift */; };
 		3B40A37F2B12B49400170041 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A37E2B12B49400170041 /* ProgressRingView.swift */; };
 		3B40A3882B12CBE600170041 /* HealthDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A3872B12CBE600170041 /* HealthDataView.swift */; };
@@ -52,6 +51,8 @@
 		3BA4A6562B0D60D50032936E /* YogelixSecrets.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA4A6552B0D60D50032936E /* YogelixSecrets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BA4A6592B0D60D50032936E /* YogelixSecrets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */; };
 		3BA4A65A2B0D60D50032936E /* YogelixSecrets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BAF8EFE2B13D25500E5436F /* PicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF8EFD2B13D25500E5436F /* PicView.swift */; };
+		3BAF8F002B13D79300E5436F /* HealthCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF8EFF2B13D79300E5436F /* HealthCardView.swift */; };
 		3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */; };
 		3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C82B01901400FD1FC3 /* ContentView.swift */; };
 		3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
@@ -136,12 +137,11 @@
 		3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
-		3B33FD542B13770600DB2283 /* BodyMass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMass.swift; sourceTree = "<group>"; };
 		3B38F5122B08323C00511CF6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3B3E13B42B0A6B67003F8E78 /* YogaPose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaPose.swift; sourceTree = "<group>"; };
 		3B3E13B62B0A6C7F003F8E78 /* pose-list-with-meta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pose-list-with-meta.json"; sourceTree = "<group>"; };
 		3B40A36E2B12230400170041 /* OpenAINetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAINetworking.swift; sourceTree = "<group>"; };
-		3B40A3742B126D7400170041 /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
+		3B40A3742B126D7400170041 /* CustomActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityRingView.swift; sourceTree = "<group>"; };
 		3B40A37C2B12B43000170041 /* MetricCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCardView.swift; sourceTree = "<group>"; };
 		3B40A37E2B12B49400170041 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		3B40A3872B12CBE600170041 /* HealthDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataView.swift; sourceTree = "<group>"; };
@@ -168,6 +168,8 @@
 		3BA4A63C2B0D56310032936E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YogelixSecrets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA4A6552B0D60D50032936E /* YogelixSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogelixSecrets.h; sourceTree = "<group>"; };
+		3BAF8EFD2B13D25500E5436F /* PicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicView.swift; sourceTree = "<group>"; };
+		3BAF8EFF2B13D79300E5436F /* HealthCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCardView.swift; sourceTree = "<group>"; };
 		3BCC04C32B01901400FD1FC3 /* Yogelix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yogelix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixApp.swift; sourceTree = "<group>"; };
 		3BCC04C82B01901400FD1FC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -252,7 +254,8 @@
 		3B33FD532B1376EB00DB2283 /* HealthData */ = {
 			isa = PBXGroup;
 			children = (
-				3B33FD542B13770600DB2283 /* BodyMass.swift */,
+				3BAF8EFD2B13D25500E5436F /* PicView.swift */,
+				3BAF8EFF2B13D79300E5436F /* HealthCardView.swift */,
 			);
 			path = HealthData;
 			sourceTree = "<group>";
@@ -297,7 +300,7 @@
 				3B8920D12B0F8378000A61A2 /* HealthView.swift */,
 				3B8920D62B0F8D88000A61A2 /* HealthData.xcdatamodeld */,
 				3B1F0D802B101B3100BD54FD /* HealthDataViewModel.swift */,
-				3B40A3742B126D7400170041 /* ActivityRingView.swift */,
+				3B40A3742B126D7400170041 /* CustomActivityRingView.swift */,
 				3B40A37C2B12B43000170041 /* MetricCardView.swift */,
 				3B40A37E2B12B49400170041 /* ProgressRingView.swift */,
 				3B40A3872B12CBE600170041 /* HealthDataView.swift */,
@@ -664,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */,
+				3BAF8EFE2B13D25500E5436F /* PicView.swift in Sources */,
 				3BCC05122B01A48900FD1FC3 /* ChallengesView.swift in Sources */,
 				3BCC05202B01A72600FD1FC3 /* AdditionalDataViewModel.swift in Sources */,
 				3BDFE1442B026C62007FB23E /* SubscriptionService.swift in Sources */,
@@ -676,7 +680,7 @@
 				3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */,
 				3BDFE13C2B026C21007FB23E /* UserController.swift in Sources */,
 				3BCC05162B01A4EE00FD1FC3 /* UpgradeToPremiumView.swift in Sources */,
-				3B40A3752B126D7400170041 /* ActivityRingView.swift in Sources */,
+				3B40A3752B126D7400170041 /* CustomActivityRingView.swift in Sources */,
 				3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */,
 				3BCC05032B019B4A00FD1FC3 /* HomeView.swift in Sources */,
 				3BDADF192B0E395B0023B4AC /* AccountView.swift in Sources */,
@@ -688,7 +692,6 @@
 				3BDFE1402B026C43007FB23E /* NetworkService.swift in Sources */,
 				3B38F5132B08323C00511CF6 /* CustomButton.swift in Sources */,
 				3B9DA8302B0EB3FC00480621 /* TrailingIconLabelStyle.swift in Sources */,
-				3B33FD552B13770600DB2283 /* BodyMass.swift in Sources */,
 				3BA4A6352B0D4FDF0032936E /* UserData.swift in Sources */,
 				3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */,
 				3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */,
@@ -704,6 +707,7 @@
 				3B8920CE2B0F5D1A000A61A2 /* HealthKitManager.swift in Sources */,
 				3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */,
 				3B9DA82A2B0EAC7C00480621 /* DailyExercise.swift in Sources */,
+				3BAF8F002B13D79300E5436F /* HealthCardView.swift in Sources */,
 				3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */,
 				3B40A37D2B12B43000170041 /* MetricCardView.swift in Sources */,
 				3BCC051A2B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift in Sources */,

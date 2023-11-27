@@ -18,7 +18,7 @@ struct ProgressRingView: View {
                 .stroke(style: StrokeStyle(lineWidth: thickness, lineCap: .round, lineJoin: .round))
                 .foregroundColor(foregroundColor)
                 .rotationEffect(Angle(degrees: 270.0))
-                .animation(.linear)
+                .animation(.linear, value: progress)
         }
     }
 }

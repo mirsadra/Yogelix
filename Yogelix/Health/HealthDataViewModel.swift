@@ -10,22 +10,25 @@ class HealthDataViewModel: ObservableObject {
     @Published var bodyMassIndex: Double?  // Example for body mass
     @Published var sleepAnalysis: [HKCategorySample]? // Example for sleep analysis
     @Published var heightCm: Double?
+    @Published var dailyAverageHeartRates: [(date: Date, averageHeartRate: Double)] = []
+    @Published var activeEnergy: Double?
     
-    @Published var weeklyHeartRateAverages: [(Date, Double)]?
+    
+    @Published var heartRateReadings: [(Date, Double)]? = []
     
     init() {
-            requestAuthorization()
-        }
+        requestAuthorization()
+    }
     
     func requestAuthorization() {
-            healthKitManager.requestAuthorization { [weak self] success, error in
-                if success {
-                    self?.loadActivitySummary()
-                } else if let error = error {
-                    print("Authorization failed with error: \(error.localizedDescription)")
-                }
+        healthKitManager.requestAuthorization { [weak self] success, error in
+            if success {
+                self?.loadActivitySummary()
+            } else if let error = error {
+                print("Authorization failed with error: \(error.localizedDescription)")
             }
         }
+    }
     
     func loadActivitySummary() {
         let group = DispatchGroup()
@@ -71,7 +74,33 @@ class HealthDataViewModel: ObservableObject {
             let latestHeartRate = samples?.first?.quantity.doubleValue(for: HKUnit(from: "count/min"))
             DispatchQueue.main.async {
                 self?.heartRate = latestHeartRate
-                return
+                // Now also calculate the daily averages when heart rates are loaded.
+                if let samples = samples {
+                    self?.dailyAverageHeartRates = self?.processHeartRateSamples(samples) ?? []
+                    return
+                }
+            }
+        }
+    }
+    
+    func processHeartRateSamples(_ samples: [HKQuantitySample]) -> [(date: Date, averageHeartRate: Double)] {
+        let groupedSamples = Dictionary(grouping: samples, by: { Calendar.current.startOfDay(for: $0.startDate) })
+        let dailyAverages = groupedSamples.map { (date, samples) -> (Date, Double) in
+            let total = samples.reduce(0) { $0 + $1.quantity.doubleValue(for: HKUnit(from: "count/min")) }
+            let average = total / Double(samples.count)
+            return (date, average)
+        }
+        // Sort by date and get the last 7 entries
+        return Array(dailyAverages.sorted(by: { $0.0 < $1.0 }).suffix(7))
+    }
+    
+    func loadHeartRateChart() {
+        healthKitManager.readHeartRate { [weak self] samples, _ in
+            if let samples = samples {
+                let readings = samples.map { ($0.startDate, $0.quantity.doubleValue(for: HKUnit(from: "count/min"))) }
+                DispatchQueue.main.async {
+                    self?.heartRateReadings = readings
+                }
             }
         }
     }
@@ -86,16 +115,6 @@ class HealthDataViewModel: ObservableObject {
         }
     }
     
-    func loadWeeklyHeartRateAverages() {
-        healthKitManager.readHeartRateWeeklyAverage { [weak self] averages, _ in
-            DispatchQueue.main.async {
-                self?.weeklyHeartRateAverages = averages
-            }
-        }
-    }
-
-    
-
     func loadSleepAnalysis() {
         healthKitManager.readSleepAnalysis { [weak self] samples, _ in
             DispatchQueue.main.async {
@@ -103,42 +122,36 @@ class HealthDataViewModel: ObservableObject {
             }
         }
     }
-
+    
+    var moveRingProgress: CGFloat {
+        let burned = activitySummary.activeEnergyBurned.doubleValue(for: HKUnit.kilocalorie())
+        let goal = activitySummary.activeEnergyBurnedGoal.doubleValue(for: HKUnit.kilocalorie())
+        return min(CGFloat(burned / goal), 1.0) // Progress should not exceed 1.0
+    }
+    
+    // Computed property for exercise ring progress
+    var exerciseRingProgress: CGFloat {
+        let exerciseMinutes = activitySummary.appleExerciseTime.doubleValue(for: HKUnit.minute())
+        let goalMinutes = activitySummary.appleExerciseTimeGoal.doubleValue(for: HKUnit.minute())
+        return min(CGFloat(exerciseMinutes / goalMinutes), 1.0) // Progress should not exceed 1.0
+    }
+    
+    // Computed property for stand ring progress
+    var standRingProgress: CGFloat {
+        // Assuming you have some logic to calculate stand hours progress
+        let standHours = Double(activitySummary.appleStandHours.doubleValue(for: HKUnit.count()))
+        let goalHours = Double(activitySummary.appleStandHoursGoal.doubleValue(for: HKUnit.count()))
+        return min(CGFloat(standHours / goalHours), 1.0) // Progress should not exceed 1.0
+    }
+    
     func loadAllData() {
         loadActivitySummary()
         loadHeartRate()
         loadBodyMass()
         loadSleepAnalysis()
-        // ... load other health data
+        loadHeight()
+        loadHeartRateChart()
+        
     }
-
+    
 }
-
-
-// MARK: - Extensions
-
-// Add these computed properties to HealthDataViewModel to calculate progress
-extension HealthDataViewModel {
-    
-    // Computed property for move ring progress
-    var moveRingProgress: Double {
-        let burned = activitySummary.activeEnergyBurned.doubleValue(for: HKUnit.kilocalorie())
-        let goal = activitySummary.activeEnergyBurnedGoal.doubleValue(for: HKUnit.kilocalorie())
-        return min(burned / goal, 1.0) // The progress should not exceed 1.0
-    }
-    
-    // Computed property for exercise ring progress
-    var exerciseRingProgress: Double {
-        let exerciseMinutes = activitySummary.appleExerciseTime.doubleValue(for: HKUnit.minute())
-        let goalMinutes = activitySummary.appleExerciseTimeGoal.doubleValue(for: HKUnit.minute())
-        return min(exerciseMinutes / goalMinutes, 1.0) // The progress should not exceed 1.0
-    }
-    
-    // Computed property for stand ring progress
-    var standRingProgress: Double {
-        let standHours = Double(activitySummary.appleStandHours.doubleValue(for: HKUnit.count()))
-        let goalHours = Double(activitySummary.appleStandHoursGoal.doubleValue(for: HKUnit.count()))
-        return min(standHours / goalHours, 1.0) // The progress should not exceed 1.0
-    }
-}
-
