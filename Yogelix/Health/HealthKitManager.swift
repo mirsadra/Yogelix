@@ -53,10 +53,6 @@ class HealthKitManager {
             performRequest()
         }
     }
-}
-
-
-extension HealthKitManager {
 
     // MARK: - Authorization Check Methods
     func isAuthorizedForHeartRate() -> Bool {
@@ -135,56 +131,52 @@ extension HealthKitManager {
             }
         }
     }
-}
-
-    
-extension HealthKitManager {
 
     // MARK: - Data Reading Methods
 
     // Body Mass Index
-    func readBodyMassIndex(completion: @escaping (Double?, Error?) -> Void) {
-        executeSingleValueQuery(for: .bodyMassIndex, unit: HKUnit(from: ""), errorDomainCode: 200, completion: completion)
+    func readBodyMassIndex(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        executeQuantitySampleQueryWithDate(for: .bodyMassIndex, unit: HKUnit(from: ""), limit: 14, completion: completion)
     }
 
     // Heart Rate
-    func readHeartRate(completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
-        executeQuantitySampleQuery(for: .heartRate, limit: 15, completion: completion)
-    }
-
-    // Active Energy Burned
-    func readActiveEnergyBurned(completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
-        executeQuantitySampleQuery(for: .activeEnergyBurned, limit: 15, completion: completion)
-    }
-
-    // Oxygen Saturation
-    func readOxygenSaturation(completion: @escaping (Double?, Error?) -> Void) {
-        executeSingleValueQuery(for: .oxygenSaturation, unit: HKUnit.percent(), errorDomainCode: 201, completion: completion)
+    func readHeartRate(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        executeQuantitySampleQueryWithDate(for: .heartRate, unit: HKUnit(from: "count/min"), limit: 14, completion: completion)
     }
     
-    // Basal Energy Burned
-    func readBasalEnergyBurned(completion: @escaping (Double?, Error?) -> Void) {
-        executeSingleValueQuery(for: .basalEnergyBurned, unit: HKUnit.kilocalorie(), errorDomainCode: 201, completion: completion)
-    }
-    
-    // Excercise Time (Apple Exercise Time)
-    func readExerciseMinutes(completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
-        executeQuantitySampleQuery(for: .appleExerciseTime, limit: 15, completion: completion)
-    }
-    
-    // Stand Hours (Apple Stand Hour)
-    func readStandHours(completion: @escaping ([HKCategorySample]?, Error?) -> Void) {
-        executeCategorySampleQuery(for: .appleStandHour, limit: 15, completion: completion)
-    }
-
     // Height
     func readHeight(completion: @escaping (HKQuantitySample?, Error?) -> Void) {
         executeSingleSampleQuery(for: .height, completion: completion)
     }
 
     // Walking/Running Distance
-    func readWalkingRunningDistance(completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
-        executeQuantitySampleQuery(for: .distanceWalkingRunning, limit: 100, completion: completion)
+    func readWalkingRunningDistance(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        executeQuantitySampleQueryWithDate(for: .distanceWalkingRunning, unit: HKUnit.meter(), limit: 14, completion: completion)
+    }
+    
+    // Active Energy Burned
+    func readActiveEnergyBurned(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        executeQuantitySampleQueryWithDate(for: .activeEnergyBurned, unit: HKUnit.kilocalorie(), limit: 14, completion: completion)
+    }
+
+    // Oxygen Saturation
+    func readOxygenSaturation(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        executeQuantitySampleQueryWithDate(for: .oxygenSaturation, unit: HKUnit.percent(), limit: 14, completion: completion)
+    }
+    
+    // Basal Energy Burned
+    func readBasalEnergyBurned(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        executeQuantitySampleQueryWithDate(for: .basalEnergyBurned, unit: HKUnit.kilocalorie(), limit: 14, completion: completion)
+    }
+    
+    // Excercise Time (Apple Exercise Time)
+    func readExerciseMinutes(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        executeQuantitySampleQueryWithDate(for: .appleExerciseTime, unit: HKUnit.minute(), limit: 14, completion: completion)
+    }
+    
+    // Stand Hours (Apple Stand Hour)
+    func readStandHours(completion: @escaping ([HKCategorySample]?, Error?) -> Void) {
+        executeCategorySampleQuery(for: .appleStandHour, limit: 15, completion: completion)
     }
 
     // Mindful Sessions
@@ -241,6 +233,31 @@ extension HealthKitManager {
     }
 
     // MARK: - Private Helper Methods
+    
+    private func executeQuantitySampleQueryWithDate(for identifier: HKQuantityTypeIdentifier, unit: HKUnit, limit: Int, completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
+        guard let quantityType = HKQuantityType.quantityType(forIdentifier: identifier) else {
+            completion(nil, NSError(domain: "HealthKit", code: 200, userInfo: [NSLocalizedDescriptionKey: "\(identifier.rawValue) type is not available"]))
+            return
+        }
+
+        let predicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+
+        let query = HKSampleQuery(sampleType: quantityType, predicate: predicate, limit: limit, sortDescriptors: [sortDescriptor]) { query, samples, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+
+            let resultsWithDate = samples?.compactMap { sample in
+                (sample as? HKQuantitySample).map { ($0.startDate, $0.quantity.doubleValue(for: unit)) }
+            }
+            completion(resultsWithDate, nil)
+        }
+
+        healthStore.execute(query)
+    }
+
     private func executeQuantitySampleQuery(for identifier: HKQuantityTypeIdentifier, limit: Int, completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
         guard let quantityType = HKQuantityType.quantityType(forIdentifier: identifier) else {
             completion(nil, NSError(domain: "HealthKit", code: 200, userInfo: [NSLocalizedDescriptionKey: "\(identifier.rawValue) type is not available"]))
@@ -373,10 +390,8 @@ extension HealthKitManager {
         // Execute the statistics query
         healthStore.execute(query)
     }
-
-
-
 }
+
 
 
 extension HealthKitManager {
@@ -395,3 +410,4 @@ extension HealthKitManager {
         }
     }
 }
+

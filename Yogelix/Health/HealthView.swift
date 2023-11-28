@@ -5,171 +5,52 @@ import Charts
 
 struct HealthView: View {
     @ObservedObject var viewModel = HealthDataViewModel()
-
-    @State private var walkingRunningDistance: Double = 5.0 // in kilometers
-    @State private var activeEnergyBurned: Double = 500.0 // in calories
-    @State private var sleepAnalysis: Double = 8.0 // in hours
-    @State private var mindfulSession: Double = 30.0 // in minutes
     @State private var selectedDay: UUID?
-    
-    
-    struct Day: Identifiable {
-        let id = UUID()
-        let dayOfWeek: String
-        let number: Int
-    }
-    
-    // Create an array of days for the week
-    let days: [Day] = [
-        Day(dayOfWeek: "Sun", number: 66),
-        Day(dayOfWeek: "Mon", number: 63),
-        Day(dayOfWeek: "Tue", number: 62),
-        Day(dayOfWeek: "Wed", number: 59),
-        Day(dayOfWeek: "Thu", number: 63),
-        Day(dayOfWeek: "Fri", number: 67),
-        Day(dayOfWeek: "Sat", number: 63)
-    ]
     
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "calendar")
-                    .resizable()
-                    .frame(width: 26, height: 26)
-                Text("Today")
-                Spacer()
-                Image(systemName: "gear")
-                    .resizable()
-                    .frame(width: 26, height: 26)
-            }
-            .padding()
             ScrollView(.vertical, showsIndicators: false) {
-                ScrollView(.horizontal, showsIndicators: true) {
-                    HStack(spacing: 15) {
-                        ForEach(days) { day in
-                            VStack {
-                                Text(day.dayOfWeek)
-                                    .font(.caption)
-                                Text("\(day.number)")
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(selectedDay == day.id ? .white : .blue)
-                                    .padding()
-                                    .background(selectedDay == day.id ? Color.blue : Color.clear)
-                                    .clipShape(Circle())
-                                    .onTapGesture {
-                                        selectedDay = day.id
-                                    }
+                HStack {
+                    RingView(progress: CGFloat(viewModel.moveRingProgress), startColor: .red, endColor: .orange, labelText: "\(viewModel.activitySummary.activeEnergyBurned)", systemImageName: "flame.fill")
+                    RingView(progress: CGFloat(viewModel.exerciseRingProgress), startColor: .green, endColor: .blue, labelText: "\(viewModel.activitySummary.appleExerciseTime)", systemImageName: "medal")
+                    RingView(progress: CGFloat(viewModel.standRingProgress), startColor: .blue, endColor: .purple, labelText: "\(viewModel.activitySummary.appleStandHours)", systemImageName: "figure.stand")
+                        .onAppear {
+                            viewModel.fetchAllData()
+                        }
+                }
+                .padding()
+                VStack{
+                    HStack {
+                        MetricCardView(title: "Height", value: viewModel.heightReading ?? 0.0, unit: "cm" )
+                        if let mostRecentBMI = viewModel.bodyMassIndexReadings?.first?.1 {
+                            MetricCardView(title: "BMI", value: mostRecentBMI, unit: "", isInteger: false, iconName: "figure")
+                        }
+                    }
+                    .padding()
+                    
+                    HStack {
+                        if let mostRecentHR = viewModel.heartRateReadings?.first {
+                            MetricCardView(title: "Heart Rate", value: mostRecentHR.1, unit: "bpm", date: mostRecentHR.0, iconName: "heart")
+                        }
+                        
+                        if let readings = viewModel.activeEnergyBurnReadings {
+                            let groupedReadings = Dictionary(grouping: readings, by: { Calendar.current.startOfDay(for: $0.0) })
+                            let dailySums = groupedReadings.mapValues { readingsForDate in
+                                readingsForDate.map { $0.1 }.reduce(0, +)
+                            }
+
+                            if let mostRecentDate = dailySums.keys.sorted(by: >).first {
+                                let totalEnergyBurned = dailySums[mostRecentDate] ?? 0.0
+                                MetricCardView(title: "Active Energy", value: totalEnergyBurned, unit: "kcal", date: mostRecentDate)
                             }
                         }
                     }
-                }
-                
-                // Activity Rings View
-                CustomActivityRingView(healthDataViewModel: viewModel)
-                    .frame(height: 220)
                     .padding()
-                
-                Chart {
-                    ForEach(viewModel.dailyAverageHeartRates, id: \.date) { dataPoint in
-                        LineMark(
-                            x: .value("Date", dataPoint.date),
-                            y: .value("Heart Rate", dataPoint.averageHeartRate)
-                        )
-                        .interpolationMethod(.catmullRom)
-                    }
                 }
-                .chartXAxis {
-                    AxisMarks(values: .stride(by: .day)) { _ in
-                        AxisGridLine()
-                        AxisTick()
-                        AxisValueLabel(format: .dateTime.day().month())
-                    }
-                }
-                .chartYAxis {
-                    AxisMarks() { _ in
-                        AxisGridLine()
-                        AxisTick()
-                        AxisValueLabel()
-                    }
-                }
-                .navigationTitle("Heart Rate Trends")
-                
-                VStack() {
-                    
-                    if let bmi = viewModel.bodyMassIndex {
-                        MetricCard(title: "Body Mass Index", value: bmi, unit: "", isInteger: false, iconName: "figure.arms.open")
-                    } else {
-                        Text("BMI data is not available.")
-                    }
-                    
-                    if let hr = viewModel.heartRate {
-                        MetricCard(title: "Heart Rate", value: hr, unit: "bpm")
-                    } else {
-                        Text("Heart rate data is not available")
-                    }
-                    
-                    if let hght = viewModel.heightCm {
-                        MetricCard(title: "Height", value: hght, unit: "cm")
-                    } else {
-                        Text("Height data is not available")
-                    }
-                    
-                    if let aeburn = viewModel.activeEnergyBurn {
-                        MetricCard(title: "Active Energy Burn", value: aeburn, unit: "kcal", isInteger: false, iconName: "flame")
-                    } else {
-                        Text("Active Energy Burn data is not available")
-                    }
-                    
-                    
-                    MetricCard(title: "Sleep Analysis", value: sleepAnalysis, unit: "hrs")
-                    MetricCard(title: "Mindful Session", value: mindfulSession, unit: "mins")
-                }
-                .padding()
             }
-            .navigationTitle("Health Metrics")
-        }
-        .onAppear {
-            viewModel.fetchAllData()
         }
     }
 }
-
-struct MetricCard: View {
-    var title: String
-    var value: Double
-    var unit: String
-    var isInteger: Bool = true  // default is set to true
-    var iconName: String  = "figure" // default is set to figure
-    
-    var formattedValue: String {
-        isInteger ? "\(Int(value))" : String(format: "%.2f", value)
-    }
-    
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(.headline)
-                    .foregroundColor(.gray)
-                
-                Text("\(formattedValue) \(unit)")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-            }
-            Spacer()
-            Image(systemName: iconName)  // Use the iconName here
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 30, height: 30)
-                .foregroundColor(.red)
-        }
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 12).fill(Color.white).shadow(radius: 5))
-    }
-}
-
 
 struct HealthView_Previews: PreviewProvider {
     static var previews: some View {

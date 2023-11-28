@@ -3,10 +3,11 @@ import SwiftUI
 
 struct ContentView: View {
     let exercise: [DailyExercise]
+    let sampleViewModel = HealthDataViewModel()
     
     var body: some View {
         TabView {
-            HealthView()
+            HealthView(viewModel: sampleViewModel)
                 .tabItem {
                     Label("Home", systemImage: "heart.square")
                 }
@@ -16,7 +17,7 @@ struct ContentView: View {
                     Label("Exercise", systemImage: "figure.cooldown")
                 }
             
-            ChallengesView()
+            SummaryHealthView()
                 .badge(2)
                 .tabItem {
                     Label("Challenges", systemImage: "medal.fill")
@@ -40,5 +41,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(exercise: DailyExercise.sampleExercises)
             .environmentObject(AuthenticationViewModel())
+        
     }
 }
