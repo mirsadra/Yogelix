@@ -156,7 +156,7 @@ class HealthKitManager {
     
     // Active Energy Burned
     func readActiveEnergyBurned(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
-        executeQuantitySampleQueryWithDate(for: .activeEnergyBurned, unit: HKUnit.kilocalorie(), limit: 14, completion: completion)
+        executeQuantitySampleQueryWithDate(for: .activeEnergyBurned, unit: HKUnit.kilocalorie(), limit: 700, completion: completion)
     }
 
     // Oxygen Saturation
