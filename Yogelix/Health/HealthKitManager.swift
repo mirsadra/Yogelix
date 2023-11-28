@@ -166,6 +166,16 @@ extension HealthKitManager {
     func readBasalEnergyBurned(completion: @escaping (Double?, Error?) -> Void) {
         executeSingleValueQuery(for: .basalEnergyBurned, unit: HKUnit.kilocalorie(), errorDomainCode: 201, completion: completion)
     }
+    
+    // Excercise Time (Apple Exercise Time)
+    func readExerciseMinutes(completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
+        executeQuantitySampleQuery(for: .appleExerciseTime, limit: 15, completion: completion)
+    }
+    
+    // Stand Hours (Apple Stand Hour)
+    func readStandHours(completion: @escaping ([HKCategorySample]?, Error?) -> Void) {
+        executeCategorySampleQuery(for: .appleStandHour, limit: 15, completion: completion)
+    }
 
     // Height
     func readHeight(completion: @escaping (HKQuantitySample?, Error?) -> Void) {
@@ -205,6 +215,18 @@ extension HealthKitManager {
     // Sleep Analysis
     func readSleepAnalysis(completion: @escaping ([HKCategorySample]?, Error?) -> Void) {
         executeCategorySampleQuery(for: .sleepAnalysis, limit: 10, completion: completion)
+    }
+    
+    // MARK: - More complex
+    
+    // Fetch Total Active Energy Burned
+    func readTotalActiveEnergyBurned(completion: @escaping (Double?, Error?) -> Void) {
+        executeTotalStatistics(for: .activeEnergyBurned, unit: HKUnit.kilocalorie(), errorDomainCode: 206, completion: completion)
+    }
+    
+    // Fetch Total Exercise Minutes
+    func readTotalExerciseMinutes(completion: @escaping (Double?, Error?) -> Void) {
+        executeTotalStatistics(for: .appleExerciseTime, unit: HKUnit.minute(), errorDomainCode: 206, completion: completion)
     }
 
     // Correlate Heart Rate with Sleep Analysis
@@ -287,34 +309,58 @@ extension HealthKitManager {
             }
             healthStore.execute(query)
         }
-}
 
-
-extension HealthKitManager {
-
-    // MARK: - Fetch Total Statistics
-
-    // Fetch Total Active Energy Burned
-    func fetchTotalActiveEnergyBurned(completion: @escaping (Double?, Error?) -> Void) {
-        fetchTotalStatistics(for: .activeEnergyBurned, unit: HKUnit.kilocalorie(), errorDomainCode: 206, completion: completion)
-    }
-    
-    // Fetch Total Exercise Minutes
-    func fetchTotalExerciseMinutes(completion: @escaping (Double?, Error?) -> Void) {
-        fetchTotalStatistics(for: .appleExerciseTime, unit: HKUnit.minute(), errorDomainCode: 207, completion: completion)
-    }
-
-    // MARK: - Private Helper Methods
-
-    private func fetchTotalStatistics(for identifier: HKQuantityTypeIdentifier, unit: HKUnit, errorDomainCode: Int, completion: @escaping (Double?, Error?) -> Void) {
+    private func executeTotalStatistics(for identifier: HKQuantityTypeIdentifier, unit: HKUnit, errorDomainCode: Int, completion: @escaping (Double?, Error?) -> Void) {
         guard let quantityType = HKObjectType.quantityType(forIdentifier: identifier) else {
             completion(nil, NSError(domain: "HealthKit", code: errorDomainCode, userInfo: [NSLocalizedDescriptionKey: "\(identifier.rawValue) type is not available"]))
             return
         }
 
-        let startOfDay = Calendar.current.startOfDay(for: Date())
-        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: Date(), options: .strictStartDate)
+        // Create a query to retrieve the most recent sample for the specified data type
+        let mostRecentSampleQuery = HKSampleQuery(
+            sampleType: quantityType,
+            predicate: nil,
+            limit: 1,
+            sortDescriptors: [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)]
+        ) { (query, results, error) in
+            guard let sample = results?.first as? HKQuantitySample, error == nil else {
+                completion(nil, error)
+                return
+            }
 
+            // Calculate the date 7 days before the most recent sample
+            let sevenDaysAgo = Calendar.current.date(byAdding: .day, value: -7, to: sample.endDate)
+
+            // Create a statistics query and call the function to execute it
+            self.executeStatisticsQuery(
+                for: quantityType,
+                unit: unit,
+                startDate: sevenDaysAgo,
+                endDate: sample.endDate,
+                completion: completion
+            )
+        }
+
+        // Execute the mostRecentSampleQuery to retrieve the most recent sample
+        healthStore.execute(mostRecentSampleQuery)
+    }
+
+    private func executeStatisticsQuery(
+        for quantityType: HKQuantityType,
+        unit: HKUnit,
+        startDate: Date?,
+        endDate: Date?,
+        completion: @escaping (Double?, Error?) -> Void
+    ) {
+        guard let startDate = startDate, let endDate = endDate else {
+            completion(nil, NSError(domain: "HealthKit", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid date range"]))
+            return
+        }
+
+        // Create a predicate to filter data samples within the specified date range
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate, options: .strictEndDate)
+
+        // Create a statistics query to calculate the cumulative sum for the specified date range
         let query = HKStatisticsQuery(quantityType: quantityType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, result, error in
             guard let result = result, error == nil else {
                 completion(nil, error)
@@ -324,11 +370,16 @@ extension HealthKitManager {
             completion(total, nil)
         }
 
+        // Execute the statistics query
         healthStore.execute(query)
     }
 
 
 
+}
+
+
+extension HealthKitManager {
     // MARK: - Core Data Integration
     
     func saveHealthDataToCoreData(stepCount: Double, heartRate: Double) {

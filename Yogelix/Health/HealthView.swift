@@ -67,7 +67,7 @@ struct HealthView: View {
                 
                 // Activity Rings View
                 CustomActivityRingView(healthDataViewModel: viewModel)
-                    .frame(height: 100)
+                    .frame(height: 220)
                     .padding()
                 
                 Chart {
@@ -115,7 +115,7 @@ struct HealthView: View {
                         Text("Height data is not available")
                     }
                     
-                    if let aeburn = viewModel.activeEnergy {
+                    if let aeburn = viewModel.activeEnergyBurn {
                         MetricCard(title: "Active Energy Burn", value: aeburn, unit: "kcal", isInteger: false, iconName: "flame")
                     } else {
                         Text("Active Energy Burn data is not available")

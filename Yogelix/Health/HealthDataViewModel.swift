@@ -5,26 +5,32 @@ import HealthKit
 class HealthDataViewModel: ObservableObject {
     private let healthKitManager = HealthKitManager()
     
-    @Published var bodyMassIndex: Double?  // Example for body mass
-    @Published var moveTime: Double?
-    @Published var activitySummary = HKActivitySummary()
-    @Published var heartRate: Double? // Example for heart rate
+    // MARK: - Published Properties
+    @Published var bodyMassIndex: Double?
+    @Published var heartRate: Double?
     @Published var activeEnergyBurn: Double?
     @Published var basalEnergyBurn: Double?
-    @Published var AverageActiveEnergyBurn: Double?
-    @Published var sleepAnalysis: [HKCategorySample]? // Example for sleep analysis
+    @Published var oxygenSaturation: Double?
     @Published var heightCm: Double?
+    @Published var walkingRunningDistance: [HKQuantitySample]?
+    @Published var mindfulSessions: [HKCategorySample]?
+    @Published var sleepAnalysis: [HKCategorySample]?
+    @Published var exerciseMinutes: [HKQuantitySample]?
+    @Published var standHours: [HKCategorySample]?
+    @Published var biologicalSex: HKBiologicalSexObject?
+    @Published var dateOfBirth: DateComponents?
+    @Published var averageActiveEnergyBurn: Double?
     @Published var dailyAverageHeartRates: [(date: Date, averageHeartRate: Double)] = []
-    @Published var activeEnergy: Double?
-    
-    
     @Published var heartRateReadings: [(Date, Double)]? = []
+    @Published var activitySummary = HKActivitySummary()
     
+    // MARK: - Initialization
     init() {
         requestAuthorization()
     }
     
-    func requestAuthorization() {
+    // MARK: - Private Methods
+    private func requestAuthorization() {
         healthKitManager.requestAuthorization { [weak self] success, error in
             if success {
                 self?.fetchActivitySummary()
@@ -34,11 +40,112 @@ class HealthDataViewModel: ObservableObject {
         }
     }
     
+    private func fetchData<T>(
+            fetcher: (@escaping (T?, Error?) -> Void) -> Void,
+            resultHandler: @escaping (T?) -> Void
+        ) {
+            fetcher { [weak self] result, error in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        print("Error fetching data: \(error.localizedDescription)")
+                        return
+                    }
+                    resultHandler(result)
+                }
+            }
+        }
+    
+    // MARK: - Fetch Health Data Methods
+    func fetchBodyMassIndex() {
+        fetchData(fetcher: healthKitManager.readBodyMassIndex) { [weak self] bmiValue in
+            self?.bodyMassIndex = bmiValue
+            
+        }
+    }
+    
+    func fetchHeartRate() {
+        fetchData(fetcher: healthKitManager.readHeartRate) { [weak self] samples in
+            let latestHeartRate = samples?.first?.quantity.doubleValue(for: HKUnit(from: "count/min"))
+            self?.heartRate = latestHeartRate
+            if let samples = samples {
+                self?.dailyAverageHeartRates = self?.processHeartRateSamples(samples) ?? []
+            }
+        }
+    }
+    
+    func fetchHeight() {
+        fetchData(fetcher: healthKitManager.readHeight) { [weak self] sample in
+            let latestHeight = sample?.quantity.doubleValue(for: HKUnit.meterUnit(with: .centi))
+            self?.heightCm = latestHeight
+        }
+    }
+    
+    func fetchActiveEnergyBurned() {
+        fetchData(fetcher: healthKitManager.readActiveEnergyBurned) { [weak self] samples in
+            let latestActiveEnergy = samples?.first?.quantity.doubleValue(for: HKUnit(from: "kcal"))
+            self?.activeEnergyBurn = latestActiveEnergy
+        }
+    }
+
+    func fetchBasalEnergyBurned() {
+        fetchData(fetcher: healthKitManager.readBasalEnergyBurned) { [weak self] basalEnergy in
+            self?.basalEnergyBurn = basalEnergy
+        }
+    }
+
+    func fetchOxygenSaturation() {
+        fetchData(fetcher: healthKitManager.readOxygenSaturation) { [weak self] saturation in
+            self?.oxygenSaturation = saturation
+        }
+    }
+
+    func fetchWalkingRunningDistance() {
+        fetchData(fetcher: healthKitManager.readWalkingRunningDistance) { [weak self] samples in
+            self?.walkingRunningDistance = samples
+        }
+    }
+
+    func fetchMindfulSessions() {
+        fetchData(fetcher: healthKitManager.readMindfulSessions) { [weak self] sessions in
+            self?.mindfulSessions = sessions
+        }
+    }
+
+    func fetchSleepAnalysis() {
+        fetchData(fetcher: healthKitManager.readSleepAnalysis) { [weak self] samples in
+            self?.sleepAnalysis = samples
+        }
+    }
+    
+    func fetchExerciseMinutes() {
+        fetchData(fetcher: healthKitManager.readExerciseMinutes) { [weak self] samples in
+            self?.exerciseMinutes = samples
+        }
+    }
+
+    func fetchStandHours() {
+        fetchData(fetcher: healthKitManager.readStandHours) { [weak self] samples in
+            self?.standHours = samples
+        }
+    }
+
+    func fetchBiologicalSex() {
+        fetchData(fetcher: healthKitManager.readBiologicalSex) { [weak self] biologicalSex in
+            self?.biologicalSex = biologicalSex
+        }
+    }
+
+    func fetchDateOfBirth() {
+        fetchData(fetcher: healthKitManager.readDateOfBirth) { [weak self] dateOfBirthComponents in
+            self?.dateOfBirth = dateOfBirthComponents
+        }
+    }
+    
     func fetchActivitySummary() {
         let group = DispatchGroup()
         
         group.enter()
-        healthKitManager.fetchTotalActiveEnergyBurned { [weak self] totalCalories, _ in
+        healthKitManager.readTotalActiveEnergyBurned { [weak self] totalCalories, _ in
             defer { group.leave() }
             if let totalCalories = totalCalories, let self = self {
                 let quantity = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: totalCalories)
@@ -48,7 +155,7 @@ class HealthDataViewModel: ObservableObject {
         }
         
         group.enter()
-        healthKitManager.fetchTotalExerciseMinutes { [weak self] totalMinutes, _ in
+        healthKitManager.readTotalExerciseMinutes { [weak self] totalMinutes, _ in
             defer { group.leave() }
             if let totalMinutes = totalMinutes, let self = self {
                 let quantity = HKQuantity(unit: HKUnit.minute(), doubleValue: totalMinutes)
@@ -62,49 +169,20 @@ class HealthDataViewModel: ObservableObject {
             self?.objectWillChange.send()
         }
     }
-    
-    func fetchActiveEnergyBurned() {
-        healthKitManager.readActiveEnergyBurned { [weak self] samples, error in
-            let latestActiveEnergy = samples?.first?.quantity.doubleValue(for: HKUnit(from: "kcal"))
-            DispatchQueue.main.async {
-                self?.activeEnergy = latestActiveEnergy
-                return
-            }
-            
-        }
-    }
-    
-
-        
-    func fetchBodyMassIndex() {
-        healthKitManager.readBodyMassIndex { [weak self] bmiValue, error in
-            DispatchQueue.main.async {
-                if let error = error {
-                    // Handle error (e.g., show alert)
-                    print("Error fetching BMI: \(error.localizedDescription)")
-                    return
-                }
-                self?.bodyMassIndex = bmiValue
-                // Update UI or handle the new BMI value
-            }
-        }
-    }
 
     
-    func fetchHeartRate() {
-        healthKitManager.readHeartRate { [weak self] samples, _ in
-            let latestHeartRate = samples?.first?.quantity.doubleValue(for: HKUnit(from: "count/min"))
-            DispatchQueue.main.async {
-                self?.heartRate = latestHeartRate
-                // Now also calculate the daily averages when heart rates are fetched.
-                if let samples = samples {
-                    self?.dailyAverageHeartRates = self?.processHeartRateSamples(samples) ?? []
-                    return
-                }
-            }
-        }
-    }
+    
+    // MARK: - Daily Average for 7 days ( return seven numbers, each belongs to average of one day)
+    
 
+    // MARK: - Total average of 7 days ( return one number that is the average of 7 days)
+    
+    // MARK: - Summing up values (e.g. total active energy burned in a week)
+    
+    // MARK: - Trend Analysis
+    
+    
+    // MARK: -
     
     func processHeartRateSamples(_ samples: [HKQuantitySample]) -> [(date: Date, averageHeartRate: Double)] {
         let groupedSamples = Dictionary(grouping: samples, by: { Calendar.current.startOfDay(for: $0.startDate) })
@@ -117,35 +195,8 @@ class HealthDataViewModel: ObservableObject {
         return Array(dailyAverages.sorted(by: { $0.0 < $1.0 }).suffix(7))
     }
     
-    func fetchHeartRateChart() {
-        healthKitManager.readHeartRate { [weak self] samples, _ in
-            if let samples = samples {
-                let readings = samples.map { ($0.startDate, $0.quantity.doubleValue(for: HKUnit(from: "count/min"))) }
-                DispatchQueue.main.async {
-                    self?.heartRateReadings = readings
-                }
-            }
-        }
-    }
     
-    func fetchHeight() {
-        healthKitManager.readHeight { [weak self] sample, _ in
-            let latestHeight = sample?.quantity.doubleValue(for: HKUnit.meterUnit(with: .centi))
-            DispatchQueue.main.async {
-                self?.heightCm = latestHeight
-                return
-            }
-        }
-    }
-    
-    func fetchSleepAnalysis() {
-        healthKitManager.readSleepAnalysis { [weak self] samples, _ in
-            DispatchQueue.main.async {
-                self?.sleepAnalysis = samples
-            }
-        }
-    }
-    
+
     var moveRingProgress: CGFloat {
         let burned = activitySummary.activeEnergyBurned.doubleValue(for: HKUnit.kilocalorie())
         let goal = activitySummary.activeEnergyBurnedGoal.doubleValue(for: HKUnit.kilocalorie())
@@ -167,17 +218,27 @@ class HealthDataViewModel: ObservableObject {
         return min(CGFloat(standHours / goalHours), 1.0) // Progress should not exceed 1.0
     }
     
-
-    
     func fetchAllData() {
         fetchBodyMassIndex()
         fetchActivitySummary()
         fetchHeartRate()
         fetchSleepAnalysis()
         fetchHeight()
-        fetchHeartRateChart()
         fetchActiveEnergyBurned()
         
     }
     
 }
+
+
+
+//    func fetchHeartRateChart() {
+//        healthKitManager.readHeartRate { [weak self] samples, _ in
+//            if let samples = samples {
+//                let readings = samples.map { ($0.startDate, $0.quantity.doubleValue(for: HKUnit(from: "count/min"))) }
+//                DispatchQueue.main.async {
+//                    self?.heartRateReadings = readings
+//                }
+//            }
+//        }
+//    }

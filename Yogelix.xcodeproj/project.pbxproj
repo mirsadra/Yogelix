@@ -30,7 +30,6 @@
 		3B40A3752B126D7400170041 /* CustomActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A3742B126D7400170041 /* CustomActivityRingView.swift */; };
 		3B40A37D2B12B43000170041 /* MetricCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A37C2B12B43000170041 /* MetricCardView.swift */; };
 		3B40A37F2B12B49400170041 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A37E2B12B49400170041 /* ProgressRingView.swift */; };
-		3B40A3882B12CBE600170041 /* HealthDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A3872B12CBE600170041 /* HealthDataView.swift */; };
 		3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469892B0CFC5B009130FD /* AuthenticationView.swift */; };
 		3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */; };
 		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
@@ -85,6 +84,10 @@
 		3BF5476C2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5476B2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift */; };
 		3BF5476E2B148A6F0073BD18 /* WorkoutStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5476D2B148A6F0073BD18 /* WorkoutStore.swift */; };
 		3BF547702B148FFE0073BD18 /* YogaCustomWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5476F2B148FFE0073BD18 /* YogaCustomWorkoutView.swift */; };
+		3BF547722B155CAC0073BD18 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF547712B155CAC0073BD18 /* Item.swift */; };
+		3BF547742B155D1C0073BD18 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF547732B155D1C0073BD18 /* Home.swift */; };
+		3BF547762B155DC10073BD18 /* MainScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF547752B155DC10073BD18 /* MainScrollView.swift */; };
+		3BF547782B155EDE0073BD18 /* LoopingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF547772B155EDE0073BD18 /* LoopingScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,7 +150,6 @@
 		3B40A3742B126D7400170041 /* CustomActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityRingView.swift; sourceTree = "<group>"; };
 		3B40A37C2B12B43000170041 /* MetricCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCardView.swift; sourceTree = "<group>"; };
 		3B40A37E2B12B49400170041 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
-		3B40A3872B12CBE600170041 /* HealthDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataView.swift; sourceTree = "<group>"; };
 		3B40A3892B12D48F00170041 /* Prompt.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prompt.md; sourceTree = "<group>"; };
 		3B5469892B0CFC5B009130FD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
@@ -209,6 +211,10 @@
 		3BF5476B2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWorkoutConfiguration+Displaying.swift"; sourceTree = "<group>"; };
 		3BF5476D2B148A6F0073BD18 /* WorkoutStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStore.swift; sourceTree = "<group>"; };
 		3BF5476F2B148FFE0073BD18 /* YogaCustomWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaCustomWorkoutView.swift; sourceTree = "<group>"; };
+		3BF547712B155CAC0073BD18 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		3BF547732B155D1C0073BD18 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		3BF547752B155DC10073BD18 /* MainScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScrollView.swift; sourceTree = "<group>"; };
+		3BF547772B155EDE0073BD18 /* LoopingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +268,10 @@
 			children = (
 				3BAF8EFD2B13D25500E5436F /* PicView.swift */,
 				3BAF8EFF2B13D79300E5436F /* HealthCardView.swift */,
+				3BF547712B155CAC0073BD18 /* Item.swift */,
+				3BF547732B155D1C0073BD18 /* Home.swift */,
+				3BF547752B155DC10073BD18 /* MainScrollView.swift */,
+				3BF547772B155EDE0073BD18 /* LoopingScrollView.swift */,
 			);
 			path = HealthData;
 			sourceTree = "<group>";
@@ -310,7 +320,6 @@
 				3B40A3742B126D7400170041 /* CustomActivityRingView.swift */,
 				3B40A37C2B12B43000170041 /* MetricCardView.swift */,
 				3B40A37E2B12B49400170041 /* ProgressRingView.swift */,
-				3B40A3872B12CBE600170041 /* HealthDataView.swift */,
 			);
 			path = Health;
 			sourceTree = "<group>";
@@ -689,6 +698,7 @@
 				3BF547702B148FFE0073BD18 /* YogaCustomWorkoutView.swift in Sources */,
 				3BCC05202B01A72600FD1FC3 /* AdditionalDataViewModel.swift in Sources */,
 				3BDFE1442B026C62007FB23E /* SubscriptionService.swift in Sources */,
+				3BF547742B155D1C0073BD18 /* Home.swift in Sources */,
 				3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */,
 				3BF5476E2B148A6F0073BD18 /* WorkoutStore.swift in Sources */,
 				3BCC04D32B01901500FD1FC3 /* Yogelix.xcdatamodeld in Sources */,
@@ -704,6 +714,7 @@
 				3BCC05032B019B4A00FD1FC3 /* HomeView.swift in Sources */,
 				3BDADF192B0E395B0023B4AC /* AccountView.swift in Sources */,
 				3BDADF1D2B0E55FE0023B4AC /* RandomQueryView.swift in Sources */,
+				3BF547762B155DC10073BD18 /* MainScrollView.swift in Sources */,
 				3BCC050D2B01A44100FD1FC3 /* AsanasExplorerView.swift in Sources */,
 				3BCC05232B01A73800FD1FC3 /* UpgradeToPremiumViewModel.swift in Sources */,
 				3B3E13B52B0A6B67003F8E78 /* YogaPose.swift in Sources */,
@@ -733,9 +744,10 @@
 				3BCC051A2B01A6D000FD1FC3 /* AsanasExplorerViewModel.swift in Sources */,
 				3B40A36F2B12230400170041 /* OpenAINetworking.swift in Sources */,
 				3BCC05072B01A31F00FD1FC3 /* ProgressSnapshotView.swift in Sources */,
+				3BF547722B155CAC0073BD18 /* Item.swift in Sources */,
 				3BCC05182B01A6AE00FD1FC3 /* AIYogaPlanViewModel.swift in Sources */,
-				3B40A3882B12CBE600170041 /* HealthDataView.swift in Sources */,
 				3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */,
+				3BF547782B155EDE0073BD18 /* LoopingScrollView.swift in Sources */,
 				3BDFE1422B026C58007FB23E /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
