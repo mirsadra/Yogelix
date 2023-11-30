@@ -13,20 +13,12 @@ struct RingView: View {
     var endColor: Color
     var labelText: String
     var systemImageName: String
+    var imageColor: Color?
     @Environment(\.colorScheme) var colorScheme // Detects the current color scheme
     
     
     var labelColor: Color {
         colorScheme == .light ? .black : .white
-    }
-    
-    var imageColor: Color {
-        switch systemImageName {
-            case "flame.fill":
-                return .red // Flame icon will be red
-            default:
-                return labelColor // Other icons will match the label color
-        }
     }
     
     var body: some View {

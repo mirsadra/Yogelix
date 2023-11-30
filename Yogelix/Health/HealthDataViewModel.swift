@@ -21,8 +21,6 @@ class HealthDataViewModel: ObservableObject {
     @Published var sleepAnalysis: [HKCategorySample]?
     @Published var activitySummary = HKActivitySummary()
     
-    @Published var summaryHealthItems: [SummaryHealth] = []
-    
     // MARK: - Initialization
     init() {
         requestAuthorization()
@@ -163,7 +161,7 @@ class HealthDataViewModel: ObservableObject {
             self?.objectWillChange.send()
         }
     }
-
+    
     var moveRingProgress: CGFloat {
         let burned = activitySummary.activeEnergyBurned.doubleValue(for: HKUnit.kilocalorie())
         let goal = activitySummary.activeEnergyBurnedGoal.doubleValue(for: HKUnit.kilocalorie())
@@ -185,84 +183,7 @@ class HealthDataViewModel: ObservableObject {
         return min(CGFloat(standHoursReadings / goalHours), 1.0) // Progress should not exceed 1.0
     }
     
-    // MARK: - Process Data to create SummaryHealth instances
-    
-
-    
-
-
-    
-    func processBMIData() {
-        if let bmiReadings = bodyMassIndexReadings, let mostRecentBMI = bmiReadings.last {
-            let summaryHealth = SummaryHealth(
-                title: "Body Mass Index",
-                value: mostRecentBMI.1,  // .1 to access the Double value in the tuple
-                unit: "",
-                caption: "Most recent reading",
-                dataDate: Calendar.current.dateComponents([.year, .month, .day], from: mostRecentBMI.0),
-                dateRange: .daily,
-                iconName: "figure.scale",
-                isInteger: false
-            )
-
-            // Add or append the summary to summaryHealthItems
-            self.summaryHealthItems.append(summaryHealth)
-            return
-        }
-    }
-    
-    func processHeartRateData() {
-        let weeklyHeartRates = weeklyHeartRateReadings()
-
-        let heartRateSummary = weeklyHeartRates.map { (date, averageRate) in
-            return SummaryHealth(
-                title: "Weekly Heart Rate",
-                value: averageRate,
-                unit: "BPM",
-                caption: "Average over the week",
-                dataDate: Calendar.current.dateComponents([.year, .month, .day], from: date),
-                dateRange: .weekly(start: .distantPast, end: .now),
-                iconName: "heart.fill",
-                isInteger: false
-            )
-        }
-
-        self.summaryHealthItems += heartRateSummary
-    }
-
-
-    
-    func processHealthData() {
-        // Example: Processing weekly heart rate readings
-        let weeklyHeartRates = weeklyHeartRateReadings()
-        let heartRateSummary = convertToSummaryHealth(
-            averages: weeklyHeartRates,
-            title: "Weekly Heart Rate",
-            unit: "BPM",
-            iconName: "heart.fill",
-            isInteger: false,
-            dateRange: .weekly(start: Date(), end: Date())
-        )
-
-        // Process other metrics in a similar way and then update summaryHealthItems
-        self.summaryHealthItems = heartRateSummary // Add more items as needed
-    }
-    
-    func convertToSummaryHealth(averages: [Date: Double], title: String, unit: String, iconName: String, isInteger: Bool, dateRange: SummaryHealth.DateRange) -> [SummaryHealth] {
-        averages.map { (date, value) in
-            SummaryHealth(
-                title: title,
-                value: value,
-                unit: unit,
-                caption: "Average",
-                dataDate: Calendar.current.dateComponents([.year, .month, .day], from: date),
-                dateRange: dateRange,
-                iconName: iconName,
-                isInteger: isInteger
-            )
-        }
-    }
-    
+    // MARK: - Fetch All Data
     func fetchAllData() {
         fetchBodyMassIndexReadings()
         fetchActivitySummary()
@@ -270,87 +191,129 @@ class HealthDataViewModel: ObservableObject {
         fetchSleepAnalysis()
         fetchHeight()
         fetchActiveEnergyBurnReading()
-        
+        fetchWalkingRunningDistanceReadings()
+
+    }
+    
+    // MARK: - Calculation & Date & Date Interval
+    // MARK: - Total (Sum) of Day, Week, and Month
+    func getDailyTotal(readings: [(Date, Double)]) -> (total: Double, date: Date) {
+        let today = Calendar.current.startOfDay(for: Date())
+        let total = readings
+            .filter { Calendar.current.isDate($0.0, inSameDayAs: today) }
+            .map { $0.1 }
+            .reduce(0, +)
+        return (total, today)
+    }
+
+    func getWeeklyTotal(readings: [(Date, Double)]) -> (total: Double, startDate: Date, endDate: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date(), Date()) }
+        let startDate = Calendar.current.date(byAdding: .day, value: -6, to: mostRecentDate)!
+        let total = readings
+            .filter { $0.0 >= startDate && $0.0 <= mostRecentDate }
+            .map { $0.1 }
+            .reduce(0, +)
+        return (total, startDate, mostRecentDate)
+    }
+
+    func getMonthlyTotal(readings: [(Date, Double)]) -> (total: Double, startDate: Date, endDate: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date(), Date()) }
+        let startDate = Calendar.current.date(byAdding: .day, value: -29, to: mostRecentDate)!
+        let total = readings
+            .filter { $0.0 >= startDate && $0.0 <= mostRecentDate }
+            .map { $0.1 }
+            .reduce(0, +)
+        return (total, startDate, mostRecentDate)
+    }
+    
+    // MARK: - Average of Day, Week, and Month
+    func getDailyAverage(readings: [(Date, Double)]) -> (average: Double, date: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date()) }
+        let average = calculateAverage(readings: readings.filter { Calendar.current.isDate($0.0, inSameDayAs: mostRecentDate) })
+        return (average, mostRecentDate)
+    }
+
+    func getWeeklyAverage(readings: [(Date, Double)]) -> (average: Double, startDate: Date, endDate: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date(), Date()) }
+        let startDate = Calendar.current.date(byAdding: .day, value: -6, to: mostRecentDate)!
+        let average = calculateAverage(readings: readings.filter { $0.0 >= startDate && $0.0 <= mostRecentDate })
+        return (average, startDate, mostRecentDate)
+    }
+
+    func getMonthlyAverage(readings: [(Date, Double)]) -> (average: Double, startDate: Date, endDate: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date(), Date()) }
+        let startDate = Calendar.current.date(byAdding: .day, value: -29, to: mostRecentDate)!
+        let average = calculateAverage(readings: readings.filter { $0.0 >= startDate && $0.0 <= mostRecentDate })
+        return (average, startDate, mostRecentDate)
+    }
+
+    private func calculateAverage(readings: [(Date, Double)]) -> Double {
+        guard !readings.isEmpty else { return 0.0 }
+
+        let totalSum = readings.reduce(0.0) { $0 + $1.1 }
+        return totalSum / Double(readings.count)
+    }
+    
+    // MARK: - Total (Sum) of Day, Week, and Month for kilometer
+    func getDailyDistanceTotal(readings: [(Date, Double)]) -> (total: Double, date: Date) {
+        let today = Calendar.current.startOfDay(for: Date())
+        let totalMeters = readings
+            .filter { Calendar.current.isDate($0.0, inSameDayAs: today) }
+            .map { $0.1 }
+            .reduce(0, +)
+        let totalKilometers = totalMeters / 1000.0
+        return (totalKilometers, today)
+    }
+
+    func getWeeklyDistanceTotal(readings: [(Date, Double)]) -> (total: Double, startDate: Date, endDate: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date(), Date()) }
+        let startDate = Calendar.current.date(byAdding: .day, value: -6, to: mostRecentDate)!
+        let totalMeters = readings
+            .filter { $0.0 >= startDate && $0.0 <= mostRecentDate }
+            .map { $0.1 }
+            .reduce(0, +)
+        let totalKilometers = totalMeters / 1000.0
+        return (totalKilometers, startDate, mostRecentDate)
+    }
+
+    func getMonthlyDistanceTotal(readings: [(Date, Double)]) -> (total: Double, startDate: Date, endDate: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date(), Date()) }
+        let startDate = Calendar.current.date(byAdding: .day, value: -29, to: mostRecentDate)!
+        let totalMeters = readings
+            .filter { $0.0 >= startDate && $0.0 <= mostRecentDate }
+            .map { $0.1 }
+            .reduce(0, +)
+        let totalKilometers = totalMeters / 1000.0
+        return (totalKilometers, startDate, mostRecentDate)
+    }
+    
+    // MARK: - Average of Day, Week, and Month
+    func getDailyDistanceAverage(readings: [(Date, Double)]) -> (average: Double, date: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date()) }
+        let average = calculateDistanceAverage(readings: readings.filter { Calendar.current.isDate($0.0, inSameDayAs: mostRecentDate) })
+        return (average, mostRecentDate)
+    }
+
+    func getWeeklyDistanceAverage(readings: [(Date, Double)]) -> (average: Double, startDate: Date, endDate: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date(), Date()) }
+        let startDate = Calendar.current.date(byAdding: .day, value: -6, to: mostRecentDate)!
+        let average = calculateDistanceAverage(readings: readings.filter { $0.0 >= startDate && $0.0 <= mostRecentDate })
+        return (average, startDate, mostRecentDate)
+    }
+
+    func getMonthlyDistanceAverage(readings: [(Date, Double)]) -> (average: Double, startDate: Date, endDate: Date) {
+        guard let mostRecentDate = readings.first?.0 else { return (0.0, Date(), Date()) }
+        let startDate = Calendar.current.date(byAdding: .day, value: -29, to: mostRecentDate)!
+        let average = calculateDistanceAverage(readings: readings.filter { $0.0 >= startDate && $0.0 <= mostRecentDate })
+        return (average, startDate, mostRecentDate)
+    }
+
+    private func calculateDistanceAverage(readings: [(Date, Double)]) -> Double {
+        guard !readings.isEmpty else { return 0.0 }
+
+        let totalSum = readings.reduce(0.0) { $0 + $1.1 }
+        let averageKilometers = totalSum / 1000.0
+        return averageKilometers / Double(readings.count)
     }
 }
-
-// MARK: - Health Data Averages Extension
-extension HealthDataViewModel {
-
-    // MARK: - Average Calculations for Data Collections
-    private func calculateMetricAverages(metrics: [(Date, Double)]?, component: Calendar.Component) -> [Date: Double] {
-        guard let metrics = metrics else { return [:] }
-
-        return calculateAverages(for: metrics, by: component)
-    }
-    
-    func weeklyHeartRateReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: heartRateReadings, component: .weekOfYear)
-    }
-    
-    func monthlyHeartRateReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: heartRateReadings, component: .month)
-    }
-    
-    func weeklyWalkingRunningDistanceReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: walkingRunningDistanceReadings, component: .weekOfYear)
-    }
-
-    func monthlyWalkingRunningDistanceReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: walkingRunningDistanceReadings, component: .month)
-    }
-    
-    func weeklyActiveEnergyBurnReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: activeEnergyBurnReadings, component: .weekOfYear)
-    }
-
-    func monthlyActiveEnergyBurnReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: activeEnergyBurnReadings, component: .month)
-    }
-    
-    func weeklyOxygenSaturationReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: oxygenSaturationReadings, component: .weekOfYear)
-    }
-
-    func monthlyOxygenSaturationReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: oxygenSaturationReadings, component: .month)
-    }
-    
-    func weeklyBasalEnergyBurnReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: basalEnergyBurnReadings, component: .weekOfYear)
-    }
-    
-    func monthlyBasalEnergyBurnReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: basalEnergyBurnReadings, component: .month)
-    }
-    
-    func weeklyExerciseMinutesReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: exerciseMinutesReadings, component: .weekOfYear)
-    }
-
-    func monthlyExerciseMinutesReadings() -> [Date: Double] {
-        calculateMetricAverages(metrics: exerciseMinutesReadings, component: .month)
-    }
-    
-    // MARK: - General Average Calculation
-    private func calculateAverages(for data: [(Date, Double)], by component: Calendar.Component) -> [Date: Double] {
-        let groupedData = Dictionary(grouping: data) { tuple in
-            let date = Calendar.current.date(from: Calendar.current.dateComponents([component], from: tuple.0.startOfDay())) ?? tuple.0.startOfDay()
-            return date
-        }
-
-
-        return groupedData.mapValues { readings in
-            let total = readings.reduce(0) { $0 + $1.1 }
-            return total / Double(readings.count)
-        }
-    }
-}
-
-private extension Date {
-    func startOfDay() -> Date {
-        Calendar.current.startOfDay(for: self)
-    }
-}
-
 

@@ -6,67 +6,135 @@ import Charts
 struct HealthView: View {
     @ObservedObject var viewModel = HealthDataViewModel()
     @State private var selectedDay: UUID?
+    @State private var selectedTimePeriod: TimePeriod = .today
     
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
                 HStack {
-                    RingView(progress: CGFloat(viewModel.moveRingProgress), startColor: .red, endColor: .orange, labelText: "\(viewModel.activitySummary.activeEnergyBurned)", systemImageName: "flame.fill")
-                    RingView(progress: CGFloat(viewModel.exerciseRingProgress), startColor: .green, endColor: .blue, labelText: "\(viewModel.activitySummary.appleExerciseTime)", systemImageName: "medal")
+                    RingView(progress: CGFloat(viewModel.moveRingProgress), startColor: .red, endColor: .orange, labelText: "\(viewModel.activitySummary.activeEnergyBurned)", systemImageName: "flame.fill", imageColor: .red)
+                    RingView(progress: CGFloat(viewModel.exerciseRingProgress), startColor: .green, endColor: .blue, labelText: "\(viewModel.activitySummary.appleExerciseTime)", systemImageName: "medal", imageColor: .yellow)
                     RingView(progress: CGFloat(viewModel.standRingProgress), startColor: .blue, endColor: .purple, labelText: "\(viewModel.activitySummary.appleStandHours)", systemImageName: "figure.stand")
-                        .onAppear {
-                            viewModel.fetchAllData()
-                        }
                 }
                 .padding()
                 VStack{
-                    HStack {
-                        MetricCardView(title: "Height", value: viewModel.heightReading ?? 0.0, unit: "cm", caption: "")
-                        if let mostRecentBMI = viewModel.bodyMassIndexReadings?.first?.1 {
-                            MetricCardView(title: "BMI", value: mostRecentBMI, unit: "", caption: "Latest Available Data", isInteger: false, iconName: "figure")
+                    ScrollView(.horizontal, showsIndicators: true) {
+                        HStack {
+                            if let mostRecentBMI = viewModel.bodyMassIndexReadings?.first {
+                                MetricCardView(title: "BMI", value: mostRecentBMI.1, unit: "", date: mostRecentBMI.0, caption: "Latest", iconName: "list.clipboard")
+                            }
+                            
+                            if let mostRecentHeight = viewModel.heightReading {
+                                MetricCardView(title: "Height", value: mostRecentHeight, unit: "cm", date: Date(), caption: "Latest", iconName: "pencil.and.ruler")
+                            }
+                            
+                            if let mostRecentHR = viewModel.heartRateReadings?.first {
+                                MetricCardView(title: "Heart Rate", value: mostRecentHR.1, unit: "bpm", date: mostRecentHR.0, caption: "Latest", iconName: "heart")
+                            }
                         }
+                        .padding()
                     }
+                    
+                    // Picker for selecting the time period
+                    Picker("Time Period", selection: $selectedTimePeriod) {
+                        Text("Today").tag(TimePeriod.today)
+                        Text("Last 7 Days").tag(TimePeriod.last7Days)
+                        Text("Last 30 Days").tag(TimePeriod.last30Days)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
                     .padding()
                     
                     HStack {
-                        // Last data submited for heart rate with date
-                        if let mostRecentHR = viewModel.heartRateReadings?.first {
-                            MetricCardView(title: "Heart Rate", value: mostRecentHR.1, unit: "bpm", date: mostRecentHR.0, caption: "Latest Available Data", iconName: "heart")
+                        // Conditional display of MetricCardView based on selectedTimePeriod
+                        if let activeEnergyBurnSum = viewModel.activeEnergyBurnReadings {
+                            switch selectedTimePeriod {
+                                case .today:
+                                    let (dailyTotal, date) = viewModel.getDailyTotal(readings: activeEnergyBurnSum)
+                                    MetricCardView(title: "⚡️ + 🔥", value: dailyTotal, unit: "kcal", date: date, caption: "∑")
+                                    
+                                case .last7Days:
+                                    let (weeklyTotal, startDate, endDate) = viewModel.getWeeklyTotal(readings: activeEnergyBurnSum)
+                                    let weeklyDateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
+                                    MetricCardView(title: "⚡️ + 🔥", value: weeklyTotal, unit: "kcal", caption: "∑", dateInterval: weeklyDateInterval)
+                                    
+                                case .last30Days:
+                                    let (monthlyTotal, startDate, endDate) = viewModel.getMonthlyTotal(readings: activeEnergyBurnSum)
+                                    let monthlyDateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
+                                    MetricCardView(title: "⚡️ + 🔥", value: monthlyTotal, unit: "kcal", caption: "∑", dateInterval: monthlyDateInterval)
+                            }
                         }
                         
-                        // Active energy burn sum of day with date
-                        if let readings = viewModel.activeEnergyBurnReadings {
-                            let groupedReadings = Dictionary(grouping: readings, by: { Calendar.current.startOfDay(for: $0.0) })
-                            let dailySums = groupedReadings.mapValues { readingsForDate in
-                                readingsForDate.map { $0.1 }.reduce(0, +)
-                            }
-
-                            if let mostRecentDate = dailySums.keys.sorted(by: >).first {
-                                let totalEnergyBurned = dailySums[mostRecentDate] ?? 0.0
-                                MetricCardView(title: "Active Energy", value: totalEnergyBurned, unit: "kcal", date: mostRecentDate, caption: "Sum")
+                        if let activeEnergyBurnAverage = viewModel.activeEnergyBurnReadings {
+                            switch selectedTimePeriod {
+                                case .today:
+                                    let (dailyTotal, date) = viewModel.getDailyAverage(readings: activeEnergyBurnAverage)
+                                    MetricCardView(title: "⚡️ + 🔥", value: dailyTotal, unit: "kcal", date: date, caption: "⨏")
+                                    
+                                case .last7Days:
+                                    let (weeklyTotal, startDate, endDate) = viewModel.getWeeklyAverage(readings: activeEnergyBurnAverage)
+                                    let weeklyDateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
+                                    MetricCardView(title: "⚡️ + 🔥", value: weeklyTotal, unit: "kcal", caption: "⨏", dateInterval: weeklyDateInterval)
+                                    
+                                case .last30Days:
+                                    let (monthlyTotal, startDate, endDate) = viewModel.getMonthlyAverage(readings: activeEnergyBurnAverage)
+                                    let monthlyDateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
+                                    MetricCardView(title: "⚡️ + 🔥", value: monthlyTotal, unit: "kcal", caption: "⨏", dateInterval: monthlyDateInterval)
                             }
                         }
                     }
                     .padding()
                     
                     HStack {
-                        // Active energy burn 
-                        if let readings = viewModel.activeEnergyBurnReadings {
-                            let endDate = Date()
-                            let startDate = Calendar.current.date(byAdding: .day, value: -6, to: endDate)!
-
-                            let filteredReadings = readings.filter { $0.0 >= startDate && $0.0 <= endDate }
-                            let totalEnergyBurned = filteredReadings.map { $0.1 }.reduce(0, +)
-
-                            let dateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
-                            MetricCardView(title: "Active Energy Burned (Last 7 Days)", value: totalEnergyBurned, unit: "kcal", caption: "Sum", dateInterval: dateInterval)
+                        // Conditional display of MetricCardView based on selectedTimePeriod
+                        if let walkingRunningDistanceSum = viewModel.walkingRunningDistanceReadings {
+                            switch selectedTimePeriod {
+                                case .today:
+                                    let (dailyTotal, date) = viewModel.getDailyDistanceTotal(readings: walkingRunningDistanceSum)
+                                    MetricCardView(title: "🏃🏾 + 🚶🏼‍♀️", value: dailyTotal, unit: "km", date: date, caption: "∑", useTwoDecimalPlaces: true)
+                                    
+                                case .last7Days:
+                                    let (weeklyTotal, startDate, endDate) = viewModel.getWeeklyDistanceTotal(readings: walkingRunningDistanceSum)
+                                    let weeklyDateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
+                                    MetricCardView(title: "🏃🏾 + 🚶🏼‍♀️", value: weeklyTotal, unit: "km", caption: "∑", dateInterval: weeklyDateInterval, useTwoDecimalPlaces: true)
+                                    
+                                case .last30Days:
+                                    let (monthlyTotal, startDate, endDate) = viewModel.getMonthlyDistanceTotal(readings: walkingRunningDistanceSum)
+                                    let monthlyDateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
+                                    MetricCardView(title: "🏃🏾 + 🚶🏼‍♀️", value: monthlyTotal, unit: "km", caption: "∑", dateInterval: monthlyDateInterval, useTwoDecimalPlaces: true)
+                            }
+                        }
+                        
+                        if let walkingRunningDistanceAverage = viewModel.walkingRunningDistanceReadings {
+                            switch selectedTimePeriod {
+                                case .today:
+                                    let (dailyTotal, date) = viewModel.getDailyDistanceAverage(readings: walkingRunningDistanceAverage)
+                                    MetricCardView(title: "🏃🏾 + 🚶🏼‍♀️", value: dailyTotal, unit: "km", date: date, caption: "⨏", useTwoDecimalPlaces: true)
+                                    
+                                case .last7Days:
+                                    let (weeklyTotal, startDate, endDate) = viewModel.getWeeklyDistanceAverage(readings: walkingRunningDistanceAverage)
+                                    let weeklyDateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
+                                    MetricCardView(title: "🏃🏾 + 🚶🏼‍♀️", value: weeklyTotal, unit: "km", caption: "⨏", dateInterval: weeklyDateInterval, useTwoDecimalPlaces: true)
+                                    
+                                case .last30Days:
+                                    let (monthlyTotal, startDate, endDate) = viewModel.getMonthlyDistanceAverage(readings: walkingRunningDistanceAverage)
+                                    let monthlyDateInterval = formatDateInterval(startDate: startDate, endDate: endDate)
+                                    MetricCardView(title: "🏃🏾 + 🚶🏼‍♀️", value: monthlyTotal, unit: "km", caption: "⨏", dateInterval: monthlyDateInterval, useTwoDecimalPlaces: true)
+                            }
                         }
                     }
                     .padding()
                 }
+                .padding()
             }
         }
+        .onAppear {
+            viewModel.fetchAllData()
+        }
     }
+}
+
+enum TimePeriod {
+    case today, last7Days, last30Days
 }
 
 func formatDateInterval(startDate: Date, endDate: Date) -> String {
@@ -86,3 +154,13 @@ struct HealthView_Previews: PreviewProvider {
 }
 
 
+/*
+ HStack {
+ MetricCardView(title: "Height", value: viewModel.heightReading ?? 0.0, unit: "cm", caption: "")
+ if let mostRecentBMI = viewModel.bodyMassIndexReadings?.first?.1 {
+ MetricCardView(title: "BMI", value: mostRecentBMI, unit: "", caption: "Latest Available Data", isInteger: false, iconName: "figure")
+ }
+ }
+ .padding()
+ 
+ */

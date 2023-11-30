@@ -2,35 +2,61 @@
 import SwiftUI
 
 struct CardView: View {
-    let exercise: DailyExercise
+    let practices: DailyPractice
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(exercise.title)
-                .font(.headline)
-                .accessibilityAddTraits(.isHeader)
-            Spacer()
-            HStack {
-                Label("\(exercise.steps.count)", systemImage: "figure.step.training")
-                    .accessibilityLabel("\(exercise.steps.count) steps")
+        
+        ZStack {
+            Image(practices.image)
+                .resizable()
+                .frame(width: 160, height: 90)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(practices.title)
+                        .font(.headline)
+                    .accessibilityAddTraits(.isHeader)
+                    
+                    Spacer()
+                    
+                    Label {
+                        Text("\(practices.difficulty)")
+                            .hidden()
+                    }
+                    icon: {
+                        HStack(spacing: 2) {
+                            ForEach(0..<3) { _ in
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(.yellow)
+                            }
+                        }
+                    }
+
+                }
                 Spacer()
-                Label("\(exercise.lengthInMin)", systemImage: "timer")
-                    .accessibilityLabel("\(exercise.lengthInMin) minute exercise")
-                    .labelStyle(.trailingIcon)
+                HStack {
+                    Label {
+                        Text("\(practices.goal)")
+                    }
+                    icon: {
+                        Image(systemName: "sparkle")
+                            .foregroundColor(.yellow) // Set the color you desire here
+                    }
+                        .labelStyle(.titleAndIcon)
+                }
+                .font(.footnote)
+                .padding(.top, 50)
             }
-            .font(.subheadline)
-        }
-        .padding()
+            .padding()
         .foregroundColor(.black)
+        }
     }
 }
 
 struct CardView_Previews: PreviewProvider {
-    static var exercise = DailyExercise.sampleExercises[0]
+    static var practice = DailyPractice.dailyPractices[0]
     static var previews: some View {
-        CardView(exercise: exercise)
-            .background(exercise.theme.mainColor)
-            .previewLayout(.fixed(width: 200, height: 240))
+        CardView(practices: practice)
+            .previewLayout(.fixed(width: 400, height: 180))
             .presentationCornerRadius(16)
     }
 }

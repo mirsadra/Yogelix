@@ -8,14 +8,14 @@ struct DailyWorkoutView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             VStack {
-                Text(openAINetworking.responseText) // Display the response text
-                    .padding()
+//                Text(openAINetworking.responseText) // Display the response text
+//                    .padding()
                 
                 Spacer()
                 
                 Button("Send Request") {
                     // Call the sendRequest method when the button is tapped
-                    openAINetworking.sendRequest()
+//                    openAINetworking.sendRequest()
                 }
                 .bold()
                 .frame(maxWidth: .infinity)

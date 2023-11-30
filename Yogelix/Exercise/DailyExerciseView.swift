@@ -2,15 +2,15 @@
 import SwiftUI
 
 struct DailyExerciseView: View {
-    let exercise: [DailyExercise]
+    let practices: [DailyPractice]
     
     var body: some View {
         NavigationStack {
-            List(exercise) { exercise in
-                NavigationLink(destination: DetailView(exercise: exercise)) {
-                    CardView(exercise: exercise)
+            List(practices) { practices in
+                NavigationLink(destination: DetailView(exercise: practices)) {
+                    CardView(practices: practices)
                 }
-                        .listRowBackground(exercise.theme.mainColor)
+//                        .listRowBackground(practices.theme.mainColor)
             }
             .navigationTitle("Daily Exercise")
             .toolbar {
@@ -25,6 +25,6 @@ struct DailyExerciseView: View {
 
 struct DailyExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        DailyExerciseView(exercise: DailyExercise.sampleExercises)
+        DailyExerciseView(practices: DailyPractice.dailyPractices)
     }
 }

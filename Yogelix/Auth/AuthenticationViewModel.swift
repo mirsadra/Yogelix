@@ -1,7 +1,8 @@
 //  AuthenticationViewModel.swift
 import Foundation
 import FirebaseAuth
-// For Sign in with Apple
+import FirebaseStorage
+import FirebaseFirestore
 import AuthenticationServices
 import CryptoKit
 
@@ -96,6 +97,64 @@ class AuthenticationViewModel: ObservableObject {
         password = ""
         confirmPassword = ""
     }
+    
+    // MARK: - Upload Profile Picture
+    enum ProfileImageError: Error {
+        case failedToConvertImage
+        case failedToUploadImage
+        case failedToUpdateFirestore
+        case unknownError
+    }
+    
+    func uploadProfileImage(_ image: UIImage, for user: User) async -> Result<URL, Error> {
+        guard let imageData = image.jpegData(compressionQuality: 0.4) else {
+            return .failure(ProfileImageError.failedToConvertImage)
+        }
+        
+        let storageRef = Storage.storage().reference().child("profile_images/\(user.uid).png")
+        
+        // Create metadata for the image
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/png"  // or "image/jpeg" if you're using JPEG
+        
+        do {
+            // Upload the image data with metadata
+            _ = try await storageRef.putData(imageData, metadata: metadata)
+            let imageUrl = try await storageRef.downloadURL()
+            return .success(imageUrl)
+        } catch {
+            return .failure(ProfileImageError.unknownError)
+        }
+    }
+    
+    
+    func updateProfileImageUrl(_ url: URL, for user: User) async -> Result<Void, Error> {
+        let db = Firestore.firestore()
+        let userDoc = db.collection("users").document(user.uid)
+        
+        do {
+            try await userDoc.setData(["profileImageUrl": url.absoluteString], merge: true)
+            return .success(())
+        } catch {
+            return .failure(ProfileImageError.failedToUpdateFirestore)
+        }
+    }
+    
+    func fetchAndSetProfileImage() async {
+        guard let uid = user?.uid else { return }
+        
+        let userDocRef = Firestore.firestore().collection("users").document(uid)
+        do {
+            let snapshot = try await userDocRef.getDocument()
+            if let imageUrlString = snapshot.data()?["profileImageUrl"] as? String,
+               let imageUrl = URL(string: imageUrlString) {
+                // Download the image data from the imageUrl and set it to your profileImage
+                // Depending on your UI logic, you may need to publish changes to profileImage
+            }
+        } catch {
+            // Handle errors, e.g., unable to fetch document, data format issues, etc.
+        }
+    }
 }
 
 // MARK: - Email and Password Authentication
@@ -139,7 +198,7 @@ extension AuthenticationViewModel {
             errorMessage = error.localizedDescription
         }
     }
-
+    
     
     func deleteAccount() async -> Bool {
         do {
@@ -151,8 +210,6 @@ extension AuthenticationViewModel {
         }
     }
 }
-
-// MARK: - Email and Link Authentication
 
 
 // MARK: Sign in with Apple
@@ -286,8 +343,6 @@ private func randomNonceString(length: Int = 32) -> String {
     
     return result
 }
-
-
 
 private func sha256(_ input: String) -> String {
     let inputData = Data(input.utf8)

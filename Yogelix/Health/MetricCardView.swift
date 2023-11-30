@@ -1,3 +1,4 @@
+// MetricCardView.swift
 import SwiftUI
 
 struct MetricCardView: View {
@@ -8,16 +9,22 @@ struct MetricCardView: View {
     var caption: String
     var dateInterval: String?
     var isInteger: Bool = true
-    var iconName: String  = "figure"
-
+    var useTwoDecimalPlaces: Bool = false
+    var iconName: String  = "circle.badge.checkmark"
+    
     @State private var iconScale: CGFloat = 0.9
     @State private var textOpacity: Double = 0
     @State private var slideInOffset: CGSize = CGSize(width: 20, height: 0)
-
+    
+    
     var formattedValue: String {
-        isInteger ? "\(Int(value))" : String(format: "%.2f", value)
+        if useTwoDecimalPlaces {
+            return String(format: "%.2f", value)
+        } else {
+            return isInteger ? "\(Int(value))" : String(format: "%.2f", value)
+        }
     }
-
+    
     private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -28,25 +35,15 @@ struct MetricCardView: View {
     var formattedDate: String {
         date != nil ? dateFormatter.string(from: date!) : ""
     }
-
+    
     var body: some View {
         VStack {
-            Image(systemName: iconName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 30, height: 30)
-                .foregroundColor(Color.blue)
+            Label("\(title)", systemImage: "\(iconName)")
+                .font(.headline)
+                .foregroundStyle(.black, .mint)
                 .padding(.top)
                 .scaleEffect(iconScale)
-                .onAppear {
-                    withAnimation(.easeOut(duration: 0.6)) {
-                        iconScale = 1.0
-                    }
-                }
-
-            Text(title)
-                .font(.headline)
-                .foregroundColor(Color.gray)
+                .symbolRenderingMode(.multicolor)
                 .opacity(textOpacity)
                 .offset(slideInOffset)
                 .onAppear {
@@ -55,31 +52,34 @@ struct MetricCardView: View {
                         slideInOffset = .zero
                     }
                 }
-
+            
             Text("\(formattedValue) \(unit)")
-                .font(.largeTitle)
+                .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
                 .padding(.vertical, 2)
-
+            
             if let dateInterval = dateInterval {
                 Text("Period: \(dateInterval)")
                     .font(.subheadline)
-                    .foregroundColor(Color.secondary)
+                    .foregroundColor(Color.accentColor)
             } else if let date = date {
                 Text("Date: \(formattedDate)")
                     .font(.subheadline)
-                    .foregroundColor(Color.secondary)
+                    .foregroundColor(Color.accentColor)
             }
-
+            
             Text(caption)
                 .font(.caption)
                 .foregroundColor(Color.gray)
                 .padding(.bottom)
+            // New VStack with Picker and Button
+            
         }
         .padding()
         .background(Color.white)
         .cornerRadius(15)
-        .shadow(color: Color.gray.opacity(0.4), radius: 10, x: 0, y: 4)
+        .shadow(color: Color.gray.opacity(0.4), radius: 10, x: 10, y: 10)
     }
+    
 }

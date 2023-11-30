@@ -17,50 +17,47 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct YogelixApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-//    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
     @StateObject var viewModel = AuthenticationViewModel()  // @StateObject is source of truth
     
-    
     var body: some Scene {
-        WindowGroup {
-            if viewModel.authenticationState == .authenticated {
-                // Replace with your authenticated user view
-                ContentView(exercise: DailyExercise.sampleExercises)
+            WindowGroup {
+                AuthenticatedView(unauthenticated: {
+                    // Login view for unauthenticated users
+                    NavigationView {
+                        LoginView()
+                            .environmentObject(viewModel)
+                    }
+                }, content: {
+                    // Authenticated user's tab view
+                    TabView {
+                        HealthView()
+                            .tabItem {
+                                Label("Home", systemImage: "heart.circle")
+                            }
+                        
+                        DailyExerciseView(practices: DailyPractice.dailyPractices)
+                            .tabItem {
+                                Label("Exercise", systemImage: "flag.2.crossed.circle")
+                            }
+                        
+                        YogaCustomWorkoutView()
+                            .tabItem {
+                                Label("Workout", systemImage: "figure.yoga")
+                            }
+                        
+                        DailyWorkoutView()
+                            .tabItem {
+                                Label("Daily Workout", systemImage: "figure.yoga")
+                            }
+                        
+                        UserProfileView()
+                            .badge("!")
+                            .tabItem {
+                                Label("Account", systemImage: "person")
+                            }
+                    }
                     .environmentObject(viewModel)
-            } else {
-                // Login view for unauthenticated users
-                NavigationView {
-                    LoginView()
-                        .environmentObject(viewModel)
-                }
+                })
             }
         }
-    }
 }
-
-
-
-
-/*        // Firebase Emulator (Auth)
- Auth.auth().useEmulator(withHost: "localhost", port: 9099)
- 
- // Firebase Emulator (Cloud Firestore)
- Firestore.firestore().useEmulator(withHost: "localhost", port: 8080)
- 
- let settings = Firestore.firestore().settings
- settings.cacheSettings = MemoryCacheSettings()
- settings.isSSLEnabled = false
- Firestore.firestore().settings = settings
- return true
- 
- // Firebase Emulator (Cloud Storage)
- Storage.storage().useEmulator(withHost: "localhost", port: 9199)
- return true
- 
- // Firebase Emulator (Cloud Functions)
- Functions.functions().useEmulator(withHost: "localhost", port: 5001)
- return true
- 
- }
- }
- */

@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    let exercise: DailyExercise
+    let exercise: DailyPractice
     
     var body: some View {
         List {
@@ -13,7 +13,7 @@ struct DetailView: View {
                 HStack {
                     Label("Length", systemImage: "clock")
                     Spacer()
-                    Text("\(exercise.lengthInMin) minutes")
+                    Text("\(exercise.goal)")
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
@@ -27,17 +27,13 @@ struct DetailView: View {
                 }
                 .accessibilityElement(children: .combine)
             }
-            Section(header: Text("Steps")) {
-                ForEach(exercise.steps) { steps in
-                    Label(steps.name, systemImage: "flag.2.crossed")
-                }
-            }
         }
     }
 }
 
+
 #Preview {
     NavigationStack {
-        DetailView(exercise: DailyExercise.sampleExercises[0])
+        DetailView(exercise: DailyPractice.dailyPractices[0])
     }
 }

@@ -151,7 +151,7 @@ class HealthKitManager {
 
     // Walking/Running Distance
     func readWalkingRunningDistance(completion: @escaping ([(Date, Double)]?, Error?) -> Void) {
-        executeQuantitySampleQueryWithDate(for: .distanceWalkingRunning, unit: HKUnit.meter(), limit: 14, completion: completion)
+        executeQuantitySampleQueryWithDate(for: .distanceWalkingRunning, unit: HKUnit.meter(), limit: 700, completion: completion)
     }
     
     // Active Energy Burned
@@ -209,7 +209,7 @@ class HealthKitManager {
         executeCategorySampleQuery(for: .sleepAnalysis, limit: 10, completion: completion)
     }
     
-    // MARK: - More complex
+    // MARK: - More complex reading
     
     // Fetch Total Active Energy Burned
     func readTotalActiveEnergyBurned(completion: @escaping (Double?, Error?) -> Void) {
@@ -219,11 +219,6 @@ class HealthKitManager {
     // Fetch Total Exercise Minutes
     func readTotalExerciseMinutes(completion: @escaping (Double?, Error?) -> Void) {
         executeTotalStatistics(for: .appleExerciseTime, unit: HKUnit.minute(), errorDomainCode: 206, completion: completion)
-    }
-
-    // Correlate Heart Rate with Sleep Analysis
-    func correlateHeartRateWithSleep(heartRateSamples: [HKQuantitySample], sleepSamples: [HKCategorySample], completion: @escaping (Double?, Error?) -> Void) {
-        // [Correlation calculation logic remains the same as provided in the original code snippet]
     }
 
     // Query for Workouts
