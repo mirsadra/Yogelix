@@ -1,2 +1,0 @@
-//  NetworkService.swift
-import Foundation

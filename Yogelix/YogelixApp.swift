@@ -1,15 +1,12 @@
 //  YogelixApp.swift
 import SwiftUI
 import Firebase
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseAuth
-
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         FirebaseApp.configure()
+    
         return true
     }
 }
@@ -18,6 +15,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct YogelixApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var viewModel = AuthenticationViewModel()  // @StateObject is source of truth
+    @State private var modelData = ModelData()
     
     var body: some Scene {
             WindowGroup {
@@ -35,6 +33,11 @@ struct YogelixApp: App {
                                 Label("Home", systemImage: "heart.circle")
                             }
                         
+                        ContentView()
+                            .tabItem {
+                                Label("Poses", systemImage: "figure.yoga")
+                            }
+                        
                         DailyExerciseView(practices: DailyPractice.dailyPractices)
                             .tabItem {
                                 Label("Exercise", systemImage: "flag.2.crossed.circle")
@@ -42,12 +45,7 @@ struct YogelixApp: App {
                         
                         YogaCustomWorkoutView()
                             .tabItem {
-                                Label("Workout", systemImage: "figure.yoga")
-                            }
-                        
-                        DailyWorkoutView()
-                            .tabItem {
-                                Label("Daily Workout", systemImage: "figure.yoga")
+                                Label("Workout", systemImage: "applewatch")
                             }
                         
                         UserProfileView()
@@ -57,6 +55,7 @@ struct YogelixApp: App {
                             }
                     }
                     .environmentObject(viewModel)
+                    .environmentObject(modelData)
                 })
             }
         }

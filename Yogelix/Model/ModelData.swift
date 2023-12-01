@@ -1,8 +1,10 @@
 // ModelData.swift
 import Foundation
+import Combine
 
-// Specify that you expect an array of Poses from the load function
-var poses: [Pose] = load("poseListWithMeta.json")
+final class ModelData: ObservableObject {
+    @Published var poses: [Pose] = load("poseListWithMeta.json")
+}
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

@@ -2,7 +2,12 @@
 import SwiftUI
 
 struct PoseDetail: View {
+    @EnvironmentObject var modelData: ModelData
     var pose: Pose
+    
+    var poseIndex: Int {
+        modelData.poses.firstIndex(where: { $0.id == pose.id })!
+    }
     
     var body: some View {
         
@@ -17,18 +22,22 @@ struct PoseDetail: View {
             
             VStack(alignment: .leading) {
                 
-                Text(pose.englishName)
-                    .font(.title)
-                    .padding(.top, 20)
                 HStack {
                     Text(pose.sanskritName)
                         .font(.subheadline)
                     Spacer()
-                    Text("\(pose.difficulty)")
+                    Text("Difficulty: \(pose.difficulty) / 3")
                         .font(.subheadline)
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
+                
+                HStack {
+                    Text(pose.englishName)
+                        .font(.title)
+                    Spacer()
+                    FavoriteButton(isSet: $modelData.poses[poseIndex].isFavorite)
+                }
                 
                 Divider()
                 
@@ -47,7 +56,10 @@ struct PoseDetail: View {
 }
 
 struct PoseDetail_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        PoseDetail(pose: poses[0])
+        PoseDetail(pose: ModelData().poses[0])
+            .environmentObject(modelData)
     }
 }

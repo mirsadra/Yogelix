@@ -3,8 +3,6 @@ import SwiftUI
 
 struct DailyWorkoutView: View {
     
-    @ObservedObject var openAINetworking = OpenAINetworking()
-    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             VStack {
