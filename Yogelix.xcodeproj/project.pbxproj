@@ -39,7 +39,6 @@
 		3B5C59E52B1905BD00283244 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E42B1905BD00283244 /* ModelData.swift */; };
 		3B5C59E72B1908DC00283244 /* PoseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E62B1908DC00283244 /* PoseRow.swift */; };
 		3B7DCC1F2B0FB0BF004B6053 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */; };
-		3B7F9BCD2B191169005FDFF8 /* poseListWithMeta.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F9BCC2B191168005FDFF8 /* poseListWithMeta.json */; };
 		3B8920CE2B0F5D1A000A61A2 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920CD2B0F5D1A000A61A2 /* HealthKitManager.swift */; };
 		3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */; };
 		3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920D12B0F8378000A61A2 /* HealthView.swift */; };
@@ -86,6 +85,9 @@
 		3BE4A8242B1A1723007611D8 /* GPTMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A8232B1A1723007611D8 /* GPTMessageView.swift */; };
 		3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */; };
 		3BE4A8422B1A607C007611D8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A8412B1A607C007611D8 /* ChatView.swift */; };
+		3BE4A8442B1A709E007611D8 /* final.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4A8432B1A709E007611D8 /* final.jsonl */; };
+		3BE4A8462B1AA319007611D8 /* poseListWithMeta.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4A8452B1AA319007611D8 /* poseListWithMeta.json */; };
+		3BE4A8482B1AA34A007611D8 /* chakras.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4A8472B1AA34A007611D8 /* chakras.json */; };
 		3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */; };
 		3BE784232B04F4BA00D1C91B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94C2B03B6DD001ADD11 /* CoreData.framework */; };
 		3BF5476C2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF5476B2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift */; };
@@ -166,7 +168,6 @@
 		3B5C59E42B1905BD00283244 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		3B5C59E62B1908DC00283244 /* PoseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseRow.swift; sourceTree = "<group>"; };
 		3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		3B7F9BCC2B191168005FDFF8 /* poseListWithMeta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poseListWithMeta.json; sourceTree = "<group>"; };
 		3B83F94A2B0399E4001ADD11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3B83F94C2B03B6DD001ADD11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3B8920CD2B0F5D1A000A61A2 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
@@ -220,6 +221,9 @@
 		3BE4A8232B1A1723007611D8 /* GPTMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTMessageView.swift; sourceTree = "<group>"; };
 		3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIApiClient.swift; sourceTree = "<group>"; };
 		3BE4A8412B1A607C007611D8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		3BE4A8432B1A709E007611D8 /* final.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = final.jsonl; sourceTree = "<group>"; };
+		3BE4A8452B1AA319007611D8 /* poseListWithMeta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = poseListWithMeta.json; path = ../../../../YogelixJSON/poseListWithMeta.json; sourceTree = "<group>"; };
+		3BE4A8472B1AA34A007611D8 /* chakras.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chakras.json; sourceTree = "<group>"; };
 		3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BF5476B2B1488FC0073BD18 /* HKWorkoutConfiguration+Displaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWorkoutConfiguration+Displaying.swift"; sourceTree = "<group>"; };
 		3BF5476D2B148A6F0073BD18 /* WorkoutStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStore.swift; sourceTree = "<group>"; };
@@ -316,7 +320,9 @@
 		3B5C59E12B1902E100283244 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3B7F9BCC2B191168005FDFF8 /* poseListWithMeta.json */,
+				3BE4A8452B1AA319007611D8 /* poseListWithMeta.json */,
+				3BE4A8472B1AA34A007611D8 /* chakras.json */,
+				3BE4A8432B1A709E007611D8 /* final.jsonl */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -695,11 +701,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BCC04CE2B01901500FD1FC3 /* Preview Assets.xcassets in Resources */,
+				3BE4A8482B1AA34A007611D8 /* chakras.json in Resources */,
 				3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */,
 				3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */,
+				3BE4A8462B1AA319007611D8 /* poseListWithMeta.json in Resources */,
 				3B5C59E02B18F54F00283244 /* EncodeSansSC.ttf in Resources */,
 				3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */,
-				3B7F9BCD2B191169005FDFF8 /* poseListWithMeta.json in Resources */,
+				3BE4A8442B1A709E007611D8 /* final.jsonl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

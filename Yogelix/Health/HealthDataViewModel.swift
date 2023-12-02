@@ -196,7 +196,7 @@ class HealthDataViewModel: ObservableObject {
     }
     
     // MARK: - Calculation & Date & Date Interval
-    // MARK: - Total (Sum) of Day, Week, and Month
+        // MARK: - Total (Sum) of Day, Week, and Month
     func getDailyTotal(readings: [(Date, Double)]) -> (total: Double, date: Date) {
         let today = Calendar.current.startOfDay(for: Date())
         let total = readings
@@ -226,7 +226,7 @@ class HealthDataViewModel: ObservableObject {
         return (total, startDate, mostRecentDate)
     }
     
-    // MARK: - Average of Day, Week, and Month
+        // MARK: - Average of Day, Week, and Month
     func getDailyAverage(readings: [(Date, Double)]) -> (average: Double, date: Date) {
         guard let mostRecentDate = readings.first?.0 else { return (0.0, Date()) }
         let average = calculateAverage(readings: readings.filter { Calendar.current.isDate($0.0, inSameDayAs: mostRecentDate) })
@@ -254,7 +254,7 @@ class HealthDataViewModel: ObservableObject {
         return totalSum / Double(readings.count)
     }
     
-    // MARK: - Total (Sum) of Day, Week, and Month for kilometer
+        // MARK: - Total (Sum) of Day, Week, and Month for kilometer
     func getDailyDistanceTotal(readings: [(Date, Double)]) -> (total: Double, date: Date) {
         let today = Calendar.current.startOfDay(for: Date())
         let totalMeters = readings
@@ -287,7 +287,7 @@ class HealthDataViewModel: ObservableObject {
         return (totalKilometers, startDate, mostRecentDate)
     }
     
-    // MARK: - Average of Day, Week, and Month
+        // MARK: - Average of Day, Week, and Month
     func getDailyDistanceAverage(readings: [(Date, Double)]) -> (average: Double, date: Date) {
         guard let mostRecentDate = readings.first?.0 else { return (0.0, Date()) }
         let average = calculateDistanceAverage(readings: readings.filter { Calendar.current.isDate($0.0, inSameDayAs: mostRecentDate) })
@@ -315,5 +315,10 @@ class HealthDataViewModel: ObservableObject {
         let averageKilometers = totalSum / 1000.0
         return averageKilometers / Double(readings.count)
     }
+    
 }
 
+
+extension HealthDataViewModel {
+    
+}

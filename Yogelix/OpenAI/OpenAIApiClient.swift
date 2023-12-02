@@ -7,7 +7,7 @@ class OpenAIApiClient {
         let url = URL(string: "https://api.openai.com/v1/chat/completions")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")  // Replace with your API Key
+        request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")  // Replace with your API Key
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         // Create the Request Body

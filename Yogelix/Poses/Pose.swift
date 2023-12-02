@@ -9,12 +9,16 @@ struct Pose: Hashable, Codable, Identifiable {
     var poseMeta: [String]
     var difficulty: Int
     var isFavorite: Bool
-    
     private var imageName: String
     var image: Image {
         Image(imageName)
     }
+    var relatedChakras: [Int]
+    var recommendedFor: [String: String]
 }
+
+
+
 
 extension Pose {
     var formattedPoseMeta: String {
