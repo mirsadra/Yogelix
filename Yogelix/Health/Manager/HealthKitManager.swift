@@ -17,13 +17,12 @@ class HealthKitManager {
               let standHoursType = HKObjectType.categoryType(forIdentifier: .appleStandHour),
               let sleepAnalysisType = HKObjectType.categoryType(forIdentifier: .sleepAnalysis),
               let mindfulSessionType = HKObjectType.categoryType(forIdentifier: .mindfulSession),
-              let biologicalSexType = HKObjectType.characteristicType(forIdentifier: .biologicalSex),
               let dateOfBirthType = HKObjectType.characteristicType(forIdentifier: .dateOfBirth) else {
                 return (Set(), Set(), NSError(domain: "HealthKit", code: 100, userInfo: [NSLocalizedDescriptionKey: "Unable to create health data types"]))
         }
         
         let sampleTypes: Set<HKSampleType> = [HKObjectType.workoutType(), bodyMassIndexType, heartRateType, heightType, walkingRunningDistanceType, activeEnergyBurnedType, exerciseMinutesType, standHoursType, oxygenSaturationType, basalEnergyBurnedType, sleepAnalysisType, mindfulSessionType]
-        let characteristicTypes: Set<HKCharacteristicType> = [biologicalSexType, dateOfBirthType]
+        let characteristicTypes: Set<HKCharacteristicType> = [dateOfBirthType]
         
         let readTypes = Set(sampleTypes).union(Set(characteristicTypes))
         let writeTypes: Set<HKSampleType> = [HKObjectType.workoutType(), heartRateType, activeEnergyBurnedType]
@@ -64,7 +63,7 @@ class HealthKitManager {
 
     func isAuthorizedForWorkouts() -> Bool {
         return healthStore.authorizationStatus(for: HKObjectType.workoutType()) == .sharingAuthorized
-    }
+    } // replaced
 
     func isAuthorizedForActiveEnergyBurned() -> Bool {
         guard let activeEnergyBurnedType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
@@ -253,6 +252,7 @@ class HealthKitManager {
         healthStore.execute(query)
     }
 
+    
     private func executeQuantitySampleQuery(for identifier: HKQuantityTypeIdentifier, limit: Int, completion: @escaping ([HKQuantitySample]?, Error?) -> Void) {
         guard let quantityType = HKQuantityType.quantityType(forIdentifier: identifier) else {
             completion(nil, NSError(domain: "HealthKit", code: 200, userInfo: [NSLocalizedDescriptionKey: "\(identifier.rawValue) type is not available"]))
@@ -267,6 +267,7 @@ class HealthKitManager {
         healthStore.execute(query)
     }
 
+    // done
     private func executeSingleValueQuery(for identifier: HKQuantityTypeIdentifier, unit: HKUnit, errorDomainCode: Int, completion: @escaping (Double?, Error?) -> Void) {
             guard let quantityType = HKQuantityType.quantityType(forIdentifier: identifier) else {
                 completion(nil, NSError(domain: "HealthKit", code: errorDomainCode, userInfo: [NSLocalizedDescriptionKey: "\(identifier.rawValue) type is not available"]))
