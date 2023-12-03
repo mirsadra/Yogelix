@@ -2,12 +2,11 @@
 import Foundation
 import HealthKit
 
-
 class QuantityTypeManager {
     private let healthStore = HKHealthStore()
     
     // MARK: - Authorization Request: Read Only
-    private func healthDataTypes() -> (read: Set<HKObjectType>, error: Error?) {
+    private func quantityDataTypes() -> (read: Set<HKObjectType>, error: Error?) {
         guard let bodyMassIndexType = HKObjectType.quantityType(forIdentifier: .bodyMassIndex),
               let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate),
               let heightType = HKObjectType.quantityType(forIdentifier: .height),
@@ -15,7 +14,7 @@ class QuantityTypeManager {
               let activeEnergyBurnedType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned),
               let oxygenSaturationType = HKObjectType.quantityType(forIdentifier: .oxygenSaturation),
               let exerciseMinutesType = HKObjectType.quantityType(forIdentifier: .appleExerciseTime) else {
-            let error = NSError(domain: "HealthKit", code: 100, userInfo: [NSLocalizedDescriptionKey: "Unable to create quantity data types"])
+            let error = NSError(domain: "HealthKit", code: 1000, userInfo: [NSLocalizedDescriptionKey: "Unable to create quantity data types"])
             return (Set(), error)
         }
         
@@ -34,7 +33,7 @@ class QuantityTypeManager {
     
     // MARK: - Request permission from the user
     func requestAuthorization(completion: @escaping (Bool, CustomError?) -> Void) {
-        let (readTypes, _) = healthDataTypes()
+        let (readTypes, _) = quantityDataTypes()
         
         func performRequest() {
             healthStore.requestAuthorization(toShare: nil, read: readTypes) { success, error in
@@ -112,7 +111,7 @@ class QuantityTypeManager {
         executeSingleValueQuery(
             for: bodyMassIndexIdentifier,
             unit: HKUnit(from: ""),
-            errorDomainCode: 101
+            errorDomainCode: 1001
         ) { (value, date, error) in
             completion(value, date, error)
         }
@@ -125,7 +124,7 @@ class QuantityTypeManager {
         executeSingleValueQuery(
             for: heightIdentifier,
             unit: HKUnit.meter(),
-            errorDomainCode: 101
+            errorDomainCode: 1002
         ) { (value, date, error) in
             completion(value, date, error)
         }

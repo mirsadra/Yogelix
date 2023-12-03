@@ -15,7 +15,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct YogelixApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var viewModel = AuthenticationViewModel()  // @StateObject is source of truth
+    @State private var quantityViewModel = QuantityDataViewModel()
     @State private var modelData = ModelData()
+    
     
     var body: some Scene {
             WindowGroup {
@@ -48,6 +50,11 @@ struct YogelixApp: App {
                                 Label("Workout", systemImage: "applewatch")
                             }
                         
+                        MainView(viewModel: quantityViewModel)
+                            .tabItem {
+                                Label("HR View", systemImage: "figure")
+                            }
+                        
                         UserProfileView()
                             .badge("!")
                             .tabItem {
@@ -56,6 +63,7 @@ struct YogelixApp: App {
                     }
                     .environmentObject(viewModel)
                     .environmentObject(modelData)
+                    .environmentObject(quantityViewModel)
                 })
             }
         }

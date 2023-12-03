@@ -3,6 +3,7 @@ import SwiftUI
 
 struct MetricCardView: View {
     var title: String
+    var emoji: String
     var value: Double
     var unit: String
     var date: Date?
@@ -10,7 +11,7 @@ struct MetricCardView: View {
     var dateInterval: String?
     var isInteger: Bool = true
     var useTwoDecimalPlaces: Bool = false
-    var iconName: String  = "circle.badge.checkmark"
+    //    var iconName: String  = "circle.badge.checkmark"
     
     @State private var iconScale: CGFloat = 0.9
     @State private var textOpacity: Double = 0
@@ -18,11 +19,7 @@ struct MetricCardView: View {
     
     
     var formattedValue: String {
-        if useTwoDecimalPlaces {
-            return String(format: "%.2f", value)
-        } else {
-            return isInteger ? "\(Int(value))" : String(format: "%.2f", value)
-        }
+        return String(format: "%.1f", value)
     }
     
     private var dateFormatter: DateFormatter {
@@ -37,13 +34,11 @@ struct MetricCardView: View {
     }
     
     var body: some View {
+        
         VStack {
-            Label("\(title)", systemImage: "\(iconName)")
+            Text("\(title)")
                 .font(.headline)
-                .foregroundStyle(.black, .mint)
-                .padding(.top)
-                .scaleEffect(iconScale)
-                .symbolRenderingMode(.multicolor)
+                .foregroundStyle(.harmonyGray)
                 .opacity(textOpacity)
                 .offset(slideInOffset)
                 .onAppear {
@@ -52,21 +47,22 @@ struct MetricCardView: View {
                         slideInOffset = .zero
                     }
                 }
+                .padding()
             
-            Text("\(formattedValue) \(unit)")
+            Text("\(formattedValue) \(unit) \(emoji)")
                 .font(.subheadline)
                 .fontWeight(.bold)
-                .foregroundColor(Color.black)
-                .padding(.vertical, 2)
+                .foregroundColor(Color.orange)
+                .padding()
             
             if let dateInterval = dateInterval {
-                Text("Period: \(dateInterval)")
+                Text("\(dateInterval)")
                     .font(.subheadline)
-                    .foregroundColor(Color.accentColor)
-            } else if let date = date {
-                Text("Date: \(formattedDate)")
+                    .foregroundColor(Color.primary)
+            } else {
+                Text("\(formattedDate)")
                     .font(.subheadline)
-                    .foregroundColor(Color.accentColor)
+                    .foregroundColor(Color.harmonyGray)
             }
             
             Text(caption)
@@ -77,9 +73,29 @@ struct MetricCardView: View {
             
         }
         .padding()
-        .background(Color.white)
+        .frame(width: 200, height: 200) 
+        .background(.primary)
         .cornerRadius(15)
-        .shadow(color: Color.gray.opacity(0.4), radius: 10, x: 10, y: 10)
+        .shadow(color: Color.sereneGreen.opacity(0.4), radius: 10, x: 8, y: 5)
     }
-    
+}
+
+
+
+struct MetricCardView_Preview: PreviewProvider {
+    static var previews: some View {
+        MetricCardView(
+            title: "Energy Burn",
+            emoji: "🔥",
+            value: 350.0,
+            unit: "kcal",
+            date: Date(),
+            caption: "Total Sum of the Day",
+            dateInterval: nil,
+            isInteger: false,
+            useTwoDecimalPlaces: true
+        )
+        .previewLayout(.sizeThatFits)
+        .padding()
+    }
 }
