@@ -335,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				3BA2F0CC2B1CF9A0001AE1F7 /* Model */,
-				3BE4A8642B1B7F72007611D8 /* View */,
 				3BA2F0CB2B1CF855001AE1F7 /* Helper */,
 				3BE4A8612B1B7E92007611D8 /* View Model */,
 				3BE4A8592B1B76A5007611D8 /* Manager */,
@@ -462,6 +461,7 @@
 		3BCC04F82B0192C600FD1FC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3BF547752B155DC10073BD18 /* MainScrollView.swift */,
 				3B8920D12B0F8378000A61A2 /* HealthView.swift */,
 				3BCC04C82B01901400FD1FC3 /* ContentView.swift */,
 				3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */,
@@ -529,14 +529,6 @@
 				3BD2CCBC2B1B90C800DD5C7E /* WorkoutDataViewModel.swift */,
 			);
 			path = "View Model";
-			sourceTree = "<group>";
-		};
-		3BE4A8642B1B7F72007611D8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3BF547752B155DC10073BD18 /* MainScrollView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1046,6 +1038,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yogelix/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yogelix;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To provide you with a truly personalized yoga experience, Yogelix requests access to read certain health data from your HealthKit store. By analyzing this data, Yogelix's advanced AI, powered by OpenAI's GPT-4, can tailor your yoga routines to align perfectly with your current fitness level, health goals, and progress. This insight allows us to suggest the most effective and enjoyable workouts for you. Rest assured, your privacy is our top priority. We use this data solely to enhance your fitness experience and never share it without your consent.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Yogelix is dedicated to enriching your fitness journey by intelligently tracking and adapting to your progress. For this, we request permission to save information about your yoga workouts and associated health metrics, like heart rate during exercises, to your HealthKit store. This integration allows us to monitor your progress, adjust future routines for improved effectiveness, and ensure you're always on the right track towards your health goals. The data saved will also enable comprehensive fitness tracking, helping you visualize your achievements over time. Your data is always handled with the utmost respect for your privacy and security, ensuring a seamless and personalized workout experience with Yogelix.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1084,6 +1077,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Yogelix/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yogelix;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To provide you with a truly personalized yoga experience, Yogelix requests access to read certain health data from your HealthKit store. By analyzing this data, Yogelix's advanced AI, powered by OpenAI's GPT-4, can tailor your yoga routines to align perfectly with your current fitness level, health goals, and progress. This insight allows us to suggest the most effective and enjoyable workouts for you. Rest assured, your privacy is our top priority. We use this data solely to enhance your fitness experience and never share it without your consent.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Yogelix is dedicated to enriching your fitness journey by intelligently tracking and adapting to your progress. For this, we request permission to save information about your yoga workouts and associated health metrics, like heart rate during exercises, to your HealthKit store. This integration allows us to monitor your progress, adjust future routines for improved effectiveness, and ensure you're always on the right track towards your health goals. The data saved will also enable comprehensive fitness tracking, helping you visualize your achievements over time. Your data is always handled with the utmost respect for your privacy and security, ensuring a seamless and personalized workout experience with Yogelix.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

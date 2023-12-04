@@ -12,6 +12,8 @@ struct MainView: View {
                 UserTrophyToolbar()
                     .ignoresSafeArea()
                     
+                MainScrollView()
+                
                 Spacer()
                 HStack {
                     if let bmiData = viewModel.currentDayBMI {

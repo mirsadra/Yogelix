@@ -25,7 +25,7 @@ struct DailyPractice: Identifiable {
 
 extension DailyPractice {
     static let dailyPractices: [DailyPractice] = [
-        DailyPractice(title: "Regular Practice", goal: "Consistency", duration: "Short", difficulty: 3, image: "childPoseImage", theme: .sereneGreen)
+        DailyPractice(title: "Regular Practice", goal: "Consistency", duration: "Short", difficulty: 3, image: "childPose", theme: .sereneGreen)
     ]
 }
 
