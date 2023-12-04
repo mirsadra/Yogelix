@@ -1,7 +1,6 @@
 // HealthView.swift
 import SwiftUI
 import HealthKit
-import Charts
 
 struct HealthView: View {
     @ObservedObject var quantityViewModel = QuantityDataViewModel()

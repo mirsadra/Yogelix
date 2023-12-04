@@ -47,7 +47,7 @@ struct YogelixApp: App {
 
                         MainView()
                             .tabItem {
-                                Label("HR View", systemImage: "figure")
+                                Label("Figma", systemImage: "figure")
                             }
                         
                         UserProfileView()

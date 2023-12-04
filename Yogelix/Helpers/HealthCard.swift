@@ -2,48 +2,83 @@
 import SwiftUI
 
 struct HealthCard: View {
+    @State var isRefreshed = false
+    @State var title = "Daily Week + Run"
+    @State var value: Double = 8.43
+    @State var unit: String = "km"
+    @State var date: Date?
+    @State var emoji: String = "😍"
     
+    var formattedValue: String { return String(format: "%.2f", value) }
+    
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }
+    
+    var formattedDate: String {
+        date != nil ? dateFormatter.string(from: date!) : ""
+    }
     
     var body: some View {
         ZStack() {
             Rectangle()
                 .foregroundColor(.clear)
-                .frame(width: 320, height: 320)
+                .frame(width: 177.48, height: 177.48)
                 .background(
                     LinearGradient(gradient: Gradient(colors: [Color(red: 0.53, green: 0.95, blue: 0.80), Color(red: 0.74, green: 0.75, blue: 0.40), Color(red: 0.37, green: 0.70, blue: 0.57)]), startPoint: .top, endPoint: .bottom)
                 )
-                .cornerRadius(30)
+                .cornerRadius(25)
             
-            Rectangle()
-                .foregroundColor(.clear)
-                .frame(width: 144, height: 144)
-                .background(Color(red: 0, green: 0, blue: 0).opacity(0))
+            VStack{
+                Text("\(title)")
+                    .font(Font.custom("Luckiest Guy", size: 14))
+                    .foregroundStyle(.calmingBlue)
+                    .padding(.top)
+                
+                Spacer()
+                
+                Text("\(formattedValue)")
+                    .font(Font.custom("Luckiest Guy", size: 33))
+                   
+                
+                Text("\(unit)")
+                    .font(Font.custom("Luckiest Guy", size: 13))
+                    .foregroundColor(Color(red: 0.41, green: 0.41, blue: 0.41).opacity(0.54))
+                
+                Text("\(emoji)")
+                    .font(.caption)
+                
+                Spacer()
+                
+                Text("\(formattedDate)")
+                    .font(Font.custom("Luckiest Guy", size: 14))
+                    .foregroundStyle(.calmingBlue)
+                
+                Button(
+                    action: {
+                        isRefreshed.toggle()
+                    },
+                    label: {
+                        Image(systemName: "arrow.clockwise.circle")
+                            .foregroundStyle(.calmingBlue)
+                            .rotationEffect(.degrees(isRefreshed ? 360 : 0))
+                            .padding(.bottom)
+                    }
+                )
+
+                    
+            }
             
-            Text("Date: 26 Nov 2023")
-                .font(Font.custom("LuckiestGuy", size: 20))
-                .lineSpacing(22)
-                .foregroundColor(.black)
-                .offset(x: 0, y: 76.50)
-            Text("Daily Walk + Run")
-                .font(Font.custom("LuckiestGuy", size: 21))
-                .lineSpacing(22)
-                .offset(x: -60.50, y: -79)
-            Text("8.43")
-                .font(Font.custom("LuckiestGuy", size: 66))
-                .lineSpacing(22)
-                .offset(x: 0, y: 7)
-            Text("km")
-                .font(Font.custom("LuckiestGuy", size: 18))
-                .lineSpacing(22)
-                .foregroundColor(Color(red: 0.41, green: 0.41, blue: 0.41).opacity(0.54))
-                .offset(x: 0, y: 54)
-            .frame(width: 42, height: 41)
         }
-        .frame(width: 320, height: 320);
+        .frame(width: 160, height: 160)
     }
 }
 
 
 #Preview {
     HealthCard()
+        .previewLayout(.fixed(width: 160, height: 160))
 }

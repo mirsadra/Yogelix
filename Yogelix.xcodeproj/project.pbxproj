@@ -24,17 +24,13 @@
 		3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */; };
 		3B2F5FFC2B1E0C610029EA14 /* StartWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFB2B1E0C610029EA14 /* StartWorkout.swift */; };
 		3B2F5FFE2B1E151E0029EA14 /* AnimationSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */; };
-		3B347FAC2B117537004C2C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
 		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
 		3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B40A36B2B1222EA00170041 /* Alamofire */; };
 		3B40A37D2B12B43000170041 /* MetricCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A37C2B12B43000170041 /* MetricCard.swift */; };
-		3B51EBEC2B1D121600BB3B7D /* HeartRateEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51EBEA2B1D121600BB3B7D /* HeartRateEntity+CoreDataClass.swift */; };
-		3B51EBED2B1D121600BB3B7D /* HeartRateEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51EBEB2B1D121600BB3B7D /* HeartRateEntity+CoreDataProperties.swift */; };
 		3B51EBEF2B1D306B00BB3B7D /* HKQueryOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51EBEE2B1D306B00BB3B7D /* HKQueryOptions.swift */; };
 		3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469892B0CFC5B009130FD /* AuthenticationView.swift */; };
 		3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */; };
 		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
-		3B5C59E02B18F54F00283244 /* EncodeSansSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B5C59DF2B18F54F00283244 /* EncodeSansSC.ttf */; };
 		3B5C59E32B1902FE00283244 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E22B1902FE00283244 /* Pose.swift */; };
 		3B5C59E52B1905BD00283244 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E42B1905BD00283244 /* ModelData.swift */; };
 		3B5C59E72B1908DC00283244 /* PoseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E62B1908DC00283244 /* PoseRow.swift */; };
@@ -48,20 +44,19 @@
 		3B9DA8302B0EB3FC00480621 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */; };
 		3B9DA8322B0EBE8100480621 /* DailyExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */; };
 		3BA2F0B82B1CA8CE001AE1F7 /* final.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BA2F0B72B1CA8CE001AE1F7 /* final.json */; };
-		3BA2F0BA2B1CACCD001AE1F7 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0B92B1CACCD001AE1F7 /* CategoryHome.swift */; };
 		3BA2F0BC2B1CD580001AE1F7 /* PoseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0BB2B1CD580001AE1F7 /* PoseFilter.swift */; };
 		3BA2F0CE2B1CFA83001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */; };
 		3BA2F0D32B1CFAE3001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CF2B1CFAE3001AE1F7 /* HeartRateModel.swift */; };
 		3BA2F0D52B1CFAE3001AE1F7 /* SleepAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0D12B1CFAE3001AE1F7 /* SleepAnalysisModel.swift */; };
 		3BA2F0D62B1CFAE3001AE1F7 /* MindfulSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0D22B1CFAE3001AE1F7 /* MindfulSessionModel.swift */; };
+		3BA33C922B1E533800DF80F6 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BA33C912B1E533800DF80F6 /* LuckiestGuy-Regular.ttf */; };
+		3BA33C942B1E6A8F00DF80F6 /* UserTrophyToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */; };
 		3BA4A6352B0D4FDF0032936E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4A6342B0D4FDF0032936E /* UserData.swift */; };
 		3BA4A6562B0D60D50032936E /* YogelixSecrets.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA4A6552B0D60D50032936E /* YogelixSecrets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BA4A6592B0D60D50032936E /* YogelixSecrets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */; };
 		3BA4A65A2B0D60D50032936E /* YogelixSecrets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAC3BB82B1CA21B0017D26C /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC3BB72B1CA21B0017D26C /* CategoryRow.swift */; };
 		3BAF8F002B13D79300E5436F /* HealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF8EFF2B13D79300E5436F /* HealthCard.swift */; };
 		3BBF478D2B1E4CD4006033F8 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF478C2B1E4CD4006033F8 /* Fonts.swift */; };
-		3BBF478E2B1E4DAA006033F8 /* LuckiestGuy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF47902B1E4DAA006033F8 /* LuckiestGuy.ttf */; };
 		3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */; };
 		3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C82B01901400FD1FC3 /* ContentView.swift */; };
 		3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
@@ -157,13 +152,10 @@
 		3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSequence.swift; sourceTree = "<group>"; };
 		3B40A37C2B12B43000170041 /* MetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCard.swift; sourceTree = "<group>"; };
 		3B40A3892B12D48F00170041 /* Prompt.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prompt.md; sourceTree = "<group>"; };
-		3B51EBEA2B1D121600BB3B7D /* HeartRateEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeartRateEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		3B51EBEB2B1D121600BB3B7D /* HeartRateEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeartRateEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3B51EBEE2B1D306B00BB3B7D /* HKQueryOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKQueryOptions.swift; sourceTree = "<group>"; };
 		3B5469892B0CFC5B009130FD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		3B5469912B0CFD40009130FD /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		3B5C59DF2B18F54F00283244 /* EncodeSansSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EncodeSansSC.ttf; sourceTree = "<group>"; };
 		3B5C59E22B1902FE00283244 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		3B5C59E42B1905BD00283244 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		3B5C59E62B1908DC00283244 /* PoseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseRow.swift; sourceTree = "<group>"; };
@@ -178,21 +170,19 @@
 		3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExerciseView.swift; sourceTree = "<group>"; };
 		3BA2F0B72B1CA8CE001AE1F7 /* final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = final.json; sourceTree = "<group>"; };
-		3BA2F0B92B1CACCD001AE1F7 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 		3BA2F0BB2B1CD580001AE1F7 /* PoseFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseFilter.swift; sourceTree = "<group>"; };
 		3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
 		3BA2F0CF2B1CFAE3001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
 		3BA2F0D12B1CFAE3001AE1F7 /* SleepAnalysisModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepAnalysisModel.swift; sourceTree = "<group>"; };
 		3BA2F0D22B1CFAE3001AE1F7 /* MindfulSessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MindfulSessionModel.swift; sourceTree = "<group>"; };
+		3BA33C912B1E533800DF80F6 /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
+		3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTrophyToolbar.swift; sourceTree = "<group>"; };
 		3BA4A6342B0D4FDF0032936E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3BA4A63C2B0D56310032936E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3BA4A6532B0D60D50032936E /* YogelixSecrets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YogelixSecrets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA4A6552B0D60D50032936E /* YogelixSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogelixSecrets.h; sourceTree = "<group>"; };
-		3BAC3BB72B1CA21B0017D26C /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		3BAF8EFF2B13D79300E5436F /* HealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCard.swift; sourceTree = "<group>"; };
 		3BBF478C2B1E4CD4006033F8 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		3BBF478F2B1E4DAA006033F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/LuckiestGuy.ttf; sourceTree = "<group>"; };
-		3BBF47912B1E4DAE006033F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/LuckiestGuy.ttf; sourceTree = "<group>"; };
 		3BCC04C32B01901400FD1FC3 /* Yogelix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yogelix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixApp.swift; sourceTree = "<group>"; };
 		3BCC04C82B01901400FD1FC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -424,17 +414,14 @@
 				3B5C59E12B1902E100283244 /* Resources */,
 				3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */,
 				3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */,
+				3BA33C912B1E533800DF80F6 /* LuckiestGuy-Regular.ttf */,
 				3BCC04CF2B01901500FD1FC3 /* Persistence.swift */,
 				3BE784142B04F3C300D1C91B /* GoogleService-Info.plist */,
 				3BCC04D42B01901500FD1FC3 /* Yogelix.entitlements */,
 				3BCC04D52B01901500FD1FC3 /* Info.plist */,
 				3BCC04D12B01901500FD1FC3 /* Yogelix.xcdatamodeld */,
-				3B51EBEA2B1D121600BB3B7D /* HeartRateEntity+CoreDataClass.swift */,
-				3B51EBEB2B1D121600BB3B7D /* HeartRateEntity+CoreDataProperties.swift */,
 				3B40A3892B12D48F00170041 /* Prompt.md */,
 				3BE08DE22B175273002D585A /* fine-tune.jsonl */,
-				3BBF47902B1E4DAA006033F8 /* LuckiestGuy.ttf */,
-				3B5C59DF2B18F54F00283244 /* EncodeSansSC.ttf */,
 			);
 			path = Yogelix;
 			sourceTree = "<group>";
@@ -503,9 +490,9 @@
 				3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */,
 				3BCC05062B01A31F00FD1FC3 /* ProgressSnapshot.swift */,
 				3BCC05022B019B4A00FD1FC3 /* ChakraDetailView.swift */,
-				3BA2F0B92B1CACCD001AE1F7 /* CategoryHome.swift */,
 				3BAF8EFF2B13D79300E5436F /* HealthCard.swift */,
 				3B40A37C2B12B43000170041 /* MetricCard.swift */,
+				3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -516,7 +503,6 @@
 				3B1962572B1916C800A7C894 /* PoseList.swift */,
 				3B1962592B191B3800A7C894 /* PoseDetail.swift */,
 				3B5C59E62B1908DC00283244 /* PoseRow.swift */,
-				3BAC3BB72B1CA21B0017D26C /* CategoryRow.swift */,
 				3BA2F0BB2B1CD580001AE1F7 /* PoseFilter.swift */,
 				3B5C59E22B1902FE00283244 /* Pose.swift */,
 				3B5C59E42B1905BD00283244 /* ModelData.swift */,
@@ -712,7 +698,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B347FAC2B117537004C2C1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,10 +707,9 @@
 			files = (
 				3BCC04CE2B01901500FD1FC3 /* Preview Assets.xcassets in Resources */,
 				3BA2F0B82B1CA8CE001AE1F7 /* final.json in Resources */,
+				3BA33C922B1E533800DF80F6 /* LuckiestGuy-Regular.ttf in Resources */,
 				3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */,
 				3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */,
-				3BBF478E2B1E4DAA006033F8 /* LuckiestGuy.ttf in Resources */,
-				3B5C59E02B18F54F00283244 /* EncodeSansSC.ttf in Resources */,
 				3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */,
 				3BE4A8442B1A709E007611D8 /* final.jsonl in Resources */,
 			);
@@ -762,12 +746,9 @@
 				3BE4A8582B1B3342007611D8 /* WorkoutTypeManager.swift in Sources */,
 				3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */,
 				3BE4A8602B1B7CC0007611D8 /* MindfulSessionModel.swift in Sources */,
-				3BA2F0BA2B1CACCD001AE1F7 /* CategoryHome.swift in Sources */,
 				3BA2F0D62B1CFAE3001AE1F7 /* MindfulSessionModel.swift in Sources */,
 				3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */,
-				3BAC3BB82B1CA21B0017D26C /* CategoryRow.swift in Sources */,
 				3BCC04D32B01901500FD1FC3 /* Yogelix.xcdatamodeld in Sources */,
-				3B51EBEC2B1D121600BB3B7D /* HeartRateEntity+CoreDataClass.swift in Sources */,
 				3BA2F0D32B1CFAE3001AE1F7 /* HeartRateModel.swift in Sources */,
 				3BD2CCCC2B1BA91C00DD5C7E /* DailySummary.swift in Sources */,
 				3BE4A8562B1B2E73007611D8 /* QuantityTypeManager.swift in Sources */,
@@ -781,10 +762,10 @@
 				3BDFE13C2B026C21007FB23E /* UserController.swift in Sources */,
 				3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */,
 				3BCC05032B019B4A00FD1FC3 /* ChakraDetailView.swift in Sources */,
+				3BA33C942B1E6A8F00DF80F6 /* UserTrophyToolbar.swift in Sources */,
 				3B5C59E52B1905BD00283244 /* ModelData.swift in Sources */,
 				3B19625A2B191B3800A7C894 /* PoseDetail.swift in Sources */,
 				3BBF478D2B1E4CD4006033F8 /* Fonts.swift in Sources */,
-				3B51EBED2B1D121600BB3B7D /* HeartRateEntity+CoreDataProperties.swift in Sources */,
 				3BA2F0CE2B1CFA83001AE1F7 /* HeartRateModel.swift in Sources */,
 				3BF547762B155DC10073BD18 /* MainScrollView.swift in Sources */,
 				3BA2F0BC2B1CD580001AE1F7 /* PoseFilter.swift in Sources */,
@@ -860,18 +841,6 @@
 			targetProxy = 3BCC04E52B01901600FD1FC3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3BBF47902B1E4DAA006033F8 /* LuckiestGuy.ttf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3BBF478F2B1E4DAA006033F8 /* Base */,
-				3BBF47912B1E4DAE006033F8 /* en */,
-			);
-			name = LuckiestGuy.ttf;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3BA4A65C2B0D60D50032936E /* Debug */ = {

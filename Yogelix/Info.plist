@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>Yogelix is dedicated to enriching your fitness journey by intelligently tracking and adapting to your progress. For this, we request permission to save information about your yoga workouts and associated health metrics, like heart rate during exercises, to your HealthKit store. This integration allows us to monitor your progress, adjust future routines for improved effectiveness, and ensure you&apos;re always on the right track towards your health goals. The data saved will also enable comprehensive fitness tracking, helping you visualize your achievements over time. Your data is always handled with the utmost respect for your privacy and security, ensuring a seamless and personalized workout experience with Yogelix.</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>To provide you with a truly personalized yoga experience, Yogelix requests access to read certain health data from your HealthKit store. By analyzing this data, Yogelix&apos;s advanced AI, powered by OpenAI&apos;s GPT-4, can tailor your yoga routines to align perfectly with your current fitness level, health goals, and progress. This insight allows us to suggest the most effective and enjoyable workouts for you. Rest assured, your privacy is our top priority. We use this data solely to enhance your fitness experience and never share it without your consent.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LuckiestGuy-Regular.ttf</string>
+	</array>
 </dict>
 </plist>
