@@ -119,7 +119,7 @@ class AuthenticationViewModel: ObservableObject {
         
         do {
             // Upload the image data with metadata
-            _ = try await storageRef.putData(imageData, metadata: metadata)
+            try await storageRef.putData(imageData, metadata: metadata)
             let imageUrl = try await storageRef.downloadURL()
             return .success(imageUrl)
         } catch {
@@ -147,7 +147,7 @@ class AuthenticationViewModel: ObservableObject {
         do {
             let snapshot = try await userDocRef.getDocument()
             if let imageUrlString = snapshot.data()?["profileImageUrl"] as? String,
-               let imageUrl = URL(string: imageUrlString) {
+               let _ = URL(string: imageUrlString) {
                 // Download the image data from the imageUrl and set it to your profileImage
                 // Depending on your UI logic, you may need to publish changes to profileImage
             }

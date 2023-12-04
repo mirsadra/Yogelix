@@ -44,13 +44,8 @@ struct YogelixApp: App {
                             .tabItem {
                                 Label("Exercise", systemImage: "flag.2.crossed.circle")
                             }
-                        
-                        YogaCustomWorkoutView()
-                            .tabItem {
-                                Label("Workout", systemImage: "applewatch")
-                            }
-                        
-                        MainView(viewModel: quantityViewModel)
+
+                        MainView()
                             .tabItem {
                                 Label("HR View", systemImage: "figure")
                             }

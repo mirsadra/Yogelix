@@ -24,14 +24,22 @@ struct CardView: View {
                     }
                     icon: {
                         HStack(spacing: 2) {
-                            ForEach(0..<3) { _ in
-                                Image(systemName: "star.fill")
-                                    .foregroundColor(.yellow)
+                            if practices.difficulty == 3 {
+                                Image(systemName: "gauge.with.dots.needle.33percent")
+                                    .foregroundStyle(.green)
+                            } else if practices.difficulty == 2 {
+                                Image(systemName: "gauge.with.dots.needle.50percent")
+                                    .foregroundStyle(.yellow)
+                            } else {
+                                Image(systemName: "gauge.with.dots.needle.67percent")
+                                    .foregroundColor(.red)
                             }
                         }
                     }
 
                 }
+                .padding()
+                
                 Spacer()
                 HStack {
                     Label {
