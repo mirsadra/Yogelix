@@ -35,6 +35,27 @@ struct HealthView: View {
                                     caption: "Latest"
                                 )
                             }
+                            
+                            if let activeEnergySumData = quantityViewModel.currentDayActiveEnergyBurned {
+                                MetricCard(
+                                    title: "Active Energy",
+                                    emoji: "🔥",
+                                    value: activeEnergySumData.total,
+                                    unit: "kcal",
+                                    date: activeEnergySumData.date,
+                                    caption: "Latest"
+                                )
+                            }
+                            
+                            if let walkRunDistanceSumData = quantityViewModel.currentDayWalkingRunningDistance {
+                                MetricCard(
+                                    title: "Walk & Run Distance",
+                                    emoji: "🏃🚶",
+                                    value: walkRunDistanceSumData.value,
+                                    unit: "m",
+                                    date: walkRunDistanceSumData.date,
+                                    caption: "Latest")
+                            }
                         }
                         .padding()
                     }

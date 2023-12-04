@@ -24,6 +24,7 @@
 		3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */; };
 		3B2F5FFC2B1E0C610029EA14 /* StartWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFB2B1E0C610029EA14 /* StartWorkout.swift */; };
 		3B2F5FFE2B1E151E0029EA14 /* AnimationSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */; };
+		3B2F60002B1E45690029EA14 /* LuckiestGuy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFF2B1E45690029EA14 /* LuckiestGuy.ttf */; };
 		3B347FAC2B117537004C2C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
 		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
 		3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B40A36B2B1222EA00170041 /* Alamofire */; };
@@ -153,6 +154,7 @@
 		3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		3B2F5FFB2B1E0C610029EA14 /* StartWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkout.swift; sourceTree = "<group>"; };
 		3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSequence.swift; sourceTree = "<group>"; };
+		3B2F5FFF2B1E45690029EA14 /* LuckiestGuy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LuckiestGuy.ttf; sourceTree = "<group>"; };
 		3B40A37C2B12B43000170041 /* MetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCard.swift; sourceTree = "<group>"; };
 		3B40A3892B12D48F00170041 /* Prompt.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prompt.md; sourceTree = "<group>"; };
 		3B51EBEA2B1D121600BB3B7D /* HeartRateEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeartRateEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				3B51EBEB2B1D121600BB3B7D /* HeartRateEntity+CoreDataProperties.swift */,
 				3B40A3892B12D48F00170041 /* Prompt.md */,
 				3BE08DE22B175273002D585A /* fine-tune.jsonl */,
+				3B2F5FFF2B1E45690029EA14 /* LuckiestGuy.ttf */,
 				3B5C59DF2B18F54F00283244 /* EncodeSansSC.ttf */,
 			);
 			path = Yogelix;
@@ -717,6 +720,7 @@
 				3BA2F0B82B1CA8CE001AE1F7 /* final.json in Resources */,
 				3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */,
 				3BE784152B04F3C300D1C91B /* GoogleService-Info.plist in Resources */,
+				3B2F60002B1E45690029EA14 /* LuckiestGuy.ttf in Resources */,
 				3B5C59E02B18F54F00283244 /* EncodeSansSC.ttf in Resources */,
 				3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */,
 				3BE4A8442B1A709E007611D8 /* final.jsonl in Resources */,

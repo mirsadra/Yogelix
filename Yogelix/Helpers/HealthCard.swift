@@ -2,62 +2,48 @@
 import SwiftUI
 
 struct HealthCard: View {
-    var title: String
-    var value: Double
-    var unit: String
-    var progress: CGFloat
-    var progressColor: Color
-    var backgroundColor: Color
-
+    
+    
     var body: some View {
-        VStack {
-            HeaderView()
+        ZStack() {
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 320, height: 320)
+                .background(
+                    LinearGradient(gradient: Gradient(colors: [Color(red: 0.53, green: 0.95, blue: 0.80), Color(red: 0.74, green: 0.75, blue: 0.40), Color(red: 0.37, green: 0.70, blue: 0.57)]), startPoint: .top, endPoint: .bottom)
+                )
+                .cornerRadius(30)
             
-            GeometryReader { geometry in
-                ProgressView(geometry: geometry)
-            }
-            .frame(height: 60)
-        }
-        .padding()
-        .background(backgroundColor)
-        .cornerRadius(12.0)
-        .shadow(radius: 5)
-    }
-
-    private func HeaderView() -> some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(title)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                Text("\(value, specifier: "%.0f") \(unit)")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-            }
-            Spacer()
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(width: 144, height: 144)
+                .background(Color(red: 0, green: 0, blue: 0).opacity(0))
             
-            Image(systemName: "carrot")
-                .resizable()
-                .frame(width: 28, height: 28)
+            Text("Date: 26 Nov 2023")
+                .font(Font.custom("LuckiestGuy", size: 20))
+                .lineSpacing(22)
+                .foregroundColor(.black)
+                .offset(x: 0, y: 76.50)
+            Text("Daily Walk + Run")
+                .font(Font.custom("LuckiestGuy", size: 21))
+                .lineSpacing(22)
+                .offset(x: -60.50, y: -79)
+            Text("8.43")
+                .font(Font.custom("LuckiestGuy", size: 66))
+                .lineSpacing(22)
+                .offset(x: 0, y: 7)
+            Text("km")
+                .font(Font.custom("LuckiestGuy", size: 18))
+                .lineSpacing(22)
+                .foregroundColor(Color(red: 0.41, green: 0.41, blue: 0.41).opacity(0.54))
+                .offset(x: 0, y: 54)
+            .frame(width: 42, height: 41)
         }
-    }
-
-    private func ProgressView(geometry: GeometryProxy) -> some View {
-        ZStack(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 10.0)
-                .frame(width: geometry.size.width, height: 20)
-                .opacity(0.3)
-                .foregroundColor(Color(UIColor.systemTeal))
-
-            RoundedRectangle(cornerRadius: 10.0)
-                .frame(width: min(CGFloat(self.progress) * geometry.size.width, geometry.size.width), height: 20)
-                .foregroundColor(progressColor)
-                .animation(.linear, value: progress)
-        }
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .frame(width: 320, height: 320);
     }
 }
 
+
 #Preview {
-    HealthCard(title: "Active Calories", value: 1145.0, unit: "kcal", progress: 0.5, progressColor: .red, backgroundColor: .white)
+    HealthCard()
 }

@@ -112,18 +112,6 @@ class QuantityTypeManager {
         }
     }
 
-    func readActiveEnergy(completion: @escaping (Double?, Date?, Error?) -> Void) {
-        let activeEnergyIdentifier = HKQuantityTypeIdentifier.activeEnergyBurned
-        
-        executeSingleValueQuery(
-            for: activeEnergyIdentifier,
-            unit: HKUnit.kilocalorie(),
-            errorDomainCode: 1002
-        ) { (value, date, error) in
-            completion(value, date, error)
-        }
-    }
-    
     func readCurrentDayActiveEnergyBurned(completion: @escaping (Double?, Date?, Error?) -> Void) {
         let activeEnergyBurnedIdentifier = HKQuantityTypeIdentifier.activeEnergyBurned
         
@@ -131,14 +119,11 @@ class QuantityTypeManager {
             for: activeEnergyBurnedIdentifier,
             unit: HKUnit.kilocalorie(),
             errorDomainCode: 190
-        ) { (result, error) in
-            let total = result.0
-            let date = result.1 // This will always be nil based on your current implementation
-
+        ) { (total, date, error) in
+            let date = Calendar.current.startOfDay(for: Date()) // Set the date as the start of the current day
             completion(total, date, error)
         }
     }
-
 
     func readCurrentDayWalkingRunningDistance(completion: @escaping (Double?, Date?, Error?) -> Void) {
         let walkingRunningDistanceIdentifier = HKQuantityTypeIdentifier.distanceWalkingRunning
@@ -147,15 +132,11 @@ class QuantityTypeManager {
             for: walkingRunningDistanceIdentifier,
             unit: HKUnit.meter(),
             errorDomainCode: 191
-        ) { (result, error) in
-            let total = result.0
-            // Set the date as the start of the current day
-            let date = Calendar.current.startOfDay(for: Date())
-
+        ) { (total, date, error) in
+            let date = Calendar.current.startOfDay(for: Date()) // Set the date as the start of the current day
             completion(total, date, error)
         }
     }
-
     
     func readCurrentDayOxygenSaturation(completion: @escaping (Double?, Date?, Error?) -> Void) {
         let oxygenSaturationIdentifier = HKQuantityTypeIdentifier.oxygenSaturation
@@ -212,10 +193,10 @@ class QuantityTypeManager {
         for identifier: HKQuantityTypeIdentifier,
         unit: HKUnit,
         errorDomainCode: Int,
-        completion: @escaping ((Double?, Date?), Error?) -> Void
+        completion: @escaping (Double?, Date?, Error?) -> Void
     ) {
         guard let quantityType = HKQuantityType.quantityType(forIdentifier: identifier) else {
-            completion((nil, nil), NSError(domain: "HealthKit", code: errorDomainCode, userInfo: [NSLocalizedDescriptionKey: "\(identifier.rawValue) type is not available"]))
+            completion(nil, nil, NSError(domain: "HealthKit", code: errorDomainCode, userInfo: [NSLocalizedDescriptionKey: "\(identifier.rawValue) type is not available"]))
             return
         }
         
@@ -224,12 +205,12 @@ class QuantityTypeManager {
         
         let query = HKStatisticsQuery(quantityType: quantityType, quantitySamplePredicate: predicate, options: .cumulativeSum) { _, statistics, error in
             if let error = error {
-                completion((nil, nil), error)
+                completion(nil, nil, error)
                 return
             }
             
             let total = statistics?.sumQuantity()?.doubleValue(for: unit) ?? 0
-            completion((total, nil), nil)
+            completion(total, nil, nil)
         }
         healthStore.execute(query)
     }

@@ -11,11 +11,11 @@ class QuantityDataViewModel: ObservableObject {
     
     @Published var height: (value: Double, date: Date)?
     
-    @Published var currentDayActiveEnergyBurned: (value: Double?, date: Date?)?
+    @Published var currentDayActiveEnergyBurned: (total: Double, date: Date)?
     
-    @Published var currentDayWalkingRunningDistance: (value: Double?, date: Date?)?
+    @Published var currentDayWalkingRunningDistance: (value: Double, date: Date)?
 
-    @Published var currentDayOxygenSaturation: (value: Double?, date: Date)?
+    @Published var currentDayOxygenSaturation: (value: Double?, date: Date?)?
     
     init() {
         requestHealthKitAuthorization()
@@ -68,8 +68,8 @@ class QuantityDataViewModel: ObservableObject {
     func fetchCurrentDayActiveEnergyBurned() {
         quantityTypeManager.readCurrentDayActiveEnergyBurned { [weak self] total, date, error  in
             DispatchQueue.main.async {
-                if let value = total, let date = date {
-                    self?.currentDayActiveEnergyBurned = (value, date)
+                if let total = total, let date = date {
+                    self?.currentDayActiveEnergyBurned = (total, date)
                 } else {
                     self?.error = error
                 }
@@ -81,8 +81,8 @@ class QuantityDataViewModel: ObservableObject {
     func fetchCurrentDayWalkingRunningDistance() {
         quantityTypeManager.readCurrentDayWalkingRunningDistance { [weak self] total, date, error in
             DispatchQueue.main.async {
-                if let value = total, let date = date {
-                    self?.currentDayWalkingRunningDistance = (value: value, date: date)
+                if let total = total, let date = date {
+                    self?.currentDayWalkingRunningDistance = (total, date)
                 } else {
                     self?.error = error
                 }
