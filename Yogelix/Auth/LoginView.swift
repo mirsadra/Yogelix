@@ -25,6 +25,14 @@ struct LoginView: View {
         }
     }
     
+    private func signInWithGoogle() {
+        Task {
+            if await viewModel.signInWithGoogle() == true {
+                dismiss()
+            }
+        }
+    }
+    
     var body: some View {
         VStack {
             Image("Sign")
@@ -81,21 +89,43 @@ struct LoginView: View {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .white))
                         .padding(.vertical, 8)
-                        .frame(maxWidth: .infinity)
+                        .frame(width: 360, height: 50)
                 }
             }
             .disabled(!viewModel.isValid)
             .frame(maxWidth: .infinity)
             .buttonStyle(.borderedProminent)
             
+            HStack {
+                    VStack { Divider() }
+                    Text("or")
+                    VStack { Divider() }
+                  }
+            
+            // MARK: - Apple Sign In
             SignInWithAppleButton { request in
                 viewModel.handleSignInWithAppleRequest(request)
             } onCompletion: { result in
                 viewModel.handleSignInWithAppleCompletion(result)
             }
             .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
-            .frame(width: 280, height: 50)
+            .frame(width: 360, height: 50)
             .cornerRadius(8)
+            
+            
+            // MARK: - Google Sign In
+            Button(action: signInWithGoogle) {
+                Text("Sign in with Google")
+                    .foregroundStyle(colorScheme == .dark ? .white : .black)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                    .background(alignment: .leading) {
+                        Image("google")
+                            .resizable()
+                            .frame(width: 30, alignment: .center)
+                    }
+            }
+            .buttonStyle(.bordered)
             
             HStack {
                 Text("Don't have an account yet?")

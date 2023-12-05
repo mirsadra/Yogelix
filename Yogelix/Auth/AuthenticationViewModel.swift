@@ -5,6 +5,9 @@ import FirebaseStorage
 import FirebaseFirestore
 import AuthenticationServices
 import CryptoKit
+import GoogleSignIn
+import GoogleSignInSwift
+import FirebaseCore
 
 enum AuthenticationState {
     case unauthenticated
@@ -213,6 +216,14 @@ extension AuthenticationViewModel {
 
 
 // MARK: Sign in with Apple
+extension ASAuthorizationAppleIDCredential {
+    func displayName() -> String {
+        return [self.fullName?.givenName, self.fullName?.familyName]
+            .compactMap( {$0})
+            .joined(separator: " ")
+    }
+}
+
 extension AuthenticationViewModel {
     
     func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
@@ -294,6 +305,7 @@ extension AuthenticationViewModel {
                     }
                 }
                 catch {
+                    
                 }
             }
         }
@@ -301,15 +313,72 @@ extension AuthenticationViewModel {
     
 }
 
-extension ASAuthorizationAppleIDCredential {
-    func displayName() -> String {
-        return [self.fullName?.givenName, self.fullName?.familyName]
-            .compactMap( {$0})
-            .joined(separator: " ")
+// MARK: - Sign in with google
+enum AuthenticationError: Error {
+    case tokenError(message: String)
+}
+
+extension AuthenticationViewModel {
+    func signInWithGoogle() async -> Bool {
+        guard let clientID = FirebaseApp.app()?.options.clientID else {
+            fatalError("No client ID found in Firebase configuration")
+        }
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = windowScene.windows.first,
+              let rootViewController = window.rootViewController else {
+            print("There is no root view controller")
+            return false
+        }
+
+        do {
+            let userAuthentication = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
+            let googleUser = userAuthentication.user
+            guard let idToken = googleUser.idToken else {
+                throw AuthenticationError.tokenError(message: "ID token missing")
+            }
+            let accessToken = googleUser.accessToken
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString,
+                                                           accessToken: accessToken.tokenString)
+
+            // Retrieve the user's full name and profile picture URL
+            let fullName = googleUser.profile?.name ?? ""
+            let profilePicUrl = googleUser.profile?.imageURL(withDimension: 200)?.absoluteString ?? ""
+
+            let result = try await Auth.auth().signIn(with: credential)
+            let firebaseUser = result.user
+            print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
+
+            // Store user's full name and profile picture URL in Firestore
+            await storeUserData(uid: firebaseUser.uid, fullName: fullName, profilePicUrl: profilePicUrl)
+
+            return true
+        }
+        catch {
+            print(error.localizedDescription)
+            errorMessage = error.localizedDescription
+            return false
+        }
+    }
+
+    private func storeUserData(uid: String, fullName: String, profilePicUrl: String) async {
+        let db = Firestore.firestore()
+        do {
+            try await db.collection("users").document(uid).setData([
+                "fullName": fullName,
+                "profilePicUrl": profilePicUrl
+            ])
+            print("User data stored successfully.")
+        } catch {
+            print("Error storing user data: \(error)")
+        }
     }
 }
 
-// Adapted from https://auth0.com/docs/api-auth/tutorials/nonce#generate-a-cryptographically-random-nonce
+
+// MARK: - Random Nonce String and Sha256
 private func randomNonceString(length: Int = 32) -> String {
     precondition(length > 0)
     let charset: [Character] =

@@ -14,6 +14,7 @@ struct UserProfileView: View {
     @State private var profileImage: Image = Image("avatarMale") // Default profile image
     @State private var showingErrorAlert = false
     @State private var errorMessage = ""
+    @State private var userName: String = ""
     
     private func deleteAccount() {
         Task {
@@ -77,13 +78,14 @@ struct UserProfileView: View {
                             }
                         
                         Spacer()
-                        
-                        
                     }
                     
                 }
             }
             .listRowBackground(Color(UIColor.systemGroupedBackground))
+            
+            // MARK: - Display User's name:
+            
             Section("Email") {
                 Text(viewModel.displayName)
             }
