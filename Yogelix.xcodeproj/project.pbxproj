@@ -21,7 +21,6 @@
 		3B2125DC2B121D9300B3E0BE /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125DB2B121D9300B3E0BE /* FirebaseRemoteConfigSwift */; };
 		3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */; };
 		3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */; };
-		3B2F5FFC2B1E0C610029EA14 /* StartWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFB2B1E0C610029EA14 /* StartWorkout.swift */; };
 		3B2F5FFE2B1E151E0029EA14 /* AnimationSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */; };
 		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
 		3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B40A36B2B1222EA00170041 /* Alamofire */; };
@@ -156,7 +155,6 @@
 		3B19625B2B191D8300A7C894 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		3B2F5FFB2B1E0C610029EA14 /* StartWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkout.swift; sourceTree = "<group>"; };
 		3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSequence.swift; sourceTree = "<group>"; };
 		3B40A37C2B12B43000170041 /* MetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCard.swift; sourceTree = "<group>"; };
 		3B40A3892B12D48F00170041 /* Prompt.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prompt.md; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 				3B9DA82D2B0EAFE500480621 /* CardView.swift */,
 				3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */,
 				3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */,
-				3B2F5FFB2B1E0C610029EA14 /* StartWorkout.swift */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -775,7 +772,6 @@
 				3BD2CCCC2B1BA91C00DD5C7E /* DailySummary.swift in Sources */,
 				3BE4A8562B1B2E73007611D8 /* QuantityTypeManager.swift in Sources */,
 				3B19625C2B191D8300A7C894 /* CircleImage.swift in Sources */,
-				3B2F5FFC2B1E0C610029EA14 /* StartWorkout.swift in Sources */,
 				3B9DA8322B0EBE8100480621 /* DailyExerciseView.swift in Sources */,
 				3BA2F0D52B1CFAE3001AE1F7 /* SleepAnalysisModel.swift in Sources */,
 				3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */,

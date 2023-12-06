@@ -2,9 +2,10 @@
 import SwiftUI
 
 struct ExerciseTimerView: View {
-    @EnvironmentObject var authViewModel: AuthenticationViewModel // Ensure this is provided in the environment
-    @StateObject var modelData = ModelData() // This can also be passed in if shared across views
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @StateObject var modelData = ModelData()
     
+
     
     var body: some View {
         VStack {
@@ -32,12 +33,6 @@ struct ExerciseTimerView: View {
                 Button(action: { }) {
                     Image(systemName: "rosette")
                 }
-            }
-            // Conditionally display PoseOfTheDay
-            if let userData = authViewModel.userData {
-                PoseOfTheDay(modelData: modelData, userData: userData)
-            } else {
-                Text("Please sign in to view the Pose of the Day.")
             }
         }
         .padding()

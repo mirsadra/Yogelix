@@ -38,10 +38,10 @@ struct YogelixApp: App {
                                 Label("Poses", systemImage: "figure.yoga")
                             }
                         
-                        DailyExerciseView(practices: DailyPractice.dailyPractices)
-                            .tabItem {
-                                Label("Exercise", systemImage: "flag.2.crossed.circle")
-                            }
+//                        DetailView(exercise: <#DailyPractice#>)
+//                            .tabItem {
+//                                Label("Exercise", systemImage: "flag.2.crossed.circle")
+//                            }
 
                         UserProfileView()
                             .badge("!")

@@ -3,7 +3,7 @@ import SwiftUI
 
 struct PoseOfTheDay: View {
     @StateObject var modelData = ModelData()
-    @StateObject var userData: UserData // Assuming UserData is already initialized and passed
+    @StateObject var userData: UserData
     @StateObject var challengeManager: DailyChallengeManager
     
     init(modelData: ModelData, userData: UserData) {
@@ -102,9 +102,3 @@ private let dateFormatter: DateFormatter = {
     formatter.timeStyle = .none
     return formatter
 }()
-
-//struct PoseOfTheDay_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PoseOfTheDay()
-//    }
-//}
