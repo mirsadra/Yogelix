@@ -67,6 +67,7 @@ struct PoseList: View {
     }
 }
 
+
 struct PoseList_Previews: PreviewProvider {
     static var previews: some View {
         PoseList()

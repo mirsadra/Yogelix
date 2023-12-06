@@ -21,14 +21,12 @@
 		3B2125DC2B121D9300B3E0BE /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125DB2B121D9300B3E0BE /* FirebaseRemoteConfigSwift */; };
 		3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */; };
 		3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */; };
-		3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */; };
 		3B2F5FFC2B1E0C610029EA14 /* StartWorkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFB2B1E0C610029EA14 /* StartWorkout.swift */; };
 		3B2F5FFE2B1E151E0029EA14 /* AnimationSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */; };
 		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
 		3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B40A36B2B1222EA00170041 /* Alamofire */; };
 		3B40A37D2B12B43000170041 /* MetricCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A37C2B12B43000170041 /* MetricCard.swift */; };
 		3B51EBEF2B1D306B00BB3B7D /* HKQueryOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51EBEE2B1D306B00BB3B7D /* HKQueryOptions.swift */; };
-		3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469892B0CFC5B009130FD /* AuthenticationView.swift */; };
 		3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */; };
 		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
 		3B5C59E32B1902FE00283244 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E22B1902FE00283244 /* Pose.swift */; };
@@ -78,7 +76,11 @@
 		3BDA65712B1F38DF00177735 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDA65702B1F38DF00177735 /* GoogleSignIn */; };
 		3BDA65732B1F38DF00177735 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDA65722B1F38DF00177735 /* GoogleSignInSwift */; };
 		3BDA65752B1F39F700177735 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BDA65742B1F39F700177735 /* GoogleService-Info.plist */; };
-		3BDFE13C2B026C21007FB23E /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13B2B026C21007FB23E /* UserController.swift */; };
+		3BDA65772B1FB43400177735 /* PoseOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */; };
+		3BDA65792B1FCD2800177735 /* TrophyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA65782B1FCD2800177735 /* TrophyView.swift */; };
+		3BDA657B2B1FCD3900177735 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA657A2B1FCD3900177735 /* AchievementView.swift */; };
+		3BDA657D2B1FDCC200177735 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA657C2B1FDCC200177735 /* ProfileView.swift */; };
+		3BDFE13C2B026C21007FB23E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13B2B026C21007FB23E /* ImagePicker.swift */; };
 		3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13D2B026C2B007FB23E /* SessionController.swift */; };
 		3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE08DE22B175273002D585A /* fine-tune.jsonl */; };
 		3BE4A8202B1A15AC007611D8 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */; };
@@ -149,13 +151,11 @@
 		3B19625B2B191D8300A7C894 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		3B2F5FFB2B1E0C610029EA14 /* StartWorkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkout.swift; sourceTree = "<group>"; };
 		3B2F5FFD2B1E151E0029EA14 /* AnimationSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSequence.swift; sourceTree = "<group>"; };
 		3B40A37C2B12B43000170041 /* MetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCard.swift; sourceTree = "<group>"; };
 		3B40A3892B12D48F00170041 /* Prompt.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prompt.md; sourceTree = "<group>"; };
 		3B51EBEE2B1D306B00BB3B7D /* HKQueryOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKQueryOptions.swift; sourceTree = "<group>"; };
-		3B5469892B0CFC5B009130FD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		3B5469912B0CFD40009130FD /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		3B5C59E22B1902FE00283244 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
@@ -209,7 +209,11 @@
 		3BD2CCCB2B1BA91C00DD5C7E /* DailySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummary.swift; sourceTree = "<group>"; };
 		3BD91F1E2B16876F00D9218E /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		3BDA65742B1F39F700177735 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3BDFE13B2B026C21007FB23E /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseOfTheDay.swift; sourceTree = "<group>"; };
+		3BDA65782B1FCD2800177735 /* TrophyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyView.swift; sourceTree = "<group>"; };
+		3BDA657A2B1FCD3900177735 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
+		3BDA657C2B1FDCC200177735 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3BDFE13B2B026C21007FB23E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3BDFE13D2B026C2B007FB23E /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		3BE08DE22B175273002D585A /* fine-tune.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = "fine-tune.jsonl"; sourceTree = "<group>"; };
 		3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -285,7 +289,13 @@
 		3B51EBE32B1CFCE900BB3B7D /* Yoga */ = {
 			isa = PBXGroup;
 			children = (
-				3BE4A8222B1A169A007611D8 /* Poses */,
+				3B1962572B1916C800A7C894 /* PoseList.swift */,
+				3B1962592B191B3800A7C894 /* PoseDetail.swift */,
+				3B5C59E62B1908DC00283244 /* PoseRow.swift */,
+				3BA2F0BB2B1CD580001AE1F7 /* PoseFilter.swift */,
+				3B5C59E22B1902FE00283244 /* Pose.swift */,
+				3B5C59E42B1905BD00283244 /* ModelData.swift */,
+				3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */,
 			);
 			path = Yoga;
 			sourceTree = "<group>";
@@ -294,9 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */,
-				3B2EA7422B0C0FB900D46DA6 /* SignupView.swift */,
 				3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */,
-				3B5469892B0CFC5B009130FD /* AuthenticationView.swift */,
 				3BA4A6342B0D4FDF0032936E /* UserData.swift */,
 			);
 			path = Auth;
@@ -465,6 +473,7 @@
 		3BCC04F82B0192C600FD1FC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3BDA657A2B1FCD3900177735 /* AchievementView.swift */,
 				3BF547752B155DC10073BD18 /* MainScrollView.swift */,
 				3B8920D12B0F8378000A61A2 /* HealthView.swift */,
 				3BCC04C82B01901400FD1FC3 /* ContentView.swift */,
@@ -479,7 +488,7 @@
 		3BCC04FD2B01931400FD1FC3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3BDFE13B2B026C21007FB23E /* UserController.swift */,
+				3BDFE13B2B026C21007FB23E /* ImagePicker.swift */,
 				3BDFE13D2B026C2B007FB23E /* SessionController.swift */,
 			);
 			path = Controller;
@@ -497,21 +506,10 @@
 				3BAF8EFF2B13D79300E5436F /* HealthCard.swift */,
 				3B40A37C2B12B43000170041 /* MetricCard.swift */,
 				3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */,
+				3BDA65782B1FCD2800177735 /* TrophyView.swift */,
+				3BDA657C2B1FDCC200177735 /* ProfileView.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		3BE4A8222B1A169A007611D8 /* Poses */ = {
-			isa = PBXGroup;
-			children = (
-				3B1962572B1916C800A7C894 /* PoseList.swift */,
-				3B1962592B191B3800A7C894 /* PoseDetail.swift */,
-				3B5C59E62B1908DC00283244 /* PoseRow.swift */,
-				3BA2F0BB2B1CD580001AE1F7 /* PoseFilter.swift */,
-				3B5C59E22B1902FE00283244 /* Pose.swift */,
-				3B5C59E42B1905BD00283244 /* ModelData.swift */,
-			);
-			path = Poses;
 			sourceTree = "<group>";
 		};
 		3BE4A8592B1B76A5007611D8 /* Manager */ = {
@@ -744,6 +742,7 @@
 			files = (
 				3BE4A8582B1B3342007611D8 /* WorkoutTypeManager.swift in Sources */,
 				3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */,
+				3BDA65792B1FCD2800177735 /* TrophyView.swift in Sources */,
 				3BE4A8602B1B7CC0007611D8 /* MindfulSessionModel.swift in Sources */,
 				3BA2F0D62B1CFAE3001AE1F7 /* MindfulSessionModel.swift in Sources */,
 				3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */,
@@ -756,9 +755,10 @@
 				3B9DA8322B0EBE8100480621 /* DailyExerciseView.swift in Sources */,
 				3BA2F0D52B1CFAE3001AE1F7 /* SleepAnalysisModel.swift in Sources */,
 				3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */,
+				3BDA657D2B1FDCC200177735 /* ProfileView.swift in Sources */,
 				3BE4A8242B1A1723007611D8 /* GPTMessageView.swift in Sources */,
 				3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */,
-				3BDFE13C2B026C21007FB23E /* UserController.swift in Sources */,
+				3BDFE13C2B026C21007FB23E /* ImagePicker.swift in Sources */,
 				3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */,
 				3BCC05032B019B4A00FD1FC3 /* ChakraDetailView.swift in Sources */,
 				3BA33C942B1E6A8F00DF80F6 /* UserTrophyToolbar.swift in Sources */,
@@ -772,7 +772,6 @@
 				3BD2CCC42B1BA6C500DD5C7E /* ActivityRings.swift in Sources */,
 				3BA4A6352B0D4FDF0032936E /* UserData.swift in Sources */,
 				3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */,
-				3B2EA7432B0C0FB900D46DA6 /* SignupView.swift in Sources */,
 				3BE4A8632B1B7EAF007611D8 /* CategoryDataViewModel.swift in Sources */,
 				3B9DA82E2B0EAFE500480621 /* CardView.swift in Sources */,
 				3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */,
@@ -782,7 +781,6 @@
 				3B5C59E72B1908DC00283244 /* PoseRow.swift in Sources */,
 				3BE4A8202B1A15AC007611D8 /* FavoriteButton.swift in Sources */,
 				3BD2CCBD2B1B90C800DD5C7E /* WorkoutDataViewModel.swift in Sources */,
-				3B54698A2B0CFC5B009130FD /* AuthenticationView.swift in Sources */,
 				3BE4A8422B1A607C007611D8 /* ChatView.swift in Sources */,
 				3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */,
 				3B51EBEF2B1D306B00BB3B7D /* HKQueryOptions.swift in Sources */,
@@ -790,6 +788,8 @@
 				3BD91F1F2B16876F00D9218E /* Ring.swift in Sources */,
 				3BD2CCBB2B1B8D7400DD5C7E /* QuantityDataViewModel.swift in Sources */,
 				3BD2CCC62B1BA83800DD5C7E /* WorkoutSummaryCard.swift in Sources */,
+				3BDA657B2B1FCD3900177735 /* AchievementView.swift in Sources */,
+				3BDA65772B1FB43400177735 /* PoseOfTheDay.swift in Sources */,
 				3BD2CCBF2B1BA4D100DD5C7E /* MainView.swift in Sources */,
 				3BAF8F002B13D79300E5436F /* HealthCard.swift in Sources */,
 				3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */,

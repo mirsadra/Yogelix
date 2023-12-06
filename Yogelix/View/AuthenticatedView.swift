@@ -2,15 +2,16 @@
 import SwiftUI
 
 struct AnimatedBlobView: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
     let index: Int
     let size: CGSize
     @State private var xOffset: CGFloat = 0
     @State private var yOffset: CGFloat = 0
-
+    
     var body: some View {
         let width = CGFloat.random(in: 100...200)
         let height = width
-
+        
         Circle()
             .fill(Color.green.opacity(0.2))
             .frame(width: width, height: height)
@@ -25,7 +26,7 @@ struct AnimatedBlobView: View {
 }
 
 struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Unauthenticated: View {
-    @StateObject private var viewModel = AuthenticationViewModel()
+    @StateObject private var authViewModel = AuthenticationViewModel()
     @State private var presentingLoginScreen = false
     @State private var presentingProfileScreen = false
     
@@ -45,64 +46,64 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
     
     var body: some View {
         ZStack {
-                    BackgroundAnimationView()
-                        .edgesIgnoringSafeArea(.all)
-
-                    switch viewModel.authenticationState {
-                    case .unauthenticated, .authenticating:
-                        VStack(spacing: 20) {
-                            Spacer()
-                            Text("Welcome to Yogelix")
-                                .font(.largeTitle)
-                                .fontWeight(.semibold)
-                                .foregroundColor(.sereneGreen)
-                                .shadow(radius: 10)
-                                .padding(.horizontal, 30)
-                                .multilineTextAlignment(.center)
-                            Text("Your 🤖 Yoga Tutor")
-                                .foregroundColor(.sereneGreen.opacity(0.9))
+            BackgroundAnimationView()
+                .edgesIgnoringSafeArea(.all)
+            
+            switch authViewModel.authenticationState {
+                case .unauthenticated, .authenticating:
+                    VStack(spacing: 20) {
+                        Spacer()
+                        Text("Welcome to Yogelix")
+                            .font(.largeTitle)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.sereneGreen)
+                            .shadow(radius: 10)
+                            .padding(.horizontal, 30)
+                            .multilineTextAlignment(.center)
+                        Text("Your 🤖 Yoga Tutor")
+                            .foregroundColor(.sereneGreen.opacity(0.9))
+                            .fontWeight(.medium)
+                        Spacer()
+                        Button(action: {
+                            presentingLoginScreen.toggle()
+                        }) {
+                            Text("Let's connect 🚀")
+                                .fontWeight(.bold)
+                                .foregroundColor(.green)
+                                .padding(.vertical, 15)
+                                .padding(.horizontal, 40)
+                                .background(Color.white)
+                                .cornerRadius(30)
+                                .shadow(radius: 5)
+                        }
+                        Spacer()
+                        VStack {
+                            Text("Powered by:")
+                                .font(.custom("LuckiestGuy-Regular", size: 16))
                                 .fontWeight(.medium)
-                            Spacer()
-                            Button(action: {
-                                presentingLoginScreen.toggle()
-                            }) {
-                                Text("Let's connect 🚀")
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.green)
-                                    .padding(.vertical, 15)
-                                    .padding(.horizontal, 40)
-                                    .background(Color.white)
-                                    .cornerRadius(30)
-                                    .shadow(radius: 5)
-                            }
-                            Spacer()
-                            VStack {
-                                Text("Powered by:")
-                                    .font(.custom("EncodeSansSC", size: 16))
-                                    .fontWeight(.medium)
-                                    .foregroundColor(.sereneGreen.opacity(0.8))
-                                Image("appleHealthKitLogo") // Assuming you have a logo image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 30)
-                                Image("openAIGPT4Logo") // Assuming you have a logo image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 30)
-                            }
-                            .padding(.bottom, 30)
+                                .foregroundColor(.sereneGreen.opacity(0.8))
+                            Image("appleHealthKitLogo") // Assuming you have a logo image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 30)
+                            Image("openAIGPT4Logo") // Assuming you have a logo image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 30)
                         }
-                        .sheet(isPresented: $presentingLoginScreen) {
-                            AuthenticationView()
-                                .environmentObject(viewModel)
-                        }
-
-                    case .authenticated:
-                        content()
-                            .transition(.move(edge: .trailing))
+                        .padding(.bottom, 30)
                     }
-                }
+                    
+                case .authenticated:
+                    content()
+                        .transition(.move(edge: .trailing))
             }
+        }
+        .sheet(isPresented: $presentingLoginScreen) {
+            LoginView()
+                .environmentObject(authViewModel)
+        }
+    }
 }
 
 
@@ -149,9 +150,8 @@ struct BackgroundAnimationView: View {
 struct AuthenticatedView_Previews: PreviewProvider {
     static var previews: some View {
         AuthenticatedView {
-            Text("You're signed in.")
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                .background(.yellow)
+            
         }
+        .environmentObject(AuthenticationViewModel())
     }
 }

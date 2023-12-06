@@ -1,33 +1,20 @@
 //  LoginView.swift
 import SwiftUI
+import UIKit
 import Combine
 import FirebaseAnalyticsSwift
 import AuthenticationServices
 
-private enum FocusableField: Hashable {
-    case email
-    case password
-}
-
 struct LoginView: View {
-    @EnvironmentObject var viewModel: AuthenticationViewModel
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @State private var isActive = false
-    @FocusState private var focus: FocusableField?
-    
-    
-    private func signInWithEmailPassword() {
-        Task {
-            if await viewModel.signInWithEmailPassword() == true {
-                dismiss()
-            }
-        }
-    }
+    @State private var emojiOffset: CGFloat = 0
     
     private func signInWithGoogle() {
         Task {
-            if await viewModel.signInWithGoogle() == true {
+            if await authViewModel.signInWithGoogle() == true {
                 dismiss()
             }
         }
@@ -39,117 +26,53 @@ struct LoginView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(minHeight: 300, maxHeight: 400)
-            Text("Login 🚀")
+            Text("🛸")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            HStack {
-                Image(systemName: "envelope")
-                TextField("Email", text: $viewModel.email)
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
-                    .focused($focus, equals: .email)
-                    .submitLabel(.next)
-                    .onSubmit {
-                        self.focus = .password
+                .offset(x: emojiOffset, y: emojiOffset)
+                .onAppear {
+                    withAnimation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
+                        emojiOffset = UIScreen.main.bounds.width * 0.3 // Move the emoji to 30% of the screen width
                     }
-            }
-            .padding(.vertical, 6)
-            .background(Divider(), alignment: .bottom)
-            .padding(.bottom, 4)
-            
-            HStack {
-                Image(systemName: "lock.rectangle")
-                SecureField("Password", text: $viewModel.password)
-                    .focused($focus, equals: .password)
-                    .submitLabel(.go)
-                    .onSubmit {
-                        signInWithEmailPassword()
-                    }
-            }
-            .padding(.vertical, 6)
-            .background(Divider(), alignment: .bottom)
-            .padding(.bottom, 8)
-            
-            if !viewModel.errorMessage.isEmpty {
-                VStack {
-                    Text(viewModel.errorMessage)
-                        .foregroundColor(Color(UIColor.systemRed))
                 }
-            }
-            
-            Button(action: signInWithEmailPassword) {
-                if viewModel.authenticationState != .authenticating {
-                    Text("Login")
-                        .padding(.vertical, 8)
-                        .frame(maxWidth: .infinity)
-                }
-                else {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                        .padding(.vertical, 8)
-                        .frame(width: 360, height: 50)
-                }
-            }
-            .disabled(!viewModel.isValid)
-            .frame(maxWidth: .infinity)
-            .buttonStyle(.borderedProminent)
-            
-            HStack {
-                    VStack { Divider() }
-                    Text("or")
-                    VStack { Divider() }
-                  }
             
             // MARK: - Apple Sign In
             SignInWithAppleButton { request in
-                viewModel.handleSignInWithAppleRequest(request)
+                authViewModel.handleSignInWithAppleRequest(request)
             } onCompletion: { result in
-                viewModel.handleSignInWithAppleCompletion(result)
+                authViewModel.handleSignInWithAppleCompletion(result)
             }
             .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
             .frame(width: 360, height: 50)
             .cornerRadius(8)
             
-            
             // MARK: - Google Sign In
             Button(action: signInWithGoogle) {
                 Text("Sign in with Google")
-                    .foregroundStyle(colorScheme == .dark ? .white : .black)
-                    .frame(maxWidth: .infinity)
+                
+                    .frame(width: 335, height: 22)
                     .padding(.vertical, 8)
                     .background(alignment: .leading) {
                         Image("google")
                             .resizable()
-                            .frame(width: 30, alignment: .center)
+                            .scaledToFit()
+                            .frame(width: 24, height: 24, alignment: .center)
                     }
             }
             .buttonStyle(.bordered)
-            
-            HStack {
-                Text("Don't have an account yet?")
-                Button(action: { viewModel.switchFlow() }) {
-                    Text("Sign up")
-                        .fontWeight(.semibold)
-                        .foregroundColor(.blue)
-                }
-            }
-            .padding([.top, .bottom], 50)
-            
+            .foregroundStyle(colorScheme == .light ? .black : .white)
         }
         .listStyle(.plain)
         .padding()
-//        .analyticsScreen(name: "\(Self.self)")
+        .analyticsScreen(name: "\(Self.self)")
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-//            LoginView()
-            LoginView()
-                .preferredColorScheme(.dark)
+          LoginView()
+            .preferredColorScheme(.light)
         }
         .environmentObject(AuthenticationViewModel())
     }

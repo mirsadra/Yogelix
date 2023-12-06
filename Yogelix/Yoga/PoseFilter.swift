@@ -35,7 +35,7 @@ struct PoseFilterView: View {
             Picker("Select Chakra", selection: $selectedChakra) {
                 Text("Any").tag(ChakraDetail.Category?.none)
                 ForEach(ChakraDetail.Category.allCases, id: \.self) { chakra in
-                    Text(chakra.rawValue).tag(chakra as ChakraDetail.Category?)
+                    Text(chakra.rawValue).tag(chakra) // Corrected
                 }
             }
             .pickerStyle(MenuPickerStyle())

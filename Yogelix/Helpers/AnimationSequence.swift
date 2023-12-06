@@ -18,7 +18,7 @@ struct AnimationSequence: View {
                 Spacer()
                 // Display the app slogan
                 
-                Text("🌎")
+                Text("Yogelix")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .rotation3DEffect(

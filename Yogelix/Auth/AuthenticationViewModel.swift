@@ -15,39 +15,19 @@ enum AuthenticationState {
     case authenticated
 }
 
-enum AuthenticationFlow {
-    case login
-    case signUp
-}
-
 @MainActor
 class AuthenticationViewModel: ObservableObject {
-    @Published var email = ""
-    @Published var password = ""
-    @Published var confirmPassword = ""
-    
-    @Published var flow: AuthenticationFlow = .login
-    
-    @Published var isValid  = false
     @Published var authenticationState: AuthenticationState = .unauthenticated
     @Published var user: User?
     @Published var errorMessage = ""
     @Published var displayName = ""
-    
+    @Published var fullName: String = ""
+    @Published var profilePicUrl: String = ""
     private var currentNonce: String?
     
     init() {
         registerAuthStateHandler()
         verifySignInWithAppleAuthenticationState()
-        
-        $flow
-            .combineLatest($email, $password, $confirmPassword)
-            .map { flow, email, password, confirmPassword in
-                flow == .login
-                ? !(email.isEmpty || password.isEmpty)
-                : !(email.isEmpty || password.isEmpty || confirmPassword.isEmpty)
-            }
-            .assign(to: &$isValid)
     }
     
     private var authStateHandler: AuthStateDidChangeListenerHandle?
@@ -58,6 +38,7 @@ class AuthenticationViewModel: ObservableObject {
                 self.user = user
                 self.authenticationState = user == nil ? .unauthenticated : .authenticated
                 self.displayName = user?.email ?? ""
+                
             }
         }
     }
@@ -74,14 +55,8 @@ class AuthenticationViewModel: ObservableObject {
                 // User is signed out
                 self?.authenticationState = .unauthenticated
                 self?.user = nil
-                self?.displayName = ""
             }
         }
-    }
-    
-    func switchFlow() {
-        flow = flow == .login ? .signUp : .login
-        errorMessage = ""
     }
     
     private func wait() async {
@@ -94,128 +69,92 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
     
-    func reset() {
-        flow = .login
-        email = ""
-        password = ""
-        confirmPassword = ""
-    }
-    
-    // MARK: - Upload Profile Picture
-    enum ProfileImageError: Error {
-        case failedToConvertImage
-        case failedToUploadImage
-        case failedToUpdateFirestore
-        case unknownError
-    }
-    
-    func uploadProfileImage(_ image: UIImage, for user: User) async -> Result<URL, Error> {
-        guard let imageData = image.jpegData(compressionQuality: 0.4) else {
-            return .failure(ProfileImageError.failedToConvertImage)
-        }
-        
-        let storageRef = Storage.storage().reference().child("profile_images/\(user.uid).png")
-        
-        // Create metadata for the image
-        let metadata = StorageMetadata()
-        metadata.contentType = "image/png"  // or "image/jpeg" if you're using JPEG
-        
-        do {
-            // Upload the image data with metadata
-            try await storageRef.putData(imageData, metadata: metadata)
-            let imageUrl = try await storageRef.downloadURL()
-            return .success(imageUrl)
-        } catch {
-            return .failure(ProfileImageError.unknownError)
-        }
-    }
-    
-    
-    func updateProfileImageUrl(_ url: URL, for user: User) async -> Result<Void, Error> {
+    // Fetch user data from Firestore
+    func fetchUserProfile() async {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
         let db = Firestore.firestore()
-        let userDoc = db.collection("users").document(user.uid)
+        let docRef = db.collection("users").document(uid)
         
         do {
-            try await userDoc.setData(["profileImageUrl": url.absoluteString], merge: true)
-            return .success(())
-        } catch {
-            return .failure(ProfileImageError.failedToUpdateFirestore)
-        }
-    }
-    
-    func fetchAndSetProfileImage() async {
-        guard let uid = user?.uid else { return }
-        
-        let userDocRef = Firestore.firestore().collection("users").document(uid)
-        do {
-            let snapshot = try await userDocRef.getDocument()
-            if let imageUrlString = snapshot.data()?["profileImageUrl"] as? String,
-               let _ = URL(string: imageUrlString) {
-                // Download the image data from the imageUrl and set it to your profileImage
-                // Depending on your UI logic, you may need to publish changes to profileImage
+            let document = try await docRef.getDocument()
+            if document.exists {
+                let data = document.data()
+                let fetchedFullName = data?["fullName"] as? String ?? ""
+                let fetchedProfilePicUrl = data?["profilePicUrl"] as? String ?? ""
+                DispatchQueue.main.async {
+                    self.fullName = fetchedFullName
+                    self.profilePicUrl = fetchedProfilePicUrl
+                }
+            } else {
+                print("Document does not exist")
             }
         } catch {
-            // Handle errors, e.g., unable to fetch document, data format issues, etc.
+            print("Error fetching user data: \(error)")
         }
     }
+    
+    func uploadProfileImage(_ imageData: Data) async {
+            guard let uid = Auth.auth().currentUser?.uid else {
+                errorMessage = "User must be logged in to upload an image."
+                return
+            }
+            
+            let storageRef = Storage.storage().reference().child("profile_pictures").child("\(uid).jpg")
+            
+            do {
+                // Upload the image to Firebase Storage
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpeg"
+                let _ = try await storageRef.putDataAsync(imageData, metadata: metadata)
+                
+                // Once the image is uploaded, retrieve the download URL
+                let downloadURL = try await storageRef.downloadURL()
+                self.profilePicUrl = downloadURL.absoluteString
+                
+                // Update the user's profile in Firestore to include the new image URL
+                let db = Firestore.firestore()
+                try await db.collection("users").document(uid).setData(["profilePicUrl": profilePicUrl], merge: true)
+                
+            } catch {
+                // Handle any errors
+                print(error.localizedDescription)
+                errorMessage = "There was an error uploading the image: \(error.localizedDescription)"
+            }
+        }
+    
+    func removeProfileImage() {
+            guard let uid = Auth.auth().currentUser?.uid else {
+                errorMessage = "User must be logged in to remove an image."
+                return
+            }
+
+            let db = Firestore.firestore()
+            let storageRef = Storage.storage().reference().child("profile_pictures").child("\(uid).jpg")
+
+            Task {
+                do {
+                    // Delete the image from Firebase Storage
+                    try await storageRef.delete()
+
+                    // Remove the image URL from Firestore
+                    try await db.collection("users").document(uid).updateData(["profilePicUrl": FieldValue.delete()])
+                    
+                    // Update the local profilePicUrl property
+                    DispatchQueue.main.async {
+                        self.profilePicUrl = ""
+                    }
+                } catch {
+                    // Handle any errors
+                    DispatchQueue.main.async {
+                        self.errorMessage = "There was an error removing the image: \(error.localizedDescription)"
+                    }
+                }
+            }
+        }
 }
 
-// MARK: - Email and Password Authentication
-extension AuthenticationViewModel {
-    func signInWithEmailPassword() async -> Bool {
-        authenticationState = .authenticating
-        do {
-            let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
-            user = authResult.user
-            print("User \(authResult.user.uid) signed in")
-            return true
-        } catch  {
-            print(error)
-            errorMessage = error.localizedDescription
-            authenticationState = .unauthenticated
-            return false
-        }
-    }
-    
-    func signUpWithEmailPassword() async -> Bool {
-        authenticationState = .authenticating
-        do {
-            let authResult = try await Auth.auth().createUser(withEmail: email, password: password)
-            user = authResult.user
-            return true
-        } catch {
-            print(error)
-            errorMessage = error.localizedDescription
-            authenticationState = .unauthenticated
-            return false
-        }
-    }
-    
-    func signOut() {
-        do {
-            try Auth.auth().signOut()
-            authenticationState = .unauthenticated // Update the authentication state
-            reset() // Reset user data
-        } catch {
-            print(error)
-            errorMessage = error.localizedDescription
-        }
-    }
-    
-    
-    func deleteAccount() async -> Bool {
-        do {
-            try await user?.delete()
-            return true
-        } catch {
-            errorMessage = error.localizedDescription
-            return false
-        }
-    }
-}
 
-
-// MARK: Sign in with Apple
+// MARK: - Apple ID Credential Extension
 extension ASAuthorizationAppleIDCredential {
     func displayName() -> String {
         return [self.fullName?.givenName, self.fullName?.familyName]
@@ -225,7 +164,6 @@ extension ASAuthorizationAppleIDCredential {
 }
 
 extension AuthenticationViewModel {
-    
     func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
         request.requestedScopes = [.fullName, .email]
         let nonce = randomNonceString()
@@ -236,8 +174,9 @@ extension AuthenticationViewModel {
     func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) {
         if case .failure(let failure) = result {
             errorMessage = failure.localizedDescription
+            return
         }
-        else if case .success(let authorization) = result {
+        if case .success(let authorization) = result {
             if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
                 guard let nonce = currentNonce else {
                     fatalError("Invalid state: a login callback was received, but no login request was sent.")
@@ -258,34 +197,46 @@ extension AuthenticationViewModel {
                 // Performing actual sign in with apple
                 Task {
                     do {
-                        let result = try await Auth.auth().signIn(with: credential)
-                        await updateDisplayName(for: result.user, with: appleIDCredential)  // to read user's full name from apple id token and assign it to firebase user.
-                    }
-                    catch {
+                        let authResult = try await Auth.auth().signIn(with: credential)
+                        // Store the user's full name if it's provided and not yet stored.
+                        if let fullName = appleIDCredential.fullName,
+                           fullName.givenName != nil || fullName.familyName != nil {
+                            let displayName = appleIDCredential.displayName()
+                            await updateDisplayName(for: authResult.user, with: displayName)
+                            await storeUserData(uid: authResult.user.uid, fullName: displayName, profilePicUrl: profilePicUrl)
+                        } else {
+                            // If full name is not available, fetch from Firestore.
+                            await fetchUserProfile()
+                        }
+                    } catch {
                         print("Error authenticating: \(error.localizedDescription)")
+                        errorMessage = error.localizedDescription
                     }
                 }
             }
         }
     }
     
-    func updateDisplayName(for user: User, with appleIDCredential: ASAuthorizationAppleIDCredential, force: Bool = false) async {
+    func updateDisplayName(for user: User, with displayName: String) async {
+        // Only set the display name if it's not already set
         if let currentDisplayName = Auth.auth().currentUser?.displayName, !currentDisplayName.isEmpty {
-            // current user is non-empty, don't overwrite it
-        }
-        else {
-            let changeRequest = user.createProfileChangeRequest()  // if the user's name was empty then we will create a profile change request and set the display name.
-            changeRequest.displayName = appleIDCredential.displayName()
+            // current user already has a non-empty display name, don't overwrite it
+        } else {
+            let changeRequest = user.createProfileChangeRequest()
+            changeRequest.displayName = displayName
             do {
                 try await changeRequest.commitChanges()
-                self.displayName = Auth.auth().currentUser?.displayName ?? ""
-            }
-            catch {
-                print("Unable to update the user's displayname: \(error.localizedDescription)")
-                errorMessage = error.localizedDescription
+                DispatchQueue.main.async {
+                    self.displayName = displayName
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.errorMessage = "Unable to update the user's display name: \(error.localizedDescription)"
+                }
             }
         }
     }
+
     
     func verifySignInWithAppleAuthenticationState() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -310,7 +261,6 @@ extension AuthenticationViewModel {
             }
         }
     }
-    
 }
 
 // MARK: - Sign in with google
@@ -332,7 +282,7 @@ extension AuthenticationViewModel {
             print("There is no root view controller")
             return false
         }
-
+        
         do {
             let userAuthentication = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
             let googleUser = userAuthentication.user
@@ -342,37 +292,62 @@ extension AuthenticationViewModel {
             let accessToken = googleUser.accessToken
             let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString,
                                                            accessToken: accessToken.tokenString)
-
+            
             // Retrieve the user's full name and profile picture URL
             let fullName = googleUser.profile?.name ?? ""
             let profilePicUrl = googleUser.profile?.imageURL(withDimension: 200)?.absoluteString ?? ""
-
+            
             let result = try await Auth.auth().signIn(with: credential)
             let firebaseUser = result.user
-            print("User \(firebaseUser.uid) signed in with email \(firebaseUser.email ?? "unknown")")
-
+            
             // Store user's full name and profile picture URL in Firestore
             await storeUserData(uid: firebaseUser.uid, fullName: fullName, profilePicUrl: profilePicUrl)
-
+            
             return true
-        }
-        catch {
+        } catch {
+            switch error {
+                case AuthenticationError.tokenError(message: _):
+                    errorMessage = "🙈 Invalid token, try again!"
+                default:
+                    errorMessage = "🚨 An error occurred while signing in with Google. Please try again later."
+            }
             print(error.localizedDescription)
-            errorMessage = error.localizedDescription
             return false
         }
     }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+            authenticationState = .unauthenticated // Update the authentication state
+            // Reset or clear any other relevant properties here
+        } catch {
+            print(error)
+            errorMessage = error.localizedDescription
+        }
+    }
 
+    // MARK: - Refactored User Data Storage
     private func storeUserData(uid: String, fullName: String, profilePicUrl: String) async {
         let db = Firestore.firestore()
+        let userDocRef = db.collection("users").document(uid)
+        
         do {
-            try await db.collection("users").document(uid).setData([
-                "fullName": fullName,
-                "profilePicUrl": profilePicUrl
-            ])
-            print("User data stored successfully.")
+            let docSnapshot = try await userDocRef.getDocument()
+            
+            if let docData = docSnapshot.data(), docData["fullName"] as? String != "" {
+                // Full name already exists, no need to update it.
+                print("Full name already stored in Firestore.")
+            } else {
+                // Full name doesn't exist or is empty, update it along with the profilePicUrl.
+                try await userDocRef.setData([
+                    "fullName": fullName,
+                    "profilePicUrl": profilePicUrl
+                ], merge: true)
+                print("User data stored successfully.")
+            }
         } catch {
-            print("Error storing user data: \(error)")
+            print("Error accessing user data: \(error)")
         }
     }
 }
@@ -421,4 +396,33 @@ private func sha256(_ input: String) -> String {
     }.joined()
     
     return hashString
+}
+
+
+public enum AuthError: Error {
+    /// The email address is already in use by another account.
+    case emailAlreadyInUse
+    
+    /// The user account is disabled from sign-in.
+    case userDisabled
+    
+    /// The password is invalid.
+    case wrongPassword
+    
+    /// The email address is invalid.
+    case invalidEmail
+    
+    /// The an invalid email address was provided.
+    case invalidCredential
+    
+    /// The operation is unable to complete due to a temporary problem.
+    case operationNotAllowed
+    
+    /// The user denied the sign-in request.
+    case userCancelled
+    
+    /// The user id supplied is invalid.
+    case invalidUser
+    
+    case weakPassword
 }
