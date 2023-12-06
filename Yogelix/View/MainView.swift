@@ -3,6 +3,8 @@ import SwiftUI
 
 struct MainView: View {
     @ObservedObject var viewModel = QuantityDataViewModel()
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @StateObject var modelData = ModelData()
     
     
     var body: some View {
@@ -42,8 +44,10 @@ struct MainView: View {
                 
                 Spacer()
                 
-                PoseOfTheDay()
-                    .padding()
+                if let userData = authViewModel.userData {
+                    PoseOfTheDay(modelData: modelData, userData: userData)
+                        .padding()
+                }
             }
         }
         .navigationTitle("Main")
@@ -54,5 +58,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(AuthenticationViewModel())
     }
 }

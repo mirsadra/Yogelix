@@ -23,7 +23,12 @@ class AuthenticationViewModel: ObservableObject {
     @Published var displayName = ""
     @Published var fullName: String = ""
     @Published var profilePicUrl: String = ""
+    
+    @Published var userData: UserData?
+    
     private var currentNonce: String?
+    
+    
     
     init() {
         registerAuthStateHandler()
@@ -38,6 +43,10 @@ class AuthenticationViewModel: ObservableObject {
                 self.user = user
                 self.authenticationState = user == nil ? .unauthenticated : .authenticated
                 self.displayName = user?.email ?? ""
+                
+                if let user = user {
+                    self.userData = UserData(userId: user.uid)
+                }
                 
             }
         }

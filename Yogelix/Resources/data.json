@@ -767,8 +767,8 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -1111,7 +1111,7 @@
         "recommendedFor":{
             "heartRate":"Low",
             "activeEnergyBurned":"Low",
-            "exerciseMinutes":"Moderate"
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Intermediate",
         "poseBenefits":[
@@ -1370,9 +1370,9 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"High",
-            "exerciseMinutes":"Moderate"
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Intermediate",
         "poseBenefits":[
@@ -2668,9 +2668,9 @@
             7
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
-            "exerciseMinutes":"Moderate"
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Intermediate",
         "poseBenefits":[
@@ -2802,7 +2802,7 @@
         "recommendedFor":{
             "heartRate":"Low",
             "activeEnergyBurned":"Low",
-            "exerciseMinutes":"Moderate"
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Beginner",
         "poseBenefits":[
@@ -2927,8 +2927,8 @@
             5
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -3006,7 +3006,7 @@
         "recommendedFor":{
             "heartRate":"High",
             "activeEnergyBurned":"High",
-            "exerciseMinutes":"Moderate"
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Advanced",
         "poseBenefits":[
@@ -3170,8 +3170,8 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -3281,9 +3281,9 @@
             1
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
-            "exerciseMinutes":"Moderate"
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Intermediate",
         "poseBenefits":[
@@ -3330,9 +3330,9 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
-            "exerciseMinutes":"Moderate"
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Intermediate",
         "poseBenefits":[
@@ -3390,8 +3390,8 @@
             1
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Beginner",
@@ -3442,9 +3442,9 @@
             5
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
-            "exerciseMinutes":"Moderate"
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Intermediate",
         "poseBenefits":[
@@ -3635,8 +3635,8 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -3749,8 +3749,8 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -3887,8 +3887,8 @@
             4
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -3977,8 +3977,8 @@
             3
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -4051,9 +4051,9 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
-            "exerciseMinutes":"Moderate"
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Advanced",
         "poseBenefits":[
@@ -4213,9 +4213,9 @@
             5
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
-            "exerciseMinutes":"Moderate"
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Intermediate",
         "poseBenefits":[
@@ -4302,9 +4302,9 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
-            "exerciseMinutes":"Moderate"
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
+            "exerciseMinutes":"Medium"
         },
         "poseLevel":"Advanced",
         "poseBenefits":[
@@ -4457,8 +4457,8 @@
             7
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -4539,8 +4539,8 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -4758,8 +4758,8 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Advanced",
@@ -4821,8 +4821,8 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Advanced",
@@ -5229,8 +5229,8 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -5295,8 +5295,8 @@
             3
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -5373,8 +5373,8 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -5438,8 +5438,8 @@
             3
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -5590,8 +5590,8 @@
             5
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
-            "activeEnergyBurned":"Moderate",
+            "heartRate":"Medium",
+            "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
         "poseLevel":"Intermediate",
@@ -5654,7 +5654,7 @@
             4
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
@@ -5796,7 +5796,7 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
@@ -5945,7 +5945,7 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
@@ -6008,7 +6008,7 @@
             5
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
@@ -6073,7 +6073,7 @@
             5
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
@@ -6166,7 +6166,7 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
@@ -6360,7 +6360,7 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
@@ -6558,7 +6558,7 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate to High",
+            "heartRate":"Medium to High",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
@@ -6663,7 +6663,7 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate",
+            "heartRate":"Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
@@ -6960,7 +6960,7 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Low to Moderate",
+            "heartRate":"Low to Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
@@ -7023,7 +7023,7 @@
             2
         ],
         "recommendedFor":{
-            "heartRate":"Low to Moderate",
+            "heartRate":"Low to Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
@@ -7089,7 +7089,7 @@
             6
         ],
         "recommendedFor":{
-            "heartRate":"Moderate to High",
+            "heartRate":"Medium to High",
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
@@ -7245,7 +7245,7 @@
             5
         ],
         "recommendedFor":{
-            "heartRate":"Low to Moderate",
+            "heartRate":"Low to Medium",
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },

@@ -5,9 +5,11 @@ class DailyChallengeManager: ObservableObject {
     @Published var currentChallenge: Pose?
     private var poses: [Pose]
     private let calendar = Calendar.current
+    private let userData: UserData  // Reference to UserData to update achievements
 
-    init(poses: [Pose]) {
+    init(poses: [Pose], userData: UserData) {
         self.poses = poses
+        self.userData = userData
         loadChallenge()
     }
 
@@ -16,7 +18,6 @@ class DailyChallengeManager: ObservableObject {
         if !calendar.isDateInToday(lastUpdated) {
             selectNewChallenge()
         } else {
-            // Load the current challenge from UserDefaults if it exists
             if let savedPoseId = UserDefaults.standard.object(forKey: "currentChallengeId") as? Int {
                 self.currentChallenge = poses.first { $0.id == savedPoseId }
             }
@@ -34,4 +35,37 @@ class DailyChallengeManager: ObservableObject {
             UserDefaults.standard.set(Date(), forKey: "lastUpdated")
         }
     }
+
+    // Call this method when the user completes the daily challenge
+    func completeChallenge(duration: Int) {
+        guard let pose = currentChallenge else { return }
+
+        let trophy = determineTrophy(for: pose, duration: duration)
+        userData.updateAchievement(for: pose, with: trophy)
+    }
+
+
+    // Determines the type of trophy based on pose difficulty and duration
+    private func determineTrophy(for pose: Pose, duration: Int) -> TrophyType {
+        switch pose.difficulty {
+        case 1: // Easier poses
+            if duration > 90 { return .gold }
+            else if duration > 60 { return .silver }
+            else { return .bronze }
+        case 2: // Intermediate poses
+            if duration > 120 { return .gold }
+            else if duration > 90 { return .silver }
+            else { return .bronze }
+        case 3: // Harder poses
+            if duration > 150 { return .gold }
+            else if duration > 120 { return .silver }
+            else { return .bronze }
+        default:
+            return .bronze
+        }
+    }
+}
+
+enum TrophyType: String {
+    case gold, silver, bronze
 }

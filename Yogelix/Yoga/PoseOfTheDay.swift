@@ -3,7 +3,14 @@ import SwiftUI
 
 struct PoseOfTheDay: View {
     @StateObject var modelData = ModelData()
-    @StateObject var challengeManager = DailyChallengeManager(poses: ModelData().poses)
+    @StateObject var userData: UserData // Assuming UserData is already initialized and passed
+    @StateObject var challengeManager: DailyChallengeManager
+    
+    init(modelData: ModelData, userData: UserData) {
+        self._modelData = StateObject(wrappedValue: modelData)
+        self._userData = StateObject(wrappedValue: userData)
+        self._challengeManager = StateObject(wrappedValue: DailyChallengeManager(poses: modelData.poses, userData: userData))
+    }
     
     var body: some View {
         ZStack {
@@ -96,8 +103,8 @@ private let dateFormatter: DateFormatter = {
     return formatter
 }()
 
-struct PoseOfTheDay_Previews: PreviewProvider {
-    static var previews: some View {
-        PoseOfTheDay()
-    }
-}
+//struct PoseOfTheDay_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PoseOfTheDay()
+//    }
+//}

@@ -2,6 +2,10 @@
 import SwiftUI
 
 struct ExerciseTimerView: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel // Ensure this is provided in the environment
+    @StateObject var modelData = ModelData() // This can also be passed in if shared across views
+    
+    
     var body: some View {
         VStack {
             ProgressView(value: 5, total: 15)
@@ -18,19 +22,22 @@ struct ExerciseTimerView: View {
                     Label("600", systemImage: "hourglass.bottomhalf.fill")
                 }
             }
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Time remaining")
-            .accessibilityValue("10 minutes")
+            
             Circle()
                 .strokeBorder(lineWidth: 14)
             HStack {
-                Text("Exercise Title")
+                Text("Pose of the Day")
                     .font(.title3)
                     .bold()
                 Button(action: { }) {
                     Image(systemName: "rosette")
                 }
-                .accessibilityLabel("Next Step Button")
+            }
+            // Conditionally display PoseOfTheDay
+            if let userData = authViewModel.userData {
+                PoseOfTheDay(modelData: modelData, userData: userData)
+            } else {
+                Text("Please sign in to view the Pose of the Day.")
             }
         }
         .padding()
@@ -39,4 +46,5 @@ struct ExerciseTimerView: View {
 
 #Preview {
     ExerciseTimerView()
+        .environmentObject(AuthenticationViewModel())
 }
