@@ -5,6 +5,7 @@ import UIKit
 struct ProfileView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     @State private var showImagePicker = false
+    @State var color = Color.primary
     @State private var imageDataToUpload: Data?
     
 
@@ -23,12 +24,25 @@ struct ProfileView: View {
                     switch phase {
                     case .success(let image):
                         image.resizable()
+                        
                     default:
-                        Image(systemName: "person.crop.circle.fill.badge.plus")
+                        Image(systemName: "person.crop.circle")
+                                .symbolRenderingMode(.multicolor)
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(color)
+                            
                     }
                 }
             } else {
-                Image(systemName: "person.crop.circle.fill.badge.plus")
+                Image(systemName: "person.crop.circle")
+                    .symbolRenderingMode(.multicolor)
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(color)
+                ColorPicker("", selection: $color)
+                        .padding()
+                
             }
         }
 

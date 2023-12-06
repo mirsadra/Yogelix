@@ -424,5 +424,4 @@ public enum AuthError: Error {
     /// The user id supplied is invalid.
     case invalidUser
     
-    case weakPassword
 }
