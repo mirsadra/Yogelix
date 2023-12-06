@@ -19,19 +19,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, spine, and back muscles",
             "Improves flexibility in the spine and hips",
             "Reduces stress and anxiety",
             "Promotes digestion"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for beginners or people with injuries to the lower back, hips, or shoulders",
             "Warm up thoroughly before practicing Bharadvajasana I",
             "Listen to your body and don't force yourself into the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -81,20 +81,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner to Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner to Intermediate",
+        "poseBenefits": [
             "Stretches the hamstring, quads, and groin",
             "Improves flexibility in the spine",
             "Reduces lower back pain",
             "Relieves menstrual cramps",
             "Promotes relaxation and stress reduction"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe hip or knee injuries",
             "Warm up thoroughly before practicing Big Toe Pose",
             "Listen to your body and don't force yourself into the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -156,20 +156,20 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, abdominal muscles, and back",
             "Improves balance and coordination",
             "Promotes digestion",
             "Reduces bloating",
             "Relieves stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with lower back pain or injuries",
             "Warm up thoroughly before practicing Boat Pose",
             "Listen to your body and don't force yourself into the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -208,20 +208,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the hips, inner thighs, groin, and inner ankles",
             "Relieves tension in the lower back and sacrum",
             "Promotes relaxation and stress reduction",
             "Enhances flexibility and range of motion",
             "May improve digestion and circulation"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent hip or knee injuries",
             "Warm up thoroughly before practicing Bound Angle Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -298,20 +298,20 @@
             "heartRate": "High",
             "activeEnergyBurned": "High",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the spine, hamstrings, quadriceps, groin, chest, and shoulders",
             "Strengthens the back, arms, and core",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May relieve back pain"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent back or neck injuries",
             "Warm up thoroughly before practicing Bow Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -399,19 +399,19 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, back, glutes, and hamstrings",
             "Improves posture and spinal flexibility",
             "Relieves back pain and tension",
             "May aid digestion and promote relaxation"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe back, shoulder, or neck injuries",
             "Warm up thoroughly before practicing Bridge Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -473,19 +473,19 @@
             "heartRate": "High",
             "activeEnergyBurned": "High",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the chest, shoulders, and spine",
             "Strengthens the core and back",
             "Improves flexibility and range of motion",
             "May aid digestion and promote relaxation"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe back, shoulder, or neck injuries",
             "Warm up thoroughly before practicing Camel Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -533,19 +533,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Relieves tension in the lower back and spine",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May help with digestion and constipation"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe back or neck injuries",
             "Warm up thoroughly before practicing Cat Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -594,19 +594,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Relieves tension in the lower back and spine",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May help with digestion and constipation"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe back or neck injuries",
             "Warm up thoroughly before practicing Cat Cow Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -669,20 +669,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner to Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner to Intermediate",
+        "poseBenefits": [
             "Warms up the body and prepares it for further yoga practice",
             "Opens the hips, groin, and hamstrings",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May help with digestion and constipation"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, wrists, or shoulders",
             "Warm up thoroughly before practicing Eight-Limbed Salute",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -770,19 +770,19 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, thighs, and glutes",
             "Improves balance and coordination",
             "Promotes weight loss and toning",
             "May ease lower back pain"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe back, hip, knee, or ankle injuries",
             "Warm up thoroughly before practicing Chair Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -834,19 +834,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Relieves tension in the lower back and spine",
             "Opens the hips and groin",
             "Promotes relaxation and stress reduction",
             "May improve sleep quality"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, wrists, or shoulders",
             "Warm up thoroughly before practicing Child's Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -925,19 +925,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the chest, shoulders, and lungs",
             "Strengthens the back and core",
             "Improves flexibility and range of motion",
             "May relieve mild back pain"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe back, neck, or shoulder injuries",
             "Warm up thoroughly before practicing Cobra Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1037,19 +1037,19 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Promotes deep relaxation and stress reduction",
             "Improves mental clarity and focus",
             "Reduces fatigue and promotes restful sleep",
             "May help with chronic pain and anxiety",
             "Offers a time to connect with your inner self"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people who are unable to lie flat on their backs due to injuries or medical conditions",
             "If you have any concerns about practicing Corpse Pose, it is always best to consult with a doctor or yoga instructor"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1112,19 +1112,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the hips, groin, and chest",
             "Stretches the hamstrings, calves, and shoulders",
             "Improves flexibility and range of motion",
             "May relieve back pain and tension"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or shoulders",
             "Warm up thoroughly before practicing Cow Face Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1187,19 +1187,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Relieves tension in the lower back and spine",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May help with digestion and constipation"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe back or neck injuries",
             "Warm up thoroughly before practicing Cow Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1260,19 +1260,19 @@
             "heartRate": "High",
             "activeEnergyBurned": "High",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, arms, and wrists",
             "Opens the hips, chest, and shoulders",
             "Improves balance and coordination",
             "May improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, or back",
             "Warm up thoroughly before practicing Crane Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1321,19 +1321,19 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, shoulders, arms, and wrists",
             "Opens the chest, hips, and shoulders",
             "Improves balance and coordination",
             "May improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, or back",
             "Warm up thoroughly before practicing Dolphin Plank Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1373,19 +1373,19 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "High",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, shoulders, arms, and wrists",
             "Opens the chest, hips, and shoulders",
             "Improves balance and coordination",
             "May improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, or back",
             "Warm up thoroughly before practicing Dolphin Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1474,19 +1474,19 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the chest, lungs, and shoulders",
             "Strengthens the back and core",
             "Improves flexibility and range of motion",
             "May help alleviate back pain"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe back, neck, or shoulder injuries",
             "Warm up thoroughly before practicing Downward-Facing Dog",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1597,19 +1597,19 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Promotes relaxation and stress reduction",
             "Improves digestion and gut health",
             "Increases blood circulation",
             "Opens the hips and groin",
             "May improve sleep quality"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe injuries or pain in the knees, hips, or ankles",
             "Warm up thoroughly before practicing Easy Pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1644,19 +1644,19 @@
             "heartRate": "High",
             "activeEnergyBurned": "High",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Strengthens the core, shoulders, arms, and wrists",
             "Opens the chest, hips, and spine",
             "Improves balance and coordination",
             "May help improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, back, or knees",
             "Warm up thoroughly before practicing Eight-Angle Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1707,19 +1707,19 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, hamstrings, and calves",
             "Opens the hips and groin",
             "Improves balance and coordination",
             "May help improve circulation and digestion"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or hamstrings",
             "Warm up thoroughly before practicing Extended Hand-To-Big-Toe Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1794,19 +1794,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the spine and chest",
             "Strengthens the back and core",
             "Improves flexibility and range of motion",
             "May help relieve back pain"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or wrists",
             "Warm up thoroughly before practicing Extended Puppy Dog Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1880,19 +1880,19 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the hips, groin, chest, and shoulders",
             "Strengthens the core, hamstrings, and quads",
             "Improves balance and coordination",
             "May help improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or shoulders",
             "Warm up thoroughly before practicing Extended Side Angle Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -1943,19 +1943,19 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the hips, groin, chest, and shoulders",
             "Strengthens the core, hamstrings, and quads",
             "Improves balance and coordination",
             "May help improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or shoulders",
             "Warm up thoroughly before practicing Extended Triangle Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2031,19 +2031,19 @@
             "heartRate": "High",
             "activeEnergyBurned": "High",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Strengthens the arms, shoulders, wrists, core, and spine",
             "Opens the chest, hips, and shoulders",
             "Improves balance and coordination",
             "May help improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, back, or neck",
             "Warm up thoroughly before practicing Feathered Peacock Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2109,19 +2109,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Stretches the inner thighs, groin, and hips",
             "Opens the chest and lungs",
             "Strengthens the core and legs",
             "May help improve posture and digestion"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the knees, hips, or lower back",
             "Warm up thoroughly before practicing Fire Log Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2233,19 +2233,19 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, arms, and wrists",
             "Opens the chest, hips, and shoulders",
             "Improves balance and coordination",
             "May help improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, back, or neck",
             "Warm up thoroughly before practicing Firefly Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2297,19 +2297,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the chest, heart, and lungs",
             "Strengthens the spine and shoulders",
             "Improves flexibility in the spine, hips, and shoulders",
             "May help improve digestion and reduce stress"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the neck, back, or shoulders",
             "Warm up thoroughly before practicing Easy Fish Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2396,19 +2396,19 @@
             "heartRate": "High",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, chest, shoulders, and arms",
             "Improves cardiovascular health",
             "Opens the hips, groin, and hamstrings",
             "May help improve digestion and reduce stress"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the wrists, elbows, shoulders, back, or neck",
             "Warm up thoroughly before practicing Four-Limbed Staff Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2442,19 +2442,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "High"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the hips, groin, and inner thighs",
             "Strengthens the core, thighs, and ankles",
             "Improves flexibility and range of motion",
             "May help reduce stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the hips, knees, or ankles",
             "Warm up thoroughly before practicing Garland Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2490,19 +2490,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Stretches the inner thighs, groin, and inner hamstrings",
             "Opens the hips and chest",
             "Strengthens the core and legs",
             "May help improve digestion and posture"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the knees, hips, or lower back",
             "Warm up thoroughly before practicing Gate Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2566,19 +2566,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the hips, groin, and inner thighs",
             "Strengthens the core, legs, and ankles",
             "Improves flexibility and range of motion",
             "May help improve digestion and reduce stress"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with recent or severe injuries to the hips, knees, or ankles",
             "Warm up thoroughly before practicing Half Frog Pose",
             "Listen to your body and don't force the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2659,20 +2659,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Improves spinal flexibility",
             "Stretches the hips, hamstrings, and inner thighs",
             "Massages the abdominal organs",
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries or herniated discs",
             "Should be done with caution by people with high blood pressure or glaucoma",
             "Pregnant women should consult with their doctor before practicing this pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2791,20 +2791,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Gently stretches the spine, hips, and legs",
             "Improves spinal flexibility",
             "Massages the abdominal organs",
             "Reduces stress and anxiety",
             "Promotes relaxation and restful sleep"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries or herniated discs",
             "Should be done with caution by pregnant women",
             "Avoid straining or overexerting yourself in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2918,20 +2918,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the legs, core, and back",
             "Improves balance and coordination",
             "Stretches the hips, hamstrings, and inner thighs",
             "Opens the chest and shoulders",
             "Increases focus and concentration"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -2995,20 +2995,20 @@
             "heartRate": "High",
             "activeEnergyBurned": "High",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Strengthens the entire body",
             "Improves balance and coordination",
             "Increases flexibility in the shoulders, wrists, and core",
             "Boosts circulation and lymphatic flow",
             "Calms the mind and reduces stress"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for beginners or people with back injuries, carpal tunnel syndrome, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Practice against a wall until you have mastered the balance"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3082,20 +3082,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Stretches the hips, inner thighs, and hamstrings",
             "Reduces stress and anxiety",
             "Improves digestion",
             "Opens the chest and shoulders",
             "Relaxes the mind and body"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for pregnant women in their third trimester",
             "Should be done with caution by people with hip injuries",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3161,20 +3161,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, inner thighs, and groin",
             "Improves balance and coordination",
             "Strengthens the core and leg muscles",
             "Increases flexibility in the hips",
             "Enhances concentration and focus"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3272,21 +3272,21 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the thighs, hips, and knees",
             "Strengthens the ankles and calves",
             "Improves balance and coordination",
             "Massages the abdominal organs",
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with knee injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Avoid excessive pressure on the knees"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3321,20 +3321,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, hips, and inner thighs",
             "Improves balance and coordination",
             "Strengthens the core muscles",
             "Increases flexibility in the hips",
             "Enhances concentration and focus"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3381,20 +3381,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Strengthens the legs, hips, and core",
             "Improves balance and coordination",
             "Stretches the hips, hamstrings, and inner thighs",
             "Opens the chest and shoulders",
             "Increases focus and concentration"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with knee injuries, high blood pressure, or vertigo",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3433,20 +3433,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, inner thighs, and side of the body",
             "Improves balance and coordination",
             "Strengthens the legs and core",
             "Stimulates the abdominal organs",
             "Helps to relieve stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3534,20 +3534,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Reduces fatigue, swelling, and pain",
             "Calms the mind and body",
             "Improves circulation",
             "Enhances digestive and respiratory systems",
             "Relieves headaches",
             "Reduces stress, anxiety, and insomnia"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with high blood pressure, glaucoma, or retinal detachment",
             "Pregnant women should consult with their doctor before practicing this pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3626,18 +3626,18 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the back, legs, and core",
             "Improves flexibility in the spine",
             "Stimulates the abdominal organs",
             "Helps to relieve stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries or herniated discs",
             "Should be done with caution by pregnant women"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3740,9 +3740,9 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Improves spinal flexibility and balance",
             "Stretches the hips, hamstrings, and inner thighs",
             "Strengthens the legs, core, and arms",
@@ -3750,11 +3750,11 @@
             "Massages the abdominal organs",
             "Stimulates the respiratory system",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3815,20 +3815,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Improves spinal flexibility and hip mobility",
             "Stretches the inner thighs, hamstrings, and groin",
             "Calms the mind and body",
             "Enhances concentration and focus",
             "Promotes relaxation and restful sleep"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3878,20 +3878,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the thighs, groins, and opens the chest",
             "Strengthens the legs, core, and back",
             "Improves balance and coordination",
             "Massages the abdominal organs",
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with knee injuries or high blood pressure",
             "Should be done with caution by pregnant women"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -3968,20 +3968,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the spine, hips, hamstrings, and inner thighs",
             "Strengthens the core, legs, and back",
             "Improves spinal flexibility and balance",
             "Massages the abdominal organs",
             "Stimulates the digestive system",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4042,23 +4042,23 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Stretches the entire lower body, including the thighs, hamstrings, and groin",
             "Improves flexibility in the hips and spine",
             "Strengthens the legs and core",
             "Massages the abdominal organs",
             "Stimulates the digestive system",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose",
             "Use props, such as blocks or straps, for support if needed"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4105,19 +4105,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Improves posture and alignment",
             "Strengthens the legs, core, and back",
             "Enhances balance and coordination",
             "Increases focus and concentration",
             "Cultivates a sense of grounding and stability"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back pain or high blood pressure",
             "Should be done with caution by pregnant women"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4154,19 +4154,19 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Improves spinal flexibility and hip mobility",
             "Stretches the inner thighs, hamstrings, and groin",
             "Enhances concentration and focus",
             "Promotes relaxation and restful sleep"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4204,9 +4204,9 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Moderate"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the chest and shoulders",
             "Stretches the hips, thighs, groin, and hamstrings",
             "Improves flexibility in the spine",
@@ -4214,13 +4214,13 @@
             "Massages the abdominal organs",
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4290,25 +4290,25 @@
             2
         ],
         "recommendedFor": {
-          "heartRate": "Moderate",
-          "activeEnergyBurned": "Moderate",
-          "exerciseMinutes": "Moderate"
+            "heartRate": "Moderate",
+            "activeEnergyBurned": "Moderate",
+            "exerciseMinutes": "Moderate"
         },
         "poseLevel": "Advanced",
         "poseBenefits": [
-          "Opens the chest, shoulders, and hips",
-          "Stretches the hamstrings, thighs, and groin",
-          "Improves flexibility in the spine",
-          "Strengthens the legs, core, and back",
-          "Massages the abdominal organs",
-          "Stimulates the digestive and respiratory systems",
-          "Reduces stress and anxiety"
+            "Opens the chest, shoulders, and hips",
+            "Stretches the hamstrings, thighs, and groin",
+            "Improves flexibility in the spine",
+            "Strengthens the legs, core, and back",
+            "Massages the abdominal organs",
+            "Stimulates the digestive and respiratory systems",
+            "Reduces stress and anxiety"
         ],
         "posePrecautions": [
-          "Not recommended for people with back injuries, hip injuries, or high blood pressure",
-          "Should be done with caution by pregnant women",
-          "Warm up thoroughly before practicing this pose",
-          "Avoid overstretching or discomfort in the pose"
+            "Not recommended for people with back injuries, hip injuries, or high blood pressure",
+            "Should be done with caution by pregnant women",
+            "Warm up thoroughly before practicing this pose",
+            "Avoid overstretching or discomfort in the pose"
         ],
         "chakraDetails": [
             {
@@ -4359,22 +4359,22 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Increases flexibility in the spine",
             "Strengthens the core, arms, and shoulders",
             "Activates the muscles of the legs",
             "Improves balance and coordination",
             "Provides a deep stretch to the hamstrings",
             "Promotes relaxation and stress relief"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, neck injuries, or high blood pressure",
             "Should be done with caution by pregnant women or anyone with a history of injuries",
             "If you cannot lift your upper body, you can support yourself on your forearms",
             "If you are experiencing pain, stop the pose immediately"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4448,9 +4448,9 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the hips and chest",
             "Stretches the hamstrings, inner thighs, and groin",
             "Improves spinal flexibility",
@@ -4458,13 +4458,13 @@
             "Massages the abdominal organs",
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4530,23 +4530,23 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, arms, and shoulders",
             "Improves balance and coordination",
             "Increases upper body strength",
             "Enhances stability and control",
             "Engages the muscles of the legs and back",
             "Activates the muscles of the abdomen and pelvis"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with wrist injuries, shoulder injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Keep your elbows close to your body and avoid hyperextending your elbows",
             "Maintain a neutral spine and avoid arching your back",
             "If you have any concerns, consult with a healthcare professional before practicing this pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4636,20 +4636,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Improves spinal flexibility and hip mobility",
             "Stretches the inner thighs, hamstrings, and groin",
             "Calms the mind and body",
             "Enhances concentration and focus",
             "Promotes relaxation and restful sleep"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4749,20 +4749,20 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Tones the arms, abs, and strengthens the wrist",
             "Improves balance and coordination",
             "Stretches the thighs, groins, and opens the chest",
             "Massages the abdominal organs",
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries or high blood pressure",
             "Should be done with caution by pregnant women"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4809,22 +4809,22 @@
             6
         ],
         "recommendedFor": {
-          "heartRate": "Moderate",
-          "activeEnergyBurned": "Moderate",
-          "exerciseMinutes": "Low"
+            "heartRate": "Moderate",
+            "activeEnergyBurned": "Moderate",
+            "exerciseMinutes": "Low"
         },
         "poseLevel": "Advanced",
         "poseBenefits": [
-          "Improves flexibility in the hips, hamstrings, and spine",
-          "Strengthens the arms, core, and legs",
-          "Enhances balance and coordination",
-          "Tones the belly and spine",
-          "Stimulates the digestive and respiratory systems",
-          "Reduces stress and anxiety"
+            "Improves flexibility in the hips, hamstrings, and spine",
+            "Strengthens the arms, core, and legs",
+            "Enhances balance and coordination",
+            "Tones the belly and spine",
+            "Stimulates the digestive and respiratory systems",
+            "Reduces stress and anxiety"
         ],
         "posePrecautions": [
-          "Not recommended for people with back injuries, hip injuries, or high blood pressure",
-          "Should be done with caution by pregnant women"
+            "Not recommended for people with back injuries, hip injuries, or high blood pressure",
+            "Should be done with caution by pregnant women"
         ],
         "chakraDetails": [
             {
@@ -4902,20 +4902,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the spine",
             "Stretches the back, shoulders, and hips",
             "Massages the abdominal organs",
             "Relieves back and hip pain",
             "Improves digestion",
             "Calms the mind and body"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back pain or high blood pressure",
             "Should be done with caution by pregnant women"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -4978,20 +4978,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the hips, groin, and inner thighs",
             "Stretches the hamstrings and calves",
             "Relieves back pain",
             "Improves digestion",
             "Reduces stress and anxiety",
             "Calms the mind and body"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with hip injuries or high blood pressure",
             "Should be done with caution by pregnant women"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5054,22 +5054,22 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, ankles, and inner thighs",
             "Improves flexibility in the hips and spine",
             "Strengthens the core muscles",
             "Massages the abdominal organs",
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5144,21 +5144,21 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Releases tension in the hips, knees, and ankles",
             "Improves flexibility in the spine and legs",
             "Calms the mind and body",
             "Promotes relaxation and stress relief",
             "Reduces anxiety and fatigue"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5220,22 +5220,22 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the hips, groin, and inner thighs",
             "Improves flexibility in the spine and hamstrings",
             "Strengthens the core muscles",
             "Stimulates the digestive and reproductive systems",
             "Reduces stress and anxiety",
             "Improves balance and coordination"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Should not be practiced if you have a history of neck or spinal injuries",
             "If you feel any pain in your lower back, knees, or hips, back out of the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5286,22 +5286,22 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the hips, groin, and outer thighs",
             "Improves flexibility in the spine and hamstrings",
             "Strengthens the core muscles",
             "Stimulates the digestive and reproductive systems",
             "Reduces stress and anxiety",
             "Improves balance and coordination"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Should not be practiced if you have a history of neck or spinal injuries",
             "If you feel any pain in your lower back, knees, or hips, back out of the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5364,22 +5364,22 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Opens the hips, groin, and outer thighs",
             "Improves flexibility in the spine and hamstrings",
             "Strengthens the core muscles",
             "Stimulates the digestive and reproductive systems",
             "Reduces stress and anxiety",
             "Improves balance and coordination"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Should not be practiced if you have a history of neck or spinal injuries",
             "If you feel any pain in your lower back, knees, or hips, back out of the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5429,21 +5429,21 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the arms, shoulders, wrists, and core",
             "Improves balance, coordination, and focus",
             "Stretches the hamstrings, calves, and inner thighs",
             "Calms the mind and reduces stress",
             "Promotes overall well-being"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with high blood pressure, heart conditions, or neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5506,21 +5506,21 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, and spine",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
             "Reduces stress and anxiety",
             "Promotes overall well-being"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, sciatica, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5581,21 +5581,21 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Moderate",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Improves balance and core strength",
             "Strengthens the arms, shoulders, wrists, and forearms",
             "Opens the hips, groin, and inner thighs",
             "Calms the mind and reduces stress",
             "Creates a sense of lightness and freedom"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with high blood pressure, heart conditions, or neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5645,21 +5645,21 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core muscles",
             "Improves balance and coordination",
             "Opens the hips, groin, and inner thighs",
             "Relieves tension in the spine and shoulders",
             "Creates a sense of stability and grounding"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with high blood pressure, heart conditions, or neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5721,21 +5721,21 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the spine, particularly the lower back and the hamstrings",
             "Opens the hips, groin, and inner thighs",
             "Improves digestion and circulation",
             "Relieves tension in the shoulders, neck, and back",
             "Promotes mental clarity and focus"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5787,21 +5787,21 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the chest, lungs, and heart",
             "Relieves tension in the upper back and shoulders",
             "Improves posture and spinal flexibility",
             "Strengthens the back muscles",
             "Promotes a sense of calm and relaxation"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5887,21 +5887,21 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Strengthens the core muscles",
             "Improves posture and balance",
             "Stretches the hamstrings, calves, and spine",
             "Relieves stress and anxiety",
             "Promotes overall well-being"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5936,21 +5936,21 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, and spine",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
             "Promotes relaxation and stress relief",
             "Improves balance and coordination"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -5999,22 +5999,22 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, and inner thighs",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
             "Promotes relaxation and stress relief",
             "Improves balance and coordination",
             "Strengthens the ankles"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6064,9 +6064,9 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, and spine",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
@@ -6074,13 +6074,13 @@
             "Improves balance and coordination",
             "Strengthens the ankles",
             "Opens the hips, groin, and inner thighs"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6157,22 +6157,22 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Easy or Supported",
-          "poseBenefits": [
+        },
+        "poseLevel": "Easy or Supported",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, and inner thighs",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
             "Promotes relaxation and stress relief",
             "Opens the hips, groin, and inner thighs",
             "Strengthens the ankles"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6261,21 +6261,21 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Improves circulation and blood flow to the brain",
             "Relieves stress and anxiety",
             "Strengthens the upper back and shoulders",
             "Opens the chest and lungs",
             "Promotes relaxation and restful sleep"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with high blood pressure, glaucoma, or severe neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6351,22 +6351,22 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Improves balance and coordination",
             "Strengthens the ankles, legs, and core",
             "Opens the hips, groin, and inner thighs",
             "Improves spinal flexibility and range of motion",
             "Promotes relaxation and stress relief",
             "Boosts self-confidence and inner stability"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe balance issues or injuries to the ankles, knees, or hips",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6444,22 +6444,22 @@
             "heartRate": "High",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, spine, and shoulders",
             "Opens the chest, lungs, and heart",
             "Strengthens the back muscles",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress relief",
             "Boosts self-confidence and inner stability"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6549,9 +6549,9 @@
             "heartRate": "Moderate to High",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Reverses the effects of gravity",
             "Improves circulation and blood flow",
             "Relieves stress and anxiety",
@@ -6559,13 +6559,13 @@
             "Strengthens the core and back muscles",
             "Opens the chest and lungs",
             "Promotes a sense of peace and well-being"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe high blood pressure, glaucoma, or severe neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6654,22 +6654,22 @@
             "heartRate": "Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, spine, and shoulders",
             "Opens the chest, lungs, and heart",
             "Strengthens the back muscles",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress relief",
             "Boosts self-confidence and inner stability"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6757,22 +6757,22 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Activates the heart and lungs",
             "Improves circulation and blood flow",
             "Calms the mind and promotes relaxation",
             "Strengthens the arms, shoulders, and spine",
             "Opens the chest and shoulders",
             "Promotes a sense of peace and well-being"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe high blood pressure, glaucoma, or injuries to the arms, shoulders, or neck",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6849,22 +6849,22 @@
             "heartRate": "High",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Opens the chest and lungs",
             "Strengthens the shoulders, arms, and core",
             "Improves flexibility and range of motion",
             "Stretches the hamstrings, calves, and spine",
             "Calms the mind and promotes relaxation",
             "Promotes a sense of peace and well-being"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with high blood pressure or glaucoma",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -6951,21 +6951,21 @@
             "heartRate": "Low to Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the legs, hips, and core",
             "Opens the hips and groin",
             "Improves balance and coordination",
             "Activates the third eye chakra (Ajna)",
             "Promotes a sense of strength, courage, and focus"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe knee injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7014,21 +7014,21 @@
             "heartRate": "Low to Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Strengthens the legs, hips, and core",
             "Opens the hips and groin",
             "Improves balance and coordination",
             "Activates the second chakra (Svadhisthana)",
             "Promotes a sense of grounding, stability, and self-acceptance"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe knee injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7080,21 +7080,21 @@
             "heartRate": "Moderate to High",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Strengthens the legs, hips, and core",
             "Opens the hips and groin",
             "Improves balance and coordination",
             "Activates the third chakra (Manipura)",
             "Promotes a sense of courage, focus, and mental clarity"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe knee injuries, high blood pressure, or glaucoma",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7169,21 +7169,21 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, and groin",
             "Opens the hips, pelvis, and lower back",
             "Improves digestion and elimination",
             "Calms the mind and promotes relaxation",
             "Promotes a sense of groundedness and stability"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7236,22 +7236,22 @@
             "heartRate": "Low to Moderate",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Stretches the hamstrings, calves, groin, and inner thighs",
             "Opens the hips, pelvis, and lower back",
             "Improves flexibility and range of motion",
             "Strengthens the legs, core, and arms",
             "Promotes relaxation and stress relief",
             "Promotes a sense of inner peace and calm"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, high blood pressure, or glaucoma",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7329,22 +7329,22 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, legs, and arms",
             "Improves balance and coordination",
             "Opens the hips and groin",
             "Promotes flexibility and range of motion",
             "Calms the mind and promotes relaxation",
             "Promotes a sense of inner peace and well-being"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe knee injuries, high blood pressure, or glaucoma",
             "Should be done with caution by pregnant women and people with neck or shoulder injuries",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7445,20 +7445,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Promotes relaxation",
             "Opens the hips and groin",
             "Improves flexibility",
             "Increases blood circulation",
             "Reduces swelling"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Avoid practicing Dangling Pose Yoga if you are pregnant or have any injuries to your back, hips, or knees.",
             "It is best to practice Dangling Pose Yoga under the guidance of a qualified yoga teacher.",
             "Avoid forcing the pose if you are unable to touch your toes."
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7524,21 +7524,21 @@
             "heartRate": "High",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Medium"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Opens the hips and groin",
             "Strengthens the back and core",
             "Improves flexibility in the spine",
             "Promotes relaxation and stress reduction",
             "Boosts confidence and self-esteem"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries, high blood pressure, or glaucoma",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7637,19 +7637,19 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Beginner to Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner to Advanced",
+        "poseBenefits": [
             "Calms the mind and reduces stress",
             "Stabilizes the lower back and legs",
             "Improves digestion and elimination",
             "Opens the hips, groin, and ankles",
             "Promotes a sense of grounding and stability"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "If you have knee pain, you may want to place a folded blanket or bolster under your knees.",
             "If you have any other injuries, please consult with your doctor before practicing this pose."
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7683,19 +7683,19 @@
             "heartRate": "Medium",
             "activeEnergyBurned": "Medium",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Improves balance and coordination",
             "Strengthens the core, arms, and shoulders",
             "Improves flexibility in the spine",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for beginners or people with injuries to the wrists, shoulders, or back",
             "Warm up thoroughly before practicing Tulasana",
             "Start with a modified version of the pose if you are unable to balance on your hands"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7732,19 +7732,19 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Beginner to Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner to Advanced",
+        "poseBenefits": [
             "Releases tension in the face, neck, and shoulders",
             "Improves jaw and eye health",
             "Increases circulation to the face",
             "Promotes relaxation and stress reduction",
             "Boosts confidence and self-esteem"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Avoid practicing Lion Pose if you have a cold or sore throat.",
             "Be mindful of your energy level and take breaks as needed."
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7816,20 +7816,20 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Promotes relaxation and stress reduction",
             "Reduces tension in the back, neck, and shoulders",
             "Opens the hips and groin",
             "Improves digestion",
             "Relieves menstrual cramps"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries or neck pain.",
             "Warm up thoroughly before practicing Crocodile Pose.",
             "Avoid overstretching or discomfort in the pose."
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7865,20 +7865,20 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate",
+        "poseBenefits": [
             "Strengthens the core, arms, and shoulders",
             "Improves balance and coordination",
             "Opens the hips and groin",
             "Improves digestion",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for beginners or people with injuries to the wrists, shoulders, or back",
             "Warm up thoroughly before practicing Pendant Pose",
             "Start with a modified version of the pose if you are unable to lift your legs off the ground"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7927,21 +7927,21 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Beginner to Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner to Intermediate",
+        "poseBenefits": [
             "Promotes relaxation and stress reduction",
             "Reduces tension in the back, neck, and shoulders",
             "Opens the hips and groin",
             "Improves digestion",
             "Relieves menstrual cramps",
             "Strengthens the spine and core"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries or neck pain",
             "Warm up thoroughly before practicing Tortoise Pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -7990,22 +7990,22 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Beginner",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner",
+        "poseBenefits": [
             "Promotes relaxation and stress reduction",
             "Calms the mind and nervous system",
             "Opens the hips and groin",
             "Improves digestion",
             "Relieves menstrual cramps",
             "Strengthens the spine and core"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe back injuries or neck pain",
             "Wait until after 12 weeks of pregnancy to practice this pose",
             "Warm up thoroughly before practicing this pose",
             "Avoid overstretching or discomfort in the pose"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -8067,20 +8067,20 @@
             "heartRate": "Very Low",
             "activeEnergyBurned": "Very Low",
             "exerciseMinutes": "Very Low"
-          },
-          "poseLevel": "Intermediate to Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Intermediate to Advanced",
+        "poseBenefits": [
             "Strengthens the core, arms, and shoulders",
             "Improves balance and coordination",
             "Opens the chest and shoulders",
             "Improves flexibility in the spine",
             "Reduces stress and anxiety"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for beginners or people with injuries to the wrists, shoulders, or back",
             "Warm up thoroughly before practicing Bhujapidasana",
             "Start with a modified version of the pose if you are unable to balance on your hands"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -8131,20 +8131,20 @@
             "heartRate": "Low",
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Low"
-          },
-          "poseLevel": "Beginner to Intermediate",
-          "poseBenefits": [
+        },
+        "poseLevel": "Beginner to Intermediate",
+        "poseBenefits": [
             "Opens the hips and groin",
             "Improves flexibility in the spine",
             "Reduces lower back pain",
             "Relieves menstrual cramps",
             "Promotes relaxation and stress reduction"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for people with severe hip or knee injuries",
             "Warm up thoroughly before practicing Frog Pose",
             "Listen to your body and don't force yourself into the pose if you experience pain"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -8221,20 +8221,20 @@
             "heartRate": "Very High",
             "activeEnergyBurned": "Very High",
             "exerciseMinutes": "Very High"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Strengthens the core, back, and shoulders",
             "Improves flexibility in the spine",
             "Opens the chest and shoulders",
             "Boosts energy levels",
             "Promotes mental clarity and focus"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for beginners or people with injuries to the neck, back, shoulders, or wrists",
             "Warm up thoroughly before practicing Formidable Pose",
             "Start with a modified version of the pose if you are unable to maintain the full form"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,
@@ -8338,21 +8338,21 @@
             "heartRate": "Very High",
             "activeEnergyBurned": "Very High",
             "exerciseMinutes": "Very High"
-          },
-          "poseLevel": "Advanced",
-          "poseBenefits": [
+        },
+        "poseLevel": "Advanced",
+        "poseBenefits": [
             "Strengthens the core, back, shoulders, arms, and wrists",
             "Improves flexibility in the spine, shoulders, and hamstrings",
             "Boosts energy levels",
             "Promotes mental clarity and focus",
             "Builds self-confidence"
-          ],
-          "posePrecautions": [
+        ],
+        "posePrecautions": [
             "Not recommended for beginners or people with injuries to the neck, back, shoulders, wrists, or head",
             "Warm up thoroughly before practicing Formidable Face/Chin Stand Pose",
             "Start with a modified version of the pose if you are unable to maintain the full form",
             "Have a spotter available when practicing for the first time"
-          ],
+        ],
         "chakraDetails": [
             {
                 "id": 1,

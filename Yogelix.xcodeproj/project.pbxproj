@@ -73,6 +73,7 @@
 		3BD2CCC62B1BA83800DD5C7E /* WorkoutSummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CCC52B1BA83800DD5C7E /* WorkoutSummaryCard.swift */; };
 		3BD2CCCC2B1BA91C00DD5C7E /* DailySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CCCB2B1BA91C00DD5C7E /* DailySummary.swift */; };
 		3BD91F1F2B16876F00D9218E /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD91F1E2B16876F00D9218E /* Ring.swift */; };
+		3BD9BBA62B20CA1000BF7949 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9BBA52B20CA1000BF7949 /* data.json */; };
 		3BDA65712B1F38DF00177735 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDA65702B1F38DF00177735 /* GoogleSignIn */; };
 		3BDA65732B1F38DF00177735 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDA65722B1F38DF00177735 /* GoogleSignInSwift */; };
 		3BDA65752B1F39F700177735 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BDA65742B1F39F700177735 /* GoogleService-Info.plist */; };
@@ -208,6 +209,7 @@
 		3BD2CCC52B1BA83800DD5C7E /* WorkoutSummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryCard.swift; sourceTree = "<group>"; };
 		3BD2CCCB2B1BA91C00DD5C7E /* DailySummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummary.swift; sourceTree = "<group>"; };
 		3BD91F1E2B16876F00D9218E /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		3BD9BBA52B20CA1000BF7949 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		3BDA65742B1F39F700177735 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseOfTheDay.swift; sourceTree = "<group>"; };
 		3BDA65782B1FCD2800177735 /* TrophyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyView.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				3BA2F0B72B1CA8CE001AE1F7 /* final.json */,
+				3BD9BBA52B20CA1000BF7949 /* data.json */,
 				3BE4A8432B1A709E007611D8 /* final.jsonl */,
 				3BBF478C2B1E4CD4006033F8 /* Fonts.swift */,
 			);
@@ -705,6 +708,7 @@
 				3BCC04CE2B01901500FD1FC3 /* Preview Assets.xcassets in Resources */,
 				3BDA65752B1F39F700177735 /* GoogleService-Info.plist in Resources */,
 				3BA2F0B82B1CA8CE001AE1F7 /* final.json in Resources */,
+				3BD9BBA62B20CA1000BF7949 /* data.json in Resources */,
 				3BA33C922B1E533800DF80F6 /* LuckiestGuy-Regular.ttf in Resources */,
 				3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */,
 				3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */,

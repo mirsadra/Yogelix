@@ -6,7 +6,7 @@ final class ModelData: ObservableObject {
     @Published var poses: [Pose] = []
 
     init() {
-        poses = load("final.json")
+        poses = load("data.json")
     }
 
     var categories: [String: [Pose]] {

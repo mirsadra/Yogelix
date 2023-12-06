@@ -8,6 +8,10 @@ struct Pose: Hashable, Codable, Identifiable {
     var sanskritName: String
     var poseMeta: [String]
     var difficulty: Int
+    var poseBenefits: [String]
+    var posePrecautions: [String]
+    var poseLevel: String
+    
     
     private var imageName: String
     var image: Image {
@@ -51,6 +55,10 @@ extension Pose {
     var formattedPoseMeta: String {
         poseMeta.joined(separator: ", ")
     }
+    
+    var formattedPoseBenefits: String {
+        poseBenefits.joined(separator: ",")
+    }
 }
 
 // Add extension for ChakraDetail if you want formatted data or computed properties.
@@ -67,3 +75,4 @@ extension Pose {
         }
     }
 }
+

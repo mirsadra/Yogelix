@@ -45,6 +45,11 @@ struct PoseDetail: View {
                     .font(.title2)
                 Text(pose.formattedPoseMeta)
                     .font(.body)
+                
+                Text(pose.formattedPoseBenefits)
+                    .font(.body)
+                
+
             }
             .padding()
             
