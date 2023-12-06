@@ -22,8 +22,7 @@ struct UserTrophyToolbar: View {
     func firstName() -> String {
         return authViewModel.fullName.components(separatedBy: " ").first ?? ""
     }
-    
-    
+
     var body: some View {
         HStack(spacing: 0) {
             ZStack {
@@ -35,6 +34,8 @@ struct UserTrophyToolbar: View {
                     .frame(height: 200)
                 
                 HStack {
+                    ProfilePicImage()
+                    
                     Text("\(greeting()), \(firstName())")
                         .font(.custom("LuckiestGuy-Regular", size: 18))
                         .padding()

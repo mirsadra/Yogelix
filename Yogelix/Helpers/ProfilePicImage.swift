@@ -2,7 +2,7 @@
 import SwiftUI
 import UIKit
 
-struct ProfileView: View {
+struct ProfilePicImage: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     @State private var showImagePicker = false
     @State var color = Color.primary
@@ -18,34 +18,37 @@ struct ProfileView: View {
     }
     
     var body: some View {
-        Group {
+        HStack {
             if let url = URL(string: authViewModel.profilePicUrl), !authViewModel.profilePicUrl.isEmpty {
                 AsyncImage(url: url) { phase in
                     switch phase {
                     case .success(let image):
                         image.resizable()
-                        
-                    default:
-                        Image(systemName: "person.crop.circle")
-                                .symbolRenderingMode(.multicolor)
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundColor(color)
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 50, height: 50)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.accentColor, lineWidth: 3))
+                            .shadow(radius: 7)
                             
+                    default:
+                        ProgressView()
+                            .frame(width: 50, height: 50)
                     }
                 }
             } else {
                 Image(systemName: "person.crop.circle")
-                    .symbolRenderingMode(.multicolor)
                     .resizable()
                     .scaledToFit()
                     .foregroundColor(color)
-                ColorPicker("", selection: $color)
-                        .padding()
+                    .frame(width: 50, height: 50)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.secondary, lineWidth: 3))
+                    .shadow(radius: 7)
                 
+                ColorPicker("", selection: $color)
+                    .labelsHidden() // Optionally hide the label of ColorPicker
             }
         }
-
         .contextMenu {
             Button {
                 uploadImage()
@@ -58,11 +61,6 @@ struct ProfileView: View {
                 Label("Remove Photo", systemImage: "trash.circle.fill")
             }
         }
-        .aspectRatio(contentMode: .fit)
-        .frame(width: 80, height: 100)
-        .clipShape(Circle())
-        .overlay(Circle().stroke(Color.white, lineWidth: 3))
-        .shadow(radius: 7)
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(selectedImageData: $imageDataToUpload)
         }
@@ -74,9 +72,10 @@ struct ProfileView: View {
             }
         }
     }
+
 }
 
 #Preview {
-    ProfileView()
+    ProfilePicImage()
         .environmentObject(AuthenticationViewModel())
 }
