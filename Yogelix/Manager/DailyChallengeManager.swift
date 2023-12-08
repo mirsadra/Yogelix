@@ -1,6 +1,7 @@
 //  DailyChallengeManager.swift
 import Foundation
 
+// ObservableObject allows the class to to publish certain properties.
 class DailyChallengeManager: ObservableObject {
     @Published var currentChallenge: Pose?
     private var poses: [Pose]

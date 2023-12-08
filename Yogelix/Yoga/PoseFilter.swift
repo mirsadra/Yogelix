@@ -8,43 +8,45 @@ struct PoseFilterView: View {
     @Binding var filterByChakra: Bool
     @Binding var selectedElement: String?
     @Binding var filterByElement: Bool
-    @Binding var selectedPetal: Int?
-    @Binding var filterByPetal: Bool
-    
     let uniqueElements: [String]
-    let uniquePetals: [Int]
 
     var body: some View {
         NavigationView {
             Form {
                 Toggle("Favorites only", isOn: $showFavoritesOnly)
-
-                chakraFilterSection
-
-                elementFilterSection
-
-                petalFilterSection
+                ChakraFilterSection(selectedChakra: $selectedChakra, filterByChakra: $filterByChakra)
+                ElementFilterSection(selectedElement: $selectedElement, uniqueElements: uniqueElements, filterByElement: $filterByElement)
             }
             .navigationTitle("Filters")
-            .navigationBarItems(trailing: doneButton)
+            .navigationBarItems(trailing: DoneButton(presentationMode: _presentationMode))
         }
     }
+}
 
-    private var chakraFilterSection: some View {
+private struct ChakraFilterSection: View {
+    @Binding var selectedChakra: ChakraDetail.Category?
+    @Binding var filterByChakra: Bool
+
+    var body: some View {
         Section(header: Text("Chakra Filter")) {
             Picker("Select Chakra", selection: $selectedChakra) {
                 Text("Any").tag(ChakraDetail.Category?.none)
                 ForEach(ChakraDetail.Category.allCases, id: \.self) { chakra in
-                    Text(chakra.rawValue).tag(chakra) // Corrected
+                    Text(chakra.rawValue).tag(chakra as ChakraDetail.Category?)
                 }
             }
             .pickerStyle(MenuPickerStyle())
-
             Toggle("Filter by Chakra", isOn: $filterByChakra)
         }
     }
+}
 
-    private var elementFilterSection: some View {
+private struct ElementFilterSection: View {
+    @Binding var selectedElement: String?
+    let uniqueElements: [String]
+    @Binding var filterByElement: Bool
+
+    var body: some View {
         Section(header: Text("Element Filter")) {
             Picker("Select Element", selection: $selectedElement) {
                 Text("Any").tag(String?.none)
@@ -53,26 +55,15 @@ struct PoseFilterView: View {
                 }
             }
             .pickerStyle(MenuPickerStyle())
-
             Toggle("Filter by Element", isOn: $filterByElement)
         }
     }
+}
 
-    private var petalFilterSection: some View {
-        Section(header: Text("Number of Petals Filter")) {
-            Picker("Select Petals", selection: $selectedPetal) {
-                Text("Any").tag(Int?.none)
-                ForEach(uniquePetals, id: \.self) { petal in
-                    Text("\(petal)").tag(petal as Int?)
-                }
-            }
-            .pickerStyle(MenuPickerStyle())
+private struct DoneButton: View {
+    @Environment(\.presentationMode) var presentationMode
 
-            Toggle("Filter by Number of Petals", isOn: $filterByPetal)
-        }
-    }
-
-    private var doneButton: some View {
+    var body: some View {
         Button("Done") {
             presentationMode.wrappedValue.dismiss()
         }

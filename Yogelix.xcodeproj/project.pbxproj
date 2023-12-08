@@ -40,7 +40,8 @@
 		3B5C59E72B1908DC00283244 /* PoseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E62B1908DC00283244 /* PoseRow.swift */; };
 		3B7DCC1F2B0FB0BF004B6053 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */; };
 		3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */; };
-		3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8920D12B0F8378000A61A2 /* HealthView.swift */; };
+		3B92A57C2B2220930088299E /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92A57B2B2220930088299E /* DiscoverView.swift */; };
+		3B92A57E2B2228440088299E /* CategoryHRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92A57D2B2228440088299E /* CategoryHRow.swift */; };
 		3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */; };
 		3B9DA82A2B0EAC7C00480621 /* DailyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8292B0EAC7C00480621 /* DailyPractice.swift */; };
 		3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82B2B0EAF6D00480621 /* Theme.swift */; };
@@ -181,7 +182,8 @@
 		3B7DCC1E2B0FB0BF004B6053 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3B83F94A2B0399E4001ADD11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		3B8920D12B0F8378000A61A2 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		3B92A57B2B2220930088299E /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		3B92A57D2B2228440088299E /* CategoryHRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHRow.swift; sourceTree = "<group>"; };
 		3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTimerView.swift; sourceTree = "<group>"; };
 		3B9DA8292B0EAC7C00480621 /* DailyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPractice.swift; sourceTree = "<group>"; };
 		3B9DA82B2B0EAF6D00480621 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -326,11 +328,8 @@
 			children = (
 				3B1962572B1916C800A7C894 /* PoseList.swift */,
 				3B1962592B191B3800A7C894 /* PoseDetail.swift */,
-				3B5C59E62B1908DC00283244 /* PoseRow.swift */,
 				3BA2F0BB2B1CD580001AE1F7 /* PoseFilter.swift */,
-				3B5C59E22B1902FE00283244 /* Pose.swift */,
-				3B5C59E42B1905BD00283244 /* ModelData.swift */,
-				3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */,
+				3B92A57D2B2228440088299E /* CategoryHRow.swift */,
 			);
 			path = Yoga;
 			sourceTree = "<group>";
@@ -338,7 +337,6 @@
 		3B5279672B0766F00011914A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */,
 				3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */,
 				3BA4A6342B0D4FDF0032936E /* UserData.swift */,
 			);
@@ -450,7 +448,6 @@
 				3BD9BBAD2B20D69D00BF7949 /* Manager */,
 				3B51EBE32B1CFCE900BB3B7D /* Yoga */,
 				3BA2F0C92B1CF7D7001AE1F7 /* HealthKit */,
-				3BE4A8212B1A1658007611D8 /* Helpers */,
 				3BCC04F82B0192C600FD1FC3 /* View */,
 				3BCC04F72B0192B200FD1FC3 /* Model */,
 				3BCC04FD2B01931400FD1FC3 /* Controller */,
@@ -501,6 +498,8 @@
 		3BCC04F72B0192B200FD1FC3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3B5C59E42B1905BD00283244 /* ModelData.swift */,
+				3B5C59E22B1902FE00283244 /* Pose.swift */,
 				3B9DA82B2B0EAF6D00480621 /* Theme.swift */,
 				3BD9BBA92B20D64100BF7949 /* UserChallengeParticipation.swift */,
 				3BD9BBAB2B20D64C00BF7949 /* SocialMediaSharing.swift */,
@@ -512,14 +511,16 @@
 		3BCC04F82B0192C600FD1FC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3BE4A8212B1A1658007611D8 /* Helpers */,
 				3B331DAE2B213CC600DAF0E2 /* Setting */,
+				3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */,
+				3BCC04C82B01901400FD1FC3 /* ContentView.swift */,
+				3BD2CCBE2B1BA4D100DD5C7E /* MainView.swift */,
+				3B92A57B2B2220930088299E /* DiscoverView.swift */,
+				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
 				3BDA657A2B1FCD3900177735 /* AchievementView.swift */,
 				3BF547752B155DC10073BD18 /* MainScrollView.swift */,
-				3B8920D12B0F8378000A61A2 /* HealthView.swift */,
-				3BCC04C82B01901400FD1FC3 /* ContentView.swift */,
 				3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */,
-				3BD2CCBE2B1BA4D100DD5C7E /* MainView.swift */,
-				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
 				3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */,
 				3B331DAF2B213ED600DAF0E2 /* LogYogaExerciseView.swift */,
 			);
@@ -547,6 +548,8 @@
 		3BE4A8212B1A1658007611D8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */,
+				3B5C59E62B1908DC00283244 /* PoseRow.swift */,
 				3B19625B2B191D8300A7C894 /* CircleImage.swift */,
 				3BDA657C2B1FDCC200177735 /* ProfilePicImage.swift */,
 				3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */,
@@ -811,8 +814,8 @@
 				3BDA657D2B1FDCC200177735 /* ProfilePicImage.swift in Sources */,
 				3BD9BBA82B20D5FF00BF7949 /* DailyChallengeManager.swift in Sources */,
 				3B331DB02B213ED600DAF0E2 /* LogYogaExerciseView.swift in Sources */,
-				3B8920D22B0F8378000A61A2 /* HealthView.swift in Sources */,
 				3BDFE13C2B026C21007FB23E /* ImagePicker.swift in Sources */,
+				3B92A57C2B2220930088299E /* DiscoverView.swift in Sources */,
 				3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */,
 				3BCC05032B019B4A00FD1FC3 /* ChakraDetailView.swift in Sources */,
 				3BA33C942B1E6A8F00DF80F6 /* UserTrophyToolbar.swift in Sources */,
@@ -860,6 +863,7 @@
 				3BCC05072B01A31F00FD1FC3 /* ProgressSnapshot.swift in Sources */,
 				3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */,
 				3BE4A85B2B1B76D9007611D8 /* CategoryTypeManager.swift in Sources */,
+				3B92A57E2B2228440088299E /* CategoryHRow.swift in Sources */,
 				3BF547782B155EDE0073BD18 /* LoopingScroll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

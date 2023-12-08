@@ -6,11 +6,11 @@ struct Pose: Hashable, Codable, Identifiable {
     var id: Int
     var englishName: String
     var sanskritName: String
-    var poseMeta: [String]
+    var metadata: [String]
     var difficulty: Int
-    var poseBenefits: [String]
-    var posePrecautions: [String]
-    var poseLevel: String
+    var benefits: [String]
+    var precautions: [String]
+    var level: String
     
     
     private var imageName: String
@@ -52,12 +52,12 @@ struct ChakraDetail: Hashable, Codable, Identifiable {
 
 // MARK: - Extensions
 extension Pose {
-    var formattedPoseMeta: String {
-        poseMeta.joined(separator: ", ")
+    var formattedMetadata: String {
+        metadata.joined(separator: ", ")
     }
     
-    var formattedPoseBenefits: String {
-        poseBenefits.joined(separator: ",")
+    var formattedBenefits: String {
+        benefits.joined(separator: ",")
     }
 }
 

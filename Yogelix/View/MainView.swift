@@ -2,9 +2,9 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var viewModel = QuantityDataViewModel()
+    @EnvironmentObject var viewModel : QuantityDataViewModel
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @StateObject var modelData = ModelData()
+    @EnvironmentObject var modelData : ModelData
     
     
     var body: some View {
@@ -43,10 +43,10 @@ struct MainView: View {
                 
                 Spacer()
                 
-                if let userData = authViewModel.userData {
-                    PoseOfTheDay(modelData: modelData, userData: userData)
-                        .padding()
-                }
+//                if let userData = authViewModel.userData {
+//                    PoseOfTheDay(modelData: modelData)
+//                        .padding()
+//                }
             }
         }
         .navigationTitle("Main")
@@ -57,6 +57,8 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(QuantityDataViewModel())
             .environmentObject(AuthenticationViewModel())
+            .environmentObject(ModelData())
     }
 }

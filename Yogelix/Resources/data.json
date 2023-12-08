@@ -2,7 +2,7 @@
     {
         "englishName":"Bharadvaja\u2019s Twist",
         "sanskritName":"Bharadvajasana I",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Seated",
             "Twist"
@@ -20,14 +20,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, spine, and back muscles",
             "Improves flexibility in the spine and hips",
             "Reduces stress and anxiety",
             "Promotes digestion"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for beginners or people with injuries to the lower back, hips, or shoulders",
             "Warm up thoroughly before practicing Bharadvajasana I",
             "Listen to your body and don't force yourself into the pose if you experience pain"
@@ -64,7 +64,7 @@
     {
         "englishName":"Big Toe Pose",
         "sanskritName":"Padangusthasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Standing"
         ],
@@ -82,15 +82,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner to Intermediate",
-        "poseBenefits":[
+        "level":"Beginner to Intermediate",
+        "benefits":[
             "Stretches the hamstring, quads, and groin",
             "Improves flexibility in the spine",
             "Reduces lower back pain",
             "Relieves menstrual cramps",
             "Promotes relaxation and stress reduction"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe hip or knee injuries",
             "Warm up thoroughly before practicing Big Toe Pose",
             "Listen to your body and don't force yourself into the pose if you experience pain"
@@ -140,7 +140,7 @@
     {
         "englishName":"Boat Pose",
         "sanskritName":"Navasana",
-        "poseMeta":[
+        "metadata":[
             "Core",
             "Seated",
             "Strengthening"
@@ -157,15 +157,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, abdominal muscles, and back",
             "Improves balance and coordination",
             "Promotes digestion",
             "Reduces bloating",
             "Relieves stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with lower back pain or injuries",
             "Warm up thoroughly before practicing Boat Pose",
             "Listen to your body and don't force yourself into the pose if you experience pain"
@@ -189,7 +189,7 @@
     {
         "englishName":"Bound Angle Pose",
         "sanskritName":"Baddha Konasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Hip Opening",
             "Seated"
@@ -209,15 +209,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the hips, inner thighs, groin, and inner ankles",
             "Relieves tension in the lower back and sacrum",
             "Promotes relaxation and stress reduction",
             "Enhances flexibility and range of motion",
             "May improve digestion and circulation"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent hip or knee injuries",
             "Warm up thoroughly before practicing Bound Angle Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -279,7 +279,7 @@
     {
         "englishName":"Bow Pose",
         "sanskritName":"Dhanurasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -299,15 +299,15 @@
             "activeEnergyBurned":"High",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the spine, hamstrings, quadriceps, groin, chest, and shoulders",
             "Strengthens the back, arms, and core",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May relieve back pain"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent back or neck injuries",
             "Warm up thoroughly before practicing Bow Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -383,7 +383,7 @@
     {
         "englishName":"Bridge Pose",
         "sanskritName":"Setu Bandha Sarvangasana",
-        "poseMeta":[
+        "metadata":[
             "Backbends"
         ],
         "difficulty":2,
@@ -400,14 +400,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, back, glutes, and hamstrings",
             "Improves posture and spinal flexibility",
             "Relieves back pain and tension",
             "May aid digestion and promote relaxation"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe back, shoulder, or neck injuries",
             "Warm up thoroughly before practicing Bridge Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -457,7 +457,7 @@
     {
         "englishName":"Camel Pose",
         "sanskritName":"Ustrasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -474,14 +474,14 @@
             "activeEnergyBurned":"High",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the chest, shoulders, and spine",
             "Strengthens the core and back",
             "Improves flexibility and range of motion",
             "May aid digestion and promote relaxation"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe back, shoulder, or neck injuries",
             "Warm up thoroughly before practicing Camel Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -518,7 +518,7 @@
     {
         "englishName":"Cat Pose",
         "sanskritName":"Marjaryasana",
-        "poseMeta":[
+        "metadata":[
             "Core"
         ],
         "difficulty":1,
@@ -534,14 +534,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Relieves tension in the lower back and spine",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May help with digestion and constipation"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe back or neck injuries",
             "Warm up thoroughly before practicing Cat Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -578,7 +578,7 @@
     {
         "englishName":"Cat Cow Pose",
         "sanskritName":"Marjaryasana-Bitilasana",
-        "poseMeta":[
+        "metadata":[
             "Backbends"
         ],
         "difficulty":1,
@@ -595,14 +595,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Relieves tension in the lower back and spine",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May help with digestion and constipation"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe back or neck injuries",
             "Warm up thoroughly before practicing Cat Cow Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -651,7 +651,7 @@
     {
         "englishName":"Eight-Limbed Salute",
         "sanskritName":"Ashtanga Namaskara",
-        "poseMeta":[
+        "metadata":[
             "Core"
         ],
         "difficulty":1,
@@ -670,15 +670,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner to Intermediate",
-        "poseBenefits":[
+        "level":"Beginner to Intermediate",
+        "benefits":[
             "Warms up the body and prepares it for further yoga practice",
             "Opens the hips, groin, and hamstrings",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May help with digestion and constipation"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, wrists, or shoulders",
             "Warm up thoroughly before practicing Eight-Limbed Salute",
             "Listen to your body and don't force the pose if you experience pain"
@@ -753,7 +753,7 @@
     {
         "englishName":"Chair Pose",
         "sanskritName":"Utkatasana",
-        "poseMeta":[
+        "metadata":[
             "Core",
             "Standing",
             "Strengthening"
@@ -771,14 +771,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, thighs, and glutes",
             "Improves balance and coordination",
             "Promotes weight loss and toning",
             "May ease lower back pain"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe back, hip, knee, or ankle injuries",
             "Warm up thoroughly before practicing Chair Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -815,7 +815,7 @@
     {
         "englishName":"Child\u2019s Pose",
         "sanskritName":"Balasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Hip Opening",
             "Restorative"
@@ -835,14 +835,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Relieves tension in the lower back and spine",
             "Opens the hips and groin",
             "Promotes relaxation and stress reduction",
             "May improve sleep quality"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, wrists, or shoulders",
             "Warm up thoroughly before practicing Child's Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -905,7 +905,7 @@
     {
         "englishName":"Cobra Pose",
         "sanskritName":"Bhujangasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -926,14 +926,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the chest, shoulders, and lungs",
             "Strengthens the back and core",
             "Improves flexibility and range of motion",
             "May relieve mild back pain"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe back, neck, or shoulder injuries",
             "Warm up thoroughly before practicing Cobra Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1021,7 +1021,7 @@
     {
         "englishName":"Corpse Pose",
         "sanskritName":"Savasana",
-        "poseMeta":[
+        "metadata":[
             "Restorative"
         ],
         "difficulty":1,
@@ -1038,15 +1038,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Promotes deep relaxation and stress reduction",
             "Improves mental clarity and focus",
             "Reduces fatigue and promotes restful sleep",
             "May help with chronic pain and anxiety",
             "Offers a time to connect with your inner self"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people who are unable to lie flat on their backs due to injuries or medical conditions",
             "If you have any concerns about practicing Corpse Pose, it is always best to consult with a doctor or yoga instructor"
         ],
@@ -1095,7 +1095,7 @@
     {
         "englishName":"Cow Face Pose",
         "sanskritName":"Gomukhasana",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Seated"
         ],
@@ -1113,14 +1113,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the hips, groin, and chest",
             "Stretches the hamstrings, calves, and shoulders",
             "Improves flexibility and range of motion",
             "May relieve back pain and tension"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or shoulders",
             "Warm up thoroughly before practicing Cow Face Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1170,7 +1170,7 @@
     {
         "englishName":"Cow Pose",
         "sanskritName":"Bitilasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -1188,14 +1188,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Relieves tension in the lower back and spine",
             "Improves flexibility and range of motion",
             "Promotes relaxation and stress reduction",
             "May help with digestion and constipation"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe back or neck injuries",
             "Warm up thoroughly before practicing Cow Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1244,7 +1244,7 @@
     {
         "englishName":"Crane (Crow) Pose",
         "sanskritName":"Bakasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Core"
         ],
@@ -1261,14 +1261,14 @@
             "activeEnergyBurned":"High",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, arms, and wrists",
             "Opens the hips, chest, and shoulders",
             "Improves balance and coordination",
             "May improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, or back",
             "Warm up thoroughly before practicing Crane Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1305,7 +1305,7 @@
     {
         "englishName":"Dolphin Plank Pose",
         "sanskritName":"Makara Adho Mukha Svanasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Core",
             "Strengthening"
@@ -1322,14 +1322,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, shoulders, arms, and wrists",
             "Opens the chest, hips, and shoulders",
             "Improves balance and coordination",
             "May improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, or back",
             "Warm up thoroughly before practicing Dolphin Plank Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1353,7 +1353,7 @@
     {
         "englishName":"Dolphin Pose",
         "sanskritName":"Ardha Pincha Mayurasana",
-        "poseMeta":[
+        "metadata":[
             "Core",
             "Standing",
             "Strengthening"
@@ -1374,14 +1374,14 @@
             "activeEnergyBurned":"High",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, shoulders, arms, and wrists",
             "Opens the chest, hips, and shoulders",
             "Improves balance and coordination",
             "May improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, or back",
             "Warm up thoroughly before practicing Dolphin Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1456,7 +1456,7 @@
     {
         "englishName":"Downward-Facing Dog",
         "sanskritName":"Adho Mukha Svanasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Standing",
             "Strengthening"
@@ -1475,14 +1475,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the chest, lungs, and shoulders",
             "Strengthens the back and core",
             "Improves flexibility and range of motion",
             "May help alleviate back pain"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe back, neck, or shoulder injuries",
             "Warm up thoroughly before practicing Downward-Facing Dog",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1532,7 +1532,7 @@
     {
         "englishName":"Eagle Pose",
         "sanskritName":"Garudasana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Hip Opening",
             "Standing"
@@ -1550,14 +1550,14 @@
             "activeEnergyBurned": "Low",
             "exerciseMinutes": "Medium"
         },
-        "poseLevel": "Intermediate",
-        "poseBenefits": [
+        "level": "Intermediate",
+        "benefits": [
             "Strengthens the core, arms, and shoulders",
             "Opens the hips, chest, and shoulders",
             "Improves balance and coordination",
             "May help improve digestion and reduce stress"
         ],
-        "posePrecautions": [
+        "precautions": [
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, back, or neck",
             "Warm up thoroughly before practicing Eagle Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1594,7 +1594,7 @@
     {
         "englishName":"Easy Pose",
         "sanskritName":"Sukhasana",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Seated"
         ],
@@ -1610,15 +1610,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Promotes relaxation and stress reduction",
             "Improves digestion and gut health",
             "Increases blood circulation",
             "Opens the hips and groin",
             "May improve sleep quality"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe injuries or pain in the knees, hips, or ankles",
             "Warm up thoroughly before practicing Easy Pose"
         ],
@@ -1641,7 +1641,7 @@
     {
         "englishName":"Eight-Angle Pose",
         "sanskritName":"Astavakrasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance"
         ],
         "difficulty":3,
@@ -1657,14 +1657,14 @@
             "activeEnergyBurned":"High",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Strengthens the core, shoulders, arms, and wrists",
             "Opens the chest, hips, and spine",
             "Improves balance and coordination",
             "May help improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, back, or knees",
             "Warm up thoroughly before practicing Eight-Angle Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1700,7 +1700,7 @@
     {
         "englishName":"Extended Hand-To-Big-Toe Pose",
         "sanskritName":"Utthita Hasta Padangushtasana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Hip Opening",
             "Standing"
@@ -1720,14 +1720,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, hamstrings, and calves",
             "Opens the hips and groin",
             "Improves balance and coordination",
             "May help improve circulation and digestion"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or hamstrings",
             "Warm up thoroughly before practicing Extended Hand-To-Big-Toe Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1789,7 +1789,7 @@
     {
         "englishName":"Extended Puppy Dog Pose",
         "sanskritName":"Uttana Shvanakasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend"
         ],
         "difficulty":2,
@@ -1807,14 +1807,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the spine and chest",
             "Strengthens the back and core",
             "Improves flexibility and range of motion",
             "May help relieve back pain"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or wrists",
             "Warm up thoroughly before practicing Extended Puppy Dog Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1876,7 +1876,7 @@
     {
         "englishName":"Extended Side Angle Pose",
         "sanskritName":"Utthita Parsvakonasana",
-        "poseMeta":[
+        "metadata":[
             "Standing",
             "Strengthening"
         ],
@@ -1893,14 +1893,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the hips, groin, chest, and shoulders",
             "Strengthens the core, hamstrings, and quads",
             "Improves balance and coordination",
             "May help improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or shoulders",
             "Warm up thoroughly before practicing Extended Side Angle Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -1937,7 +1937,7 @@
     {
         "englishName":"Extended Triangle Pose",
         "sanskritName":"Utthita Trikonasana",
-        "poseMeta":[
+        "metadata":[
             "Standing",
             "Strengthening"
         ],
@@ -1956,14 +1956,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the hips, groin, chest, and shoulders",
             "Strengthens the core, hamstrings, and quads",
             "Improves balance and coordination",
             "May help improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the lower back, hips, knees, or shoulders",
             "Warm up thoroughly before practicing Extended Triangle Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2026,7 +2026,7 @@
     {
         "englishName":"Feathered Peacock Pose",
         "sanskritName":"Pincha Mayurasana",
-        "poseMeta":[
+        "metadata":[
             "Inversion",
             "Strengthening"
         ],
@@ -2044,14 +2044,14 @@
             "activeEnergyBurned":"High",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Strengthens the arms, shoulders, wrists, core, and spine",
             "Opens the chest, hips, and shoulders",
             "Improves balance and coordination",
             "May help improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, back, or neck",
             "Warm up thoroughly before practicing Feathered Peacock Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2100,7 +2100,7 @@
     {
         "englishName":"Fire Log Pose",
         "sanskritName":"Agnistambhasana",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Seated"
         ],
@@ -2122,14 +2122,14 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Stretches the inner thighs, groin, and hips",
             "Opens the chest and lungs",
             "Strengthens the core and legs",
             "May help improve posture and digestion"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the knees, hips, or lower back",
             "Warm up thoroughly before practicing Fire Log Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2230,7 +2230,7 @@
     {
         "englishName":"Firefly Pose",
         "sanskritName":"Tittibhasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance"
         ],
         "difficulty":3,
@@ -2246,14 +2246,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, arms, and wrists",
             "Opens the chest, hips, and shoulders",
             "Improves balance and coordination",
             "May help improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the wrists, shoulders, elbows, back, or neck",
             "Warm up thoroughly before practicing Firefly Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2290,7 +2290,7 @@
     {
         "englishName":"Easy Fish Pose",
         "sanskritName":"Sukha Matsyasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -2310,14 +2310,14 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the chest, heart, and lungs",
             "Strengthens the spine and shoulders",
             "Improves flexibility in the spine, hips, and shoulders",
             "May help improve digestion and reduce stress"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the neck, back, or shoulders",
             "Warm up thoroughly before practicing Easy Fish Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2392,7 +2392,7 @@
     {
         "englishName":"Four-Limbed Staff Pose",
         "sanskritName":"Chaturanga Dandasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Core",
             "Strengthening"
@@ -2409,14 +2409,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, chest, shoulders, and arms",
             "Improves cardiovascular health",
             "Opens the hips, groin, and hamstrings",
             "May help improve digestion and reduce stress"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the wrists, elbows, shoulders, back, or neck",
             "Warm up thoroughly before practicing Four-Limbed Staff Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2440,7 +2440,7 @@
     {
         "englishName":"Garland Pose",
         "sanskritName":"Malasana",
-        "poseMeta":[
+        "metadata":[
             "Standing"
         ],
         "difficulty":1,
@@ -2455,14 +2455,14 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"High"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the hips, groin, and inner thighs",
             "Strengthens the core, thighs, and ankles",
             "Improves flexibility and range of motion",
             "May help reduce stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the hips, knees, or ankles",
             "Warm up thoroughly before practicing Garland Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2486,7 +2486,7 @@
     {
         "englishName":"Gate Pose",
         "sanskritName":"Parighasana",
-        "poseMeta":[
+        "metadata":[
             "Standing"
         ],
         "difficulty":1,
@@ -2503,14 +2503,14 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Stretches the inner thighs, groin, and inner hamstrings",
             "Opens the hips and chest",
             "Strengthens the core and legs",
             "May help improve digestion and posture"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the knees, hips, or lower back",
             "Warm up thoroughly before practicing Gate Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2560,7 +2560,7 @@
     {
         "englishName":"Half Frog Pose",
         "sanskritName":"Ardha Bhekasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -2579,14 +2579,14 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the hips, groin, and inner thighs",
             "Strengthens the core, legs, and ankles",
             "Improves flexibility and range of motion",
             "May help improve digestion and reduce stress"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with recent or severe injuries to the hips, knees, or ankles",
             "Warm up thoroughly before practicing Half Frog Pose",
             "Listen to your body and don't force the pose if you experience pain"
@@ -2649,7 +2649,7 @@
     {
         "englishName":"Half Lord of the Fishes Pose",
         "sanskritName":"Ardha Matsyendrasana",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Seated",
             "Twist"
@@ -2672,15 +2672,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Improves spinal flexibility",
             "Stretches the hips, hamstrings, and inner thighs",
             "Massages the abdominal organs",
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries or herniated discs",
             "Should be done with caution by people with high blood pressure or glaucoma",
             "Pregnant women should consult with their doctor before practicing this pose"
@@ -2781,7 +2781,7 @@
     {
         "englishName":"Lying Half Lord of the Fishes Pose",
         "sanskritName":"Supta Ardha Matsyendrasana",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Restorative",
             "Twist"
@@ -2804,15 +2804,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Gently stretches the spine, hips, and legs",
             "Improves spinal flexibility",
             "Massages the abdominal organs",
             "Reduces stress and anxiety",
             "Promotes relaxation and restful sleep"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries or herniated discs",
             "Should be done with caution by pregnant women",
             "Avoid straining or overexerting yourself in the pose"
@@ -2913,7 +2913,7 @@
     {
         "englishName":"Half Moon Pose",
         "sanskritName":"Ardha Chandrasana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Standing"
         ],
@@ -2931,15 +2931,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the legs, core, and back",
             "Improves balance and coordination",
             "Stretches the hips, hamstrings, and inner thighs",
             "Opens the chest and shoulders",
             "Increases focus and concentration"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
@@ -2988,7 +2988,7 @@
     {
         "englishName":"Handstand",
         "sanskritName":"Adho Mukha Vrksasana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Inversion",
             "Strengthening"
@@ -3008,15 +3008,15 @@
             "activeEnergyBurned":"High",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Strengthens the entire body",
             "Improves balance and coordination",
             "Increases flexibility in the shoulders, wrists, and core",
             "Boosts circulation and lymphatic flow",
             "Calms the mind and reduces stress"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for beginners or people with back injuries, carpal tunnel syndrome, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Practice against a wall until you have mastered the balance"
@@ -3078,7 +3078,7 @@
     {
         "englishName":"Happy Baby Pose",
         "sanskritName":"Ananda Balasana",
-        "poseMeta":[
+        "metadata":[
             "Core"
         ],
         "difficulty":1,
@@ -3095,15 +3095,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Stretches the hips, inner thighs, and hamstrings",
             "Reduces stress and anxiety",
             "Improves digestion",
             "Opens the chest and shoulders",
             "Relaxes the mind and body"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for pregnant women in their third trimester",
             "Should be done with caution by people with hip injuries",
             "Avoid overstretching or discomfort in the pose"
@@ -3153,7 +3153,7 @@
     {
         "englishName":"Both Hands to Foot Pose",
         "sanskritName":"Utthita Hasta Padangusthasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Seated"
         ],
@@ -3174,15 +3174,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, inner thighs, and groin",
             "Improves balance and coordination",
             "Strengthens the core and leg muscles",
             "Increases flexibility in the hips",
             "Enhances concentration and focus"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
@@ -3270,7 +3270,7 @@
     {
         "englishName":"Hero Pose",
         "sanskritName":"Virasana",
-        "poseMeta":[
+        "metadata":[
             "Seated"
         ],
         "difficulty":2,
@@ -3285,8 +3285,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the thighs, hips, and knees",
             "Strengthens the ankles and calves",
             "Improves balance and coordination",
@@ -3294,7 +3294,7 @@
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with knee injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Avoid excessive pressure on the knees"
@@ -3318,7 +3318,7 @@
     {
         "englishName":"Heron Pose",
         "sanskritName":"Krauñcāsana",
-        "poseMeta":[
+        "metadata":[
             "Seated"
         ],
         "difficulty":1,
@@ -3334,15 +3334,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, hips, and inner thighs",
             "Improves balance and coordination",
             "Strengthens the core muscles",
             "Increases flexibility in the hips",
             "Enhances concentration and focus"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
@@ -3379,7 +3379,7 @@
     {
         "englishName":"High Lunge",
         "sanskritName":"Utthita Ashwa Sanchalanasana",
-        "poseMeta":[
+        "metadata":[
             "Standing"
         ],
         "difficulty":1,
@@ -3394,15 +3394,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Strengthens the legs, hips, and core",
             "Improves balance and coordination",
             "Stretches the hips, hamstrings, and inner thighs",
             "Opens the chest and shoulders",
             "Increases focus and concentration"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with knee injuries, high blood pressure, or vertigo",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
@@ -3426,7 +3426,7 @@
     {
         "englishName":"Intense Side Stretch Pose",
         "sanskritName":"Parsvottanasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Standing"
         ],
@@ -3446,15 +3446,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, inner thighs, and side of the body",
             "Improves balance and coordination",
             "Strengthens the legs and core",
             "Stimulates the abdominal organs",
             "Helps to relieve stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up before practicing this pose"
@@ -3529,7 +3529,7 @@
     {
         "englishName":"Legs-Up-the-Wall Pose",
         "sanskritName":"Viparita Karani",
-        "poseMeta":[
+        "metadata":[
             "Restorative"
         ],
         "difficulty":1,
@@ -3547,8 +3547,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Reduces fatigue, swelling, and pain",
             "Calms the mind and body",
             "Improves circulation",
@@ -3556,7 +3556,7 @@
             "Relieves headaches",
             "Reduces stress, anxiety, and insomnia"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with high blood pressure, glaucoma, or retinal detachment",
             "Pregnant women should consult with their doctor before practicing this pose"
         ],
@@ -3617,7 +3617,7 @@
     {
         "englishName":"Locust Pose",
         "sanskritName":"Salabhasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Strengthening",
             "Backbends"
@@ -3639,14 +3639,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the back, legs, and core",
             "Improves flexibility in the spine",
             "Stimulates the abdominal organs",
             "Helps to relieve stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries or herniated discs",
             "Should be done with caution by pregnant women"
         ],
@@ -3733,7 +3733,7 @@
     {
         "englishName":"Lord of the Dance Pose",
         "sanskritName":"Natarajasana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Chest Opening",
             "Standing",
@@ -3753,8 +3753,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Improves spinal flexibility and balance",
             "Stretches the hips, hamstrings, and inner thighs",
             "Strengthens the legs, core, and arms",
@@ -3763,7 +3763,7 @@
             "Stimulates the respiratory system",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women"
         ],
@@ -3812,7 +3812,7 @@
     {
         "englishName":"Lotus Pose",
         "sanskritName":"Padmasana",
-        "poseMeta":[
+        "metadata":[
             "Seated"
         ],
         "difficulty":2,
@@ -3828,15 +3828,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Improves spinal flexibility and hip mobility",
             "Stretches the inner thighs, hamstrings, and groin",
             "Calms the mind and body",
             "Enhances concentration and focus",
             "Promotes relaxation and restful sleep"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Avoid overstretching or discomfort in the pose"
@@ -3873,7 +3873,7 @@
     {
         "englishName":"Low Lunge",
         "sanskritName":"Anjaneyasana",
-        "poseMeta":[
+        "metadata":[
             "Standing"
         ],
         "difficulty":2,
@@ -3891,8 +3891,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the thighs, groins, and opens the chest",
             "Strengthens the legs, core, and back",
             "Improves balance and coordination",
@@ -3900,7 +3900,7 @@
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with knee injuries or high blood pressure",
             "Should be done with caution by pregnant women"
         ],
@@ -3962,7 +3962,7 @@
     {
         "englishName":"Marichi\u2019s Pose",
         "sanskritName":"Marichyasana III",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Seated",
             "Twist"
@@ -3981,8 +3981,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the spine, hips, hamstrings, and inner thighs",
             "Strengthens the core, legs, and back",
             "Improves spinal flexibility and balance",
@@ -3990,7 +3990,7 @@
             "Stimulates the digestive system",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women"
         ],
@@ -4039,7 +4039,7 @@
     {
         "englishName":"Monkey Pose",
         "sanskritName":"Hanumatasana",
-        "poseMeta":[
+        "metadata":[
             "Seated"
         ],
         "difficulty":3,
@@ -4055,8 +4055,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Stretches the entire lower body, including the thighs, hamstrings, and groin",
             "Improves flexibility in the hips and spine",
             "Strengthens the legs and core",
@@ -4064,7 +4064,7 @@
             "Stimulates the digestive system",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -4103,7 +4103,7 @@
     {
         "englishName":"Mountain Pose",
         "sanskritName":"Tadasana",
-        "poseMeta":[
+        "metadata":[
             "Standing"
         ],
         "difficulty":1,
@@ -4118,15 +4118,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Improves posture and alignment",
             "Strengthens the legs, core, and back",
             "Enhances balance and coordination",
             "Increases focus and concentration",
             "Cultivates a sense of grounding and stability"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back pain or high blood pressure",
             "Should be done with caution by pregnant women"
         ],
@@ -4149,7 +4149,7 @@
     {
         "englishName":"Noose Pose",
         "sanskritName":"Pasasana",
-        "poseMeta":[
+        "metadata":[
             "Binding",
             "Hip Opening",
             "Strengthening",
@@ -4167,14 +4167,14 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Improves spinal flexibility and hip mobility",
             "Stretches the inner thighs, hamstrings, and groin",
             "Enhances concentration and focus",
             "Promotes relaxation and restful sleep"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Avoid overstretching or discomfort in the pose"
@@ -4198,7 +4198,7 @@
     {
         "englishName":"One-Legged King Pigeon Pose",
         "sanskritName":"Sukha Eka Pada Raja Kapotasana I",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Backbends"
         ],
@@ -4217,8 +4217,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the chest and shoulders",
             "Stretches the hips, thighs, groin, and hamstrings",
             "Improves flexibility in the spine",
@@ -4227,7 +4227,7 @@
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -4290,7 +4290,7 @@
     {
         "englishName":"One-Legged King Pigeon Pose II",
         "sanskritName":"Ekapāda Rājakapotāsana II",
-        "poseMeta":[
+        "metadata":[
             "Backbends"
         ],
         "difficulty":3,
@@ -4306,8 +4306,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Opens the chest, shoulders, and hips",
             "Stretches the hamstrings, thighs, and groin",
             "Improves flexibility in the spine",
@@ -4316,7 +4316,7 @@
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -4354,7 +4354,7 @@
     {
         "englishName":"Peacock Pose",
         "sanskritName":"Mayurasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance"
         ],
         "difficulty":1,
@@ -4372,8 +4372,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Increases flexibility in the spine",
             "Strengthens the core, arms, and shoulders",
             "Activates the muscles of the legs",
@@ -4381,7 +4381,7 @@
             "Provides a deep stretch to the hamstrings",
             "Promotes relaxation and stress relief"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, neck injuries, or high blood pressure",
             "Should be done with caution by pregnant women or anyone with a history of injuries",
             "If you cannot lift your upper body, you can support yourself on your forearms",
@@ -4444,7 +4444,7 @@
     {
         "englishName":"Pigeon Pose",
         "sanskritName":"Kapotasana",
-        "poseMeta":[
+        "metadata":[
             "Backbends"
         ],
         "difficulty":3,
@@ -4461,8 +4461,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the hips and chest",
             "Stretches the hamstrings, inner thighs, and groin",
             "Improves spinal flexibility",
@@ -4471,7 +4471,7 @@
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -4522,7 +4522,7 @@
     {
         "englishName":"Plank Pose",
         "sanskritName":"Phalakasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Core",
             "Strengthening"
@@ -4543,8 +4543,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, arms, and shoulders",
             "Improves balance and coordination",
             "Increases upper body strength",
@@ -4552,7 +4552,7 @@
             "Engages the muscles of the legs and back",
             "Activates the muscles of the abdomen and pelvis"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with wrist injuries, shoulder injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Keep your elbows close to your body and avoid hyperextending your elbows",
@@ -4629,7 +4629,7 @@
     {
         "englishName":"Plow Pose",
         "sanskritName":"Halasana",
-        "poseMeta":[
+        "metadata":[
             "Inversion"
         ],
         "difficulty":3,
@@ -4649,15 +4649,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Improves spinal flexibility and hip mobility",
             "Stretches the inner thighs, hamstrings, and groin",
             "Calms the mind and body",
             "Enhances concentration and focus",
             "Promotes relaxation and restful sleep"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Avoid overstretching or discomfort in the pose"
@@ -4745,7 +4745,7 @@
     {
         "englishName":"Eka Pada Koundinyasana I",
         "sanskritName":"Ekapāda Kauṇḍinyāsana I",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Twist"
         ],
@@ -4762,8 +4762,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Tones the arms, abs, and strengthens the wrist",
             "Improves balance and coordination",
             "Stretches the thighs, groins, and opens the chest",
@@ -4771,7 +4771,7 @@
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries or high blood pressure",
             "Should be done with caution by pregnant women"
         ],
@@ -4807,7 +4807,7 @@
     {
         "englishName":"Flying Splits",
         "sanskritName":"Ekapāda Kauṇḍinyāsana II",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance"
         ],
         "difficulty":3,
@@ -4825,8 +4825,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Improves flexibility in the hips, hamstrings, and spine",
             "Strengthens the arms, core, and legs",
             "Enhances balance and coordination",
@@ -4834,7 +4834,7 @@
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, hip injuries, or high blood pressure",
             "Should be done with caution by pregnant women"
         ],
@@ -4895,7 +4895,7 @@
     {
         "englishName":"Marichyasana I",
         "sanskritName":"Marichyasana",
-        "poseMeta":[
+        "metadata":[
             "Binding",
             "Forward Bend",
             "Hip Opening",
@@ -4915,8 +4915,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the spine",
             "Stretches the back, shoulders, and hips",
             "Massages the abdominal organs",
@@ -4924,7 +4924,7 @@
             "Improves digestion",
             "Calms the mind and body"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back pain or high blood pressure",
             "Should be done with caution by pregnant women"
         ],
@@ -4973,7 +4973,7 @@
     {
         "englishName":"Reclining Bound Angle Pose",
         "sanskritName":"Supta Baddha Konasana",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening",
             "Restorative"
         ],
@@ -4991,8 +4991,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the hips, groin, and inner thighs",
             "Stretches the hamstrings and calves",
             "Relieves back pain",
@@ -5000,7 +5000,7 @@
             "Reduces stress and anxiety",
             "Calms the mind and body"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with hip injuries or high blood pressure",
             "Should be done with caution by pregnant women"
         ],
@@ -5049,7 +5049,7 @@
     {
         "englishName":"Reclining Hand-to-Big-Toe Pose",
         "sanskritName":"Supta Padangusthasana",
-        "poseMeta":[
+        "metadata":[
             "Restorative"
         ],
         "difficulty":2,
@@ -5067,8 +5067,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, calves, ankles, and inner thighs",
             "Improves flexibility in the hips and spine",
             "Strengthens the core muscles",
@@ -5076,7 +5076,7 @@
             "Stimulates the digestive and respiratory systems",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5140,7 +5140,7 @@
     {
         "englishName":"Reclining Hero Pose",
         "sanskritName":"Supta Vīrāsana",
-        "poseMeta":[
+        "metadata":[
             "Restorative"
         ],
         "difficulty":2,
@@ -5157,15 +5157,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Releases tension in the hips, knees, and ankles",
             "Improves flexibility in the spine and legs",
             "Calms the mind and body",
             "Promotes relaxation and stress relief",
             "Reduces anxiety and fatigue"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5216,7 +5216,7 @@
     {
         "englishName":"Revolved Head-to-Knee Pose",
         "sanskritName":"Parivrttā Janū Sirṣāsana",
-        "poseMeta":[
+        "metadata":[
             "Seated",
             "Twist"
         ],
@@ -5233,8 +5233,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the hips, groin, and inner thighs",
             "Improves flexibility in the spine and hamstrings",
             "Strengthens the core muscles",
@@ -5242,7 +5242,7 @@
             "Reduces stress and anxiety",
             "Improves balance and coordination"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Should not be practiced if you have a history of neck or spinal injuries",
@@ -5280,7 +5280,7 @@
     {
         "englishName":"Revolved Side Angle Pose",
         "sanskritName":"Parivrttā Pṛṣṭhavākōnāsana",
-        "poseMeta":[
+        "metadata":[
             "Standing",
             "Strengthening",
             "Twist"
@@ -5299,8 +5299,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the hips, groin, and outer thighs",
             "Improves flexibility in the spine and hamstrings",
             "Strengthens the core muscles",
@@ -5308,7 +5308,7 @@
             "Reduces stress and anxiety",
             "Improves balance and coordination"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Should not be practiced if you have a history of neck or spinal injuries",
@@ -5359,7 +5359,7 @@
     {
         "englishName":"Revolved Triangle Pose",
         "sanskritName":"Parivrttā Trikoṇāsana",
-        "poseMeta":[
+        "metadata":[
             "Standing",
             "Strengthening",
             "Twist"
@@ -5377,8 +5377,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Opens the hips, groin, and outer thighs",
             "Improves flexibility in the spine and hamstrings",
             "Strengthens the core muscles",
@@ -5386,7 +5386,7 @@
             "Reduces stress and anxiety",
             "Improves balance and coordination"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, knee injuries, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Should not be practiced if you have a history of neck or spinal injuries",
@@ -5424,7 +5424,7 @@
     {
         "englishName":"Scale Pose",
         "sanskritName":"Tolasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Core"
         ],
@@ -5442,15 +5442,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the arms, shoulders, wrists, and core",
             "Improves balance, coordination, and focus",
             "Stretches the hamstrings, calves, and inner thighs",
             "Calms the mind and reduces stress",
             "Promotes overall well-being"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with high blood pressure, heart conditions, or neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5501,7 +5501,7 @@
     {
         "englishName":"Western Intense Stretch Pose",
         "sanskritName":"Paschimatānāsana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Seated"
         ],
@@ -5519,15 +5519,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Stretches the hamstrings, calves, and spine",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
             "Reduces stress and anxiety",
             "Promotes overall well-being"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, sciatica, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5578,7 +5578,7 @@
     {
         "englishName":"Crane Pose",
         "sanskritName":"Bakasāna",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance"
         ],
         "difficulty":3,
@@ -5594,15 +5594,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Improves balance and core strength",
             "Strengthens the arms, shoulders, wrists, and forearms",
             "Opens the hips, groin, and inner thighs",
             "Calms the mind and reduces stress",
             "Creates a sense of lightness and freedom"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with high blood pressure, heart conditions, or neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5639,7 +5639,7 @@
     {
         "englishName":"Side Plank Pose",
         "sanskritName":"Vasisthasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Balancing",
             "Core"
@@ -5658,15 +5658,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core muscles",
             "Improves balance and coordination",
             "Opens the hips, groin, and inner thighs",
             "Relieves tension in the spine and shoulders",
             "Creates a sense of stability and grounding"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with high blood pressure, heart conditions, or neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5717,7 +5717,7 @@
     {
         "englishName":"Infinity Pose",
         "sanskritName":"Ardha Matsyendrasana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Core"
         ],
@@ -5734,15 +5734,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the spine, particularly the lower back and the hamstrings",
             "Opens the hips, groin, and inner thighs",
             "Improves digestion and circulation",
             "Relieves tension in the shoulders, neck, and back",
             "Promotes mental clarity and focus"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5780,7 +5780,7 @@
     {
         "englishName":"Supported Cobra Pose",
         "sanskritName":"Bhujangāsana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -5800,15 +5800,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the chest, lungs, and heart",
             "Relieves tension in the upper back and shoulders",
             "Improves posture and spinal flexibility",
             "Strengthens the back muscles",
             "Promotes a sense of calm and relaxation"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5885,7 +5885,7 @@
     {
         "englishName":"Staff Pose",
         "sanskritName":"Dandāsana",
-        "poseMeta":[
+        "metadata":[
             "Seated"
         ],
         "difficulty":1,
@@ -5900,15 +5900,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Strengthens the core muscles",
             "Improves posture and balance",
             "Stretches the hamstrings, calves, and spine",
             "Relieves stress and anxiety",
             "Promotes overall well-being"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5933,7 +5933,7 @@
     {
         "englishName":"Standing Intense Stretch Pose",
         "sanskritName":"Parśvottānāsana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend"
         ],
         "difficulty":2,
@@ -5949,15 +5949,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, calves, and spine",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
             "Promotes relaxation and stress relief",
             "Improves balance and coordination"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -5995,7 +5995,7 @@
     {
         "englishName":"Standing Tip Toe Half Intense Stretch Pose",
         "sanskritName":"Ardha Parśvottānāsana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Standing"
         ],
@@ -6012,8 +6012,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, calves, and inner thighs",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
@@ -6021,7 +6021,7 @@
             "Improves balance and coordination",
             "Strengthens the ankles"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6058,7 +6058,7 @@
     {
         "englishName":"One Leg Stretched Upward Pose",
         "sanskritName":"Eka Pada Urdhva Mukha Śvānāsana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Standing"
         ],
@@ -6077,8 +6077,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, calves, and spine",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
@@ -6087,7 +6087,7 @@
             "Strengthens the ankles",
             "Opens the hips, groin, and inner thighs"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6150,7 +6150,7 @@
     {
         "englishName":"Supported Seated Tip Toe Pose",
         "sanskritName":"Baddha Koṇāsana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Inversion"
         ],
@@ -6170,8 +6170,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Easy or Supported",
-        "poseBenefits":[
+        "level":"Easy or Supported",
+        "benefits":[
             "Stretches the hamstrings, calves, and inner thighs",
             "Improves flexibility and range of motion",
             "Relieves tension in the lower back and hips",
@@ -6179,7 +6179,7 @@
             "Opens the hips, groin, and inner thighs",
             "Strengthens the ankles"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6255,7 +6255,7 @@
     {
         "englishName":"Supported Shoulderstand",
         "sanskritName":"Salamba Śarāṅgāsana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Inversion"
         ],
@@ -6274,15 +6274,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Improves circulation and blood flow to the brain",
             "Relieves stress and anxiety",
             "Strengthens the upper back and shoulders",
             "Opens the chest and lungs",
             "Promotes relaxation and restful sleep"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with high blood pressure, glaucoma, or severe neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6345,7 +6345,7 @@
     {
         "englishName":"Tree Pose",
         "sanskritName":"Vṛkṣāsana",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Standing"
         ],
@@ -6364,8 +6364,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Improves balance and coordination",
             "Strengthens the ankles, legs, and core",
             "Opens the hips, groin, and inner thighs",
@@ -6373,7 +6373,7 @@
             "Promotes relaxation and stress relief",
             "Boosts self-confidence and inner stability"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe balance issues or injuries to the ankles, knees, or hips",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6436,7 +6436,7 @@
     {
         "englishName":"Upward Bow (Wheel) Pose",
         "sanskritName":"Vṛkṣāsana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Strengthening",
             "Backbends"
@@ -6457,8 +6457,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, calves, spine, and shoulders",
             "Opens the chest, lungs, and heart",
             "Strengthens the back muscles",
@@ -6466,7 +6466,7 @@
             "Promotes relaxation and stress relief",
             "Boosts self-confidence and inner stability"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6542,7 +6542,7 @@
     {
         "englishName":"Elevated Both Legs Inverted Staff Pose",
         "sanskritName":"Viparita Dandasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -6562,8 +6562,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Reverses the effects of gravity",
             "Improves circulation and blood flow",
             "Relieves stress and anxiety",
@@ -6572,7 +6572,7 @@
             "Opens the chest and lungs",
             "Promotes a sense of peace and well-being"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe high blood pressure, glaucoma, or severe neck or back injuries",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6648,7 +6648,7 @@
     {
         "englishName":"Eastern Intense Stretch Pose",
         "sanskritName":"Pūrvottānāsana",
-        "poseMeta":[
+        "metadata":[
             "Strengthening"
         ],
         "difficulty":2,
@@ -6667,8 +6667,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, calves, spine, and shoulders",
             "Opens the chest, lungs, and heart",
             "Strengthens the back muscles",
@@ -6676,7 +6676,7 @@
             "Promotes relaxation and stress relief",
             "Boosts self-confidence and inner stability"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, herniated discs, or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6752,7 +6752,7 @@
     {
         "englishName":"Upward Salute Pose",
         "sanskritName":"Urdhvāttānāsana",
-        "poseMeta":[
+        "metadata":[
             "Standing"
         ],
         "difficulty":1,
@@ -6770,8 +6770,8 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Activates the heart and lungs",
             "Improves circulation and blood flow",
             "Calms the mind and promotes relaxation",
@@ -6779,7 +6779,7 @@
             "Opens the chest and shoulders",
             "Promotes a sense of peace and well-being"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe high blood pressure, glaucoma, or injuries to the arms, shoulders, or neck",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6842,7 +6842,7 @@
     {
         "englishName":"Upward Facing Dog Pose",
         "sanskritName":"Urdhva Mukha Svanasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -6862,8 +6862,8 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Opens the chest and lungs",
             "Strengthens the shoulders, arms, and core",
             "Improves flexibility and range of motion",
@@ -6871,7 +6871,7 @@
             "Calms the mind and promotes relaxation",
             "Promotes a sense of peace and well-being"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with high blood pressure or glaucoma",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -6947,7 +6947,7 @@
     {
         "englishName":"Warrior I Pose",
         "sanskritName":"Virabhadrasana I",
-        "poseMeta":[
+        "metadata":[
             "Standing",
             "Strengthening"
         ],
@@ -6964,15 +6964,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the legs, hips, and core",
             "Opens the hips and groin",
             "Improves balance and coordination",
             "Activates the third eye chakra (Ajna)",
             "Promotes a sense of strength, courage, and focus"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe knee injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -7010,7 +7010,7 @@
     {
         "englishName":"Warrior II Pose",
         "sanskritName":"Virabharadrasana II",
-        "poseMeta":[
+        "metadata":[
             "Standing",
             "Strengthening"
         ],
@@ -7027,15 +7027,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Strengthens the legs, hips, and core",
             "Opens the hips and groin",
             "Improves balance and coordination",
             "Activates the second chakra (Svadhisthana)",
             "Promotes a sense of grounding, stability, and self-acceptance"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe knee injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -7073,7 +7073,7 @@
     {
         "englishName":"Warrior III Pose",
         "sanskritName":"Virabhadrasana III",
-        "poseMeta":[
+        "metadata":[
             "Balancing",
             "Standing",
             "Strengthening"
@@ -7093,15 +7093,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Strengthens the legs, hips, and core",
             "Opens the hips and groin",
             "Improves balance and coordination",
             "Activates the third chakra (Manipura)",
             "Promotes a sense of courage, focus, and mental clarity"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe knee injuries, high blood pressure, or glaucoma",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -7164,7 +7164,7 @@
     {
         "englishName":"Wide-Angle Seated Forward Bend",
         "sanskritName":"Upavistha Konasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Hip Opening",
             "Seated"
@@ -7182,15 +7182,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Stretches the hamstrings, calves, and groin",
             "Opens the hips, pelvis, and lower back",
             "Improves digestion and elimination",
             "Calms the mind and promotes relaxation",
             "Promotes a sense of groundedness and stability"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries or high blood pressure",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -7228,7 +7228,7 @@
     {
         "englishName":"Wide-Legged Forward Bend",
         "sanskritName":"Prasarita Padottanasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Hip Opening",
             "Standing",
@@ -7249,8 +7249,8 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Stretches the hamstrings, calves, groin, and inner thighs",
             "Opens the hips, pelvis, and lower back",
             "Improves flexibility and range of motion",
@@ -7258,7 +7258,7 @@
             "Promotes relaxation and stress relief",
             "Promotes a sense of inner peace and calm"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, high blood pressure, or glaucoma",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -7321,7 +7321,7 @@
     {
         "englishName":"Wild Thing",
         "sanskritName":"Chamatkarasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Chest Opening"
         ],
@@ -7342,8 +7342,8 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, legs, and arms",
             "Improves balance and coordination",
             "Opens the hips and groin",
@@ -7351,7 +7351,7 @@
             "Calms the mind and promotes relaxation",
             "Promotes a sense of inner peace and well-being"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe knee injuries, high blood pressure, or glaucoma",
             "Should be done with caution by pregnant women and people with neck or shoulder injuries",
             "Warm up thoroughly before practicing this pose",
@@ -7440,7 +7440,7 @@
     {
         "englishName":"Dangling Pose Yoga",
         "sanskritName":"Baddha Hasta Yoganidrasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Seated"
         ],
@@ -7458,15 +7458,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Promotes relaxation",
             "Opens the hips and groin",
             "Improves flexibility",
             "Increases blood circulation",
             "Reduces swelling"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Avoid practicing Dangling Pose Yoga if you are pregnant or have any injuries to your back, hips, or knees.",
             "It is best to practice Dangling Pose Yoga under the guidance of a qualified yoga teacher.",
             "Avoid forcing the pose if you are unable to touch your toes."
@@ -7516,7 +7516,7 @@
     {
         "englishName":"Scorpion Pose",
         "sanskritName":"Vrishchikasana",
-        "poseMeta":[
+        "metadata":[
             "Backbends",
             "Inversion"
         ],
@@ -7537,15 +7537,15 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Medium"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Opens the hips and groin",
             "Strengthens the back and core",
             "Improves flexibility in the spine",
             "Promotes relaxation and stress reduction",
             "Boosts confidence and self-esteem"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries, high blood pressure, or glaucoma",
             "Should be done with caution by pregnant women",
             "Warm up thoroughly before practicing this pose",
@@ -7634,7 +7634,7 @@
     {
         "englishName":"Thunderbolt Pose",
         "sanskritName":"Prapada Virasana",
-        "poseMeta":[
+        "metadata":[
             "Kneeling",
             "Seated"
         ],
@@ -7650,15 +7650,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Beginner to Advanced",
-        "poseBenefits":[
+        "level":"Beginner to Advanced",
+        "benefits":[
             "Calms the mind and reduces stress",
             "Stabilizes the lower back and legs",
             "Improves digestion and elimination",
             "Opens the hips, groin, and ankles",
             "Promotes a sense of grounding and stability"
         ],
-        "posePrecautions":[
+        "precautions":[
             "If you have knee pain, you may want to place a folded blanket or bolster under your knees.",
             "If you have any other injuries, please consult with your doctor before practicing this pose."
         ],
@@ -7681,7 +7681,7 @@
     {
         "englishName":"Balance Pose",
         "sanskritName":"Tulasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance"
         ],
         "difficulty":2,
@@ -7696,14 +7696,14 @@
             "activeEnergyBurned":"Medium",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Improves balance and coordination",
             "Strengthens the core, arms, and shoulders",
             "Improves flexibility in the spine",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for beginners or people with injuries to the wrists, shoulders, or back",
             "Warm up thoroughly before practicing Tulasana",
             "Start with a modified version of the pose if you are unable to balance on your hands"
@@ -7727,7 +7727,7 @@
     {
         "englishName":"Lion Pose",
         "sanskritName":"Narasimhasana",
-        "poseMeta":[
+        "metadata":[
             "Seated"
         ],
         "difficulty":1,
@@ -7745,15 +7745,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Beginner to Advanced",
-        "poseBenefits":[
+        "level":"Beginner to Advanced",
+        "benefits":[
             "Releases tension in the face, neck, and shoulders",
             "Improves jaw and eye health",
             "Increases circulation to the face",
             "Promotes relaxation and stress reduction",
             "Boosts confidence and self-esteem"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Avoid practicing Lion Pose if you have a cold or sore throat.",
             "Be mindful of your energy level and take breaks as needed."
         ],
@@ -7814,7 +7814,7 @@
     {
         "englishName":"Crocodile Pose",
         "sanskritName":"Bhujangasana",
-        "poseMeta":[
+        "metadata":[
             "Restorative"
         ],
         "difficulty":1,
@@ -7829,15 +7829,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Promotes relaxation and stress reduction",
             "Reduces tension in the back, neck, and shoulders",
             "Opens the hips and groin",
             "Improves digestion",
             "Relieves menstrual cramps"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries or neck pain.",
             "Warm up thoroughly before practicing Crocodile Pose.",
             "Avoid overstretching or discomfort in the pose."
@@ -7861,7 +7861,7 @@
     {
         "englishName":"Pendant Pose",
         "sanskritName":"Lolasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Core"
         ],
@@ -7878,15 +7878,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Intermediate",
-        "poseBenefits":[
+        "level":"Intermediate",
+        "benefits":[
             "Strengthens the core, arms, and shoulders",
             "Improves balance and coordination",
             "Opens the hips and groin",
             "Improves digestion",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for beginners or people with injuries to the wrists, shoulders, or back",
             "Warm up thoroughly before practicing Pendant Pose",
             "Start with a modified version of the pose if you are unable to lift your legs off the ground"
@@ -7923,7 +7923,7 @@
     {
         "englishName":"Tortoise Pose",
         "sanskritName":"Kurmasana",
-        "poseMeta":[
+        "metadata":[
             "Forward Bend",
             "Seated"
         ],
@@ -7940,8 +7940,8 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Beginner to Intermediate",
-        "poseBenefits":[
+        "level":"Beginner to Intermediate",
+        "benefits":[
             "Promotes relaxation and stress reduction",
             "Reduces tension in the back, neck, and shoulders",
             "Opens the hips and groin",
@@ -7949,7 +7949,7 @@
             "Relieves menstrual cramps",
             "Strengthens the spine and core"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries or neck pain",
             "Warm up thoroughly before practicing Tortoise Pose",
             "Avoid overstretching or discomfort in the pose"
@@ -7986,7 +7986,7 @@
     {
         "englishName":"Embryo in Womb Pose",
         "sanskritName":"Garbha Pindasana",
-        "poseMeta":[
+        "metadata":[
             "Seated"
         ],
         "difficulty":3,
@@ -8003,8 +8003,8 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Beginner",
-        "poseBenefits":[
+        "level":"Beginner",
+        "benefits":[
             "Promotes relaxation and stress reduction",
             "Calms the mind and nervous system",
             "Opens the hips and groin",
@@ -8012,7 +8012,7 @@
             "Relieves menstrual cramps",
             "Strengthens the spine and core"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe back injuries or neck pain",
             "Wait until after 12 weeks of pregnancy to practice this pose",
             "Warm up thoroughly before practicing this pose",
@@ -8063,7 +8063,7 @@
     {
         "englishName":"Shoulder Press Pose",
         "sanskritName":"Bhujapidasana",
-        "poseMeta":[
+        "metadata":[
             "Arm Balance",
             "Core"
         ],
@@ -8080,15 +8080,15 @@
             "activeEnergyBurned":"Very Low",
             "exerciseMinutes":"Very Low"
         },
-        "poseLevel":"Intermediate to Advanced",
-        "poseBenefits":[
+        "level":"Intermediate to Advanced",
+        "benefits":[
             "Strengthens the core, arms, and shoulders",
             "Improves balance and coordination",
             "Opens the chest and shoulders",
             "Improves flexibility in the spine",
             "Reduces stress and anxiety"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for beginners or people with injuries to the wrists, shoulders, or back",
             "Warm up thoroughly before practicing Bhujapidasana",
             "Start with a modified version of the pose if you are unable to balance on your hands"
@@ -8125,7 +8125,7 @@
     {
         "englishName":"Frog Pose",
         "sanskritName":"Mandukasana",
-        "poseMeta":[
+        "metadata":[
             "Chest Opening",
             "Backbends"
         ],
@@ -8144,15 +8144,15 @@
             "activeEnergyBurned":"Low",
             "exerciseMinutes":"Low"
         },
-        "poseLevel":"Beginner to Intermediate",
-        "poseBenefits":[
+        "level":"Beginner to Intermediate",
+        "benefits":[
             "Opens the hips and groin",
             "Improves flexibility in the spine",
             "Reduces lower back pain",
             "Relieves menstrual cramps",
             "Promotes relaxation and stress reduction"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for people with severe hip or knee injuries",
             "Warm up thoroughly before practicing Frog Pose",
             "Listen to your body and don't force yourself into the pose if you experience pain"
@@ -8214,7 +8214,7 @@
     {
         "englishName":"Formidable Pose",
         "sanskritName":"Ganda Bherundasana",
-        "poseMeta":[
+        "metadata":[
             "Hip Opening"
         ],
         "difficulty":3,
@@ -8234,15 +8234,15 @@
             "activeEnergyBurned":"Very High",
             "exerciseMinutes":"Very High"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Strengthens the core, back, and shoulders",
             "Improves flexibility in the spine",
             "Opens the chest and shoulders",
             "Boosts energy levels",
             "Promotes mental clarity and focus"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for beginners or people with injuries to the neck, back, shoulders, or wrists",
             "Warm up thoroughly before practicing Formidable Pose",
             "Start with a modified version of the pose if you are unable to maintain the full form"
@@ -8330,7 +8330,7 @@
     {
         "englishName":"Formidable Face/Chin Stand Pose",
         "sanskritName":"Adho Mukha Vrksasana",
-        "poseMeta":[
+        "metadata":[
             "Inversion",
             "Backbends",
             "Strengthening"
@@ -8351,15 +8351,15 @@
             "activeEnergyBurned":"Very High",
             "exerciseMinutes":"Very High"
         },
-        "poseLevel":"Advanced",
-        "poseBenefits":[
+        "level":"Advanced",
+        "benefits":[
             "Strengthens the core, back, shoulders, arms, and wrists",
             "Improves flexibility in the spine, shoulders, and hamstrings",
             "Boosts energy levels",
             "Promotes mental clarity and focus",
             "Builds self-confidence"
         ],
-        "posePrecautions":[
+        "precautions":[
             "Not recommended for beginners or people with injuries to the neck, back, shoulders, wrists, or head",
             "Warm up thoroughly before practicing Formidable Face/Chin Stand Pose",
             "Start with a modified version of the pose if you are unable to maintain the full form",

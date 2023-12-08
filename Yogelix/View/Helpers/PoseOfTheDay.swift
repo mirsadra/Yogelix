@@ -2,15 +2,9 @@
 import SwiftUI
 
 struct PoseOfTheDay: View {
-    @StateObject var modelData = ModelData()
-    @StateObject var userData: UserData
+    @EnvironmentObject var modelData : ModelData
+
     @StateObject var challengeManager: DailyChallengeManager
-    
-    init(modelData: ModelData, userData: UserData) {
-        self._modelData = StateObject(wrappedValue: modelData)
-        self._userData = StateObject(wrappedValue: userData)
-        self._challengeManager = StateObject(wrappedValue: DailyChallengeManager(poses: modelData.poses, userData: userData))
-    }
     
     var body: some View {
         ZStack {
@@ -102,3 +96,10 @@ private let dateFormatter: DateFormatter = {
     formatter.timeStyle = .none
     return formatter
 }()
+
+class Calculator {
+    func addNumbers(a: Int, b: Int) -> Int {
+        return a + b
+    }
+}
+

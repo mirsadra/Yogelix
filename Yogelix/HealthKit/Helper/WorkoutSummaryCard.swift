@@ -10,7 +10,7 @@ struct WorkoutDetail {
 }
 
 struct WorkoutSummaryCard: View {
-    @ObservedObject var quantityViewModel = QuantityDataViewModel()
+    @EnvironmentObject var quantityViewModel : QuantityDataViewModel
     // Placeholder data
     let workoutDetail = WorkoutDetail(
         type: "Cross Training",
@@ -62,6 +62,7 @@ struct WorkoutSummaryCard: View {
 struct WorkoutSummaryCard_Previews: PreviewProvider {
     static var previews: some View {
         WorkoutSummaryCard()
+
             .previewLayout(.sizeThatFits)
             .padding()
     }

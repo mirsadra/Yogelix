@@ -43,10 +43,10 @@ struct PoseDetail: View {
                 
                 Text("About \(pose.englishName)")
                     .font(.title2)
-                Text(pose.formattedPoseMeta)
+                Text(pose.formattedMetadata)
                     .font(.body)
                 
-                Text(pose.formattedPoseBenefits)
+                Text(pose.formattedBenefits)
                     .font(.body)
                 
 
