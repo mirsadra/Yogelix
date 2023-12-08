@@ -26,7 +26,7 @@ struct AnimatedBlobView: View {
 }
 
 struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Unauthenticated: View {
-    @StateObject private var authViewModel = AuthenticationViewModel()
+    @EnvironmentObject private var authViewModel : AuthenticationViewModel
     @State private var presentingLoginScreen = false
     @State private var presentingProfileScreen = false
     
@@ -106,8 +106,7 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
     }
 }
 
-
-
+// MARK: - Authenticated View extension
 extension AuthenticatedView where Unauthenticated == EmptyView {
     init(@ViewBuilder content: @escaping () -> Content) {
         self.unauthenticated = nil
@@ -115,6 +114,7 @@ extension AuthenticatedView where Unauthenticated == EmptyView {
     }
 }
 
+// MARK: - Animated Shape View
 struct AnimatedShape: View {
     @State private var isAnimating = false
     
@@ -130,6 +130,7 @@ struct AnimatedShape: View {
     }
 }
 
+// MARK: - Background Animation View
 struct BackgroundAnimationView: View {
     var body: some View {
         GeometryReader { geometry in
@@ -144,9 +145,7 @@ struct BackgroundAnimationView: View {
     }
 }
 
-
-
-
+// MARK: - Authenticated View Preview
 struct AuthenticatedView_Previews: PreviewProvider {
     static var previews: some View {
         AuthenticatedView {

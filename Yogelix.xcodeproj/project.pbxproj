@@ -65,7 +65,6 @@
 		3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */; };
 		3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C82B01901400FD1FC3 /* ContentView.swift */; };
 		3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */; };
-		3BCC04CE2B01901500FD1FC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCC04CD2B01901500FD1FC3 /* Preview Assets.xcassets */; };
 		3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04CF2B01901500FD1FC3 /* Persistence.swift */; };
 		3BCC04D32B01901500FD1FC3 /* Yogelix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04D12B01901500FD1FC3 /* Yogelix.xcdatamodeld */; };
 		3BCC04DF2B01901600FD1FC3 /* YogelixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04DE2B01901600FD1FC3 /* YogelixTests.swift */; };
@@ -208,7 +207,6 @@
 		3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixApp.swift; sourceTree = "<group>"; };
 		3BCC04C82B01901400FD1FC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3BCC04CD2B01901500FD1FC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3BCC04CF2B01901500FD1FC3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3BCC04D22B01901500FD1FC3 /* Yogelix.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Yogelix.xcdatamodel; sourceTree = "<group>"; };
 		3BCC04D42B01901500FD1FC3 /* Yogelix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yogelix.entitlements; sourceTree = "<group>"; };
@@ -323,17 +321,6 @@
 			path = OpenAI;
 			sourceTree = "<group>";
 		};
-		3B51EBE32B1CFCE900BB3B7D /* Yoga */ = {
-			isa = PBXGroup;
-			children = (
-				3B1962572B1916C800A7C894 /* PoseList.swift */,
-				3B1962592B191B3800A7C894 /* PoseDetail.swift */,
-				3BA2F0BB2B1CD580001AE1F7 /* PoseFilter.swift */,
-				3B92A57D2B2228440088299E /* CategoryHRow.swift */,
-			);
-			path = Yoga;
-			sourceTree = "<group>";
-		};
 		3B5279672B0766F00011914A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,16 +432,14 @@
 		3BCC04C52B01901400FD1FC3 /* Yogelix */ = {
 			isa = PBXGroup;
 			children = (
-				3BD9BBAD2B20D69D00BF7949 /* Manager */,
-				3B51EBE32B1CFCE900BB3B7D /* Yoga */,
 				3BA2F0C92B1CF7D7001AE1F7 /* HealthKit */,
+				3BD9BBAD2B20D69D00BF7949 /* Manager */,
 				3BCC04F82B0192C600FD1FC3 /* View */,
 				3BCC04F72B0192B200FD1FC3 /* Model */,
 				3BCC04FD2B01931400FD1FC3 /* Controller */,
 				3B40A36D2B1222F100170041 /* OpenAI */,
 				3B9DA8262B0EAC2400480621 /* Exercise */,
 				3B5279672B0766F00011914A /* Auth */,
-				3BCC04CC2B01901500FD1FC3 /* Preview Content */,
 				3B5C59E12B1902E100283244 /* Resources */,
 				3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */,
 				3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */,
@@ -468,14 +453,6 @@
 				3BE08DE22B175273002D585A /* fine-tune.jsonl */,
 			);
 			path = Yogelix;
-			sourceTree = "<group>";
-		};
-		3BCC04CC2B01901500FD1FC3 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				3BCC04CD2B01901500FD1FC3 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		3BCC04DD2B01901600FD1FC3 /* YogelixTests */ = {
@@ -549,6 +526,10 @@
 			isa = PBXGroup;
 			children = (
 				3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */,
+				3B1962572B1916C800A7C894 /* PoseList.swift */,
+				3B1962592B191B3800A7C894 /* PoseDetail.swift */,
+				3BA2F0BB2B1CD580001AE1F7 /* PoseFilter.swift */,
+				3B92A57D2B2228440088299E /* CategoryHRow.swift */,
 				3B5C59E62B1908DC00283244 /* PoseRow.swift */,
 				3B19625B2B191D8300A7C894 /* CircleImage.swift */,
 				3BDA657C2B1FDCC200177735 /* ProfilePicImage.swift */,
@@ -754,7 +735,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BCC04CE2B01901500FD1FC3 /* Preview Assets.xcassets in Resources */,
 				3BDA65752B1F39F700177735 /* GoogleService-Info.plist in Resources */,
 				3BA2F0B82B1CA8CE001AE1F7 /* final.json in Resources */,
 				3BD9BBA62B20CA1000BF7949 /* data.json in Resources */,

@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct MainScrollView: View {
-    @ObservedObject var modelData = ModelData()
+    @EnvironmentObject var modelData : ModelData
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -20,5 +20,6 @@ struct MainScrollView: View {
 struct MainScrollView_Previews: PreviewProvider {
     static var previews: some View {
         MainScrollView()
+            .environmentObject(ModelData())
     }
 }
