@@ -13,7 +13,7 @@ struct PoseNavi: View {
                     Text(pose.sanskritName)
                     
                     pose.image
-                    
+    
                 }
             }
             .navigationBarTitle("Yoga Poses")

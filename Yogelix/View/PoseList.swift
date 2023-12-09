@@ -3,10 +3,17 @@ import SwiftUI
 
 struct PoseList: View {
     @EnvironmentObject var poseViewModel: PoseViewModel
+    @State private var showFavoritesOnly = false
+    
+    var filteredPoses: [Pose] {
+        poseViewModel.poses.filter { pose in
+            (!showFavoritesOnly || pose.isFavorite)
+        }
+    }
     
     var body: some View {
         NavigationSplitView {
-            List(poseViewModel.poses) { pose in
+            List(filteredPoses) { pose in
                 NavigationLink(destination: PoseDetailView(pose: pose)) {
                     PoseRow(pose: pose)
                 }
@@ -85,8 +92,14 @@ struct PoseRow: View {
                 .shadow(color: .green, radius: 5)
             
             VStack(alignment: .leading) {
-                Text(pose.englishName)
-                    .font(.headline)
+                HStack {
+                    Text(pose.englishName)
+                        .font(.headline)
+                    if pose.isFavorite {
+                        Image(systemName: "heart.fill")
+                            .foregroundStyle(.red)
+                    }
+                }
                 Text(pose.sanskritName)
                     .font(.subheadline)
                     .foregroundStyle(.gray)
