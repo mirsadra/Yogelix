@@ -23,6 +23,7 @@ struct UserProfileView: View {
                         HStack {
                             Spacer()
                             ProfilePicImage()
+                                .frame(width: 140, height: 140)
                             Spacer()
                         }
                     }

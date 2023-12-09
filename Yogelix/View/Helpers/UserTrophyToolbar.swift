@@ -35,6 +35,7 @@ struct UserTrophyToolbar: View {
                 
                 HStack {
                     ProfilePicImage()
+                        .frame(width: 50, height: 50)
                     
                     Text("\(greeting()), \(firstName())")
                         .font(.custom("LuckiestGuy-Regular", size: 18))

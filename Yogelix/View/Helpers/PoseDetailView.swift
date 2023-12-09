@@ -8,14 +8,16 @@ struct PoseDetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
                 CircleImage(image: pose.image)
-                    .offset(x: 60)
-                    .aspectRatio(contentMode: .fit)
-                    .animation(.bouncy, value: 1.5)
-                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 Divider()
-                Text("English Name: \(pose.englishName)")
-                Divider()
-                Text("Sanskrit Name: \(pose.sanskritName)")
+                Text("\(pose.englishName)")
+                    .font(.title2) // Make the font larger and more prominent
+                    .fontWeight(.bold) // Increase the weight of the font to make it stand out
+                    .padding(.vertical, 5) // Add some padding to give it room to breathe
+                Text("\(pose.sanskritName)")
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.gray)
                 Divider()
                 Text("Difficulty: \(pose.difficulty)")
                 Divider()
