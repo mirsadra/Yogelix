@@ -86,5 +86,5 @@ fileprivate struct ScrollViewHelper: UIViewRepresentable {
 }
 
 #Preview {
-    MainScrollView()
+    ChakraScrollView()
 }

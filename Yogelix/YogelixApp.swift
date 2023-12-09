@@ -15,15 +15,20 @@ struct YogelixApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var authViewModel = AuthenticationViewModel()
     @StateObject var quantityViewModel = QuantityDataViewModel()
-    @StateObject var modelData = ModelData()
+    @StateObject var poseViewModel = PoseViewModel()
+    @StateObject var workoutDataViewModel = WorkoutDataViewModel()
     
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 ContentView()
                     .environmentObject(authViewModel)
-                    .environmentObject(modelData)
+                    .environmentObject(poseViewModel)
                     .environmentObject(quantityViewModel)
+                    .environmentObject(workoutDataViewModel)
+                    .onAppear {
+                        authViewModel.initializeDailyChallengeManager(poseViewModel: poseViewModel)
+                    }
             }
             .navigationTitle("Yogel🛸 Main")
         }

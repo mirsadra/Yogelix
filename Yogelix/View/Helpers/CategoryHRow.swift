@@ -21,10 +21,7 @@ struct CategoryHRow: View {
 
 struct CategoryHRow_Previews: PreviewProvider {
     static var previews: some View {
-        let modelData = ModelData()
-        if let firstCategory = modelData.categories.first?.value.first {
-            CategoryHRow(pose: firstCategory)
-                .previewLayout(.fixed(width: 400, height: 120))
-        }
+        let poseViewModel = PoseViewModel()
+
     }
 }

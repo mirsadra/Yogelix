@@ -11,13 +11,10 @@ struct Pose: Hashable, Codable, Identifiable {
     var benefits: [String]
     var precautions: [String]
     var level: String
-    
-    
     private var imageName: String
     var image: Image {
         Image(imageName)
     }
-    
     var isFavorite: Bool
     var relatedChakras: [Int]
     var recommendedFor: RecommendedFor
@@ -48,31 +45,9 @@ struct ChakraDetail: Hashable, Codable, Identifiable {
     var location: String
     var focus: [String]
     var color: String
-}
-
-// MARK: - Extensions
-extension Pose {
-    var formattedMetadata: String {
-        metadata.joined(separator: ", ")
-    }
-    
-    var formattedBenefits: String {
-        benefits.joined(separator: ",")
-    }
-}
-
-// Add extension for ChakraDetail if you want formatted data or computed properties.
-extension ChakraDetail {
-    var formattedFocus: String {
-        focus.joined(separator: ", ")
-    }
-}
-
-extension Pose {
-    func getChakraDetails() -> [ChakraDetail] {
-        return chakraDetails.filter { chakraDetail in
-            relatedChakras.contains(chakraDetail.id)
-        }
+    private var imageName: String
+    var image: Image {
+        Image(imageName)
     }
 }
 

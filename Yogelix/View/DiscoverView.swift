@@ -2,29 +2,14 @@
 import SwiftUI
 
 struct DiscoverView: View {
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var poseViewModel: PoseViewModel
     
     var body: some View {
         NavigationSplitView {
+            ChakraScrollView()
             List {
-                ScrollView(.horizontal) {
-                    NavigationLink {
-                        
-                        Text("😵‍")
-                            .navigationTitle("Destination is Here")
-                    } label: {
-                        HStack {
-                            Text("Tap to Navigate")
-                            Spacer()
-                            Image(systemName: "arrow.forward.circle")
-                                .font(.largeTitle)
-                        }
-                        .frame(width: 6, height: 44)
-                    }
-                    
-                }
+
             }
-            
         } detail: {
             Text("Select")
         }
@@ -33,5 +18,5 @@ struct DiscoverView: View {
 
 #Preview {
     DiscoverView()
-        .environmentObject(ModelData())
+        .environmentObject(PoseViewModel())
 }

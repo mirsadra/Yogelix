@@ -7,10 +7,12 @@ class DailyChallengeManager: ObservableObject {
     private var poses: [Pose]
     private let calendar = Calendar.current
     private let userData: UserData  // Reference to UserData to update achievements
+    private var poseViewModel: PoseViewModel
 
-    init(poses: [Pose], userData: UserData) {
+    init(poses: [Pose], userData: UserData, poseViewModel: PoseViewModel) {  // Modify this
         self.poses = poses
         self.userData = userData
+        self.poseViewModel = poseViewModel  // Add this
         loadChallenge()
     }
 
@@ -23,12 +25,14 @@ class DailyChallengeManager: ObservableObject {
                 self.currentChallenge = poses.first { $0.id == savedPoseId }
             }
         }
+        poseViewModel.currentPoseOfTheDay = currentChallenge
     }
 
     private func selectNewChallenge() {
         currentChallenge = poses.randomElement()
         saveChallenge()
     }
+
 
     private func saveChallenge() {
         if let challengeId = currentChallenge?.id {

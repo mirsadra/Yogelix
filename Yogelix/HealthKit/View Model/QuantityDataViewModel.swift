@@ -3,7 +3,6 @@ import Foundation
 import CoreData
 
 class QuantityDataViewModel: ObservableObject {
-    
     private var quantityTypeManager = QuantityTypeManager()
     
     // MARK: - Properties for storing processed data

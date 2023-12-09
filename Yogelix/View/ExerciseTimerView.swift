@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ExerciseTimerView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @EnvironmentObject var modelData : ModelData
+    @EnvironmentObject var poseViewModel : PoseViewModel
     
     var body: some View {
         VStack {
@@ -40,5 +40,5 @@ struct ExerciseTimerView: View {
 #Preview {
     ExerciseTimerView()
         .environmentObject(AuthenticationViewModel())
-        .environmentObject(ModelData())
+        .environmentObject(PoseViewModel())
 }

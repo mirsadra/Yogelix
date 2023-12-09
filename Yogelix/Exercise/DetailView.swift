@@ -86,7 +86,7 @@ struct CircleProgressView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(pose: ModelData().poses[0])
+            DetailView(pose: PoseViewModel().poses[0])
         }
     }
 }

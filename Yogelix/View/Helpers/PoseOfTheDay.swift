@@ -1,10 +1,9 @@
-// PoseOfTheDay.
+// PoseOfTheDay.swift
 import SwiftUI
 
 struct PoseOfTheDay: View {
-    @EnvironmentObject var modelData : ModelData
-
-    @StateObject var challengeManager: DailyChallengeManager
+    @EnvironmentObject var poseViewModel : PoseViewModel
+    @EnvironmentObject var challengeManager: DailyChallengeManager
     
     var body: some View {
         ZStack {
@@ -31,18 +30,33 @@ struct PoseOfTheDay: View {
                                 .font(.headline)
                                 .foregroundColor(.white)
                             Spacer()
-                            NavigationLink(destination: PoseDetail(pose: pose).environmentObject(modelData)) {
-                                Image(systemName: "info.circle")
-                                    .resizable()
-                                    .frame(width: 24, height: 24)
-                                    .foregroundColor(.white)
+                            VStack {
+                                NavigationLink(destination: PoseDetail(pose: pose).environmentObject(poseViewModel)) {
+                                    Image(systemName: "info.circle")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                                        .foregroundColor(.white)
+                                }
+                                
+//                                NavigationLink(destination: LogYogaExerciseView()) {
+//                                    Image(systemName: "flame.circle.fill")
+//                                        .resizable()
+//                                        .frame(width: 24, height: 24)
+//                                        .foregroundColor(.red)
+//                                }
+                                
+                                NavigationLink(destination: LogYogaExerciseView().environmentObject(poseViewModel)) {
+                                    Image(systemName: "flame.circle.fill")
+                                        .resizable()
+                                        .frame(width: 24, height: 24)
+                                        .foregroundColor(.red)
+                                }
                             }
                         }
+                        
                         Text(pose.sanskritName)
                             .font(.subheadline)
                             .foregroundColor(.white.opacity(0.75))
-                        
-                        chakraSymbols(for: pose)
                         
                         recommendedInfo(for: pose)
                         
@@ -62,17 +76,8 @@ struct PoseOfTheDay: View {
         Image(systemName: pose.isFavorite ? "heart.fill" : "heart")
             .foregroundColor(pose.isFavorite ? .red : .white)
             .onTapGesture {
-                // Implement logic to toggle favorite status in modelData
+                // Implement logic to toggle favorite status in poseViewModel
             }
-    }
-    
-    private func chakraSymbols(for pose: Pose) -> some View {
-        HStack {
-            ForEach(pose.relatedChakras, id: \.self) { chakraID in
-                Text(modelData.uniqueChakras.first { $0.id == chakraID }?.element ?? "")
-                    .foregroundColor(.white)
-            }
-        }
     }
     
     private func recommendedInfo(for pose: Pose) -> some View {
@@ -96,10 +101,3 @@ private let dateFormatter: DateFormatter = {
     formatter.timeStyle = .none
     return formatter
 }()
-
-class Calculator {
-    func addNumbers(a: Int, b: Int) -> Int {
-        return a + b
-    }
-}
-

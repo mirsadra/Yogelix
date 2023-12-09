@@ -3,56 +3,54 @@ import SwiftUI
 import HealthKit
 
 struct LogYogaExerciseView: View {
-    // Replace this with your actual yoga poses
-    private let yogaPoses = ["Pose 1", "Pose 2", "Pose 3"]
-    @State private var selectedPose = "Pose 1"
+    @EnvironmentObject var poseViewModel: PoseViewModel
+    @EnvironmentObject var workoutDataViewModel: WorkoutDataViewModel
     @State private var durationInMinutes: Double = 30
     @State private var showingConfirmationAlert = false
 
-    // Use WorkoutDataViewModel
-    @StateObject private var workoutDataViewModel = WorkoutDataViewModel()
-
     var body: some View {
         VStack {
-            Text("Log Your Yoga Exercise")
-                .font(.headline)
+            if let currentChallenge = poseViewModel.currentPoseOfTheDay {
+                Text("Log Your Yoga Exercise for \(currentChallenge.englishName)")  // Display the current pose
+                    .font(.headline)
+                    .padding()
+
+                // Show additional details about the pose
+                Text("Sanskrit Name: \(currentChallenge.sanskritName)")
+                    .padding(.bottom)
+
+                // Duration Input
+                HStack {
+                    Text("Duration (minutes):")
+                    Spacer()
+                    TextField("Duration", value: $durationInMinutes, format: .number)
+                        .keyboardType(.numberPad)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(width: 100)
+                }
                 .padding()
 
-            // Yoga Pose Picker
-            Picker("Select Yoga Pose", selection: $selectedPose) {
-                ForEach(yogaPoses, id: \.self) {
-                    Text($0)
+                // Save Button
+                Button("Save to Health App") {
+                    saveYogaWorkout(pose: currentChallenge)
                 }
-            }
-            .padding()
-
-            // Duration Input
-            HStack {
-                Text("Duration (minutes):")
-                Spacer()
-                TextField("Duration", value: $durationInMinutes, format: .number)
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 100)
-            }
-            .padding()
-
-            // Save Button
-            Button("Save to Health App") {
-                saveYogaWorkout()
-            }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert("Workout Saved", isPresented: $showingConfirmationAlert) {
-                Button("OK", role: .cancel) {}
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+                .alert("Workout Saved", isPresented: $showingConfirmationAlert) {
+                    Button("OK", role: .cancel) {}
+                }
+            } else {
+                Text("No pose of the day available.")
+                    .font(.headline)
+                    .padding()
             }
         }
         .padding()
     }
 
-    private func saveYogaWorkout() {
+    private func saveYogaWorkout(pose: Pose) {
         let startDate = Date()
         let endDate = Calendar.current.date(byAdding: .minute, value: Int(durationInMinutes), to: startDate)!
 
@@ -67,6 +65,10 @@ struct LogYogaExerciseView: View {
 
 struct LogYogaExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        LogYogaExerciseView()
+        return LogYogaExerciseView()
+            .environmentObject(PoseViewModel())
+            .environmentObject(WorkoutDataViewModel())
     }
 }
+
+

@@ -8,7 +8,7 @@ struct CircleImage: View {
         
         image
             .resizable()
-            .frame(width: 150, height: 150)
+            .frame(width: 200, height: 200)
             .clipShape(Circle())
             .overlay {
                 Circle().stroke(.white, lineWidth: 4)

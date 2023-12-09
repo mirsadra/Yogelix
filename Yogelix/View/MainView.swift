@@ -4,14 +4,17 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var viewModel : QuantityDataViewModel
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @EnvironmentObject var modelData : ModelData
-    
+    @EnvironmentObject var poseViewModel : PoseViewModel
+    @EnvironmentObject var challengeManager: DailyChallengeManager
     
     var body: some View {
         NavigationView {
             VStack {
                 UserTrophyToolbar()
                     .ignoresSafeArea()
+                
+                PoseOfTheDay()
+                    .padding()
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
@@ -43,10 +46,6 @@ struct MainView: View {
                 
                 Spacer()
                 
-//                if let userData = authViewModel.userData {
-//                    PoseOfTheDay(modelData: modelData)
-//                        .padding()
-//                }
             }
         }
         .navigationTitle("Main")
@@ -56,9 +55,9 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        return MainView()
             .environmentObject(QuantityDataViewModel())
             .environmentObject(AuthenticationViewModel())
-            .environmentObject(ModelData())
     }
 }
+

@@ -25,6 +25,7 @@ class AuthenticationViewModel: ObservableObject {
     @Published var profilePicUrl: String = ""
     
     @Published var userData: UserData?
+    @Published var dailyChallengeManager: DailyChallengeManager?
     
     private var currentNonce: String?
     
@@ -39,15 +40,18 @@ class AuthenticationViewModel: ObservableObject {
     // To make sure if the user has an account, the user will be redirected
     func registerAuthStateHandler() {
         if authStateHandler == nil {
-            authStateHandler = Auth.auth().addStateDidChangeListener { auth, user in
-                self.user = user
-                self.authenticationState = user == nil ? .unauthenticated : .authenticated
-                self.displayName = user?.email ?? ""
-                
+            authStateHandler = Auth.auth().addStateDidChangeListener { [weak self] auth, user in
+                self?.user = user
                 if let user = user {
-                    self.userData = UserData(userId: user.uid)
+                    // User is authenticated
+                    self?.authenticationState = .authenticated
+                    self?.displayName = user.email ?? ""
+                    self?.userData = UserData(userId: user.uid)  // Initialize UserData here
+                } else {
+                    // User is not authenticated
+                    self?.authenticationState = .unauthenticated
+                    self?.userData = nil  // Reset UserData
                 }
-                
             }
         }
     }
@@ -77,6 +81,16 @@ class AuthenticationViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
+    
+    // Call this method after the user is successfully authenticated
+    func initializeDailyChallengeManager(poseViewModel: PoseViewModel) {
+        guard let user = Auth.auth().currentUser else { return }
+        let userData = UserData(userId: user.uid)
+        dailyChallengeManager = DailyChallengeManager(poses: poseViewModel.poses, userData: userData, poseViewModel: poseViewModel)
+    }
+
+
     
     // Fetch user data from Firestore
     func fetchUserProfile() async {

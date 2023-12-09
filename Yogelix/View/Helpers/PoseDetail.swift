@@ -2,11 +2,11 @@
 import SwiftUI
 
 struct PoseDetail: View {
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var poseViewModel: PoseViewModel
     var pose: Pose
     
     var poseIndex: Int {
-        modelData.poses.firstIndex(where: { $0.id == pose.id })!
+        poseViewModel.poses.firstIndex(where: { $0.id == pose.id })!
     }
     
     var body: some View {
@@ -36,18 +36,14 @@ struct PoseDetail: View {
                     Text(pose.englishName)
                         .font(.title)
                     Spacer()
-                    FavoriteButton(isSet: $modelData.poses[poseIndex].isFavorite)
+                    FavoriteButton(isSet: $poseViewModel.poses[poseIndex].isFavorite)
                 }
                 
                 Divider()
                 
                 Text("About \(pose.englishName)")
                     .font(.title2)
-                Text(pose.formattedMetadata)
-                    .font(.body)
                 
-                Text(pose.formattedBenefits)
-                    .font(.body)
                 
 
             }
@@ -61,10 +57,10 @@ struct PoseDetail: View {
 }
 
 struct PoseDetail_Previews: PreviewProvider {
-    static let modelData = ModelData()
+    static let poseViewModel = PoseViewModel()
     
     static var previews: some View {
-        PoseDetail(pose: ModelData().poses[0])
-            .environmentObject(modelData)
+        PoseDetail(pose: PoseViewModel().poses[0])
+            .environmentObject(PoseViewModel())
     }
 }
