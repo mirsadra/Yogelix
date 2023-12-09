@@ -9,6 +9,6 @@ struct Achievement: Identifiable, Hashable {
     var progress: Double
     var trophy: TrophyType
     var color: Color
+    var relatedExercise: DailyExercise?
 }
-
 

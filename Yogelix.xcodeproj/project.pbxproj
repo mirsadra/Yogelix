@@ -19,7 +19,6 @@
 		3B2125D22B121D2600B3E0BE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125D12B121D2600B3E0BE /* FirebaseFirestoreSwift */; };
 		3B2125DA2B121D9300B3E0BE /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125D92B121D9300B3E0BE /* FirebaseRemoteConfig */; };
 		3B2125DC2B121D9300B3E0BE /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125DB2B121D9300B3E0BE /* FirebaseRemoteConfigSwift */; };
-		3B225B812B2483E800D7E748 /* PoseNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B225B802B2483E800D7E748 /* PoseNavi.swift */; };
 		3B225B832B24871200D7E748 /* PoseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B225B822B24871200D7E748 /* PoseDetailView.swift */; };
 		3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */; };
 		3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */; };
@@ -46,11 +45,10 @@
 		3B9A56A72B23AF3200E2246F /* RecommendationPosesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A56A62B23AF3200E2246F /* RecommendationPosesView.swift */; };
 		3B9A56A92B23B98F00E2246F /* updated_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A56A82B23B98F00E2246F /* updated_data.json */; };
 		3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */; };
-		3B9DA82A2B0EAC7C00480621 /* DailyPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8292B0EAC7C00480621 /* DailyPractice.swift */; };
+		3B9DA82A2B0EAC7C00480621 /* DailyExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8292B0EAC7C00480621 /* DailyExercise.swift */; };
 		3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82B2B0EAF6D00480621 /* Theme.swift */; };
 		3B9DA82E2B0EAFE500480621 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82D2B0EAFE500480621 /* CardView.swift */; };
 		3B9DA8302B0EB3FC00480621 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */; };
-		3B9DA8322B0EBE8100480621 /* DailyExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */; };
 		3BA2F0CE2B1CFA83001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */; };
 		3BA2F0D32B1CFAE3001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CF2B1CFAE3001AE1F7 /* HeartRateModel.swift */; };
 		3BA2F0D52B1CFAE3001AE1F7 /* SleepAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0D12B1CFAE3001AE1F7 /* SleepAnalysisModel.swift */; };
@@ -101,6 +99,7 @@
 		3BE4A85B2B1B76D9007611D8 /* CategoryTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A85A2B1B76D8007611D8 /* CategoryTypeManager.swift */; };
 		3BE4A8602B1B7CC0007611D8 /* MindfulSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A85F2B1B7CC0007611D8 /* MindfulSessionModel.swift */; };
 		3BE4A8632B1B7EAF007611D8 /* CategoryDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A8622B1B7EAE007611D8 /* CategoryDataViewModel.swift */; };
+		3BED82712B2502FD00141F88 /* YogaWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED82702B2502FD00141F88 /* YogaWorkoutView.swift */; };
 		3BF547762B155DC10073BD18 /* ChakraScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF547752B155DC10073BD18 /* ChakraScrollView.swift */; };
 		3BF547782B155EDE0073BD18 /* LoopingScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF547772B155EDE0073BD18 /* LoopingScroll.swift */; };
 /* End PBXBuildFile section */
@@ -149,7 +148,6 @@
 		3B1962572B1916C800A7C894 /* PoseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseList.swift; sourceTree = "<group>"; };
 		3B1962592B191B3800A7C894 /* PoseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDetail.swift; sourceTree = "<group>"; };
 		3B19625B2B191D8300A7C894 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
-		3B225B802B2483E800D7E748 /* PoseNavi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNavi.swift; sourceTree = "<group>"; };
 		3B225B822B24871200D7E748 /* PoseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDetailView.swift; sourceTree = "<group>"; };
 		3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -176,11 +174,10 @@
 		3B9A56A62B23AF3200E2246F /* RecommendationPosesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationPosesView.swift; sourceTree = "<group>"; };
 		3B9A56A82B23B98F00E2246F /* updated_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = updated_data.json; sourceTree = "<group>"; };
 		3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTimerView.swift; sourceTree = "<group>"; };
-		3B9DA8292B0EAC7C00480621 /* DailyPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPractice.swift; sourceTree = "<group>"; };
+		3B9DA8292B0EAC7C00480621 /* DailyExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExercise.swift; sourceTree = "<group>"; };
 		3B9DA82B2B0EAF6D00480621 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		3B9DA82D2B0EAFE500480621 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
-		3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExerciseView.swift; sourceTree = "<group>"; };
 		3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
 		3BA2F0CF2B1CFAE3001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
 		3BA2F0D12B1CFAE3001AE1F7 /* SleepAnalysisModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepAnalysisModel.swift; sourceTree = "<group>"; };
@@ -236,6 +233,7 @@
 		3BE4A85A2B1B76D8007611D8 /* CategoryTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTypeManager.swift; sourceTree = "<group>"; };
 		3BE4A85F2B1B7CC0007611D8 /* MindfulSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulSessionModel.swift; sourceTree = "<group>"; };
 		3BE4A8622B1B7EAE007611D8 /* CategoryDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataViewModel.swift; sourceTree = "<group>"; };
+		3BED82702B2502FD00141F88 /* YogaWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaWorkoutView.swift; sourceTree = "<group>"; };
 		3BF547752B155DC10073BD18 /* ChakraScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChakraScrollView.swift; sourceTree = "<group>"; };
 		3BF547772B155EDE0073BD18 /* LoopingScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -456,7 +454,7 @@
 			children = (
 				3B5C59E22B1902FE00283244 /* Pose.swift */,
 				3BD9BBB02B20E48300BF7949 /* Achievement.swift */,
-				3B9DA8292B0EAC7C00480621 /* DailyPractice.swift */,
+				3B9DA8292B0EAC7C00480621 /* DailyExercise.swift */,
 				3BE4A8572B1B3342007611D8 /* WorkoutTypeManager.swift */,
 				3BD9BBAE2B20D6A900BF7949 /* NotificationManager.swift */,
 				3BD9BBAB2B20D64C00BF7949 /* SocialMediaSharing.swift */,
@@ -479,11 +477,11 @@
 				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
 				3BDA657A2B1FCD3900177735 /* AchievementView.swift */,
 				3BF547752B155DC10073BD18 /* ChakraScrollView.swift */,
-				3B9DA8312B0EBE8100480621 /* DailyExerciseView.swift */,
 				3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */,
 				3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */,
 				3B331DAF2B213ED600DAF0E2 /* LogYogaExerciseView.swift */,
 				3B9A56A62B23AF3200E2246F /* RecommendationPosesView.swift */,
+				3BED82702B2502FD00141F88 /* YogaWorkoutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -512,7 +510,6 @@
 				3B40A37C2B12B43000170041 /* MetricCard.swift */,
 				3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */,
 				3BDA65782B1FCD2800177735 /* TrophyView.swift */,
-				3B225B802B2483E800D7E748 /* PoseNavi.swift */,
 				3B225B822B24871200D7E748 /* PoseDetailView.swift */,
 			);
 			path = Helpers;
@@ -706,7 +703,6 @@
 				3BE4A8562B1B2E73007611D8 /* QuantityTypeManager.swift in Sources */,
 				3B331DA32B21381600DAF0E2 /* ManageSubscriptionView.swift in Sources */,
 				3B19625C2B191D8300A7C894 /* CircleImage.swift in Sources */,
-				3B9DA8322B0EBE8100480621 /* DailyExerciseView.swift in Sources */,
 				3BA2F0D52B1CFAE3001AE1F7 /* SleepAnalysisModel.swift in Sources */,
 				3B331DAD2B213A6000DAF0E2 /* TermsOfUseView.swift in Sources */,
 				3B331DA92B21399E00DAF0E2 /* AppleHealthView.swift in Sources */,
@@ -725,6 +721,7 @@
 				3B331DA52B21385D00DAF0E2 /* RestorePurchaseView.swift in Sources */,
 				3B225B832B24871200D7E748 /* PoseDetailView.swift in Sources */,
 				3BF547762B155DC10073BD18 /* ChakraScrollView.swift in Sources */,
+				3BED82712B2502FD00141F88 /* YogaWorkoutView.swift in Sources */,
 				3B9DA8302B0EB3FC00480621 /* TrailingIconLabelStyle.swift in Sources */,
 				3BD2CCC42B1BA6C500DD5C7E /* ActivityRings.swift in Sources */,
 				3BA4A6352B0D4FDF0032936E /* UserData.swift in Sources */,
@@ -732,7 +729,6 @@
 				3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */,
 				3BE4A8632B1B7EAF007611D8 /* CategoryDataViewModel.swift in Sources */,
 				3B9DA82E2B0EAFE500480621 /* CardView.swift in Sources */,
-				3B225B812B2483E800D7E748 /* PoseNavi.swift in Sources */,
 				3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */,
 				3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */,
 				3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */,
@@ -744,7 +740,7 @@
 				3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */,
 				3B9A56A72B23AF3200E2246F /* RecommendationPosesView.swift in Sources */,
 				3B51EBEF2B1D306B00BB3B7D /* HKQueryOptions.swift in Sources */,
-				3B9DA82A2B0EAC7C00480621 /* DailyPractice.swift in Sources */,
+				3B9DA82A2B0EAC7C00480621 /* DailyExercise.swift in Sources */,
 				3BD91F1F2B16876F00D9218E /* Ring.swift in Sources */,
 				3BD2CCBB2B1B8D7400DD5C7E /* QuantityDataViewModel.swift in Sources */,
 				3BD2CCC62B1BA83800DD5C7E /* WorkoutSummaryCard.swift in Sources */,

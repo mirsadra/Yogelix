@@ -28,9 +28,7 @@ class AuthenticationViewModel: ObservableObject {
     @Published var dailyChallengeManager: DailyChallengeManager?
     
     private var currentNonce: String?
-    
-    
-    
+
     init() {
         registerAuthStateHandler()
         verifySignInWithAppleAuthenticationState()
@@ -90,8 +88,6 @@ class AuthenticationViewModel: ObservableObject {
         dailyChallengeManager = DailyChallengeManager(poses: poseViewModel.poses, userData: userData, poseViewModel: poseViewModel)
     }
 
-
-    
     // Fetch user data from Firestore
     func fetchUserProfile() async {
         guard let uid = Auth.auth().currentUser?.uid else { return }

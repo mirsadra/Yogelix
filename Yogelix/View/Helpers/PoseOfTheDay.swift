@@ -20,48 +20,33 @@ struct PoseOfTheDay: View {
                     )
                 
                 VStack {
-                    CircleImage(image: pose.image)
-                        .offset(y: -130)
-                        .padding(.bottom, -130)
-                    
-                    VStack(alignment: .leading) {
-                        HStack {
-                            Text(pose.englishName)
-                                .font(.headline)
+                    HStack {
+                        NavigationLink(destination: PoseDetail(pose: pose).environmentObject(poseViewModel)) {
+                            Image(systemName: "info.circle")
+                                .resizable()
+                                .frame(width: 24, height: 24)
                                 .foregroundColor(.white)
-                            Spacer()
-                            VStack {
-                                NavigationLink(destination: PoseDetail(pose: pose).environmentObject(poseViewModel)) {
-                                    Image(systemName: "info.circle")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                                        .foregroundColor(.white)
-                                }
-                                
-//                                NavigationLink(destination: LogYogaExerciseView()) {
-//                                    Image(systemName: "flame.circle.fill")
-//                                        .resizable()
-//                                        .frame(width: 24, height: 24)
-//                                        .foregroundColor(.red)
-//                                }
-                                
-                                NavigationLink(destination: LogYogaExerciseView().environmentObject(poseViewModel)) {
-                                    Image(systemName: "flame.circle.fill")
-                                        .resizable()
-                                        .frame(width: 24, height: 24)
-                                        .foregroundColor(.red)
-                                }
-                            }
+                                .padding()
                         }
                         
-                        Text(pose.sanskritName)
-                            .font(.subheadline)
-                            .foregroundColor(.white.opacity(0.75))
+                        CircleImage(image: pose.image)
+                            .offset(y: -40)
                         
-                        recommendedInfo(for: pose)
-                        
+                        NavigationLink(destination: LogYogaExerciseView().environmentObject(poseViewModel)) {
+                            Image(systemName: "flame")
+                                .resizable()
+                                .frame(width: 20, height: 24)
+                                .foregroundColor(.white)
+                                .padding()
+                        }
                     }
-                    .padding([.bottom, .horizontal])
+                    
+                    Text(pose.englishName)
+                        .font(.headline)
+                        .foregroundColor(.white)
+
+                    recommendedInfo(for: pose)
+                        .padding(.bottom, 80)
                 }
             }
         }
@@ -101,3 +86,5 @@ private let dateFormatter: DateFormatter = {
     formatter.timeStyle = .none
     return formatter
 }()
+
+

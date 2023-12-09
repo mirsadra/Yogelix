@@ -7,7 +7,6 @@ struct ProfilePicImage: View {
     @State private var showImagePicker = false
     @State var color = Color.primary
     @State private var imageDataToUpload: Data?
-    
 
     func uploadImage() {
         showImagePicker = true
