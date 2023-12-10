@@ -83,7 +83,6 @@
 		3BD9BBB12B20E48300BF7949 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BBB02B20E48300BF7949 /* Achievement.swift */; };
 		3BDA65712B1F38DF00177735 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDA65702B1F38DF00177735 /* GoogleSignIn */; };
 		3BDA65732B1F38DF00177735 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3BDA65722B1F38DF00177735 /* GoogleSignInSwift */; };
-		3BDA65752B1F39F700177735 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BDA65742B1F39F700177735 /* GoogleService-Info.plist */; };
 		3BDA65772B1FB43400177735 /* PoseOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */; };
 		3BDA65792B1FCD2800177735 /* TrophyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA65782B1FCD2800177735 /* TrophyView.swift */; };
 		3BDA657B2B1FCD3900177735 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA657A2B1FCD3900177735 /* AchievementView.swift */; };
@@ -91,6 +90,7 @@
 		3BDFE13C2B026C21007FB23E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13B2B026C21007FB23E /* ImagePicker.swift */; };
 		3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13D2B026C2B007FB23E /* SessionController.swift */; };
 		3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE08DE22B175273002D585A /* fine-tune.jsonl */; };
+		3BE252B42B26106C00AABE82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE252B32B26106C00AABE82 /* GoogleService-Info.plist */; };
 		3BE4A8202B1A15AC007611D8 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */; };
 		3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */; };
 		3BE4A8422B1A607C007611D8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A8412B1A607C007611D8 /* ChatView.swift */; };
@@ -218,7 +218,6 @@
 		3BD9BBAB2B20D64C00BF7949 /* SocialMediaSharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaSharing.swift; sourceTree = "<group>"; };
 		3BD9BBAE2B20D6A900BF7949 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		3BD9BBB02B20E48300BF7949 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
-		3BDA65742B1F39F700177735 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseOfTheDay.swift; sourceTree = "<group>"; };
 		3BDA65782B1FCD2800177735 /* TrophyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrophyView.swift; sourceTree = "<group>"; };
 		3BDA657A2B1FCD3900177735 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
@@ -226,6 +225,7 @@
 		3BDFE13B2B026C21007FB23E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3BDFE13D2B026C2B007FB23E /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		3BE08DE22B175273002D585A /* fine-tune.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = "fine-tune.jsonl"; sourceTree = "<group>"; };
+		3BE252B32B26106C00AABE82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIApiClient.swift; sourceTree = "<group>"; };
 		3BE4A8412B1A607C007611D8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -424,7 +424,7 @@
 				3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */,
 				3BA33C912B1E533800DF80F6 /* LuckiestGuy-Regular.ttf */,
 				3BCC04CF2B01901500FD1FC3 /* Persistence.swift */,
-				3BDA65742B1F39F700177735 /* GoogleService-Info.plist */,
+				3BE252B32B26106C00AABE82 /* GoogleService-Info.plist */,
 				3BCC04D42B01901500FD1FC3 /* Yogelix.entitlements */,
 				3BCC04D52B01901500FD1FC3 /* Info.plist */,
 				3BCC04D12B01901500FD1FC3 /* Yogelix.xcdatamodeld */,
@@ -662,7 +662,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BDA65752B1F39F700177735 /* GoogleService-Info.plist in Resources */,
+				3BE252B42B26106C00AABE82 /* GoogleService-Info.plist in Resources */,
 				3BD9BBA62B20CA1000BF7949 /* data.json in Resources */,
 				3BA33C922B1E533800DF80F6 /* LuckiestGuy-Regular.ttf in Resources */,
 				3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */,
