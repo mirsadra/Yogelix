@@ -78,7 +78,6 @@ struct PoseDetailView: View {
                         .fontWeight(.bold) // Increase the weight of the font to make it stand out
                         .padding(.vertical, 5) // Add some padding to give it room to breathe
                     FavoriteButton(isSet: $poseViewModel.poses[poseIndex].isFavorite) // Pose is favorite or not
-                        .environmentObject(PoseViewModel())
                 }
                 Text("\(pose.sanskritName)")
                     .font(.subheadline)
@@ -200,5 +199,6 @@ struct PoseDetailView: View {
             .padding()
         }
         .navigationBarTitle(pose.englishName, displayMode: .inline)
+        .environmentObject(PoseViewModel())
     }
 }

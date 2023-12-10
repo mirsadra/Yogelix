@@ -10,7 +10,7 @@ struct MetadataScrollView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(MetadataCategory.allCases.prefix(MetadataCategory.allCases.count / 2), id: \.self) { metadataCategory in
-                            NavigationLink(destination: MetadataPosesView(metadataCategory: metadataCategory, poses: filteredPoses(for: metadataCategory))) {
+                            NavigationLink(destination: MetadataPosesView(metadataCategory: metadataCategory, poses: filteredPoses(for: metadataCategory)).environmentObject(poseViewModel)) {
                                 MetadataCard(metadataCategory: metadataCategory)
                             }
                         }
@@ -21,7 +21,7 @@ struct MetadataScrollView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
                         ForEach(MetadataCategory.allCases.suffix(MetadataCategory.allCases.count / 2), id: \.self) { metadataCategory in
-                            NavigationLink(destination: MetadataPosesView(metadataCategory: metadataCategory, poses: filteredPoses(for: metadataCategory))) {
+                            NavigationLink(destination: MetadataPosesView(metadataCategory: metadataCategory, poses: filteredPoses(for: metadataCategory)).environmentObject(poseViewModel)) {
                                 MetadataCard(metadataCategory: metadataCategory)
                             }
                         }
@@ -58,10 +58,11 @@ struct MetadataCard: View {
 struct MetadataPosesView: View {
     var metadataCategory: MetadataCategory
     var poses: [Pose]
+    @EnvironmentObject var poseViewModel: PoseViewModel
     
     var body: some View {
         List(poses, id: \.id) { pose in
-            NavigationLink(destination: PoseDetailView(pose: pose)) {
+            NavigationLink(destination: PoseDetailView(pose: pose).environmentObject(poseViewModel)) {
                 VStack(alignment: .leading) {
                     HStack {
                         pose.image

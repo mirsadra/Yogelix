@@ -51,7 +51,7 @@ struct PoseOfTheDay: View {
                 }
             }
         }
-        
+        .environmentObject(challengeManager)
         .onAppear {
             challengeManager.loadChallenge()
         }

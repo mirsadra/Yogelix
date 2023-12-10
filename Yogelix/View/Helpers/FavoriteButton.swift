@@ -2,6 +2,7 @@
 import SwiftUI
 
 struct FavoriteButton: View {
+    
     @Binding var isSet: Bool
     
     var body: some View {

@@ -91,6 +91,7 @@
 		3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13D2B026C2B007FB23E /* SessionController.swift */; };
 		3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE08DE22B175273002D585A /* fine-tune.jsonl */; };
 		3BE252B42B26106C00AABE82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE252B32B26106C00AABE82 /* GoogleService-Info.plist */; };
+		3BE252B62B2636B400AABE82 /* ManageSubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE252B52B2636B400AABE82 /* ManageSubscriptionViewModel.swift */; };
 		3BE4A8202B1A15AC007611D8 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */; };
 		3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */; };
 		3BE4A8422B1A607C007611D8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A8412B1A607C007611D8 /* ChatView.swift */; };
@@ -226,6 +227,7 @@
 		3BDFE13D2B026C2B007FB23E /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		3BE08DE22B175273002D585A /* fine-tune.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = "fine-tune.jsonl"; sourceTree = "<group>"; };
 		3BE252B32B26106C00AABE82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3BE252B52B2636B400AABE82 /* ManageSubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionViewModel.swift; sourceTree = "<group>"; };
 		3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIApiClient.swift; sourceTree = "<group>"; };
 		3BE4A8412B1A607C007611D8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				3BD2CCBC2B1B90C800DD5C7E /* WorkoutDataViewModel.swift */,
 				3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */,
 				3BA4A6342B0D4FDF0032936E /* UserData.swift */,
+				3BE252B52B2636B400AABE82 /* ManageSubscriptionViewModel.swift */,
 			);
 			path = DataViewModel;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				3B331DAB2B2139E500DAF0E2 /* PrivacyPolicyView.swift in Sources */,
 				3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */,
 				3B40A37D2B12B43000170041 /* MetricCard.swift in Sources */,
+				3BE252B62B2636B400AABE82 /* ManageSubscriptionViewModel.swift in Sources */,
 				3B5C59E32B1902FE00283244 /* Pose.swift in Sources */,
 				3B2F5FFE2B1E151E0029EA14 /* AnimationSequence.swift in Sources */,
 				3BD9BBAC2B20D64C00BF7949 /* SocialMediaSharing.swift in Sources */,

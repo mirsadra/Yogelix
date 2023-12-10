@@ -71,6 +71,7 @@ class DailyChallengeManager: ObservableObject {
     }
 }
 
+
 enum TrophyType: String {
     case gold, silver, bronze
 }
