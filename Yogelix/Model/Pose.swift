@@ -6,6 +6,7 @@ struct Pose: Hashable, Codable, Identifiable {
     var id: Int
     var englishName: String
     var sanskritName: String
+    var steps: [Step]
     var metadata: [MetadataCategory]
     var difficulty: Int
     var benefits: [String]
@@ -19,6 +20,11 @@ struct Pose: Hashable, Codable, Identifiable {
     var relatedChakras: [Int]
     var recommendedFor: RecommendedFor
     var chakraDetails: [ChakraDetail]
+}
+
+struct Step: Hashable, Codable {
+    var name: String
+    var description: String
 }
 
 enum MetadataCategory: String, Codable, CaseIterable {

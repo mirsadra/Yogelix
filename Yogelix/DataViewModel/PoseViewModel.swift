@@ -18,6 +18,7 @@ final class PoseViewModel: ObservableObject {
         }
         
         guard let decoded = try? JSONDecoder().decode(T.self, from: data) else {
+
             fatalError("Couldn't parse \(filename) as \(T.self)")
         }
         return decoded

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>393531940418-44eotunt36vhhnqvnueal7snj0gma33f.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.393531940418-44eotunt36vhhnqvnueal7snj0gma33f</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAxjAj0ztOyumFDZ5fh0iI-lv1WhY2z6GA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>393531940418</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.chateth.Yogelix</string>
+	<key>PROJECT_ID</key>
+	<string>yogelix-c0c4d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>yogelix-c0c4d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:393531940418:ios:0563f3c940bab5b34bd7db</string>
+</dict>
+</plist>
