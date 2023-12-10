@@ -26,6 +26,8 @@ struct LoginView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(minHeight: 300, maxHeight: 400)
+            Text("Are you a Yogelixer?")
+                .font(.custom("LuckiestGuy-Regular", size: 22))
             Text("🛸")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -48,19 +50,22 @@ struct LoginView: View {
             
             // MARK: - Google Sign In
             Button(action: signInWithGoogle) {
-                Text("Sign in with Google")
-                
-                    .frame(width: 335, height: 22)
-                    .padding(.vertical, 8)
-                    .background(alignment: .leading) {
-                        Image("google")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24, alignment: .center)
-                    }
+                HStack {
+                    Image("google") // Your Google icon
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 18, height: 18)
+                    Text("Sign in with Google")
+                        .font(.system(size: 18))
+                        .bold()
+                        
+                }
+                .frame(width: 343, height: 50) // Set your desired frame size
+                .padding(.horizontal, 8) // Adjust padding as needed
             }
-            .buttonStyle(.bordered)
-            .foregroundStyle(colorScheme == .light ? .black : .white)
+            .background(colorScheme == .light ? .black : .white) // Set your desired background color here
+            .foregroundColor(.white) // Set the text color
+            .cornerRadius(8) // Optional, for rounded corners
         }
         .listStyle(.plain)
         .padding()

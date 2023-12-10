@@ -47,6 +47,7 @@ struct PoseOfTheDay: View {
 
                     recommendedInfo(for: pose)
                         .padding(.bottom, 80)
+                    
                 }
             }
         }
@@ -67,9 +68,9 @@ struct PoseOfTheDay: View {
     
     private func recommendedInfo(for pose: Pose) -> some View {
         VStack {
-            Text("Heart Rate: \(pose.recommendedFor.heartRate)")
-            Text("Energy Burned: \(pose.recommendedFor.activeEnergyBurned)")
-            Text("Exercise Minutes: \(pose.recommendedFor.exerciseMinutes)")
+            Text("Heart Rate: \(pose.recommendedFor.heartRate.rawValue)")
+            Text("Energy Burned: \(pose.recommendedFor.activeEnergyBurned.rawValue)")
+            Text("Exercise Minutes: \(pose.recommendedFor.exerciseMinutes.rawValue)")
         }
         .foregroundColor(.white)
     }
@@ -88,3 +89,18 @@ private let dateFormatter: DateFormatter = {
 }()
 
 
+extension View {
+    func snapshot() -> UIImage {
+        let controller = UIHostingController(rootView: self)
+        let view = controller.view
+
+        let targetSize = CGSize(width: 360, height: 260)
+        view?.bounds = CGRect(origin: .zero, size: targetSize)
+        view?.backgroundColor = .clear
+
+        let renderer = UIGraphicsImageRenderer(size: targetSize)
+        return renderer.image { _ in
+            view?.drawHierarchy(in: controller.view.bounds, afterScreenUpdates: true)
+        }
+    }
+}

@@ -3,7 +3,7 @@ import SwiftUI
 import Combine
 
 // My current PoseViewModel loads an array of Pose from the JSON file.
-class PoseViewModel: ObservableObject {
+final class PoseViewModel: ObservableObject {
     @Published var poses: [Pose] = []
     @Published var currentPoseOfTheDay: Pose?
 

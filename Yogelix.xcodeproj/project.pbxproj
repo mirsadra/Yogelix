@@ -49,6 +49,7 @@
 		3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82B2B0EAF6D00480621 /* Theme.swift */; };
 		3B9DA82E2B0EAFE500480621 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82D2B0EAFE500480621 /* CardView.swift */; };
 		3B9DA8302B0EB3FC00480621 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */; };
+		3BA0D7532B25CD4200C53055 /* MetadataScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */; };
 		3BA2F0CE2B1CFA83001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */; };
 		3BA2F0D32B1CFAE3001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CF2B1CFAE3001AE1F7 /* HeartRateModel.swift */; };
 		3BA2F0D52B1CFAE3001AE1F7 /* SleepAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0D12B1CFAE3001AE1F7 /* SleepAnalysisModel.swift */; };
@@ -178,6 +179,7 @@
 		3B9DA82B2B0EAF6D00480621 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		3B9DA82D2B0EAFE500480621 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3B9DA82F2B0EB3FC00480621 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataScrollView.swift; sourceTree = "<group>"; };
 		3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
 		3BA2F0CF2B1CFAE3001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
 		3BA2F0D12B1CFAE3001AE1F7 /* SleepAnalysisModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepAnalysisModel.swift; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
 				3BDA657A2B1FCD3900177735 /* AchievementView.swift */,
 				3BF547752B155DC10073BD18 /* ChakraScrollView.swift */,
+				3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */,
 				3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */,
 				3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */,
 				3B331DAF2B213ED600DAF0E2 /* LogYogaExerciseView.swift */,
@@ -720,6 +723,7 @@
 				3BA2F0CE2B1CFA83001AE1F7 /* HeartRateModel.swift in Sources */,
 				3B331DA52B21385D00DAF0E2 /* RestorePurchaseView.swift in Sources */,
 				3B225B832B24871200D7E748 /* PoseDetailView.swift in Sources */,
+				3BA0D7532B25CD4200C53055 /* MetadataScrollView.swift in Sources */,
 				3BF547762B155DC10073BD18 /* ChakraScrollView.swift in Sources */,
 				3BED82712B2502FD00141F88 /* YogaWorkoutView.swift in Sources */,
 				3B9DA8302B0EB3FC00480621 /* TrailingIconLabelStyle.swift in Sources */,

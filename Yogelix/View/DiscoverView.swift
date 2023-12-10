@@ -5,14 +5,13 @@ struct DiscoverView: View {
     @EnvironmentObject var poseViewModel: PoseViewModel
     
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             ChakraScrollView()
-            List {
-
-            }
-        } detail: {
-            Text("Select")
+            Spacer()
+            MetadataScrollView()
+            Spacer()
         }
+        .navigationTitle("Discover")
     }
 }
 
