@@ -17,4 +17,5 @@ struct FavoriteButton: View {
 
 #Preview {
     FavoriteButton(isSet: .constant(true))
+        .environmentObject(PoseViewModel())
 }

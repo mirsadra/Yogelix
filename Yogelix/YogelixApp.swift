@@ -10,7 +10,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
 }
 
-
 @main
 struct YogelixApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate

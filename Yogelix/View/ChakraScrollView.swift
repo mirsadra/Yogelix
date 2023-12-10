@@ -10,7 +10,7 @@ struct ChakraScrollView: View {
                 HStack(spacing: 10) {
                     ForEach(ChakraDetail.Category.allCases, id: \.self) { chakraCategory in
                         if let chakraDetail = self.getChakraDetail(for: chakraCategory) {
-                            NavigationLink(destination: ChakraPosesView(chakraCategory: chakraCategory, poses: filteredPoses(for: chakraCategory))) {
+                            NavigationLink(destination: ChakraPosesView(chakraCategory: chakraCategory, poses: filteredPoses(for: chakraCategory)).environmentObject(poseViewModel)) {
                                 ChakraCard(chakraCategory: chakraCategory, chakraDetail: chakraDetail)
                             }
                         }
@@ -64,10 +64,11 @@ struct ChakraCard: View {
 struct ChakraPosesView: View {
     var chakraCategory: ChakraDetail.Category
     var poses: [Pose]
-
+    @EnvironmentObject var poseViewModel: PoseViewModel
+    
     var body: some View {
         List(poses, id: \.id) { pose in
-            NavigationLink(destination: PoseDetailView(pose: pose)) {
+            NavigationLink(destination: PoseDetailView(pose: pose).environmentObject(poseViewModel)) {
                 VStack(alignment: .leading) {
                     HStack {
                         pose.image

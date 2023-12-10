@@ -16,6 +16,7 @@ struct PoseList: View {
             List(filteredPoses) { pose in
                 NavigationLink(destination: PoseDetailView(pose: pose)) {
                     PoseRow(pose: pose)
+                        .environmentObject(PoseViewModel())
                 }
             }
             .navigationTitle("Yoga Poses")
@@ -114,8 +115,6 @@ struct PoseRow: View {
                 }
 
             }
-            
-
         }
     }
 }

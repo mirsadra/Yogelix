@@ -21,7 +21,7 @@ struct PoseOfTheDay: View {
                 
                 VStack {
                     HStack {
-                        NavigationLink(destination: PoseDetail(pose: pose).environmentObject(poseViewModel)) {
+                        NavigationLink(destination: PoseDetailView(pose: pose).environmentObject(poseViewModel)) {
                             Image(systemName: "info.circle")
                                 .resizable()
                                 .frame(width: 24, height: 24)
