@@ -1,2 +1,0 @@
-//  UserChallengeParticipation.swift
-import Foundation
