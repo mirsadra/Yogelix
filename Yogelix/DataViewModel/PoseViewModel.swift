@@ -1,11 +1,12 @@
 // PoseViewModel.swift
 import SwiftUI
+import Foundation
 import Combine
 
 // My current PoseViewModel loads an array of Pose from the JSON file.
 final class PoseViewModel: ObservableObject {
     @Published var poses: [Pose] = []
-    @Published var currentPoseOfTheDay: Pose?
+    @Published var lastUpdated: Date?
 
     init() {
         self.poses = load("updated_data.json")
@@ -28,6 +29,8 @@ final class PoseViewModel: ObservableObject {
 struct YogaData: Codable {
     var poses: [Pose]
 }
+
+
 
 /*
 You can simply call it by: (but this doesn't work if you are loading a json file with an array.

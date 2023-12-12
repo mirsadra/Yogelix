@@ -17,7 +17,6 @@ struct YogelixApp: App {
     @StateObject var quantityViewModel = QuantityDataViewModel()
     @StateObject var poseViewModel = PoseViewModel()
     @StateObject var workoutDataViewModel = WorkoutDataViewModel()
-    @StateObject var userData = UserData(userId: "userId")
     
     var body: some Scene {
         WindowGroup {
@@ -27,10 +26,6 @@ struct YogelixApp: App {
                     .environmentObject(poseViewModel)
                     .environmentObject(quantityViewModel)
                     .environmentObject(workoutDataViewModel)
-                    .environmentObject(userData)
-                    .onAppear {
-                        authViewModel.initializeDailyChallengeManager(poseViewModel: poseViewModel)
-                    }
             }
             .navigationTitle("Yogel🛸 Main")
         }

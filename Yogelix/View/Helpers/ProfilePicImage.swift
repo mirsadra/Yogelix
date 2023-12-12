@@ -35,17 +35,19 @@ struct ProfilePicImage: View {
                     }
                 }
             } else {
-                Image(systemName: "person.crop.circle")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(color)
-                    .frame(width: 50, height: 50)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.secondary, lineWidth: 3))
-                    .shadow(radius: 7)
-                
-                ColorPicker("", selection: $color)
-                    .labelsHidden() // Optionally hide the label of ColorPicker
+                VStack {
+                    Image(systemName: "person.crop.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(color)
+                        .frame(width: 50, height: 50)
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.secondary, lineWidth: 3))
+                        .shadow(radius: 7)
+                    
+                    ColorPicker("", selection: $color)
+                        .labelsHidden() // Optionally hide the label of ColorPicker
+                }
             }
         }
         .contextMenu {

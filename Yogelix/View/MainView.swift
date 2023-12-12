@@ -5,16 +5,14 @@ struct MainView: View {
     @EnvironmentObject var viewModel : QuantityDataViewModel
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     @EnvironmentObject var poseViewModel : PoseViewModel
-    @EnvironmentObject var challengeManager: DailyChallengeManager
+
     
     var body: some View {
         NavigationView {
             VStack {
                 UserTrophyToolbar()
                     .ignoresSafeArea()
-                
-                PoseOfTheDay()
-                    .padding()
+
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
@@ -43,9 +41,7 @@ struct MainView: View {
                     }
                     .padding()
                 }
-                
                 Spacer()
-                
             }
         }
         .navigationTitle("Main")

@@ -3,7 +3,6 @@ import SwiftUI
 
 struct PoseDetailView: View {
     @EnvironmentObject var poseViewModel: PoseViewModel
-    @EnvironmentObject var challengeManager: DailyChallengeManager
     let pose: Pose
     
     var poseIndex: Int {

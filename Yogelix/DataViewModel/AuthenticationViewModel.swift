@@ -24,9 +24,6 @@ class AuthenticationViewModel: ObservableObject {
     @Published var fullName: String = ""
     @Published var profilePicUrl: String = ""
     
-    @Published var userData: UserData?
-    @Published var dailyChallengeManager: DailyChallengeManager?
-    
     private var currentNonce: String?
 
     init() {
@@ -44,28 +41,10 @@ class AuthenticationViewModel: ObservableObject {
                     // User is authenticated
                     self?.authenticationState = .authenticated
                     self?.displayName = user.email ?? ""
-                    self?.userData = UserData(userId: user.uid)  // Initialize UserData here
                 } else {
                     // User is not authenticated
                     self?.authenticationState = .unauthenticated
-                    self?.userData = nil  // Reset UserData
                 }
-            }
-        }
-    }
-    
-    // New registerAuthStateListener
-    func registerAuthStateListener() {
-        Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
-            if let user = user {
-                // User is signed in
-                self?.authenticationState = .authenticated
-                self?.user = user
-                self?.displayName = user.email ?? ""
-            } else {
-                // User is signed out
-                self?.authenticationState = .unauthenticated
-                self?.user = nil
             }
         }
     }
@@ -80,14 +59,6 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
     
-    
-    // Call this method after the user is successfully authenticated
-    func initializeDailyChallengeManager(poseViewModel: PoseViewModel) {
-        guard let user = Auth.auth().currentUser else { return }
-        let userData = UserData(userId: user.uid)
-        dailyChallengeManager = DailyChallengeManager(poses: poseViewModel.poses, userData: userData, poseViewModel: poseViewModel)
-    }
-
     // Fetch user data from Firestore
     func fetchUserProfile() async {
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -117,9 +88,7 @@ class AuthenticationViewModel: ObservableObject {
                 errorMessage = "User must be logged in to upload an image."
                 return
             }
-            
             let storageRef = Storage.storage().reference().child("profile_pictures").child("\(uid).jpg")
-            
             do {
                 // Upload the image to Firebase Storage
                 let metadata = StorageMetadata()

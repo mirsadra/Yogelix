@@ -3,7 +3,6 @@ import SwiftUI
 
 struct UserTrophyToolbar: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @State var profilePic: Image = Image("avatarMale")
     
     func greeting() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
