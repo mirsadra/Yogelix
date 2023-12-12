@@ -29,7 +29,6 @@ struct MetadataScrollView: View {
                     .padding(.horizontal)
                 }
             }
-            .navigationTitle("Metadata")
         }
     }
     
@@ -46,7 +45,7 @@ struct MetadataCard: View {
     var body: some View {
         Text(metadataCategory.rawValue)
             .font(.callout)
-            .padding(.horizontal, 10) // Padding to provide some space on sides
+            .padding(.horizontal, 5) // Padding to provide some space on sides
             .frame(height: 40)
             .background(Color.gray.opacity(0.2))
             .cornerRadius(10)

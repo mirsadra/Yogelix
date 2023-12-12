@@ -36,6 +36,10 @@
 		3B5C59E32B1902FE00283244 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E22B1902FE00283244 /* Pose.swift */; };
 		3B5C59E52B1905BD00283244 /* PoseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E42B1905BD00283244 /* PoseViewModel.swift */; };
 		3B63F0D42B2878B600794E2A /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D32B2878B600794E2A /* Achievement.swift */; };
+		3B63F0D62B28D61200794E2A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D52B28D61200794E2A /* SearchBar.swift */; };
+		3B63F0D82B28D6CD00794E2A /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D72B28D6CD00794E2A /* CategoryButton.swift */; };
+		3B63F0DA2B28D79B00794E2A /* LatestContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D92B28D79B00794E2A /* LatestContentView.swift */; };
+		3B63F0DC2B28D81300794E2A /* FocusAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0DB2B28D81300794E2A /* FocusAreaView.swift */; };
 		3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */; };
 		3B92A57C2B2220930088299E /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92A57B2B2220930088299E /* DiscoverView.swift */; };
 		3B9A56A92B23B98F00E2246F /* updated_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A56A82B23B98F00E2246F /* updated_data.json */; };
@@ -149,6 +153,10 @@
 		3B5C59E22B1902FE00283244 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		3B5C59E42B1905BD00283244 /* PoseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseViewModel.swift; sourceTree = "<group>"; };
 		3B63F0D32B2878B600794E2A /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		3B63F0D52B28D61200794E2A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		3B63F0D72B28D6CD00794E2A /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		3B63F0D92B28D79B00794E2A /* LatestContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestContentView.swift; sourceTree = "<group>"; };
+		3B63F0DB2B28D81300794E2A /* FocusAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAreaView.swift; sourceTree = "<group>"; };
 		3B83F94A2B0399E4001ADD11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3B92A57B2B2220930088299E /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
@@ -458,6 +466,10 @@
 				3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */,
 				3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */,
 				3B225B822B24871200D7E748 /* PoseDetailView.swift */,
+				3B63F0D52B28D61200794E2A /* SearchBar.swift */,
+				3B63F0D72B28D6CD00794E2A /* CategoryButton.swift */,
+				3B63F0D92B28D79B00794E2A /* LatestContentView.swift */,
+				3B63F0DB2B28D81300794E2A /* FocusAreaView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -637,7 +649,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B63F0DA2B28D79B00794E2A /* LatestContentView.swift in Sources */,
 				3BE4A8582B1B3342007611D8 /* WorkoutTypeManager.swift in Sources */,
+				3B63F0DC2B28D81300794E2A /* FocusAreaView.swift in Sources */,
 				3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */,
 				3BE4A8602B1B7CC0007611D8 /* MindfulSessionModel.swift in Sources */,
 				3BA2F0D62B1CFAE3001AE1F7 /* MindfulSessionModel.swift in Sources */,
@@ -664,6 +678,7 @@
 				3B331DA52B21385D00DAF0E2 /* RestorePurchaseView.swift in Sources */,
 				3B225B832B24871200D7E748 /* PoseDetailView.swift in Sources */,
 				3BA0D7532B25CD4200C53055 /* MetadataScrollView.swift in Sources */,
+				3B63F0D82B28D6CD00794E2A /* CategoryButton.swift in Sources */,
 				3BF59E2C2B279F5F000C6483 /* UserProfileViewModel.swift in Sources */,
 				3BF547762B155DC10073BD18 /* ChakraScrollView.swift in Sources */,
 				3BD2CCC42B1BA6C500DD5C7E /* ActivityRings.swift in Sources */,
@@ -690,6 +705,7 @@
 				3BE252B62B2636B400AABE82 /* ManageSubscriptionViewModel.swift in Sources */,
 				3B5C59E32B1902FE00283244 /* Pose.swift in Sources */,
 				3B1962582B1916C800A7C894 /* PoseList.swift in Sources */,
+				3B63F0D62B28D61200794E2A /* SearchBar.swift in Sources */,
 				3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */,
 				3BE4A85B2B1B76D9007611D8 /* CategoryTypeManager.swift in Sources */,
 				3BF547782B155EDE0073BD18 /* LoopingScroll.swift in Sources */,

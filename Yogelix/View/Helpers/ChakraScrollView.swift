@@ -18,7 +18,6 @@ struct ChakraScrollView: View {
                 }
                 .padding(.horizontal)
             }
-            .navigationTitle("Chakras")
         }
     }
 
@@ -43,7 +42,6 @@ struct ChakraCard: View {
 
     var body: some View {
         VStack {
-            // Chakra image, styled as a circle with padding.
             CircleImage(image: chakraDetail.image)
                 .padding() // Add some padding to give space around the image.
             

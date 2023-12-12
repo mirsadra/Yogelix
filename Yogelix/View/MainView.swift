@@ -6,7 +6,6 @@ struct MainView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     @EnvironmentObject var poseViewModel : PoseViewModel
 
-    
     var body: some View {
         NavigationView {
             VStack {
