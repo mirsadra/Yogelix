@@ -35,6 +35,7 @@
 		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
 		3B5C59E32B1902FE00283244 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E22B1902FE00283244 /* Pose.swift */; };
 		3B5C59E52B1905BD00283244 /* PoseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E42B1905BD00283244 /* PoseViewModel.swift */; };
+		3B63F0D42B2878B600794E2A /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D32B2878B600794E2A /* Achievement.swift */; };
 		3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */; };
 		3B92A57C2B2220930088299E /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92A57B2B2220930088299E /* DiscoverView.swift */; };
 		3B9A56A92B23B98F00E2246F /* updated_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A56A82B23B98F00E2246F /* updated_data.json */; };
@@ -147,6 +148,7 @@
 		3B5469912B0CFD40009130FD /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		3B5C59E22B1902FE00283244 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		3B5C59E42B1905BD00283244 /* PoseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseViewModel.swift; sourceTree = "<group>"; };
+		3B63F0D32B2878B600794E2A /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		3B83F94A2B0399E4001ADD11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3B92A57B2B2220930088299E /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				3B5C59E22B1902FE00283244 /* Pose.swift */,
 				3BE4A8572B1B3342007611D8 /* WorkoutTypeManager.swift */,
 				3B9DA82B2B0EAF6D00480621 /* Theme.swift */,
+				3B63F0D32B2878B600794E2A /* Achievement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */,
 				3BE4A8202B1A15AC007611D8 /* FavoriteButton.swift in Sources */,
 				3BD2CCBD2B1B90C800DD5C7E /* WorkoutDataViewModel.swift in Sources */,
+				3B63F0D42B2878B600794E2A /* Achievement.swift in Sources */,
 				3BE4A8422B1A607C007611D8 /* ChatView.swift in Sources */,
 				3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */,
 				3B51EBEF2B1D306B00BB3B7D /* HKQueryOptions.swift in Sources */,

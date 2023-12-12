@@ -21,7 +21,7 @@ struct UserTrophyToolbar: View {
     func firstName() -> String {
         return authViewModel.fullName.components(separatedBy: " ").first ?? ""
     }
-
+    
     var body: some View {
         HStack(spacing: 0) {
             ZStack {
@@ -42,17 +42,18 @@ struct UserTrophyToolbar: View {
                     
                     Spacer()
                     
-                    Image(systemName: "trophy.circle.fill")
-                        .font(Font.custom("SF Pro", size: 24))
-                        .foregroundStyle(.gray)
-                    
-                    Image(systemName: "trophy.circle.fill")
-                        .font(Font.custom("SF Pro", size: 32))
-                        .foregroundStyle(.yellow)
-                    
-                    Image(systemName: "trophy.circle.fill")
-                        .font(Font.custom("SF Pro", size: 20))
-                        .foregroundStyle(.orange)
+                        ForEach(authViewModel.userAchievements) { achievement in
+                            Image(systemName: "trophy.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(getTrophyColor(for: achievement.id))
+                            // Additional view modifiers...
+                            
+                            Text("\(achievement.count)")
+                                .font(.custom("LuckiestGuy-Regular", size: 12))
+                                .foregroundColor(.primary)
+                        }
                 }
                 .padding()
             }
@@ -60,7 +61,21 @@ struct UserTrophyToolbar: View {
         .onAppear {
             Task {
                 await authViewModel.fetchUserProfile()
+                await authViewModel.fetchAchievements()
             }
+        }
+    }
+    
+    func getTrophyColor(for id: String) -> Color {
+        switch id {
+        case "gold":
+            return .yellow
+        case "silver":
+            return .gray
+        case "bronze":
+            return .brown // Adjust color as needed
+        default:
+            return .black
         }
     }
 }

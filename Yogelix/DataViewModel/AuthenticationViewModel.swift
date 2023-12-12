@@ -23,9 +23,10 @@ class AuthenticationViewModel: ObservableObject {
     @Published var displayName = ""
     @Published var fullName: String = ""
     @Published var profilePicUrl: String = ""
+    @Published var userAchievements: [Achievement] = []
     
     private var currentNonce: String?
-
+    
     init() {
         registerAuthStateHandler()
         verifySignInWithAppleAuthenticationState()
@@ -59,7 +60,7 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
     
-    // Fetch user data from Firestore
+    // MARK: - User Profile
     func fetchUserProfile() async {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let db = Firestore.firestore()
@@ -84,61 +85,108 @@ class AuthenticationViewModel: ObservableObject {
     }
     
     func uploadProfileImage(_ imageData: Data) async {
-            guard let uid = Auth.auth().currentUser?.uid else {
-                errorMessage = "User must be logged in to upload an image."
-                return
-            }
-            let storageRef = Storage.storage().reference().child("profile_pictures").child("\(uid).jpg")
-            do {
-                // Upload the image to Firebase Storage
-                let metadata = StorageMetadata()
-                metadata.contentType = "image/jpeg"
-                let _ = try await storageRef.putDataAsync(imageData, metadata: metadata)
-                
-                // Once the image is uploaded, retrieve the download URL
-                let downloadURL = try await storageRef.downloadURL()
-                self.profilePicUrl = downloadURL.absoluteString
-                
-                // Update the user's profile in Firestore to include the new image URL
-                let db = Firestore.firestore()
-                try await db.collection("users").document(uid).setData(["profilePicUrl": profilePicUrl], merge: true)
-                
-            } catch {
-                // Handle any errors
-                print(error.localizedDescription)
-                errorMessage = "There was an error uploading the image: \(error.localizedDescription)"
-            }
+        guard let uid = Auth.auth().currentUser?.uid else {
+            errorMessage = "User must be logged in to upload an image."
+            return
         }
+        let storageRef = Storage.storage().reference().child("profile_pictures").child("\(uid).jpg")
+        do {
+            // Upload the image to Firebase Storage
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            let _ = try await storageRef.putDataAsync(imageData, metadata: metadata)
+            
+            // Once the image is uploaded, retrieve the download URL
+            let downloadURL = try await storageRef.downloadURL()
+            self.profilePicUrl = downloadURL.absoluteString
+            
+            // Update the user's profile in Firestore to include the new image URL
+            let db = Firestore.firestore()
+            try await db.collection("users").document(uid).setData(["profilePicUrl": profilePicUrl], merge: true)
+            
+        } catch {
+            // Handle any errors
+            print(error.localizedDescription)
+            errorMessage = "There was an error uploading the image: \(error.localizedDescription)"
+        }
+    }
     
     func removeProfileImage() {
-            guard let uid = Auth.auth().currentUser?.uid else {
-                errorMessage = "User must be logged in to remove an image."
-                return
-            }
-
-            let db = Firestore.firestore()
-            let storageRef = Storage.storage().reference().child("profile_pictures").child("\(uid).jpg")
-
-            Task {
-                do {
-                    // Delete the image from Firebase Storage
-                    try await storageRef.delete()
-
-                    // Remove the image URL from Firestore
-                    try await db.collection("users").document(uid).updateData(["profilePicUrl": FieldValue.delete()])
-                    
-                    // Update the local profilePicUrl property
-                    DispatchQueue.main.async {
-                        self.profilePicUrl = ""
-                    }
-                } catch {
-                    // Handle any errors
-                    DispatchQueue.main.async {
-                        self.errorMessage = "There was an error removing the image: \(error.localizedDescription)"
-                    }
+        guard let uid = Auth.auth().currentUser?.uid else {
+            errorMessage = "User must be logged in to remove an image."
+            return
+        }
+        
+        let db = Firestore.firestore()
+        let storageRef = Storage.storage().reference().child("profile_pictures").child("\(uid).jpg")
+        
+        Task {
+            do {
+                // Delete the image from Firebase Storage
+                try await storageRef.delete()
+                
+                // Remove the image URL from Firestore
+                try await db.collection("users").document(uid).updateData(["profilePicUrl": FieldValue.delete()])
+                
+                // Update the local profilePicUrl property
+                DispatchQueue.main.async {
+                    self.profilePicUrl = ""
+                }
+            } catch {
+                // Handle any errors
+                DispatchQueue.main.async {
+                    self.errorMessage = "There was an error removing the image: \(error.localizedDescription)"
                 }
             }
         }
+    }
+    
+    // MARK: - Achievement
+    func fetchAchievements() async {
+        guard let userId = user?.uid else { return }
+        
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(userId)
+        
+        do {
+            let document = try await docRef.getDocument()
+            if let data = document.data(), let achievementsData = data["achievements"] as? [[String: Any]] {
+                processAchievementsData(achievementsData)
+            } else {
+                // No achievements data available, set default values
+                DispatchQueue.main.async {
+                    self.userAchievements = self.createDefaultAchievements()
+                }
+            }
+        } catch {
+            print("Error fetching achievements: \(error.localizedDescription)")
+        }
+    }
+    
+    private func createDefaultAchievements() -> [Achievement] {
+        // Initialize default achievements with 0 trophies
+        return [Achievement(id: "gold", count: 0),
+                Achievement(id: "silver", count: 0),
+                Achievement(id: "bronze", count: 0)]
+    }
+    
+    // Intended to transform the raw dictionary data from Firestore into Swift "Achievement" data model.
+    private func processAchievementsData(_ achievementsData: [[String: Any]]) {
+        // Convert the array of dictionaries to an array of Achievement objects
+        let achievements = achievementsData.compactMap { dict -> Achievement? in
+            guard let id = dict["id"] as? String,
+                  let count = dict["count"] as? Int else {
+                return nil
+            }
+            
+            return Achievement(id: id, count: count)
+        }
+        
+        // Update the published userAchievements property
+        DispatchQueue.main.async {
+            self.userAchievements = achievements
+        }
+    }
 }
 
 
@@ -224,7 +272,7 @@ extension AuthenticationViewModel {
             }
         }
     }
-
+    
     
     func verifySignInWithAppleAuthenticationState() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -314,15 +362,22 @@ extension AuthenticationViewModel {
             errorMessage = error.localizedDescription
         }
     }
-
+    
     // MARK: - Refactored User Data Storage
     private func storeUserData(uid: String, fullName: String, profilePicUrl: String) async {
         let db = Firestore.firestore()
         let userDocRef = db.collection("users").document(uid)
-        
+
+        // Default achievements to be added when creating the user profile
+        let defaultAchievements = [
+            ["id": "gold", "count": 0],
+            ["id": "silver", "count": 0],
+            ["id": "bronze", "count": 0]
+        ]
+
         do {
             let docSnapshot = try await userDocRef.getDocument()
-            
+
             if let docData = docSnapshot.data(), docData["fullName"] as? String != "" {
                 // Full name already exists, no need to update it.
                 print("Full name already stored in Firestore.")
@@ -330,7 +385,8 @@ extension AuthenticationViewModel {
                 // Full name doesn't exist or is empty, update it along with the profilePicUrl.
                 try await userDocRef.setData([
                     "fullName": fullName,
-                    "profilePicUrl": profilePicUrl
+                    "profilePicUrl": profilePicUrl,
+                    "achievements": defaultAchievements // Include default achievements
                 ], merge: true)
                 print("User data stored successfully.")
             }
