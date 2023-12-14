@@ -29,8 +29,8 @@ class WorkoutDataViewModel: ObservableObject {
     }
 
     // MARK: - Saving Yoga Workout
-    func saveYogaWorkout(startDate: Date, endDate: Date, activeEnergyBurned: Double?, appleExerciseTime: Double?, oxygenSaturation: Double?, respiratoryRate: Double?) {
-        workoutTypeManager.saveYogaWorkout(startDate: startDate, endDate: endDate, activeEnergyBurned: activeEnergyBurned, appleExerciseTime: appleExerciseTime, oxygenSaturation: oxygenSaturation, respiratoryRate: respiratoryRate) { [weak self] workout, customError in
+    func saveYogaWorkout(startDate: Date, endDate: Date, activeEnergyBurned: Double?, appleExerciseTime: Double?) {
+        workoutTypeManager.saveYogaWorkout(startDate: startDate, endDate: endDate, activeEnergyBurned: activeEnergyBurned, appleExerciseTime: appleExerciseTime) { [weak self] workout, customError in
             DispatchQueue.main.async {
                 if workout != nil {
                     self?.fetchYogaWorkouts() // Refresh the list of workouts
@@ -53,6 +53,4 @@ class WorkoutDataViewModel: ObservableObject {
             }
         }
     }
-
-    // Additional ViewModel methods for processing or formatting data can be added here
 }

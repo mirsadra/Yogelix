@@ -8,6 +8,7 @@ import CryptoKit
 import GoogleSignIn
 import GoogleSignInSwift
 import FirebaseCore
+import SwiftUI
 
 enum AuthenticationState {
     case unauthenticated
@@ -23,6 +24,7 @@ class AuthenticationViewModel: ObservableObject {
     @Published var displayName = ""
     @Published var fullName: String = ""
     @Published var profilePicUrl: String = ""
+    @Published var profilePicColor: Color = .primary
     @Published var userAchievements: [Achievement] = []
     
     private var currentNonce: String?

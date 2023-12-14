@@ -78,13 +78,6 @@ class QuantityTypeManager {
         return healthStore.authorizationStatus(for: activeEnergyBurnedType) == .sharingAuthorized
     }
     
-    func isAuthorizedForOxygenSaturation() -> Bool {
-        guard let oxygenSaturationType = HKObjectType.quantityType(forIdentifier: .oxygenSaturation) else {
-            return false
-        }
-        return healthStore.authorizationStatus(for: oxygenSaturationType) == .sharingAuthorized
-    }
-    
     // MARK: - Reading BMI and Height (using `executeSingleValueQuery`)
     // Body Mass Index
     func readBodyMassIndex(completion: @escaping (Double?, Date?, Error?) -> Void) {
@@ -137,24 +130,6 @@ class QuantityTypeManager {
             completion(total, date, error)
         }
     }
-    
-    func readCurrentDayOxygenSaturation(completion: @escaping (Double?, Date?, Error?) -> Void) {
-        let oxygenSaturationIdentifier = HKQuantityTypeIdentifier.oxygenSaturation
-        let oxygenSaturationUnit = HKUnit.percent()
-        let options: HKStatisticsOptions = [.discreteAverage]
-        
-        executeCurrentDayDiscreteStatisticsQuery(
-            for: oxygenSaturationIdentifier,
-            unit: oxygenSaturationUnit,
-            options: options
-        ) { (result, error) in
-            let value = result.0
-            let date = result.1
-            completion(value, date, error)
-        }
-    }
-
-
     
     // MARK: - Private Helper Methods
     

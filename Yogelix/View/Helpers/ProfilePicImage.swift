@@ -5,7 +5,6 @@ import UIKit
 struct ProfilePicImage: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     @State private var showImagePicker = false
-    @State var color = Color.primary
     @State private var imageDataToUpload: Data?
 
     func uploadImage() {
@@ -24,7 +23,6 @@ struct ProfilePicImage: View {
                     case .success(let image):
                         image.resizable()
                             .aspectRatio(contentMode: .fill)
-//                            .frame(width: 50, height: 50)
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.accentColor, lineWidth: 3))
                             .shadow(radius: 7)
@@ -39,13 +37,13 @@ struct ProfilePicImage: View {
                     Image(systemName: "person.crop.circle")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(color)
+                        .foregroundColor(authViewModel.profilePicColor)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.secondary, lineWidth: 3))
                         .shadow(radius: 7)
                     
-                    ColorPicker("", selection: $color)
+                    ColorPicker("", selection: $authViewModel.profilePicColor)
                         .labelsHidden() // Optionally hide the label of ColorPicker
                 }
             }
@@ -73,7 +71,6 @@ struct ProfilePicImage: View {
             }
         }
     }
-
 }
 
 #Preview {

@@ -44,7 +44,7 @@ class WorkoutTypeManager {
     
     
     // MARK: - Write (save) Yoga Workout into Health app from Yogelix.
-    func saveYogaWorkout(startDate: Date, endDate: Date, activeEnergyBurned: Double?, appleExerciseTime: Double?, oxygenSaturation: Double?, respiratoryRate: Double?, completion: @escaping (HKWorkout?, CustomError?) -> Void) {
+    func saveYogaWorkout(startDate: Date, endDate: Date, activeEnergyBurned: Double?, appleExerciseTime: Double?, completion: @escaping (HKWorkout?, CustomError?) -> Void) {
         let workoutConfiguration = HKWorkoutConfiguration()
         workoutConfiguration.activityType = .yoga
         workoutConfiguration.locationType = .unknown
@@ -68,18 +68,6 @@ class WorkoutTypeManager {
                 let exerciseTimeQuantity = HKQuantity(unit: HKUnit.minute(), doubleValue: exerciseTimeValue)
                 let exerciseTimeSample = HKQuantitySample(type: HKQuantityType.quantityType(forIdentifier: .appleExerciseTime)!, quantity: exerciseTimeQuantity, start: startDate, end: endDate)
                 samples.append(exerciseTimeSample)
-            }
-            
-            if let oxygenSaturationValue = oxygenSaturation {
-                let oxygenSaturationQuantity = HKQuantity(unit: HKUnit.percent(), doubleValue: oxygenSaturationValue / 100.0) // Assuming input is in percentage
-                let oxygenSaturationSample = HKQuantitySample(type: HKQuantityType.quantityType(forIdentifier: .oxygenSaturation)!, quantity: oxygenSaturationQuantity, start: startDate, end: endDate)
-                samples.append(oxygenSaturationSample)
-            }
-            
-            if let respiratoryRateValue = respiratoryRate {
-                let respiratoryRateQuantity = HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: respiratoryRateValue)
-                let respiratoryRateSample = HKQuantitySample(type: HKQuantityType.quantityType(forIdentifier: .respiratoryRate)!, quantity: respiratoryRateQuantity, start: startDate, end: endDate)
-                samples.append(respiratoryRateSample)
             }
             
             builder.add(samples) { success, error in
@@ -128,11 +116,24 @@ class WorkoutTypeManager {
     }
     
     // MARK: - Custom Error Handling
-    enum CustomError: Error {
+    enum CustomError: Error, Identifiable {
         case authorizationFailed
         case workoutSaveFailed
         case workoutSaveBuildFailed
         case workoutReadFailed
+
+        var id: Int {
+            switch self {
+            case .authorizationFailed:
+                return 1
+            case .workoutSaveFailed:
+                return 2
+            case .workoutSaveBuildFailed:
+                return 3
+            case .workoutReadFailed:
+                return 4
+            }
+        }
         
         var emoji: String {
             switch self {

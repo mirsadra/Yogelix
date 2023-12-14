@@ -30,7 +30,6 @@
 		3B3E13C02B0A8BB4003F8E78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83F94A2B0399E4001ADD11 /* StoreKit.framework */; };
 		3B40A36C2B1222EA00170041 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B40A36B2B1222EA00170041 /* Alamofire */; };
 		3B40A37D2B12B43000170041 /* MetricCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B40A37C2B12B43000170041 /* MetricCard.swift */; };
-		3B51EBEF2B1D306B00BB3B7D /* HKQueryOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51EBEE2B1D306B00BB3B7D /* HKQueryOptions.swift */; };
 		3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */; };
 		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
 		3B5C59E32B1902FE00283244 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E22B1902FE00283244 /* Pose.swift */; };
@@ -52,6 +51,7 @@
 		3BA2F0D62B1CFAE3001AE1F7 /* MindfulSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0D22B1CFAE3001AE1F7 /* MindfulSessionModel.swift */; };
 		3BA33C922B1E533800DF80F6 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BA33C912B1E533800DF80F6 /* LuckiestGuy-Regular.ttf */; };
 		3BA33C942B1E6A8F00DF80F6 /* UserTrophyToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */; };
+		3BAC1BB22B2B3EF4001DBE56 /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */; };
 		3BAF8F002B13D79300E5436F /* HealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF8EFF2B13D79300E5436F /* HealthCard.swift */; };
 		3BBF478D2B1E4CD4006033F8 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF478C2B1E4CD4006033F8 /* Fonts.swift */; };
 		3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */; };
@@ -147,7 +147,6 @@
 		3B331DAC2B213A6000DAF0E2 /* TermsOfUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseView.swift; sourceTree = "<group>"; };
 		3B40A37C2B12B43000170041 /* MetricCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCard.swift; sourceTree = "<group>"; };
 		3B40A3892B12D48F00170041 /* Prompt.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prompt.md; sourceTree = "<group>"; };
-		3B51EBEE2B1D306B00BB3B7D /* HKQueryOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKQueryOptions.swift; sourceTree = "<group>"; };
 		3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		3B5469912B0CFD40009130FD /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		3B5C59E22B1902FE00283244 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
@@ -172,6 +171,7 @@
 		3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTrophyToolbar.swift; sourceTree = "<group>"; };
 		3BA4A63C2B0D56310032936E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3BA4A6552B0D60D50032936E /* YogelixSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogelixSecrets.h; sourceTree = "<group>"; };
+		3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutView.swift; sourceTree = "<group>"; };
 		3BAF8EFF2B13D79300E5436F /* HealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCard.swift; sourceTree = "<group>"; };
 		3BBF478C2B1E4CD4006033F8 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3BCC04C32B01901400FD1FC3 /* Yogelix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yogelix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -439,6 +439,7 @@
 				3B1962572B1916C800A7C894 /* PoseList.swift */,
 				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
 				3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */,
+				3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,7 +480,6 @@
 			children = (
 				3BE4A8552B1B2E73007611D8 /* QuantityTypeManager.swift */,
 				3BE4A85A2B1B76D8007611D8 /* CategoryTypeManager.swift */,
-				3B51EBEE2B1D306B00BB3B7D /* HKQueryOptions.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -661,6 +661,7 @@
 				3BA2F0D32B1CFAE3001AE1F7 /* HeartRateModel.swift in Sources */,
 				3BD2CCCC2B1BA91C00DD5C7E /* DailySummary.swift in Sources */,
 				3BE4A8562B1B2E73007611D8 /* QuantityTypeManager.swift in Sources */,
+				3BAC1BB22B2B3EF4001DBE56 /* CreateWorkoutView.swift in Sources */,
 				3B331DA32B21381600DAF0E2 /* ManageSubscriptionView.swift in Sources */,
 				3B19625C2B191D8300A7C894 /* CircleImage.swift in Sources */,
 				3BA2F0D52B1CFAE3001AE1F7 /* SleepAnalysisModel.swift in Sources */,
@@ -692,7 +693,6 @@
 				3B63F0D42B2878B600794E2A /* Achievement.swift in Sources */,
 				3BE4A8422B1A607C007611D8 /* ChatView.swift in Sources */,
 				3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */,
-				3B51EBEF2B1D306B00BB3B7D /* HKQueryOptions.swift in Sources */,
 				3BD91F1F2B16876F00D9218E /* Ring.swift in Sources */,
 				3BD2CCBB2B1B8D7400DD5C7E /* QuantityDataViewModel.swift in Sources */,
 				3BD2CCC62B1BA83800DD5C7E /* WorkoutSummaryCard.swift in Sources */,

@@ -26,7 +26,7 @@ struct LoginView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(minHeight: 300, maxHeight: 400)
-            Text("Are you a Yogelixer?")
+            Text("Welcome to Yogelix")
                 .font(.custom("LuckiestGuy-Regular", size: 22))
             Text("🛸")
                 .font(.largeTitle)
@@ -43,6 +43,7 @@ struct LoginView: View {
                 authViewModel.handleSignInWithAppleRequest(request)
             } onCompletion: { result in
                 authViewModel.handleSignInWithAppleCompletion(result)
+                dismiss()
             }
             .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
             .frame(width: 360, height: 50)
@@ -51,7 +52,7 @@ struct LoginView: View {
             // MARK: - Google Sign In
             Button(action: signInWithGoogle) {
                 HStack {
-                    Image("google") // Your Google icon
+                    Image("google")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 18, height: 18)
@@ -63,8 +64,8 @@ struct LoginView: View {
                 .frame(width: 343, height: 50) // Set your desired frame size
                 .padding(.horizontal, 8) // Adjust padding as needed
             }
-            .background(colorScheme == .light ? .black : .white) // Set your desired background color here
-            .foregroundColor(.white) // Set the text color
+            .background(colorScheme == .light ? .black : .white)
+            .foregroundColor(.black) // Set the text color
             .cornerRadius(8) // Optional, for rounded corners
         }
         .listStyle(.plain)
@@ -77,7 +78,7 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
           LoginView()
-            .preferredColorScheme(.light)
+                .preferredColorScheme(.dark)
         }
         .environmentObject(AuthenticationViewModel())
     }

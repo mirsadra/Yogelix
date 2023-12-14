@@ -29,6 +29,11 @@ struct ContentView: View {
                     Label("Discover", systemImage: "figure.run.square.stack.fill")
                 }
             
+            CreateWorkoutView()
+                .tabItem {
+                    Label("Workout", systemImage: "flag.2.crossed.circle.fill")
+                }
+            
             PoseList()
                 .tabItem {
                     Label("Poses", systemImage: "figure.yoga")
