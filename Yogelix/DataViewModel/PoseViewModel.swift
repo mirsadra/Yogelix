@@ -10,8 +10,7 @@ final class PoseViewModel: ObservableObject {
     
     // Computed property to extract unique categories from all poses
     var categories: [MetadataCategory] {
-        // Assuming each pose's metadata contains its categories and you want to eliminate duplicates
-        let allCategories = poses.flatMap { $0.metadata }
+        let allCategories = poses.flatMap { $0.metadata }  // Create an array with duplication: [Yogelix.MetadataCategory.hipOpening, Yogelix.MetadataCategory.seated..]
         let uniqueCategories = Set(allCategories)
         return Array(uniqueCategories).sorted { $0.rawValue < $1.rawValue }
     }

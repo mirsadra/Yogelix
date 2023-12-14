@@ -43,7 +43,6 @@ enum MetadataCategory: String, Codable, CaseIterable {
     case inversion = "Inversion"
     case binding = "Binding"
     case kneeling = "Kneeling"
-    // Add more categories as needed
 }
 
 enum HeartRateCategory: String, Codable, CaseIterable {

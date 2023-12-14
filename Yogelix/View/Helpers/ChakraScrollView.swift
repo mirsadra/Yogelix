@@ -22,7 +22,6 @@ struct ChakraScrollView: View {
     }
 
     private func filteredPoses(for chakraCategory: ChakraDetail.Category) -> [Pose] {
-        // Utilize PoseViewModel's filtering capability to get the filtered poses for a specific chakra category
         poseViewModel.poses.filter { pose in
             pose.chakraDetails.contains { $0.name == chakraCategory }
         }
