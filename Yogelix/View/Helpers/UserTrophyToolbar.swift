@@ -3,6 +3,8 @@ import SwiftUI
 
 struct UserTrophyToolbar: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @EnvironmentObject var userProfileViewModel: UserProfileViewModel
+    @EnvironmentObject var achievementsViewModel: AchievementsViewModel
     
     func greeting() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
@@ -60,8 +62,8 @@ struct UserTrophyToolbar: View {
         }
         .onAppear {
             Task {
-                await authViewModel.fetchUserProfile()
-                await authViewModel.fetchAchievements()
+                await userProfileViewModel.fetchUserProfile()
+                await achievementsViewModel.fetchAchievements()
             }
         }
     }
