@@ -10,8 +10,7 @@ class QuantityTypeManager {
         guard let bodyMassIndexType = HKObjectType.quantityType(forIdentifier: .bodyMassIndex),
               let heightType = HKObjectType.quantityType(forIdentifier: .height),
               let walkingRunningDistanceType = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning),
-              let activeEnergyBurnedType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned),
-              let oxygenSaturationType = HKObjectType.quantityType(forIdentifier: .oxygenSaturation) else {
+              let activeEnergyBurnedType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
             let error = NSError(domain: "HealthKit", code: 1000, userInfo: [NSLocalizedDescriptionKey: "Unable to create quantity data types"])
             return (Set(), error)
         }
@@ -20,8 +19,7 @@ class QuantityTypeManager {
             bodyMassIndexType,
             heightType,
             walkingRunningDistanceType,
-            activeEnergyBurnedType,
-            oxygenSaturationType
+            activeEnergyBurnedType
         ]
         
         return (readTypes, nil)

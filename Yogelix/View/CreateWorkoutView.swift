@@ -7,6 +7,7 @@ struct CreateWorkoutView: View {
     @State private var difficultyLevel: Int = 1 // Difficulty level
     @State private var appleExerciseTime: Double = 5 // Default to 5 minutes, range 5-60 minutes
     @State private var estimatedCalories: Int = 0 // Estimated calories burned
+    @State private var showWorkoutSession = false
 
     var body: some View {
         NavigationView {
@@ -34,8 +35,13 @@ struct CreateWorkoutView: View {
 
                 Button("Start Yoga Workout") {
                     startWorkout()
+                    showWorkoutSession = true
                 }
-                .disabled(!viewModel.authorizationStatus)
+                .disabled(viewModel.authorizationStatus)
+                .sheet(isPresented: $showWorkoutSession) {
+                    let endDate = Calendar.current.date(byAdding: .minute, value: Int(appleExerciseTime), to: startDate)!
+                    WorkoutSessionView(startDate: startDate, endDate: endDate)
+                }
             }
             .navigationTitle("New Yoga Workout")
             .alert(item: $viewModel.error) { error in
@@ -48,6 +54,7 @@ struct CreateWorkoutView: View {
     private func startWorkout() {
         let endDate = Calendar.current.date(byAdding: .minute, value: Int(appleExerciseTime), to: startDate)!
         viewModel.saveYogaWorkout(startDate: startDate, endDate: endDate, activeEnergyBurned: Double(estimatedCalories), appleExerciseTime: appleExerciseTime)
+        // You might want to handle additional logic here, if needed
     }
 
     private func calculateEstimatedCalories() {
@@ -65,7 +72,6 @@ struct CreateWorkoutView: View {
             print("Invalid duration")
             return 0
         }
-
         return caloriesPerMinute * duration
     }
 }

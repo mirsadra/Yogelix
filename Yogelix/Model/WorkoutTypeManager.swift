@@ -83,7 +83,14 @@ class WorkoutTypeManager {
                     }
                     
                     builder.finishWorkout { workout, error in
-                        completion(workout, CustomError.workoutSaveBuildFailed)
+                        if let workout = workout {
+                            completion(workout, nil) // Successfully saved the workout
+                        } else if let error = error {
+                            print("Error saving workout: \(error.localizedDescription)")
+                            completion(nil, .workoutSaveFailed) // There was an error saving the workout
+                        } else {
+                            completion(nil, CustomError.workoutSaveBuildFailed) // Generic error
+                        }
                     }
                 }
             }

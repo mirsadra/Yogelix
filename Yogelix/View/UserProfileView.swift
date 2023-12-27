@@ -1,3 +1,4 @@
+// UserProfileView.swift
 import SwiftUI
 import FirebaseAnalyticsSwift
 import FirebaseFirestore

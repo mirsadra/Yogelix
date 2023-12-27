@@ -86,10 +86,10 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
                                 .resizable()
                                 .scaledToFit()
                                 .frame(height: 30)
-                            Image("openAIGPT4Logo") // Assuming you have a logo image
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 30)
+//                            Image("openAIGPT4Logo")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(height: 30)
                         }
                         .padding(.bottom, 30)
                     }

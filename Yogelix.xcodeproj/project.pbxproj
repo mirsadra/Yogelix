@@ -19,6 +19,7 @@
 		3B2125DA2B121D9300B3E0BE /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125D92B121D9300B3E0BE /* FirebaseRemoteConfig */; };
 		3B2125DC2B121D9300B3E0BE /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125DB2B121D9300B3E0BE /* FirebaseRemoteConfigSwift */; };
 		3B225B832B24871200D7E748 /* PoseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B225B822B24871200D7E748 /* PoseDetailView.swift */; };
+		3B2760CA2B3C94F8007CB829 /* AchievementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2760C92B3C94F8007CB829 /* AchievementsViewModel.swift */; };
 		3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */; };
 		3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */; };
 		3B331DA32B21381600DAF0E2 /* ManageSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331DA22B21381600DAF0E2 /* ManageSubscriptionView.swift */; };
@@ -42,7 +43,6 @@
 		3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */; };
 		3B92A57C2B2220930088299E /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92A57B2B2220930088299E /* DiscoverView.swift */; };
 		3B9A56A92B23B98F00E2246F /* updated_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A56A82B23B98F00E2246F /* updated_data.json */; };
-		3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */; };
 		3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82B2B0EAF6D00480621 /* Theme.swift */; };
 		3BA0D7532B25CD4200C53055 /* MetadataScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */; };
 		3BA2F0CE2B1CFA83001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */; };
@@ -52,6 +52,7 @@
 		3BA33C922B1E533800DF80F6 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BA33C912B1E533800DF80F6 /* LuckiestGuy-Regular.ttf */; };
 		3BA33C942B1E6A8F00DF80F6 /* UserTrophyToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */; };
 		3BAC1BB22B2B3EF4001DBE56 /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */; };
+		3BAC1BB62B2B7A67001DBE56 /* WorkoutSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC1BB52B2B7A67001DBE56 /* WorkoutSessionView.swift */; };
 		3BAF8F002B13D79300E5436F /* HealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF8EFF2B13D79300E5436F /* HealthCard.swift */; };
 		3BBF478D2B1E4CD4006033F8 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF478C2B1E4CD4006033F8 /* Fonts.swift */; };
 		3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */; };
@@ -137,6 +138,7 @@
 		3B1962572B1916C800A7C894 /* PoseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseList.swift; sourceTree = "<group>"; };
 		3B19625B2B191D8300A7C894 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3B225B822B24871200D7E748 /* PoseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDetailView.swift; sourceTree = "<group>"; };
+		3B2760C92B3C94F8007CB829 /* AchievementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewModel.swift; sourceTree = "<group>"; };
 		3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		3B331DA22B21381600DAF0E2 /* ManageSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionView.swift; sourceTree = "<group>"; };
@@ -160,7 +162,6 @@
 		3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3B92A57B2B2220930088299E /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		3B9A56A82B23B98F00E2246F /* updated_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = updated_data.json; sourceTree = "<group>"; };
-		3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTimerView.swift; sourceTree = "<group>"; };
 		3B9DA82B2B0EAF6D00480621 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataScrollView.swift; sourceTree = "<group>"; };
 		3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 		3BA4A63C2B0D56310032936E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3BA4A6552B0D60D50032936E /* YogelixSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogelixSecrets.h; sourceTree = "<group>"; };
 		3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutView.swift; sourceTree = "<group>"; };
+		3BAC1BB52B2B7A67001DBE56 /* WorkoutSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionView.swift; sourceTree = "<group>"; };
 		3BAF8EFF2B13D79300E5436F /* HealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCard.swift; sourceTree = "<group>"; };
 		3BBF478C2B1E4CD4006033F8 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3BCC04C32B01901400FD1FC3 /* Yogelix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yogelix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +265,7 @@
 				3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */,
 				3BE252B52B2636B400AABE82 /* ManageSubscriptionViewModel.swift */,
 				3BF59E2B2B279F5F000C6483 /* UserProfileViewModel.swift */,
+				3B2760C92B3C94F8007CB829 /* AchievementsViewModel.swift */,
 			);
 			path = DataViewModel;
 			sourceTree = "<group>";
@@ -438,8 +441,8 @@
 				3B92A57B2B2220930088299E /* DiscoverView.swift */,
 				3B1962572B1916C800A7C894 /* PoseList.swift */,
 				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
-				3B9DA8242B0EA9E200480621 /* ExerciseTimerView.swift */,
 				3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */,
+				3BAC1BB52B2B7A67001DBE56 /* WorkoutSessionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -682,8 +685,9 @@
 				3B63F0D82B28D6CD00794E2A /* CategoryButton.swift in Sources */,
 				3BF59E2C2B279F5F000C6483 /* UserProfileViewModel.swift in Sources */,
 				3BF547762B155DC10073BD18 /* ChakraScrollView.swift in Sources */,
+				3BAC1BB62B2B7A67001DBE56 /* WorkoutSessionView.swift in Sources */,
 				3BD2CCC42B1BA6C500DD5C7E /* ActivityRings.swift in Sources */,
-				3B9DA8252B0EA9E200480621 /* ExerciseTimerView.swift in Sources */,
+				3B2760CA2B3C94F8007CB829 /* AchievementsViewModel.swift in Sources */,
 				3BE4A8632B1B7EAF007611D8 /* CategoryDataViewModel.swift in Sources */,
 				3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */,
 				3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */,

@@ -45,7 +45,6 @@ struct ContentView: View {
                     Label("Account", systemImage: "gear.circle.fill")
                 }
         }
-        
     }
 }
 
