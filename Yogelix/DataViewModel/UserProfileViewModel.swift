@@ -5,17 +5,15 @@ import FirebaseFirestore
 import FirebaseStorage
 import SwiftUI
 
-@MainActor
+
 class UserProfileViewModel: ObservableObject {
     @Published var fullName: String = ""
     @Published var profilePicUrl: String = ""
-    @Published var profilePicColor: Color = .primary
     
     @Published var errorMessage = ""
     
     @Published var exerciseDuration: TimeInterval = 0
     @Published var achievements: [String] = []
-    
 
     private var db = Firestore.firestore()
 
@@ -154,22 +152,22 @@ class UserProfileViewModel: ObservableObject {
         }
     }
 
-    // Add a new achievement to the user's profile in Firestore and locally
-    func addAchievement(achievement: String) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let docRef = db.collection("users").document(uid)
-        
-        Task {
-            do {
-                try await docRef.updateData(["achievements": FieldValue.arrayUnion([achievement])])
-                DispatchQueue.main.async {
-                    self.achievements.append(achievement)
-                }
-            } catch {
-                print("Error adding achievement: \(error)")
-            }
-        }
-    }
+//    // Add a new achievement to the user's profile in Firestore and locally
+//    func addAchievement(achievement: String) {
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        let docRef = db.collection("users").document(uid)
+//        
+//        Task {
+//            do {
+//                try await docRef.updateData(["achievements": FieldValue.arrayUnion([achievement])])
+//                DispatchQueue.main.async {
+//                    self.achievements.append(achievement)
+//                }
+//            } catch {
+//                print("Error adding achievement: \(error)")
+//            }
+//        }
+//    }
     
     
 }

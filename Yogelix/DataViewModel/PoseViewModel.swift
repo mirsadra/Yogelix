@@ -24,18 +24,6 @@ final class PoseViewModel: ObservableObject {
             LatestContent(id: UUID(), pose: pose, title: pose.englishName, image: pose.imageName, duration: "\(pose.steps.count * 2) mins", level: pose.level)
         }
     }
-    
-    // Computed property to get focus areas
-    var focusAreas: [FocusArea] {
-        // Example: Select unique chakra details and map them to FocusArea
-        // This is just a placeholder logic, adjust it to your actual criteria
-        let uniqueChakras = Set(poses.flatMap { $0.chakraDetails.map { $0.name.rawValue } })
-        return uniqueChakras.map { chakraName in
-            // Assuming each chakra corresponds to a focus area
-            // The image and id are placeholders and should be replaced with actual data
-            FocusArea(id: UUID(), name: chakraName, icon: "circle.fill") // Replace with actual icon names
-        }
-    }
 
     init() {
         self.poses = load("updated_data.json")

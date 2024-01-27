@@ -4,7 +4,6 @@ import SwiftUI
 struct UserTrophyToolbar: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
     @EnvironmentObject var userProfileViewModel: UserProfileViewModel
-    @EnvironmentObject var achievementsViewModel: AchievementsViewModel
     
     func greeting() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
@@ -20,64 +19,24 @@ struct UserTrophyToolbar: View {
         }
     }
     
-    func firstName() -> String {
-        return authViewModel.fullName.components(separatedBy: " ").first ?? ""
-    }
+    //    func firstName() -> String {
+    //        return authViewModel.fullName.components(separatedBy: " ").first ?? ""
+    //    }
     
     var body: some View {
-        HStack(spacing: 0) {
-            ZStack {
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .background(
-                        LinearGradient(gradient: Gradient(colors: [Color.seaBlue.opacity(0.4), Color.clear]), startPoint: .top, endPoint: .center)
-                    )
-                    .frame(height: 200)
-                
-                HStack {
-                    ProfilePicImage()
-                        .frame(width: 50, height: 50)
-                    
-                    Text("\(greeting()), \(firstName())")
-                        .font(.custom("LuckiestGuy-Regular", size: 18))
-                        .padding()
-                    
-                    Spacer()
-                    
-                        ForEach(authViewModel.userAchievements) { achievement in
-                            Image(systemName: "trophy.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 24, height: 24)
-                                .foregroundColor(getTrophyColor(for: achievement.id))
-                            // Additional view modifiers...
-                            
-                            Text("\(achievement.count)")
-                                .font(.custom("LuckiestGuy-Regular", size: 12))
-                                .foregroundColor(.primary)
-                        }
-                }
-                .padding()
-            }
+        HStack {
+            ProfilePicImage()
+                .frame(width: 50, height: 50)
+            
+            Text("\(greeting()), \(authViewModel.fullName.components(separatedBy: " ").first ?? "\(authViewModel.displayName.components(separatedBy: " "))" )")
+                .font(.title3)
+                .bold()
         }
+        .padding()
         .onAppear {
             Task {
                 await userProfileViewModel.fetchUserProfile()
-                await achievementsViewModel.fetchAchievements()
             }
-        }
-    }
-    
-    func getTrophyColor(for id: String) -> Color {
-        switch id {
-        case "gold":
-            return .yellow
-        case "silver":
-            return .gray
-        case "bronze":
-            return .brown // Adjust color as needed
-        default:
-            return .black
         }
     }
 }
@@ -86,6 +45,7 @@ struct UserTrophyToolbar_Previews: PreviewProvider {
     static var previews: some View {
         UserTrophyToolbar()
             .environmentObject(AuthenticationViewModel())
+            .environmentObject(UserProfileViewModel())
     }
 }
 

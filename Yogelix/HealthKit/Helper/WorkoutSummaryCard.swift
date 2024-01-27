@@ -62,7 +62,6 @@ struct WorkoutSummaryCard: View {
 struct WorkoutSummaryCard_Previews: PreviewProvider {
     static var previews: some View {
         WorkoutSummaryCard()
-
             .previewLayout(.sizeThatFits)
             .padding()
     }

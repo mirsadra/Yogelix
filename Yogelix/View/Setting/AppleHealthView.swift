@@ -14,17 +14,10 @@ struct AppleHealthView: View {
 
             Toggle("Grant Read Access", isOn: $isReadAccessGranted)
                 .padding()
-                .onChange(of: isReadAccessGranted) { newValue in
-                    // Trigger the function to handle read access
-                    handleReadAccess(granted: newValue)
-                }
+
 
             Toggle("Grant Write Access", isOn: $isWriteAccessGranted)
                 .padding()
-                .onChange(of: isWriteAccessGranted) { newValue in
-                    // Trigger the function to handle write access
-                    handleWriteAccess(granted: newValue)
-                }
 
             Button("Customize HealthKit Permissions") {
                 // Trigger the HealthKit permissions popup

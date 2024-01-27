@@ -1,2 +1,0 @@
-//  SessionController.swift
-import Foundation

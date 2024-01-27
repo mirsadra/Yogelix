@@ -18,20 +18,17 @@ struct YogelixApp: App {
     @StateObject var poseViewModel = PoseViewModel()
     @StateObject var workoutDataViewModel = WorkoutDataViewModel()
     @StateObject var userProfileViewModel = UserProfileViewModel()
-    @StateObject var achievementsViewModel = AchievementsViewModel()
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
+            AuthenticatedView {
                 ContentView()
-                    .environmentObject(authViewModel)
-                    .environmentObject(poseViewModel)
-                    .environmentObject(quantityViewModel)
-                    .environmentObject(workoutDataViewModel)
-                    .environmentObject(userProfileViewModel)
-                    .environmentObject(achievementsViewModel)
             }
-            .navigationTitle("Yogel🛸 Main")
+            .environmentObject(authViewModel)
+            .environmentObject(poseViewModel)
+            .environmentObject(quantityViewModel)
+            .environmentObject(workoutDataViewModel)
+            .environmentObject(userProfileViewModel)
         }
     }
 }

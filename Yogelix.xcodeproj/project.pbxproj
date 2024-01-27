@@ -19,7 +19,6 @@
 		3B2125DA2B121D9300B3E0BE /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125D92B121D9300B3E0BE /* FirebaseRemoteConfig */; };
 		3B2125DC2B121D9300B3E0BE /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2125DB2B121D9300B3E0BE /* FirebaseRemoteConfigSwift */; };
 		3B225B832B24871200D7E748 /* PoseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B225B822B24871200D7E748 /* PoseDetailView.swift */; };
-		3B2760CA2B3C94F8007CB829 /* AchievementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2760C92B3C94F8007CB829 /* AchievementsViewModel.swift */; };
 		3B2EA73C2B0BFF2800D46DA6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */; };
 		3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */; };
 		3B331DA32B21381600DAF0E2 /* ManageSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B331DA22B21381600DAF0E2 /* ManageSubscriptionView.swift */; };
@@ -35,25 +34,19 @@
 		3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5469912B0CFD40009130FD /* UserProfileView.swift */; };
 		3B5C59E32B1902FE00283244 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E22B1902FE00283244 /* Pose.swift */; };
 		3B5C59E52B1905BD00283244 /* PoseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C59E42B1905BD00283244 /* PoseViewModel.swift */; };
-		3B63F0D42B2878B600794E2A /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D32B2878B600794E2A /* Achievement.swift */; };
 		3B63F0D62B28D61200794E2A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D52B28D61200794E2A /* SearchBar.swift */; };
 		3B63F0D82B28D6CD00794E2A /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D72B28D6CD00794E2A /* CategoryButton.swift */; };
 		3B63F0DA2B28D79B00794E2A /* LatestContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0D92B28D79B00794E2A /* LatestContentView.swift */; };
-		3B63F0DC2B28D81300794E2A /* FocusAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B63F0DB2B28D81300794E2A /* FocusAreaView.swift */; };
 		3B8920D02B0F5E50000A61A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */; };
 		3B92A57C2B2220930088299E /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92A57B2B2220930088299E /* DiscoverView.swift */; };
 		3B9A56A92B23B98F00E2246F /* updated_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A56A82B23B98F00E2246F /* updated_data.json */; };
-		3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DA82B2B0EAF6D00480621 /* Theme.swift */; };
 		3BA0D7532B25CD4200C53055 /* MetadataScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */; };
-		3BA2F0CE2B1CFA83001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */; };
 		3BA2F0D32B1CFAE3001AE1F7 /* HeartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0CF2B1CFAE3001AE1F7 /* HeartRateModel.swift */; };
 		3BA2F0D52B1CFAE3001AE1F7 /* SleepAnalysisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0D12B1CFAE3001AE1F7 /* SleepAnalysisModel.swift */; };
-		3BA2F0D62B1CFAE3001AE1F7 /* MindfulSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA2F0D22B1CFAE3001AE1F7 /* MindfulSessionModel.swift */; };
 		3BA33C922B1E533800DF80F6 /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BA33C912B1E533800DF80F6 /* LuckiestGuy-Regular.ttf */; };
 		3BA33C942B1E6A8F00DF80F6 /* UserTrophyToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */; };
 		3BAC1BB22B2B3EF4001DBE56 /* CreateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */; };
 		3BAC1BB62B2B7A67001DBE56 /* WorkoutSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC1BB52B2B7A67001DBE56 /* WorkoutSessionView.swift */; };
-		3BAF8F002B13D79300E5436F /* HealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF8EFF2B13D79300E5436F /* HealthCard.swift */; };
 		3BBF478D2B1E4CD4006033F8 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF478C2B1E4CD4006033F8 /* Fonts.swift */; };
 		3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */; };
 		3BCC04C92B01901400FD1FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04C82B01901400FD1FC3 /* ContentView.swift */; };
@@ -63,6 +56,9 @@
 		3BCC04DF2B01901600FD1FC3 /* YogelixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04DE2B01901600FD1FC3 /* YogelixTests.swift */; };
 		3BCC04E92B01901600FD1FC3 /* YogelixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04E82B01901600FD1FC3 /* YogelixUITests.swift */; };
 		3BCC04EB2B01901600FD1FC3 /* YogelixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC04EA2B01901600FD1FC3 /* YogelixUITestsLaunchTests.swift */; };
+		3BCF8E4A2B6468A400D2C61D /* AnimatedBlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF8E492B6468A400D2C61D /* AnimatedBlobView.swift */; };
+		3BCF8E4E2B64733B00D2C61D /* AppleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF8E4D2B64733B00D2C61D /* AppleSignInManager.swift */; };
+		3BCF8E522B64801C00D2C61D /* GoogleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCF8E512B64801C00D2C61D /* GoogleSignInManager.swift */; };
 		3BD2CCBB2B1B8D7400DD5C7E /* QuantityDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CCBA2B1B8D7400DD5C7E /* QuantityDataViewModel.swift */; };
 		3BD2CCBD2B1B90C800DD5C7E /* WorkoutDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CCBC2B1B90C800DD5C7E /* WorkoutDataViewModel.swift */; };
 		3BD2CCBF2B1BA4D100DD5C7E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD2CCBE2B1BA4D100DD5C7E /* MainView.swift */; };
@@ -76,14 +72,9 @@
 		3BDA65772B1FB43400177735 /* PoseOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */; };
 		3BDA657D2B1FDCC200177735 /* ProfilePicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA657C2B1FDCC200177735 /* ProfilePicImage.swift */; };
 		3BDFE13C2B026C21007FB23E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13B2B026C21007FB23E /* ImagePicker.swift */; };
-		3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFE13D2B026C2B007FB23E /* SessionController.swift */; };
 		3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE08DE22B175273002D585A /* fine-tune.jsonl */; };
 		3BE252B42B26106C00AABE82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE252B32B26106C00AABE82 /* GoogleService-Info.plist */; };
-		3BE252B62B2636B400AABE82 /* ManageSubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE252B52B2636B400AABE82 /* ManageSubscriptionViewModel.swift */; };
 		3BE4A8202B1A15AC007611D8 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */; };
-		3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */; };
-		3BE4A8422B1A607C007611D8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A8412B1A607C007611D8 /* ChatView.swift */; };
-		3BE4A8442B1A709E007611D8 /* final.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 3BE4A8432B1A709E007611D8 /* final.jsonl */; };
 		3BE4A8562B1B2E73007611D8 /* QuantityTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A8552B1B2E73007611D8 /* QuantityTypeManager.swift */; };
 		3BE4A8582B1B3342007611D8 /* WorkoutTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A8572B1B3342007611D8 /* WorkoutTypeManager.swift */; };
 		3BE4A85B2B1B76D9007611D8 /* CategoryTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE4A85A2B1B76D8007611D8 /* CategoryTypeManager.swift */; };
@@ -138,7 +129,6 @@
 		3B1962572B1916C800A7C894 /* PoseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseList.swift; sourceTree = "<group>"; };
 		3B19625B2B191D8300A7C894 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3B225B822B24871200D7E748 /* PoseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDetailView.swift; sourceTree = "<group>"; };
-		3B2760C92B3C94F8007CB829 /* AchievementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewModel.swift; sourceTree = "<group>"; };
 		3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		3B331DA22B21381600DAF0E2 /* ManageSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionView.swift; sourceTree = "<group>"; };
@@ -153,16 +143,13 @@
 		3B5469912B0CFD40009130FD /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		3B5C59E22B1902FE00283244 /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		3B5C59E42B1905BD00283244 /* PoseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseViewModel.swift; sourceTree = "<group>"; };
-		3B63F0D32B2878B600794E2A /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		3B63F0D52B28D61200794E2A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		3B63F0D72B28D6CD00794E2A /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		3B63F0D92B28D79B00794E2A /* LatestContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestContentView.swift; sourceTree = "<group>"; };
-		3B63F0DB2B28D81300794E2A /* FocusAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAreaView.swift; sourceTree = "<group>"; };
 		3B83F94A2B0399E4001ADD11 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3B8920CF2B0F5E50000A61A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3B92A57B2B2220930088299E /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		3B9A56A82B23B98F00E2246F /* updated_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = updated_data.json; sourceTree = "<group>"; };
-		3B9DA82B2B0EAF6D00480621 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataScrollView.swift; sourceTree = "<group>"; };
 		3BA2F0CD2B1CFA83001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
 		3BA2F0CF2B1CFAE3001AE1F7 /* HeartRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRateModel.swift; sourceTree = "<group>"; };
@@ -174,7 +161,6 @@
 		3BA4A6552B0D60D50032936E /* YogelixSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogelixSecrets.h; sourceTree = "<group>"; };
 		3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWorkoutView.swift; sourceTree = "<group>"; };
 		3BAC1BB52B2B7A67001DBE56 /* WorkoutSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionView.swift; sourceTree = "<group>"; };
-		3BAF8EFF2B13D79300E5436F /* HealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCard.swift; sourceTree = "<group>"; };
 		3BBF478C2B1E4CD4006033F8 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		3BCC04C32B01901400FD1FC3 /* Yogelix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yogelix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixApp.swift; sourceTree = "<group>"; };
@@ -189,6 +175,9 @@
 		3BCC04E42B01901600FD1FC3 /* YogelixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YogelixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCC04E82B01901600FD1FC3 /* YogelixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixUITests.swift; sourceTree = "<group>"; };
 		3BCC04EA2B01901600FD1FC3 /* YogelixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogelixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3BCF8E492B6468A400D2C61D /* AnimatedBlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBlobView.swift; sourceTree = "<group>"; };
+		3BCF8E4D2B64733B00D2C61D /* AppleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInManager.swift; sourceTree = "<group>"; };
+		3BCF8E512B64801C00D2C61D /* GoogleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInManager.swift; sourceTree = "<group>"; };
 		3BD2CCBA2B1B8D7400DD5C7E /* QuantityDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityDataViewModel.swift; sourceTree = "<group>"; };
 		3BD2CCBC2B1B90C800DD5C7E /* WorkoutDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDataViewModel.swift; sourceTree = "<group>"; };
 		3BD2CCBE2B1BA4D100DD5C7E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -200,14 +189,9 @@
 		3BDA65762B1FB43400177735 /* PoseOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseOfTheDay.swift; sourceTree = "<group>"; };
 		3BDA657C2B1FDCC200177735 /* ProfilePicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicImage.swift; sourceTree = "<group>"; };
 		3BDFE13B2B026C21007FB23E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		3BDFE13D2B026C2B007FB23E /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		3BE08DE22B175273002D585A /* fine-tune.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = "fine-tune.jsonl"; sourceTree = "<group>"; };
 		3BE252B32B26106C00AABE82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3BE252B52B2636B400AABE82 /* ManageSubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageSubscriptionViewModel.swift; sourceTree = "<group>"; };
 		3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
-		3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIApiClient.swift; sourceTree = "<group>"; };
-		3BE4A8412B1A607C007611D8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		3BE4A8432B1A709E007611D8 /* final.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = final.jsonl; sourceTree = "<group>"; };
 		3BE4A8552B1B2E73007611D8 /* QuantityTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityTypeManager.swift; sourceTree = "<group>"; };
 		3BE4A8572B1B3342007611D8 /* WorkoutTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypeManager.swift; sourceTree = "<group>"; };
 		3BE4A85A2B1B76D8007611D8 /* CategoryTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTypeManager.swift; sourceTree = "<group>"; };
@@ -262,10 +246,7 @@
 			children = (
 				3B5C59E42B1905BD00283244 /* PoseViewModel.swift */,
 				3BD2CCBC2B1B90C800DD5C7E /* WorkoutDataViewModel.swift */,
-				3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */,
-				3BE252B52B2636B400AABE82 /* ManageSubscriptionViewModel.swift */,
 				3BF59E2B2B279F5F000C6483 /* UserProfileViewModel.swift */,
-				3B2760C92B3C94F8007CB829 /* AchievementsViewModel.swift */,
 			);
 			path = DataViewModel;
 			sourceTree = "<group>";
@@ -283,21 +264,11 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		3B40A36D2B1222F100170041 /* OpenAI */ = {
-			isa = PBXGroup;
-			children = (
-				3BE4A83F2B1A5C0C007611D8 /* OpenAIApiClient.swift */,
-				3BE4A8412B1A607C007611D8 /* ChatView.swift */,
-			);
-			path = OpenAI;
-			sourceTree = "<group>";
-		};
 		3B5C59E12B1902E100283244 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				3BD9BBA52B20CA1000BF7949 /* data.json */,
 				3B9A56A82B23B98F00E2246F /* updated_data.json */,
-				3BE4A8432B1A709E007611D8 /* final.jsonl */,
 				3BBF478C2B1E4CD4006033F8 /* Fonts.swift */,
 			);
 			path = Resources;
@@ -381,12 +352,12 @@
 		3BCC04C52B01901400FD1FC3 /* Yogelix */ = {
 			isa = PBXGroup;
 			children = (
+				3BCF8E462B6444D000D2C61D /* Auth */,
 				3BA2F0C92B1CF7D7001AE1F7 /* HealthKit */,
 				3B225B7F2B247CDA00D7E748 /* DataViewModel */,
 				3BCC04F82B0192C600FD1FC3 /* View */,
 				3BCC04F72B0192B200FD1FC3 /* Model */,
 				3BCC04FD2B01931400FD1FC3 /* Controller */,
-				3B40A36D2B1222F100170041 /* OpenAI */,
 				3B5C59E12B1902E100283244 /* Resources */,
 				3BCC04C62B01901400FD1FC3 /* YogelixApp.swift */,
 				3BCC04CA2B01901500FD1FC3 /* Assets.xcassets */,
@@ -424,8 +395,6 @@
 			children = (
 				3B5C59E22B1902FE00283244 /* Pose.swift */,
 				3BE4A8572B1B3342007611D8 /* WorkoutTypeManager.swift */,
-				3B9DA82B2B0EAF6D00480621 /* Theme.swift */,
-				3B63F0D32B2878B600794E2A /* Achievement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -435,12 +404,10 @@
 			children = (
 				3BE4A8212B1A1658007611D8 /* Helpers */,
 				3B331DAE2B213CC600DAF0E2 /* Setting */,
-				3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */,
 				3BCC04C82B01901400FD1FC3 /* ContentView.swift */,
 				3BD2CCBE2B1BA4D100DD5C7E /* MainView.swift */,
 				3B92A57B2B2220930088299E /* DiscoverView.swift */,
 				3B1962572B1916C800A7C894 /* PoseList.swift */,
-				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
 				3BAC1BB12B2B3EF4001DBE56 /* CreateWorkoutView.swift */,
 				3BAC1BB52B2B7A67001DBE56 /* WorkoutSessionView.swift */,
 			);
@@ -451,9 +418,22 @@
 			isa = PBXGroup;
 			children = (
 				3BDFE13B2B026C21007FB23E /* ImagePicker.swift */,
-				3BDFE13D2B026C2B007FB23E /* SessionController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3BCF8E462B6444D000D2C61D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3B54698E2B0CFCD3009130FD /* AuthenticatedView.swift */,
+				3B2EA73E2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift */,
+				3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */,
+				3B5469912B0CFD40009130FD /* UserProfileView.swift */,
+				3BCF8E492B6468A400D2C61D /* AnimatedBlobView.swift */,
+				3BCF8E4D2B64733B00D2C61D /* AppleSignInManager.swift */,
+				3BCF8E512B64801C00D2C61D /* GoogleSignInManager.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		3BE4A8212B1A1658007611D8 /* Helpers */ = {
@@ -463,17 +443,14 @@
 				3B19625B2B191D8300A7C894 /* CircleImage.swift */,
 				3BDA657C2B1FDCC200177735 /* ProfilePicImage.swift */,
 				3BE4A81F2B1A15AC007611D8 /* FavoriteButton.swift */,
-				3BAF8EFF2B13D79300E5436F /* HealthCard.swift */,
 				3B40A37C2B12B43000170041 /* MetricCard.swift */,
 				3BA33C932B1E6A8F00DF80F6 /* UserTrophyToolbar.swift */,
 				3BF547752B155DC10073BD18 /* ChakraScrollView.swift */,
 				3BA0D7522B25CD4200C53055 /* MetadataScrollView.swift */,
-				3B2EA73B2B0BFF2800D46DA6 /* LoginView.swift */,
 				3B225B822B24871200D7E748 /* PoseDetailView.swift */,
 				3B63F0D52B28D61200794E2A /* SearchBar.swift */,
 				3B63F0D72B28D6CD00794E2A /* CategoryButton.swift */,
 				3B63F0D92B28D79B00794E2A /* LatestContentView.swift */,
-				3B63F0DB2B28D81300794E2A /* FocusAreaView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -576,7 +553,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					3BCC04C22B01901400FD1FC3 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -627,7 +604,6 @@
 				3BCC04CB2B01901500FD1FC3 /* Assets.xcassets in Resources */,
 				3BE08DE32B175273002D585A /* fine-tune.jsonl in Resources */,
 				3B9A56A92B23B98F00E2246F /* updated_data.json in Resources */,
-				3BE4A8442B1A709E007611D8 /* final.jsonl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,12 +628,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCF8E4A2B6468A400D2C61D /* AnimatedBlobView.swift in Sources */,
 				3B63F0DA2B28D79B00794E2A /* LatestContentView.swift in Sources */,
 				3BE4A8582B1B3342007611D8 /* WorkoutTypeManager.swift in Sources */,
-				3B63F0DC2B28D81300794E2A /* FocusAreaView.swift in Sources */,
 				3B54698F2B0CFCD3009130FD /* AuthenticatedView.swift in Sources */,
 				3BE4A8602B1B7CC0007611D8 /* MindfulSessionModel.swift in Sources */,
-				3BA2F0D62B1CFAE3001AE1F7 /* MindfulSessionModel.swift in Sources */,
 				3B331DA72B2138A000DAF0E2 /* RateUsView.swift in Sources */,
 				3BCC04D02B01901500FD1FC3 /* Persistence.swift in Sources */,
 				3BCC04D32B01901500FD1FC3 /* Yogelix.xcdatamodeld in Sources */,
@@ -678,7 +653,6 @@
 				3BA33C942B1E6A8F00DF80F6 /* UserTrophyToolbar.swift in Sources */,
 				3B5C59E52B1905BD00283244 /* PoseViewModel.swift in Sources */,
 				3BBF478D2B1E4CD4006033F8 /* Fonts.swift in Sources */,
-				3BA2F0CE2B1CFA83001AE1F7 /* HeartRateModel.swift in Sources */,
 				3B331DA52B21385D00DAF0E2 /* RestorePurchaseView.swift in Sources */,
 				3B225B832B24871200D7E748 /* PoseDetailView.swift in Sources */,
 				3BA0D7532B25CD4200C53055 /* MetadataScrollView.swift in Sources */,
@@ -687,29 +661,23 @@
 				3BF547762B155DC10073BD18 /* ChakraScrollView.swift in Sources */,
 				3BAC1BB62B2B7A67001DBE56 /* WorkoutSessionView.swift in Sources */,
 				3BD2CCC42B1BA6C500DD5C7E /* ActivityRings.swift in Sources */,
-				3B2760CA2B3C94F8007CB829 /* AchievementsViewModel.swift in Sources */,
 				3BE4A8632B1B7EAF007611D8 /* CategoryDataViewModel.swift in Sources */,
-				3B9DA82C2B0EAF6D00480621 /* Theme.swift in Sources */,
 				3B2EA73F2B0C0BAF00D46DA6 /* AuthenticationViewModel.swift in Sources */,
 				3B5469922B0CFD40009130FD /* UserProfileView.swift in Sources */,
 				3BE4A8202B1A15AC007611D8 /* FavoriteButton.swift in Sources */,
+				3BCF8E4E2B64733B00D2C61D /* AppleSignInManager.swift in Sources */,
 				3BD2CCBD2B1B90C800DD5C7E /* WorkoutDataViewModel.swift in Sources */,
-				3B63F0D42B2878B600794E2A /* Achievement.swift in Sources */,
-				3BE4A8422B1A607C007611D8 /* ChatView.swift in Sources */,
-				3BE4A8402B1A5C0C007611D8 /* OpenAIApiClient.swift in Sources */,
 				3BD91F1F2B16876F00D9218E /* Ring.swift in Sources */,
 				3BD2CCBB2B1B8D7400DD5C7E /* QuantityDataViewModel.swift in Sources */,
 				3BD2CCC62B1BA83800DD5C7E /* WorkoutSummaryCard.swift in Sources */,
 				3BDA65772B1FB43400177735 /* PoseOfTheDay.swift in Sources */,
 				3BD2CCBF2B1BA4D100DD5C7E /* MainView.swift in Sources */,
-				3BAF8F002B13D79300E5436F /* HealthCard.swift in Sources */,
 				3B331DAB2B2139E500DAF0E2 /* PrivacyPolicyView.swift in Sources */,
-				3BDFE13E2B026C2B007FB23E /* SessionController.swift in Sources */,
 				3B40A37D2B12B43000170041 /* MetricCard.swift in Sources */,
-				3BE252B62B2636B400AABE82 /* ManageSubscriptionViewModel.swift in Sources */,
 				3B5C59E32B1902FE00283244 /* Pose.swift in Sources */,
 				3B1962582B1916C800A7C894 /* PoseList.swift in Sources */,
 				3B63F0D62B28D61200794E2A /* SearchBar.swift in Sources */,
+				3BCF8E522B64801C00D2C61D /* GoogleSignInManager.swift in Sources */,
 				3BCC04C72B01901400FD1FC3 /* YogelixApp.swift in Sources */,
 				3BE4A85B2B1B76D9007611D8 /* CategoryTypeManager.swift in Sources */,
 				3BF547782B155EDE0073BD18 /* LoopingScroll.swift in Sources */,

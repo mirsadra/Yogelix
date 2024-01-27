@@ -2,11 +2,13 @@
 import SwiftUI
 
 struct MetricCard: View {
-    var title: String
-    var emoji: String
-    var value: Double
-    var unit: String
-    var date: Date?
+    @State var isRefreshed = false
+    @State var title: String
+    @State var value: Double
+    @State var unit: String
+    @State var date: Date?
+    @State var emoji: String
+    
     var caption: String
     var dateInterval: String?
     var isInteger: Bool = true
@@ -86,15 +88,7 @@ struct MetricCard: View {
 struct MetricCard_Preview: PreviewProvider {
     static var previews: some View {
         MetricCard(
-            title: "Energy Burn",
-            emoji: "🔥",
-            value: 350.0,
-            unit: "kcal",
-            date: Date(),
-            caption: "Total Sum of the Day",
-            dateInterval: nil,
-            isInteger: false,
-            useTwoDecimalPlaces: true
+            isRefreshed: false, title: "Energy Burn", value: 350.0, unit: "kcal", emoji: "🔥", caption: "Caption"
         )
         .previewLayout(.sizeThatFits)
         .padding()

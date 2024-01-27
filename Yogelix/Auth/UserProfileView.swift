@@ -12,15 +12,10 @@ struct UserProfileView: View {
     @State private var profileImage: Image = Image("avatarMale")
     @State private var showingErrorAlert = false
     @State private var errorMessage = ""
-    
-    private func signOut() {
-        authViewModel.signOut()
-    }
 
     var body: some View {
         NavigationView {
             List {
-                // Profile Picture and Email Section
                 Section {
                     VStack {
                         HStack {
@@ -69,7 +64,12 @@ struct UserProfileView: View {
 
                 // Sign out and Delete Account
                 Section {
-                    Button("Sign Out", action: signOut)
+                    Button(action: {
+                        authViewModel.shouldSignOut()
+                        authViewModel.authenticationState = .unauthenticated
+                    }, label: {
+                        Text("Sign Out")
+                    })
                     Button("Delete Account", action: { presentingConfirmationDialog.toggle() })
                         .foregroundColor(.red)
                 }
@@ -99,34 +99,6 @@ struct UserProfileView: View {
 
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        // Create a mock AuthenticationViewModel if necessary
-        let mockAuthViewModel = AuthenticationViewModel()
-
         UserProfileView()
-            .environmentObject(mockAuthViewModel) // Providing the mock environment object
     }
 }
-
-
-/*
- 
- @Environment(\.dismiss) var dismiss
- 
- 
- 
- private func deleteAccount() {
- Task {
- if await viewModel.deleteAccount() == true {
- dismiss()
- }
- }
- }
- 
- 
- 
- .confirmationDialog("Deleting your account is permanent. Do you want to delete your account?",
- isPresented: $presentingConfirmationDialog, titleVisibility: .visible) {
- Button("Delete Account", role: .destructive, action: deleteAccount)
- Button("Cancel", role: .cancel, action: { })
- }
- */

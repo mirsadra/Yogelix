@@ -39,14 +39,9 @@ struct ProfilePicImage: View {
                     Image(systemName: "person.crop.circle")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(userProfileViewModel.profilePicColor)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.secondary, lineWidth: 3))
-                        .shadow(radius: 7)
-                    
-                    ColorPicker("", selection: $userProfileViewModel.profilePicColor)
-                        .labelsHidden() // Optionally hide the label of ColorPicker
                 }
             }
         }
@@ -75,7 +70,3 @@ struct ProfilePicImage: View {
     }
 }
 
-#Preview {
-    ProfilePicImage()
-        .environmentObject(AuthenticationViewModel())
-}
