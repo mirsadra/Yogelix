@@ -17,7 +17,6 @@ struct YogelixApp: App {
     @StateObject var quantityViewModel = QuantityDataViewModel()
     @StateObject var poseViewModel = PoseViewModel()
     @StateObject var workoutDataViewModel = WorkoutDataViewModel()
-    @StateObject var userProfileViewModel = UserProfileViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -28,7 +27,6 @@ struct YogelixApp: App {
             .environmentObject(poseViewModel)
             .environmentObject(quantityViewModel)
             .environmentObject(workoutDataViewModel)
-            .environmentObject(userProfileViewModel)
         }
     }
 }

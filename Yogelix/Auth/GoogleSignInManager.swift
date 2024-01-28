@@ -9,6 +9,7 @@ protocol GoogleSignInManagerDelegate: AnyObject {
     func didUpdateProfile(name: String, fullName: String, profilePicUrl: String)
     func didEncounterError(_ error: Error)
     func shouldSignOut()
+    func didCompleteFirebaseSignIn(result: AuthDataResult)
     func deleteGoogleUserAccount() async -> Bool
 }
 
@@ -45,6 +46,7 @@ class GoogleSignInManager {
                                                            accessToken: accessToken.tokenString)
             
             let result = try await Auth.auth().signIn(with: credential)
+            delegate?.didCompleteFirebaseSignIn(result: result)
             
             let displayName = googleUser.profile?.name ?? ""
             let profilePicUrl = googleUser.profile?.imageURL(withDimension: 200)?.absoluteString ?? ""

@@ -6,7 +6,6 @@ import FirebaseAuth
 
 struct UserProfileView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @EnvironmentObject var userProfileViewModel: UserProfileViewModel
     
     @State var presentingConfirmationDialog = false
     @State private var profileImage: Image = Image("avatarMale")
@@ -88,7 +87,7 @@ struct UserProfileView: View {
             }
             .onAppear {
                 Task {
-                    await userProfileViewModel.fetchUserProfile()
+                    authViewModel.loadUserProfile()
                 }
             }
             .analyticsScreen(name: "\(Self.self)")

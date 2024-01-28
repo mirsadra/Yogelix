@@ -4,7 +4,6 @@ import UIKit
 
 struct ProfilePicImage: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @EnvironmentObject var userProfileViewModel: UserProfileViewModel
     
     @State private var showImagePicker = false
     @State private var imageDataToUpload: Data?
@@ -14,7 +13,7 @@ struct ProfilePicImage: View {
     }
     
     func removeImage() {
-        userProfileViewModel.removeProfileImage()
+        authViewModel.removeProfileImage()
     }
     
     var body: some View {
@@ -27,11 +26,8 @@ struct ProfilePicImage: View {
                             .aspectRatio(contentMode: .fill)
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.accentColor, lineWidth: 3))
-                            .shadow(radius: 7)
-                            
                     default:
                         ProgressView()
-                            .frame(width: 50, height: 50)
                     }
                 }
             } else {
@@ -39,7 +35,6 @@ struct ProfilePicImage: View {
                     Image(systemName: "person.crop.circle")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 50, height: 50)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.secondary, lineWidth: 3))
                 }
@@ -63,7 +58,7 @@ struct ProfilePicImage: View {
         .onChange(of: imageDataToUpload) {
             if let imageData = imageDataToUpload {
                 Task {
-                    await userProfileViewModel.uploadProfileImage(imageData)
+                    await authViewModel.uploadProfileImage(imageData)
                 }
             }
         }
