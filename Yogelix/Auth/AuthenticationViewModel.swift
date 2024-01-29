@@ -42,7 +42,29 @@ class AuthenticationViewModel: ObservableObject, AppleSignInManagerDelegate, Goo
         registerAuthStateHandler()
         appleSignInManager.delegate = self
         googleSignInManager.delegate = self
+        loadPersistedData()
         loadUserProfile()
+    }
+    
+    // MARK: - Persistence
+    private func savePersistedData() {
+        let defaults = UserDefaults.standard
+        defaults.set(email, forKey: "userEmail")
+        defaults.set(displayName, forKey: "userDisplayName")
+        defaults.set(fullName, forKey: "userFullName")
+        defaults.set(profilePicUrl, forKey: "userProfilePicUrl")
+        defaults.set(exerciseDuration, forKey: "userExerciseDuration")
+        defaults.set(achievements, forKey: "userAchievements")
+    }
+
+    private func loadPersistedData() {
+        let defaults = UserDefaults.standard
+        email = defaults.string(forKey: "userEmail") ?? ""
+        displayName = defaults.string(forKey: "userDisplayName") ?? ""
+        fullName = defaults.string(forKey: "userFullName") ?? ""
+        profilePicUrl = defaults.string(forKey: "userProfilePicUrl") ?? ""
+        exerciseDuration = defaults.double(forKey: "userExerciseDuration")
+        achievements = defaults.object(forKey: "userAchievements") as? [String] ?? []
     }
     
     // MARK: - User Profile Management
@@ -181,15 +203,16 @@ class AuthenticationViewModel: ObservableObject, AppleSignInManagerDelegate, Goo
             self.displayName = name
             self.fullName = fullName
             self.profilePicUrl = profilePicUrl
+            self.savePersistedData()
         }
     }
     
     func didCompleteFirebaseSignIn(result: AuthDataResult) {
         DispatchQueue.main.async {
-            // Update relevant user information
             self.user = result.user
             self.email = result.user.email ?? ""
             self.displayName = result.user.displayName ?? ""
+            self.savePersistedData()
         }
     }
     

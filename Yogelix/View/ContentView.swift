@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @EnvironmentObject var poseViewModel: PoseViewModel
+    @EnvironmentObject var poseData: PoseData
     
     var body: some View {
         TabView {
@@ -22,15 +22,9 @@ struct ContentView: View {
                     Label("Workout", systemImage: "flag.2.crossed.circle.fill")
                 }
             
-            PoseList()
+            PoseListView()
                 .tabItem {
                     Label("Poses", systemImage: "figure.yoga")
-                }
-            
-            UserProfileView()
-                .badge("!")
-                .tabItem {
-                    Label("Account", systemImage: "gear.circle.fill")
                 }
         }
     }

@@ -40,7 +40,7 @@ struct MetricCard: View {
         VStack {
             Text("\(title)")
                 .font(.headline)
-                .foregroundStyle(.harmonyGray)
+                .foregroundStyle(.primary)
                 .opacity(textOpacity)
                 .offset(slideInOffset)
                 .onAppear {
@@ -53,9 +53,9 @@ struct MetricCard: View {
             
             Text("\(formattedValue) \(unit) \(emoji)")
                 .font(.subheadline)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .animation(.bouncy(duration: 2))
-                .foregroundColor(Color.orange)
+                .foregroundColor(Color.blue)
                 .padding()
             
             if let dateInterval = dateInterval {
@@ -65,21 +65,19 @@ struct MetricCard: View {
             } else {
                 Text("\(formattedDate)")
                     .font(.subheadline)
-                    .foregroundColor(Color.harmonyGray)
+                    .foregroundColor(Color.primary)
             }
             
             Text(caption)
                 .font(.caption)
-                .foregroundColor(Color.gray)
+                .foregroundColor(.primary)
                 .padding(.bottom)
-            // New VStack with Picker and Button
             
         }
         .padding()
-        .frame(width: 200, height: 200) 
-        .background(.primary)
+        .frame(width: 200, height: 200)
+        .background(Color(UIColor.systemFill))
         .cornerRadius(15)
-        .shadow(color: Color.sereneGreen.opacity(0.4), radius: 10, x: 8, y: 5)
     }
 }
 

@@ -9,6 +9,7 @@ protocol AppleSignInManagerDelegate: AnyObject {
     func didUpdateProfile(name: String, fullName: String, profilePicUrl: String)
     func didEncounterError(_ error: Error)
     func shouldSignOut()
+    func didCompleteFirebaseSignIn(result: AuthDataResult)
     func deleteAppleUserAccount() async -> Bool
 }
 
@@ -57,6 +58,7 @@ class AppleSignInManager {
                         let displayName = fullName.isEmpty ? (authResult.user.displayName ?? "") : fullName
                         let profilePicUrl = ""
                         
+                        delegate?.didCompleteFirebaseSignIn(result: authResult)
                         delegate?.didUpdateProfile(name: displayName, fullName: displayName, profilePicUrl: profilePicUrl)
                         delegate?.didUpdateAuthenticationState(.authenticated)
                     } catch {

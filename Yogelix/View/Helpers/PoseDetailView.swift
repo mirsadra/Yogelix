@@ -2,11 +2,11 @@
 import SwiftUI
 
 struct PoseDetailView: View {
-    @EnvironmentObject var poseViewModel: PoseViewModel
+    @EnvironmentObject var poseData: PoseData
     let pose: Pose
     
     var poseIndex: Int {
-        poseViewModel.poses.firstIndex(where: { $0.id == pose.id })!
+        poseData.poses.firstIndex(where: { $0.id == pose.id })!
     }
     
     func intensityLevel(for level: String) -> Double {
@@ -76,7 +76,7 @@ struct PoseDetailView: View {
                         .font(.title2) // Make the font larger and more prominent
                         .fontWeight(.bold) // Increase the weight of the font to make it stand out
                         .padding(.vertical, 5) // Add some padding to give it room to breathe
-                    FavoriteButton(isSet: $poseViewModel.poses[poseIndex].isFavorite) // Pose is favorite or not
+                    FavoriteButton(isSet: $poseData.poses[poseIndex].isFavorite) // Pose is favorite or not
                 }
                 Text("\(pose.sanskritName)")
                     .font(.subheadline)
@@ -198,6 +198,6 @@ struct PoseDetailView: View {
             .padding()
         }
         .navigationBarTitle(pose.englishName, displayMode: .inline)
-        .environmentObject(PoseViewModel())
+        .environmentObject(PoseData())
     }
 }

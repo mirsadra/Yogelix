@@ -15,7 +15,7 @@ struct YogelixApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var authViewModel = AuthenticationViewModel()
     @StateObject var quantityViewModel = QuantityDataViewModel()
-    @StateObject var poseViewModel = PoseViewModel()
+    @StateObject var poseData = PoseData()
     @StateObject var workoutDataViewModel = WorkoutDataViewModel()
     
     var body: some Scene {
@@ -24,7 +24,7 @@ struct YogelixApp: App {
                 ContentView()
             }
             .environmentObject(authViewModel)
-            .environmentObject(poseViewModel)
+            .environmentObject(poseData)
             .environmentObject(quantityViewModel)
             .environmentObject(workoutDataViewModel)
         }

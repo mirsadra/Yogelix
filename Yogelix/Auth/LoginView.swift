@@ -10,7 +10,6 @@ struct LoginView: View {
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @State private var isActive = false
-    @State private var emojiOffset: CGFloat = 0
     
     var body: some View {
         VStack {
