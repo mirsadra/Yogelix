@@ -16,7 +16,26 @@ struct Pose: Hashable, Codable, Identifiable {
     var image: Image {
         Image(imageName)
     }
-    var isFavorite: Bool
+    
+    // This property is not saved directly, but computed based on UserDefaults
+    var isFavorite: Bool {
+        get {
+            let favorites = UserDefaults.standard.array(forKey: "favoritePoses") as? [Int] ?? []
+            return favorites.contains(id)
+        }
+        set {
+            var favorites = UserDefaults.standard.array(forKey: "favoritePoses") as? [Int] ?? []
+            if newValue {
+                if !favorites.contains(id) {
+                    favorites.append(id)
+                }
+            } else {
+                favorites.removeAll { $0 == id }
+            }
+            UserDefaults.standard.set(favorites, forKey: "favoritePoses")
+        }
+    }
+    
     var relatedChakras: [Int]
     var recommendedFor: RecommendedFor
     var chakraDetails: [ChakraDetail]

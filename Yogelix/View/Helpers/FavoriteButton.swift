@@ -20,3 +20,4 @@ struct FavoriteButton: View {
     FavoriteButton(isSet: .constant(true))
         .environmentObject(PoseData())
 }
+

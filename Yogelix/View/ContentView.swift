@@ -7,7 +7,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            MainView()
+            DashboardView()
                 .tabItem {
                     Label("Main", systemImage: "heart.circle.fill")
                 }
@@ -15,11 +15,6 @@ struct ContentView: View {
             DiscoverView()
                 .tabItem {
                     Label("Discover", systemImage: "figure.run.square.stack.fill")
-                }
-            
-            CreateWorkoutView()
-                .tabItem {
-                    Label("Workout", systemImage: "flag.2.crossed.circle.fill")
                 }
             
             PoseListView()
