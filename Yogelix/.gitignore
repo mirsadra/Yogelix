@@ -67,3 +67,4 @@ node_modules/
 
 # Custom secret
 OpenAI/KeychainService.swift
+GoogleService-Info.plist
