@@ -58,7 +58,6 @@ class PoseData: ObservableObject {
         }
     }
     
-
     func load<T: Decodable>(_ filename: String) -> T {
         guard let file = Bundle.main.url(forResource: filename, withExtension: nil),
               let data = try? Data(contentsOf: file) else {
@@ -72,4 +71,6 @@ class PoseData: ObservableObject {
         return decoded
     }
 }
+
+
 

@@ -20,43 +20,60 @@ enum AuthenticationError: Error {
 
 class GoogleSignInManager {
     weak var delegate: GoogleSignInManagerDelegate?
-    
+
     func signInWithGoogle() async -> Bool {
-        guard let clientID = FirebaseApp.app()?.options.clientID else {
-            fatalError("No client ID found in Firebase configuration")
-        }
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-        
-        guard let windowScene = await UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let window = await windowScene.windows.first,
-              let rootViewController = await window.rootViewController else {
-            print("There is no root view controller")
-            return false
-        }
-        
-        do {
-            let userAuthentication = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
-            let googleUser = userAuthentication.user
-            guard let idToken = googleUser.idToken else {
-                throw AuthenticationError.tokenError(message: "ID token missing")
+        return await withCheckedContinuation { continuation in
+            DispatchQueue.main.async {
+                guard let clientID = FirebaseApp.app()?.options.clientID else {
+                    fatalError("No client ID found in Firebase configuration")
+                }
+                let config = GIDConfiguration(clientID: clientID)
+                GIDSignIn.sharedInstance.configuration = config
+                
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                      let window = windowScene.windows.first,
+                      let rootViewController = window.rootViewController else {
+                    print("There is no root view controller")
+                    continuation.resume(returning: false)
+                    return
+                }
+                
+                GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { [weak self] user, error in
+                    guard let self = self else { return }
+                    
+                    if let error = error {
+                        DispatchQueue.main.async {
+                            self.delegate?.didEncounterError(error)
+                        }
+                        continuation.resume(returning: false)
+                        return
+                    }
+                    
+                    guard let user = user, let idToken = user.user.idToken else {
+                        continuation.resume(returning: false)
+                        return
+                    }
+                    let accessToken = user.user.accessToken
+                    let credential = GoogleAuthProvider.credential(withIDToken: "idToken", accessToken: "accessToken")
+                    
+                    Task {
+                        do {
+                            let result = try await Auth.auth().signIn(with: credential)
+                            DispatchQueue.main.async {
+                                self.delegate?.didCompleteFirebaseSignIn(result: result)
+                                self.delegate?.didUpdateProfile(name: user.user.profile?.givenName ?? "", fullName: user.user.profile?.name ?? "", profilePicUrl: user.user.profile?.imageURL(withDimension: 200)?.absoluteString ?? "")
+                                self.delegate?.didUpdateAuthenticationState(.authenticated)
+                            }
+                        } catch {
+                            DispatchQueue.main.async {
+                                self.delegate?.didEncounterError(error)
+                            }
+                        }
+                        
+                        continuation.resume(returning: true)
+                    }
+                }
             }
-            let accessToken = googleUser.accessToken
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken.tokenString,
-                                                           accessToken: accessToken.tokenString)
-            
-            let result = try await Auth.auth().signIn(with: credential)
-            delegate?.didCompleteFirebaseSignIn(result: result)
-            
-            let displayName = googleUser.profile?.name ?? ""
-            let profilePicUrl = googleUser.profile?.imageURL(withDimension: 200)?.absoluteString ?? ""
-            
-            delegate?.didUpdateProfile(name: displayName, fullName: displayName, profilePicUrl: profilePicUrl)
-            delegate?.didUpdateAuthenticationState(.authenticated)
-            
-        } catch {
-            delegate?.didEncounterError(error)
         }
-        return false
     }
 }

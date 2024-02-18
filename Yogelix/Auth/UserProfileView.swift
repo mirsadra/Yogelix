@@ -82,8 +82,25 @@ struct UserProfileView: View {
             }
             .confirmationDialog("Are you sure you want to delete your account?", isPresented: $presentingConfirmationDialog, titleVisibility: .visible) {
                 Button("Delete Account", role: .destructive) {
-                    // Implement account deletion logic
+                    // Async call within a task to handle deletion
+                    Task {
+                        // Call the async deleteAccount method and await its result
+                        let success = await authViewModel.deleteAccount()
+                        // Handle the result on the main thread
+                        DispatchQueue.main.async {
+                            if success {
+                                // Update the UI after successful deletion
+                                authViewModel.authenticationState = .unauthenticated
+                                // Show an alert or navigate the user away from the profile view
+                            } else {
+                                // Show an error message if deletion was not successful
+                                showingErrorAlert = true
+                                errorMessage = "There was an error deleting your account. Please try again later."
+                            }
+                        }
+                    }
                 }
+                Button("Cancel", role: .cancel) { }
             }
             .onAppear {
                 Task {
@@ -99,5 +116,6 @@ struct UserProfileView: View {
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileView()
+            .environmentObject(AuthenticationViewModel())
     }
 }

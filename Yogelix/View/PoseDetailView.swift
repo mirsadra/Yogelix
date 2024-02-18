@@ -176,24 +176,39 @@ struct PoseDetailView: View {
                 
                 
                 Divider()
-//                Text("Chakra Details:")
-//                ForEach(pose.chakraDetails) { chakraDetail in
-//                    VStack(alignment: .leading) {
-//                        Text("Name: \(chakraDetail.name.rawValue)")
-//                        Text("Element: \(chakraDetail.element)")
-//                        Text("Number of Petals: \(chakraDetail.numberOfPetals)")
-//                        Text("Location: \(chakraDetail.location)")
-//                        Text("Color: \(chakraDetail.color)")
-//                        chakraDetail.image
-//                            .resizable()
-//                            .scaledToFit()
-//                        Text("Focus:")
-//                        ForEach(chakraDetail.focus, id: \.self) { focus in
-//                            Text(focus)
-//                        }
-//                    }
-//                }
-//                Divider()
+                
+                // Add a navigation link to PoseStepsView
+                NavigationLink(destination: PoseStepsView(pose: pose)) {
+                    Text("View Steps")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color(UIColor.secondarySystemBackground))
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+                
+                Divider()
+                
+                Text("Chakra Details:")
+                ForEach(pose.chakraDetails) { chakraDetail in
+                    VStack(alignment: .leading) {
+                        Text("Name: \(chakraDetail.name.rawValue)")
+                        Text("Element: \(chakraDetail.element)")
+                        Text("Number of Petals: \(chakraDetail.numberOfPetals)")
+                        Text("Location: \(chakraDetail.location)")
+                        Text("Color: \(chakraDetail.color)")
+                        chakraDetail.image
+                            .resizable()
+                            .scaledToFit()
+                        Text("Focus:")
+                        ForEach(chakraDetail.focus, id: \.self) { focus in
+                            Text(focus)
+                        }
+                    }
+                }
+                Divider()
             }
             .padding()
         }

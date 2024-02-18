@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="BenefitEntity" representedClassName="BenefitEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="benefit" optional="YES" attributeType="String"/>
+        <relationship name="pose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PoseEntity" inverseName="benefits" inverseEntity="PoseEntity"/>
+    </entity>
+    <entity name="ChakraDetailEntity" representedClassName="ChakraDetailEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="element" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="numberOfPetals" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="pose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PoseEntity" inverseName="chakraDetails" inverseEntity="PoseEntity"/>
+    </entity>
+    <entity name="ChakraEntity" representedClassName="ChakraEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="chakraId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="pose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PoseEntity" inverseName="relatedChakras" inverseEntity="PoseEntity"/>
+    </entity>
     <entity name="FavoritePose" representedClassName="FavoritePose" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="pose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PoseEntity" inverseName="favorites" inverseEntity="PoseEntity"/>
+    </entity>
+    <entity name="FocusEntity" representedClassName="FocusEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="focus" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FocusEntity" inverseName="relationship" inverseEntity="FocusEntity"/>
+    </entity>
+    <entity name="MetadataCategoryEntity" representedClassName="MetadataCategoryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <relationship name="pose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PoseEntity" inverseName="metadata" inverseEntity="PoseEntity"/>
+    </entity>
+    <entity name="PoseEntity" representedClassName="PoseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="difficulty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="englishName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="level" optional="YES" attributeType="String"/>
+        <attribute name="sanskritName" optional="YES" attributeType="String"/>
+        <relationship name="benefits" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BenefitEntity" inverseName="pose" inverseEntity="BenefitEntity"/>
+        <relationship name="chakraDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChakraDetailEntity" inverseName="pose" inverseEntity="ChakraDetailEntity"/>
+        <relationship name="favorites" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoritePose" inverseName="pose" inverseEntity="FavoritePose"/>
+        <relationship name="metadata" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MetadataCategoryEntity" inverseName="pose" inverseEntity="MetadataCategoryEntity"/>
+        <relationship name="precautions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PrecautionEntity" inverseName="pose" inverseEntity="PrecautionEntity"/>
+        <relationship name="recommendedFor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecommendedForEntity" inverseName="pose" inverseEntity="RecommendedForEntity"/>
+        <relationship name="relatedChakras" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChakraEntity" inverseName="pose" inverseEntity="ChakraEntity"/>
+        <relationship name="steps" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StepEntity" inverseName="pose" inverseEntity="StepEntity"/>
+    </entity>
+    <entity name="PrecautionEntity" representedClassName="PrecautionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="precaution" optional="YES" attributeType="String"/>
+        <relationship name="pose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PoseEntity" inverseName="precautions" inverseEntity="PoseEntity"/>
+    </entity>
+    <entity name="RecommendedForEntity" representedClassName="RecommendedForEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="activeEnergyBurned" optional="YES" attributeType="String"/>
+        <attribute name="exerciseMinutes" optional="YES" attributeType="String"/>
+        <attribute name="heartRate" optional="YES" attributeType="String"/>
+        <relationship name="pose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PoseEntity" inverseName="recommendedFor" inverseEntity="PoseEntity"/>
+    </entity>
+    <entity name="StepEntity" representedClassName="StepEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="describe" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="pose" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PoseEntity" inverseName="steps" inverseEntity="PoseEntity"/>
     </entity>
 </model>
